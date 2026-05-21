@@ -10,6 +10,7 @@ import PhaseThree from './components/PhaseThree';
 export default function App() {
   const [userId, setUserId] = useState(null);
   const [phase1Ratings, setPhase1Ratings] = useState({});
+  const [phase2Ratings, setPhase2Ratings] = useState({});
   const [currentPhase, setCurrentPhase] = useState('phase1');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,6 +35,12 @@ export default function App() {
       const phase1Snapshot = await get(phase1Ref);
       if (phase1Snapshot.exists()) {
         setPhase1Ratings(phase1Snapshot.val());
+      }
+
+      const phase2Ref = ref(db, `users/${userId}/phase2/ratings`);
+      const phase2Snapshot = await get(phase2Ref);
+      if (phase2Snapshot.exists()) {
+        setPhase2Ratings(phase2Snapshot.val());
       }
     } catch (err) {
       console.warn('Could not load previous ratings:', err);
@@ -85,7 +92,7 @@ export default function App() {
   }
 
   return (
-    <ScoreProvider phase1Ratings={phase1Ratings}>
+    <ScoreProvider phase1Ratings={phase1Ratings} phase2Ratings={phase2Ratings}>
       {currentPhase === 'phase1' && (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="container mx-auto px-4 py-8">

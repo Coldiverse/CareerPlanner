@@ -1,0 +1,467 @@
+﻿{
+  "careers": [
+    {
+      "id": "software-engineer",
+      "title": "Software Engineer",
+      "tier": "core",
+      "description": "Designs, builds, and maintains software applications and systems. Works across frontend, backend, or full-stack development.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_discrete_math", "weight": 0.70 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 140000, "senior": 200000 },
+        "education": "BS Computer Science or related; bootcamp acceptable for entry",
+        "jobOutlook": "8% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Python", "JavaScript", "System Design", "Problem Solving"],
+        "careerPath": "Junior Dev  to  Mid-level Dev  to  Senior Dev  to  Staff/Principal Engineer",
+        "relatedCareers": ["web-developer", "backend-engineer", "mobile-developer"],
+        "discoveryHint": "If you love building things and solving logic puzzles, this is the path."
+      }
+    },
+    {
+      "id": "registered-nurse",
+      "title": "Registered Nurse",
+      "tier": "core",
+      "description": "Provides direct patient care, administers medications, and monitors health conditions in hospitals, clinics, and other settings.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_nursing", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.85 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 62000, "mid": 80000, "senior": 110000 },
+        "education": "BSN (Bachelor of Science in Nursing); RN licensure exam required",
+        "jobOutlook": "6% growth, consistently high demand",
+        "yearsToEntry": 4,
+        "skills": ["Patient Care", "Clinical Assessment", "Communication", "Critical Thinking"],
+        "careerPath": "RN Bedside Nurse  to  Charge Nurse  to  Nurse Manager  to  Nursing Leadership",
+        "relatedCareers": ["nurse-practitioner", "nurse-anesthetist", "nursing-educator"],
+        "discoveryHint": "Make a direct difference in people's health and well-being every day."
+      }
+    },
+    {
+      "id": "high-school-teacher",
+      "title": "High School Teacher",
+      "tier": "core",
+      "description": "Educates students in specific subject areas, develops curriculum, and assesses student learning.",
+      "requirements": [
+        { "subcategoryId": "subcat_educ_pedagogy", "weight": 0.95 },
+        { "subcategoryId": "subcat_subj_literature", "weight": 0.60 },
+        { "subcategoryId": "subcat_math_algebra", "weight": 0.60 }
+      ],
+      "context": {
+        "salary": { "entry": 38000, "mid": 55000, "senior": 75000 },
+        "education": "BA in subject area + teaching credential/MAT",
+        "jobOutlook": "4% growth, moderate demand with regional variation",
+        "yearsToEntry": 4,
+        "skills": ["Communication", "Curriculum Design", "Classroom Management", "Assessment"],
+        "careerPath": "New Teacher  to  Experienced Teacher  to  Department Chair  to  Administration",
+        "relatedCareers": ["college-professor", "curriculum-developer", "school-principal"],
+        "discoveryHint": "Shape young minds and inspire the next generation in your field of expertise."
+      }
+    },
+    {
+      "id": "data-scientist",
+      "title": "Data Scientist",
+      "tier": "core",
+      "description": "Analyzes complex datasets to extract insights and build predictive models for business decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_linear_algebra", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 130000, "senior": 180000 },
+        "education": "BS Math/Statistics/CS or MS Data Science",
+        "jobOutlook": "36% growth, extremely high demand",
+        "yearsToEntry": 4,
+        "skills": ["Python", "SQL", "Machine Learning", "Statistical Analysis", "Data Visualization"],
+        "careerPath": "Junior Data Scientist  to  Data Scientist  to  Senior Data Scientist  to  ML Lead",
+        "relatedCareers": ["machine-learning-engineer", "business-analyst", "statistician"],
+        "discoveryHint": "Turn raw data into actionable insights that drive real business impact."
+      }
+    },
+    {
+      "id": "civil-engineer",
+      "title": "Civil Engineer",
+      "tier": "core",
+      "description": "Designs and oversees construction of infrastructure projects like bridges, roads, and buildings.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 63000, "mid": 95000, "senior": 130000 },
+        "education": "BS Civil Engineering + PE license",
+        "jobOutlook": "2% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Project Management", "CAD", "Structural Analysis", "Compliance Knowledge"],
+        "careerPath": "Junior Engineer  to  Civil Engineer  to  Senior Engineer  to  Project Manager",
+        "relatedCareers": ["structural-engineer", "geotechnical-engineer", "construction-manager"],
+        "discoveryHint": "Build the infrastructure that shapes communities and lasts generations."
+      }
+    },
+    {
+      "id": "physician",
+      "title": "Physician (MD/DO)",
+      "tier": "advanced",
+      "description": "Diagnoses and treats diseases, performs surgeries, and manages patient health across medical specialties.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.90 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 200000, "mid": 300000, "senior": 400000 },
+        "education": "BS pre-med + MD/DO from medical school + residency (3-7 yrs)",
+        "jobOutlook": "3% growth, high demand",
+        "yearsToEntry": 11,
+        "skills": ["Clinical Diagnosis", "Critical Decision-Making", "Compassion", "Continuous Learning"],
+        "careerPath": "Resident  to  Board-Certified Physician  to  Specialist  to  Division Chief",
+        "relatedCareers": ["surgeon", "psychiatrist", "pediatrician"],
+        "discoveryHint": "Dedicate your career to healing and improving human health at the highest level."
+      }
+    },
+    {
+      "id": "marketing-manager",
+      "title": "Marketing Manager",
+      "tier": "core",
+      "description": "Develops and executes marketing strategies to promote products/services and grow brand awareness.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_digital", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 52000, "mid": 85000, "senior": 130000 },
+        "education": "BA Marketing, Business, or Communications",
+        "jobOutlook": "8% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Strategic Planning", "Analytics", "Communication", "Creativity", "Leadership"],
+        "careerPath": "Assistant Manager  to  Marketing Manager  to  Senior Manager  to  Director",
+        "relatedCareers": ["product-manager", "brand-manager", "digital-marketing-specialist"],
+        "discoveryHint": "Influence consumer behavior and build brands that resonate with millions."
+      }
+    },
+    {
+      "id": "accountant",
+      "title": "Certified Public Accountant (CPA)",
+      "tier": "core",
+      "description": "Manages financial records, prepares tax returns, and provides audit and accounting services.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_arithmetic", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_business_writing", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 75000, "senior": 110000 },
+        "education": "BS Accounting + CPA license",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Financial Analysis", "Attention to Detail", "Tax Knowledge", "Ethics"],
+        "careerPath": "Junior Accountant  to  CPA  to  Senior Accountant  to  Audit Manager",
+        "relatedCareers": ["financial-analyst", "auditor", "tax-specialist"],
+        "discoveryHint": "Master the language of business and help organizations make sound financial decisions."
+      }
+    },
+    {
+      "id": "environmental-scientist",
+      "title": "Environmental Scientist",
+      "tier": "core",
+      "description": "Studies environmental systems, assesses pollution, and develops solutions for conservation and sustainability.",
+      "requirements": [
+        { "subcategoryId": "subcat_env_ecology", "weight": 0.95 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_bio_ecology", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 70000, "senior": 100000 },
+        "education": "BS Environmental Science, Chemistry, or Biology",
+        "jobOutlook": "8% growth, increasing demand",
+        "yearsToEntry": 4,
+        "skills": ["Field Research", "Data Analysis", "Environmental Regulations", "Problem-Solving"],
+        "careerPath": "Junior Scientist  to  Environmental Scientist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["environmental-engineer", "conservation-biologist", "sustainability-consultant"],
+        "discoveryHint": "Protect the planet and develop solutions to environmental challenges facing humanity."
+      }
+    },
+    {
+      "id": "graphic-designer",
+      "title": "Graphic Designer",
+      "tier": "core",
+      "description": "Creates visual content for digital and print media, including logos, websites, and marketing materials.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.85 },
+        { "subcategoryId": "subcat_art_color_composition", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 38000, "mid": 60000, "senior": 90000 },
+        "education": "BA Graphic Design or self-taught portfolio",
+        "jobOutlook": "3% growth, competitive field",
+        "yearsToEntry": 4,
+        "skills": ["Adobe Creative Suite", "Visual Design", "Communication", "Creativity"],
+        "careerPath": "Junior Designer  to  Graphic Designer  to  Senior Designer  to  Creative Director",
+        "relatedCareers": ["ux-designer", "web-designer", "art-director"],
+        "discoveryHint": "Transform ideas into compelling visuals that capture attention and communicate meaning."
+      }
+    },
+    {
+      "id": "mechanical-engineer",
+      "title": "Mechanical Engineer",
+      "tier": "core",
+      "description": "Designs, develops, and tests mechanical devices and systems including engines, machinery, and tools.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 100000, "senior": 140000 },
+        "education": "BS Mechanical Engineering + PE license",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["CAD", "Thermodynamics", "Materials Science", "Project Management"],
+        "careerPath": "Junior Engineer  to  Mechanical Engineer  to  Senior Engineer  to  Engineering Manager",
+        "relatedCareers": ["electrical-engineer", "aerospace-engineer", "automotive-engineer"],
+        "discoveryHint": "Design innovative machines and systems that solve real-world problems at scale."
+      }
+    },
+    {
+      "id": "psychologist",
+      "title": "Clinical Psychologist",
+      "tier": "core",
+      "description": "Diagnoses and treats mental health disorders through therapy, counseling, and behavioral interventions.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_clinical", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_research", "weight": 0.75 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 80000, "senior": 120000 },
+        "education": "MA/PhD Clinical Psychology + state licensure",
+        "jobOutlook": "3% growth, steady demand",
+        "yearsToEntry": 6,
+        "skills": ["Empathy", "Active Listening", "Clinical Assessment", "Evidence-Based Therapy"],
+        "careerPath": "Therapist  to  Licensed Psychologist  to  Senior Clinician  to  Private Practice Owner",
+        "relatedCareers": ["psychiatrist", "counselor", "social-worker"],
+        "discoveryHint": "Help people overcome mental health challenges and build healthier, happier lives."
+      }
+    },
+    {
+      "id": "electrical-engineer",
+      "title": "Electrical Engineer",
+      "tier": "core",
+      "description": "Designs and develops electrical systems, power distribution, and electronics for various industries.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_electrical", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_electricity", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 66000, "mid": 102000, "senior": 145000 },
+        "education": "BS Electrical Engineering + PE license",
+        "jobOutlook": "3% growth, steady demand with specialization opportunities",
+        "yearsToEntry": 4,
+        "skills": ["Circuit Design", "Power Systems", "Programming", "Problem-Solving"],
+        "careerPath": "Junior Engineer  to  Electrical Engineer  to  Senior Engineer  to  Project Lead",
+        "relatedCareers": ["power-engineer", "controls-engineer", "electronics-technician"],
+        "discoveryHint": "Design the electrical systems powering modern infrastructure and innovation."
+      }
+    },
+    {
+      "id": "attorney",
+      "title": "Attorney at Law",
+      "tier": "core",
+      "description": "Provides legal advice, represents clients in court, and drafts legal documents across various practice areas.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_civil", "weight": 0.85 },
+        { "subcategoryId": "subcat_law_litigation", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 120000, "senior": 250000 },
+        "education": "JD from law school + bar exam passage",
+        "jobOutlook": "4% growth, moderate demand with variation by specialty",
+        "yearsToEntry": 7,
+        "skills": ["Legal Research", "Argumentation", "Writing", "Negotiation"],
+        "careerPath": "Associate Attorney  to  Senior Associate  to  Partner  to  Managing Partner",
+        "relatedCareers": ["judge", "patent-attorney", "legal-counsel"],
+        "discoveryHint": "Advocate for justice and help clients navigate complex legal systems."
+      }
+    },
+    {
+      "id": "financial-analyst",
+      "title": "Financial Analyst",
+      "tier": "core",
+      "description": "Analyzes financial data to help organizations make investment and business decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.85 },
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 100000, "senior": 160000 },
+        "education": "BS Finance, Economics, or Accounting; CFA helpful",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Financial Modeling", "Data Analysis", "Market Knowledge", "Excel"],
+        "careerPath": "Junior Analyst  to  Financial Analyst  to  Senior Analyst  to  Finance Manager",
+        "relatedCareers": ["investment-banker", "portfolio-manager", "risk-analyst"],
+        "discoveryHint": "Make sense of markets and guide investment strategies that create wealth."
+      }
+    },
+    {
+      "id": "web-developer",
+      "title": "Web Developer",
+      "tier": "core",
+      "description": "Builds and maintains websites and web applications using HTML, CSS, JavaScript, and backend frameworks.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_web_dev", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BS Computer Science or bootcamp certificate",
+        "jobOutlook": "13% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["JavaScript", "React/Vue", "CSS", "Backend frameworks", "Git"],
+        "careerPath": "Junior Developer  to  Web Developer  to  Senior Developer  to  Tech Lead",
+        "relatedCareers": ["frontend-engineer", "backend-engineer", "full-stack-developer"],
+        "discoveryHint": "Build the websites and apps billions of people use every day."
+      }
+    },
+    {
+      "id": "human-resources-manager",
+      "title": "Human Resources Manager",
+      "tier": "core",
+      "description": "Manages recruitment, employee relations, compensation, and organizational development.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_business_writing", "weight": 0.75 },
+        { "subcategoryId": "subcat_soc_organizational", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 75000, "senior": 120000 },
+        "education": "BA Business, HR, or Communications; SHRM certification helpful",
+        "jobOutlook": "7% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Recruitment", "Employee Relations", "Compliance Knowledge", "Communication"],
+        "careerPath": "HR Coordinator  to  HR Manager  to  Senior Manager  to  HR Director",
+        "relatedCareers": ["recruiter", "organizational-development-specialist", "training-manager"],
+        "discoveryHint": "Build thriving workplace cultures and help people develop their careers."
+      }
+    },
+    {
+      "id": "architect",
+      "title": "Architect (Building Design)",
+      "tier": "core",
+      "description": "Designs buildings and structures, manages projects from concept through completion.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.85 },
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_geometry", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "BArch or BS Architecture + AIA license",
+        "jobOutlook": "3% growth, moderate demand",
+        "yearsToEntry": 5,
+        "skills": ["Design", "CAD", "Building Codes", "Project Management"],
+        "careerPath": "Junior Architect  to  Architect  to  Senior Architect  to  Principal",
+        "relatedCareers": ["landscape-architect", "interior-designer", "urban-planner"],
+        "discoveryHint": "Design the buildings and spaces where people live, work, and thrive."
+      }
+    },
+    {
+      "id": "pharmaceutical-scientist",
+      "title": "Pharmaceutical Scientist",
+      "tier": "advanced",
+      "description": "Researches and develops new medications, conducting experiments to create drugs that treat diseases.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_organic", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.90 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 150000 },
+        "education": "BS Chemistry/Biology + MS/PhD Chemistry or Pharmacology",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Laboratory Techniques", "Organic Chemistry", "Research Design", "Analysis"],
+        "careerPath": "Research Scientist  to  Senior Scientist  to  Principal Scientist  to  Research Manager",
+        "relatedCareers": ["medicinal-chemist", "toxicologist", "drug-formulation-scientist"],
+        "discoveryHint": "Develop life-saving medications that improve human health and longevity."
+      }
+    },
+    {
+      "id": "system-administrator",
+      "title": "System Administrator",
+      "tier": "core",
+      "description": "Manages computer systems, networks, and IT infrastructure to ensure organizational operations.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.70 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 85000, "senior": 130000 },
+        "education": "BS Computer Science or IT certifications (CompTIA, Cisco)",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Linux/Windows", "Networking", "Security", "Troubleshooting"],
+        "careerPath": "Junior Admin  to  System Administrator  to  Senior Admin  to  Infrastructure Manager",
+        "relatedCareers": ["network-administrator", "security-analyst", "cloud-architect"],
+        "discoveryHint": "Keep organizations' digital infrastructure running smoothly and securely."
+      }
+    },
+    {
+      "id": "journalist",
+      "title": "Journalist / Reporter",
+      "tier": "core",
+      "description": "Investigates stories, interviews sources, and writes articles for newspapers, magazines, or online publications.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.95 },
+        { "subcategoryId": "subcat_lit_writing", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 55000, "senior": 85000 },
+        "education": "BA Journalism or Communications",
+        "jobOutlook": "-5% decline, but digital demand growing",
+        "yearsToEntry": 4,
+        "skills": ["Research", "Writing", "Interview Skills", "News Judgment"],
+        "careerPath": "Reporter  to  Senior Reporter  to  Editor  to  News Director",
+        "relatedCareers": ["content-writer", "blogger", "documentary-filmmaker"],
+        "discoveryHint": "Inform the public and hold power accountable through investigative journalism."
+      }
+    },
+    {
+      "id": "ux-designer",
+      "title": "UX/UI Designer",
+      "tier": "core",
+      "description": "Designs user interfaces and experiences for digital products, focusing on usability and aesthetics.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BA Design or bootcamp; portfolio essential",
+        "jobOutlook": "13% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Figma", "Prototyping", "User Research", "Visual Design"],
+        "careerPath": "Junior Designer  to  UX Designer  to  Senior Designer  to  Design Lead",
+        "relatedCareers": ["product-designer", "interaction-designer", "design-researcher"],
+        "discoveryHint": "Create intuitive, beautiful digital experiences that delight millions of users."
+      }
+    }
+  ]
+}
+

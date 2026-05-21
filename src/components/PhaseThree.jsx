@@ -210,14 +210,6 @@ export default function PhaseThree({ userId, onPhaseChange }) {
           >
             ← Back to Phase 2
           </button>
-          {filteredCareers.length > 0 && (
-            <button
-              onClick={() => onPhaseChange && onPhaseChange('phase4')}
-              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition flex items-center gap-2"
-            >
-              Next: Find Jobs →
-            </button>
-          )}
         </div>
 
         {/* Career Details Modal */}

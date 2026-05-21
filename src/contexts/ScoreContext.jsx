@@ -3,8 +3,8 @@ import { calculateAllScores, validatePhase1Ratings } from '../utils/scoring';
 
 export const ScoreContext = createContext();
 
-export function ScoreProvider({ children, phase1Ratings: initialPhase1Ratings = {} }) {
-  const [phase2Ratings, setPhase2Ratings] = useState({});
+export function ScoreProvider({ children, phase1Ratings: initialPhase1Ratings = {}, phase2Ratings: initialPhase2Ratings = {} }) {
+  const [phase2Ratings, setPhase2Ratings] = useState(initialPhase2Ratings);
   const phase1Ratings = useRef(validatePhase1Ratings(initialPhase1Ratings));
 
   // Memoized: recalculate only when phase2Ratings change

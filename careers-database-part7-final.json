@@ -1,0 +1,382 @@
+{
+  "careers": [
+    {
+      "id": "radiologist",
+      "title": "Radiologist",
+      "tier": "advanced",
+      "description": "Interprets medical images to diagnose diseases and guide treatment decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.80 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 250000, "mid": 350000, "senior": 500000 },
+        "education": "MD/DO + radiology residency (5 years)",
+        "jobOutlook": "7% growth, high demand",
+        "yearsToEntry": 12,
+        "skills": ["Image Interpretation", "Diagnostic Imaging", "Reporting", "Patient Care"],
+        "careerPath": "Resident  to  Radiologist  to  Senior Radiologist  to  Department Head",
+        "relatedCareers": ["neuroradiologist", "interventional-radiologist", "cardiac-radiologist"],
+        "discoveryHint": "Diagnose diseases through medical imaging and save lives."
+      }
+    },
+    {
+      "id": "cardiologist",
+      "title": "Cardiologist",
+      "tier": "advanced",
+      "description": "Specializes in diagnosing and treating heart and vascular diseases.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.90 },
+        { "subcategoryId": "subcat_bio_physiology", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 250000, "mid": 350000, "senior": 500000 },
+        "education": "MD/DO + cardiology fellowship (3 years)",
+        "jobOutlook": "3% growth, high demand",
+        "yearsToEntry": 12,
+        "skills": ["Cardiac Diagnosis", "Interventional Skills", "Patient Management", "Research"],
+        "careerPath": "Resident  to  Cardiologist  to  Senior Cardiologist  to  Division Chief",
+        "relatedCareers": ["interventional-cardiologist", "cardiac-surgeon", "heart-specialist"],
+        "discoveryHint": "Treat heart disease and save lives through cardiovascular expertise."
+      }
+    },
+    {
+      "id": "structural-engineer",
+      "title": "Structural Engineer",
+      "tier": "core",
+      "description": "Designs structural systems for buildings, bridges, and infrastructure to ensure safety.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 150000 },
+        "education": "BS Civil Engineering + PE license",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Structural Analysis", "CAD", "Building Codes", "Material Selection"],
+        "careerPath": "Junior Engineer  to  Structural Engineer  to  Senior Engineer  to  Project Lead",
+        "relatedCareers": ["civil-engineer", "geotechnical-engineer", "architect"],
+        "discoveryHint": "Design safe, innovative structures that define skylines and stand generations."
+      }
+    },
+    {
+      "id": "materials-engineer",
+      "title": "Materials Engineer",
+      "tier": "advanced",
+      "description": "Develops and tests new materials with specific properties for manufacturing and research.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_phys_properties", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 68000, "mid": 115000, "senior": 160000 },
+        "education": "BS Materials Science or Engineering",
+        "jobOutlook": "3% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Material Testing", "Characterization", "Process Development", "Problem-Solving"],
+        "careerPath": "Junior Engineer  to  Materials Engineer  to  Senior Engineer  to  R&D Manager",
+        "relatedCareers": ["metallurgist", "chemist", "mechanical-engineer"],
+        "discoveryHint": "Develop advanced materials that enable innovation across industries."
+      }
+    },
+    {
+      "id": "epidemiologist-disease-control",
+      "title": "Epidemiologist (Disease Control Specialist)",
+      "tier": "advanced",
+      "description": "Tracks disease outbreaks and develops public health strategies to prevent disease spread.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_public_health", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 110000, "senior": 160000 },
+        "education": "MPH or MS Epidemiology",
+        "jobOutlook": "5% growth, high demand",
+        "yearsToEntry": 3,
+        "skills": ["Epidemiological Methods", "Field Epidemiology", "Data Analysis", "Communication"],
+        "careerPath": "Epidemiologist  to  Senior Epidemiologist  to  Chief Epidemiologist  to  Director",
+        "relatedCareers": ["public-health-officer", "infectious-disease-specialist", "researcher"],
+        "discoveryHint": "Lead public health response to disease outbreaks globally."
+      }
+    },
+    {
+      "id": "content-creator",
+      "title": "Content Creator (YouTube, TikTok, Streaming)",
+      "tier": "niche",
+      "description": "Creates entertaining or educational video content for social media and streaming platforms.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_media", "weight": 0.95 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.80 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 0, "mid": 50000, "senior": 500000 },
+        "education": "Varies; no formal requirement; strong portfolio essential",
+        "jobOutlook": "Rapidly growing; highly variable",
+        "yearsToEntry": 2,
+        "skills": ["Video Production", "Editing", "Audience Engagement", "Platform Knowledge"],
+        "careerPath": "Small Creator  to  Content Creator  to  Influencer  to  Media Company Owner",
+        "relatedCareers": ["videographer", "animator", "podcaster"],
+        "discoveryHint": "Build a following and earn income creating content you're passionate about."
+      }
+    },
+    {
+      "id": "logistics-coordinator",
+      "title": "Logistics Coordinator",
+      "tier": "core",
+      "description": "Coordinates shipping, receiving, and inventory management to optimize supply chain operations.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.80 },
+        { "subcategoryId": "subcat_math_arithmetic", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 40000, "mid": 60000, "senior": 90000 },
+        "education": "BA Business or Logistics",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 3,
+        "skills": ["Inventory Management", "Shipping Systems", "Problem-Solving", "Organization"],
+        "careerPath": "Coordinator  to  Supervisor  to  Manager  to  Operations Manager",
+        "relatedCareers": ["supply-chain-manager", "warehouse-manager", "transportation-manager"],
+        "discoveryHint": "Ensure products move efficiently through global supply chains."
+      }
+    },
+    {
+      "id": "tax-specialist",
+      "title": "Tax Specialist / Tax Advisor",
+      "tier": "core",
+      "description": "Advises individuals and businesses on tax planning and ensures compliance with tax laws.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 140000 },
+        "education": "BA Accounting + EA or CPA certification",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Tax Law", "Tax Planning", "Compliance", "Financial Analysis"],
+        "careerPath": "Tax Associate  to  Tax Specialist  to  Senior Specialist  to  Tax Manager",
+        "relatedCareers": ["accountant", "auditor", "financial-advisor"],
+        "discoveryHint": "Help clients minimize taxes legally and navigate complex tax regulations."
+      }
+    },
+    {
+      "id": "clinical-research-coordinator",
+      "title": "Clinical Research Coordinator",
+      "tier": "niche",
+      "description": "Manages clinical trials, coordinates with patients and researchers, and ensures regulatory compliance.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_healthcare", "weight": 0.90 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 40000, "mid": 65000, "senior": 100000 },
+        "education": "BS Health Sciences or related + clinical trial training",
+        "jobOutlook": "7% growth, growing demand",
+        "yearsToEntry": 3,
+        "skills": ["Clinical Trial Management", "Patient Recruitment", "Regulatory Knowledge", "Data Entry"],
+        "careerPath": "Coordinator  to  Senior Coordinator  to  Manager  to  Director",
+        "relatedCareers": ["research-analyst", "clinical-research-manager", "regulatory-specialist"],
+        "discoveryHint": "Help bring new medical treatments to patients through clinical research."
+      }
+    },
+    {
+      "id": "web-content-manager",
+      "title": "Web Content Manager",
+      "tier": "core",
+      "description": "Manages website content, updates, and strategy to ensure user engagement and SEO optimization.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_digital", "weight": 0.90 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 70000, "senior": 110000 },
+        "education": "BA Communications or Marketing",
+        "jobOutlook": "8% growth, steady demand",
+        "yearsToEntry": 3,
+        "skills": ["Content Management", "SEO", "Copywriting", "Analytics"],
+        "careerPath": "Content Associate  to  Content Manager  to  Senior Manager  to  Director",
+        "relatedCareers": ["digital-marketer", "seo-specialist", "social-media-manager"],
+        "discoveryHint": "Manage web content that reaches millions and drives online engagement."
+      }
+    },
+    {
+      "id": "biotech-entrepreneur",
+      "title": "Biotech Entrepreneur",
+      "tier": "advanced",
+      "description": "Founds and scales biotechnology companies developing innovative therapies and diagnostics.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 0, "mid": 200000, "senior": 1000000 },
+        "education": "PhD Biology/Chemistry + MBA or business experience",
+        "jobOutlook": "High growth in biotech startup space",
+        "yearsToEntry": 8,
+        "skills": ["Biotechnology", "Fundraising", "Business Strategy", "Innovation"],
+        "careerPath": "Researcher  to  Founder  to  CEO  to  Public Company Executive",
+        "relatedCareers": ["venture-capitalist", "pharmaceutical-scientist", "startup-founder"],
+        "discoveryHint": "Build biotech companies that revolutionize medicine and improve lives."
+      }
+    },
+    {
+      "id": "astrophysicist",
+      "title": "Astrophysicist",
+      "tier": "advanced",
+      "description": "Studies stars, galaxies, black holes, and the universe through observation and theoretical physics.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_general", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_advanced", "weight": 0.95 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 120000, "senior": 180000 },
+        "education": "PhD Physics or Astronomy",
+        "jobOutlook": "2% growth; academic and observatory positions",
+        "yearsToEntry": 8,
+        "skills": ["Observational Astronomy", "Theoretical Physics", "Data Analysis", "Computing"],
+        "careerPath": "Postdoc  to  Astrophysicist  to  Senior Scientist  to  Observatory Director",
+        "relatedCareers": ["astronomer", "cosmologist", "planetary-scientist"],
+        "discoveryHint": "Explore the cosmos and understand the fundamental laws of the universe."
+      }
+    },
+    {
+      "id": "industrial-designer",
+      "title": "Industrial Designer",
+      "tier": "niche",
+      "description": "Designs consumer products balancing aesthetics, functionality, and manufacturability.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.95 },
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.75 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "BID (Bachelor of Industrial Design)",
+        "jobOutlook": "2% growth; varies by product category",
+        "yearsToEntry": 4,
+        "skills": ["3D Design", "CAD", "Prototyping", "User-Centered Design"],
+        "careerPath": "Junior Designer  to  Industrial Designer  to  Senior Designer  to  Design Director",
+        "relatedCareers": ["product-designer", "ux-designer", "architect"],
+        "discoveryHint": "Design everyday products that millions of people use and love."
+      }
+    },
+    {
+      "id": "patent-examiner",
+      "title": "Patent Examiner (USPTO)",
+      "tier": "niche",
+      "description": "Reviews patent applications, evaluates inventiveness, and grants or rejects patents.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_intellectual", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.60 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 150000 },
+        "education": "BS Technical + patent knowledge + USPTO training",
+        "jobOutlook": "1% growth; government position",
+        "yearsToEntry": 4,
+        "skills": ["Patent Law", "Technical Analysis", "Writing", "Examination Procedures"],
+        "careerPath": "Patent Examiner  to  Senior Examiner  to  Supervisory Patent Examiner",
+        "relatedCareers": ["patent-attorney", "intellectual-property-manager", "legal-analyst"],
+        "discoveryHint": "Evaluate and grant patents that protect innovation and shape industries."
+      }
+    },
+    {
+      "id": "data-visualization-specialist",
+      "title": "Data Visualization Specialist",
+      "tier": "niche",
+      "description": "Creates visual representations of data to communicate insights and tell data-driven stories.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.80 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 100000, "senior": 150000 },
+        "education": "BA Design/Statistics/CS + data viz skills",
+        "jobOutlook": "12% growth, high demand",
+        "yearsToEntry": 4,
+        "skills": ["Visualization Design", "D3.js", "Design Tools", "Data Understanding"],
+        "careerPath": "Designer  to  Visualization Specialist  to  Senior Specialist  to  Lead",
+        "relatedCareers": ["ux-designer", "data-analyst", "digital-designer"],
+        "discoveryHint": "Transform complex data into beautiful, understandable visualizations."
+      }
+    },
+    {
+      "id": "voice-actor",
+      "title": "Voice Actor",
+      "tier": "niche",
+      "description": "Provides voice-over performances for animation, audiobooks, video games, commercials, and media.",
+      "requirements": [
+        { "subcategoryId": "subcat_arts_performance", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.90 },
+        { "subcategoryId": "subcat_music_performance", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 20000, "mid": 60000, "senior": 200000 },
+        "education": "BA Acting or Voice Training; portfolio essential",
+        "jobOutlook": "Varies; growth in animation and gaming",
+        "yearsToEntry": 3,
+        "skills": ["Voice Performance", "Acting", "Microphone Technique", "Audio Software"],
+        "careerPath": "Voice Actor  to  Professional VA  to  Featured Voice  to  Union Member",
+        "relatedCareers": ["actor", "narrator", "podcast-host"],
+        "discoveryHint": "Bring characters to life with your voice across animation, games, and media."
+      }
+    },
+    {
+      "id": "grant-writer",
+      "title": "Grant Writer",
+      "tier": "niche",
+      "description": "Writes proposals to secure funding from government agencies and private foundations.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.95 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 75000, "senior": 120000 },
+        "education": "BA Communications/English + grant writing training",
+        "jobOutlook": "5% growth, steady in nonprofits",
+        "yearsToEntry": 3,
+        "skills": ["Grant Writing", "Research", "Communication", "Attention to Detail"],
+        "careerPath": "Grant Writer  to  Senior Writer  to  Development Director  to  Executive Director",
+        "relatedCareers": ["nonprofit-manager", "fundraiser", "proposals-manager"],
+        "discoveryHint": "Secure critical funding for nonprofits and research institutions."
+      }
+    },
+    {
+      "id": "environmental-consultant",
+      "title": "Environmental Consultant",
+      "tier": "advanced",
+      "description": "Advises organizations on environmental compliance, sustainability, and mitigation strategies.",
+      "requirements": [
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 105000, "senior": 160000 },
+        "education": "BS Environmental Science + sustainability knowledge",
+        "jobOutlook": "6% growth, increasing demand",
+        "yearsToEntry": 4,
+        "skills": ["Environmental Law", "Sustainability Planning", "Stakeholder Engagement", "Analysis"],
+        "careerPath": "Consultant  to  Senior Consultant  to  Manager  to  Director",
+        "relatedCareers": ["sustainability-manager", "environmental-engineer", "policy-analyst"],
+        "discoveryHint": "Guide organizations toward environmental responsibility and sustainability."
+      }
+    }
+  ]
+}

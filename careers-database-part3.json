@@ -1,0 +1,698 @@
+﻿{
+  "careers": [
+    {
+      "id": "scientific-illustrator",
+      "title": "Scientific Illustrator",
+      "tier": "niche",
+      "description": "Creates detailed, accurate illustrations of scientific subjects for textbooks, papers, and publications.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 40000, "mid": 65000, "senior": 95000 },
+        "education": "BFA with scientific coursework or combined degree",
+        "jobOutlook": "2% growth, niche but steady",
+        "yearsToEntry": 4,
+        "skills": ["Digital Art", "Scientific Accuracy", "Anatomical Knowledge", "Adobe Suite"],
+        "careerPath": "Freelancer to Illustrator to Senior Illustrator to Art Director",
+        "relatedCareers": ["medical-illustrator", "technical-illustrator", "science-writer"],
+        "discoveryHint": "Blend art and science to make complex biological systems visually understandable."
+      }
+    },
+    {
+      "id": "ux-researcher",
+      "title": "UX Researcher",
+      "tier": "niche",
+      "description": "Conducts user research, interviews, and usability testing to inform product design decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_research", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 150000 },
+        "education": "BA Psychology/HCI + research experience",
+        "jobOutlook": "13% growth, growing demand",
+        "yearsToEntry": 5,
+        "skills": ["User Testing", "Qualitative Analysis", "Interviewing", "Data Visualization"],
+        "careerPath": "Junior Researcher  to  UX Researcher  to  Senior Researcher  to  Research Lead",
+        "relatedCareers": ["product-researcher", "design-researcher", "human-factors-specialist"],
+        "discoveryHint": "Understand user behavior deeply and drive design decisions backed by research."
+      }
+    },
+    {
+      "id": "music-producer",
+      "title": "Music Producer / Audio Producer",
+      "tier": "niche",
+      "description": "Produces music recordings, manages studio sessions, and shapes the sound of recordings.",
+      "requirements": [
+        { "subcategoryId": "subcat_music_production", "weight": 0.95 },
+        { "subcategoryId": "subcat_music_theory", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 30000, "mid": 80000, "senior": 200000 },
+        "education": "BA Music Production or self-taught; portfolio essential",
+        "jobOutlook": "Varies; increasingly digital/home-based",
+        "yearsToEntry": 4,
+        "skills": ["DAW Proficiency", "Mixing/Mastering", "Audio Engineering", "Music Theory"],
+        "careerPath": "Assistant  to  Music Producer  to  Senior Producer  to  Executive Producer",
+        "relatedCareers": ["sound-engineer", "recording-engineer", "music-engineer"],
+        "discoveryHint": "Shape the sound of music and help artists realize their creative vision."
+      }
+    },
+    {
+      "id": "sound-designer",
+      "title": "Sound Designer",
+      "tier": "niche",
+      "description": "Creates and designs sound effects and audio experiences for films, games, and interactive media.",
+      "requirements": [
+        { "subcategoryId": "subcat_music_production", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_media", "weight": 0.80 },
+        { "subcategoryId": "subcat_arts_film", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "BA Audio Design or Film; portfolio essential",
+        "jobOutlook": "8% growth in gaming/film industries",
+        "yearsToEntry": 4,
+        "skills": ["Audio Production", "Sound Synthesis", "DAW Proficiency", "Foley"],
+        "careerPath": "Junior Designer  to  Sound Designer  to  Senior Designer  to  Audio Director",
+        "relatedCareers": ["audio-engineer", "field-recordist", "sonic-branding-specialist"],
+        "discoveryHint": "Create immersive auditory experiences that enhance storytelling and gaming."
+      }
+    },
+    {
+      "id": "film-director",
+      "title": "Film Director",
+      "tier": "niche",
+      "description": "Directs actors, crew, and creative vision for films, TV shows, or video content.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_media", "weight": 0.95 },
+        { "subcategoryId": "subcat_arts_film", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 40000, "mid": 120000, "senior": 400000 },
+        "education": "BA Film/Media + portfolio; often MFA recommended",
+        "jobOutlook": "Varies; highly competitive",
+        "yearsToEntry": 5,
+        "skills": ["Vision", "Leadership", "Storytelling", "Technical Knowledge"],
+        "careerPath": "Short Film Director  to  Feature Director  to  Acclaimed Director",
+        "relatedCareers": ["screenwriter", "cinematographer", "producer"],
+        "discoveryHint": "Bring stories to life visually and emotionally impact millions of viewers."
+      }
+    },
+    {
+      "id": "conservation-biologist",
+      "title": "Conservation Biologist",
+      "tier": "niche",
+      "description": "Studies and protects endangered species and ecosystems through research and policy advocacy.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_ecology", "weight": 0.95 },
+        { "subcategoryId": "subcat_env_conservation", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_geography", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 75000, "senior": 110000 },
+        "education": "BS/MS Biology or Ecology; PhD for research positions",
+        "jobOutlook": "3% growth; funding-dependent",
+        "yearsToEntry": 5,
+        "skills": ["Field Research", "Data Analysis", "Conservation Planning", "Advocacy"],
+        "careerPath": "Field Researcher  to  Conservation Biologist  to  Conservation Director",
+        "relatedCareers": ["environmental-scientist", "ecologist", "wildlife-manager"],
+        "discoveryHint": "Dedicate your career to saving endangered species and protecting wild spaces."
+      }
+    },
+    {
+      "id": "forensic-psychologist",
+      "title": "Forensic Psychologist",
+      "tier": "niche",
+      "description": "Applies psychological expertise to legal cases, assessing criminal behavior and competency.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_clinical", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_civil", "weight": 0.80 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 95000, "senior": 140000 },
+        "education": "PhD Psychology + forensic training + licensure",
+        "jobOutlook": "3% growth, specialized field",
+        "yearsToEntry": 7,
+        "skills": ["Psychological Assessment", "Legal Knowledge", "Expert Testimony", "Integrity"],
+        "careerPath": "Licensed Psychologist  to  Forensic Psychologist  to  Senior Consultant",
+        "relatedCareers": ["clinical-psychologist", "criminal-profiler", "legal-psychologist"],
+        "discoveryHint": "Apply psychology to justice and contribute to the legal system's fairness."
+      }
+    },
+    {
+      "id": "paleontologist",
+      "title": "Paleontologist",
+      "tier": "niche",
+      "description": "Studies fossils and ancient life to understand evolutionary history and prehistoric ecosystems.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_ecology", "weight": 0.85 },
+        { "subcategoryId": "subcat_geo_geology", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 80000, "senior": 120000 },
+        "education": "MS/PhD Paleontology or Geology",
+        "jobOutlook": "1% growth, academic/museum positions",
+        "yearsToEntry": 6,
+        "skills": ["Fossil Analysis", "Field Excavation", "Evolutionary Theory", "Documentation"],
+        "careerPath": "Postdoc  to  Research Scientist  to  Museum Curator  to  Research Director",
+        "relatedCareers": ["geologist", "evolutionary-biologist", "museum-director"],
+        "discoveryHint": "Uncover Earth's deep history and understand the evolution of life itself."
+      }
+    },
+    {
+      "id": "literary-editor",
+      "title": "Literary Editor / Book Editor",
+      "tier": "niche",
+      "description": "Edits manuscripts, provides feedback to authors, and shapes books for publication.",
+      "requirements": [
+        { "subcategoryId": "subcat_lit_writing", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.90 },
+        { "subcategoryId": "subcat_subj_literature", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 55000, "senior": 85000 },
+        "education": "BA Literature or English + editing experience",
+        "jobOutlook": "-2% decline in publishing; digital growing",
+        "yearsToEntry": 5,
+        "skills": ["Copy Editing", "Content Development", "Writing", "Attention to Detail"],
+        "careerPath": "Junior Editor  to  Editor  to  Senior Editor  to  Publishing Director",
+        "relatedCareers": ["publisher", "agent", "literary-critic"],
+        "discoveryHint": "Shape great literature and help authors communicate their stories to the world."
+      }
+    },
+    {
+      "id": "criminologist",
+      "title": "Criminologist",
+      "tier": "niche",
+      "description": "Studies crime, criminal behavior, and the justice system to inform policy and prevention strategies.",
+      "requirements": [
+        { "subcategoryId": "subcat_soc_criminal", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.80 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 75000, "senior": 110000 },
+        "education": "MS/PhD Criminology or Sociology",
+        "jobOutlook": "3% growth, academic/research focused",
+        "yearsToEntry": 6,
+        "skills": ["Research Design", "Data Analysis", "Criminal Justice Knowledge", "Writing"],
+        "careerPath": "Research Analyst  to  Criminologist  to  Senior Researcher  to  Professor",
+        "relatedCareers": ["sociologist", "criminal-justice-planner", "policy-analyst"],
+        "discoveryHint": "Advance understanding of crime and contribute to justice system reforms."
+      }
+    },
+    {
+      "id": "nutritionist",
+      "title": "Registered Dietitian Nutritionist (RDN)",
+      "tier": "niche",
+      "description": "Develops nutrition plans, counsels patients on dietary health, and conducts nutrition research.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_nutrition", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.75 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 75000, "senior": 110000 },
+        "education": "BS Food Science/Nutrition + RDN certification + 6-month internship",
+        "jobOutlook": "7% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Nutrition Counseling", "Medical Nutrition", "Behavior Change", "Food Science"],
+        "careerPath": "Clinical Dietitian  to  Senior Dietitian  to  Nutrition Director  to  Private Practice",
+        "relatedCareers": ["health-coach", "nutritional-scientist", "sports-nutritionist"],
+        "discoveryHint": "Guide people toward healthier lifestyles through personalized nutrition."
+      }
+    },
+    {
+      "id": "epidemiologist",
+      "title": "Epidemiologist",
+      "tier": "niche",
+      "description": "Investigates disease outbreaks, conducts epidemiological studies, and develops public health strategies.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_public_health", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 100000, "senior": 150000 },
+        "education": "MS/PhD Epidemiology or Public Health",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 3,
+        "skills": ["Statistical Analysis", "Study Design", "Epidemiological Methods", "Communication"],
+        "careerPath": "Epidemiologist  to  Senior Epidemiologist  to  Director  to  Chief Epidemiologist",
+        "relatedCareers": ["public-health-officer", "disease-investigator", "infectious-disease-specialist"],
+        "discoveryHint": "Investigate disease patterns and protect public health at population scale."
+      }
+    },
+    {
+      "id": "marine-biologist",
+      "title": "Marine Biologist",
+      "tier": "niche",
+      "description": "Studies marine organisms, ecosystems, and ocean conservation through field research and lab work.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_ecology", "weight": 0.95 },
+        { "subcategoryId": "subcat_env_conservation", "weight": 0.85 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 80000, "senior": 120000 },
+        "education": "BS Biology + MS/PhD Marine Biology",
+        "jobOutlook": "2% growth, competitive field",
+        "yearsToEntry": 6,
+        "skills": ["Field Research", "SCUBA", "Data Analysis", "Ocean Systems Knowledge"],
+        "careerPath": "Research Assistant  to  Marine Biologist  to  Senior Scientist  to  Director",
+        "relatedCareers": ["oceanographer", "aquaculture-specialist", "conservation-biologist"],
+        "discoveryHint": "Explore and protect the world's oceans and marine life."
+      }
+    },
+    {
+      "id": "music-therapist",
+      "title": "Music Therapist",
+      "tier": "niche",
+      "description": "Uses music to improve physical, emotional, and mental health in clinical and therapeutic settings.",
+      "requirements": [
+        { "subcategoryId": "subcat_music_general", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_clinical", "weight": 0.85 },
+        { "subcategoryId": "subcat_health_healthcare", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 70000, "senior": 100000 },
+        "education": "BS Music Therapy + MT-BC certification + internship",
+        "jobOutlook": "8% growth, growing demand",
+        "yearsToEntry": 4,
+        "skills": ["Music Performance", "Therapeutic Techniques", "Assessment", "Empathy"],
+        "careerPath": "Music Therapist  to  Senior Therapist  to  Program Director  to  Clinical Lead",
+        "relatedCareers": ["art-therapist", "counselor", "rehabilitation-specialist"],
+        "discoveryHint": "Heal and improve lives using the universal language of music."
+      }
+    },
+    {
+      "id": "economist",
+      "title": "Economist / Economic Researcher",
+      "tier": "niche",
+      "description": "Analyzes economic data, develops models, and informs policy through economic research.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_macro", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.90 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 180000 },
+        "education": "MA/PhD Economics",
+        "jobOutlook": "3% growth, academic/government/think tanks",
+        "yearsToEntry": 6,
+        "skills": ["Econometrics", "Data Analysis", "Economic Theory", "Policy Writing"],
+        "careerPath": "Research Economist  to  Senior Economist  to  Chief Economist  to  Think Tank Director",
+        "relatedCareers": ["policy-analyst", "financial-analyst", "data-scientist"],
+        "discoveryHint": "Study economic systems and inform policy decisions that impact millions."
+      }
+    },
+    {
+      "id": "landscape-architect",
+      "title": "Landscape Architect",
+      "tier": "niche",
+      "description": "Designs outdoor spaces, parks, and landscapes combining aesthetics with environmental sustainability.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.90 },
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.75 },
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 80000, "senior": 120000 },
+        "education": "BLA (Bachelor of Landscape Architecture) + ASLA license",
+        "jobOutlook": "2% growth, steady with environmental focus",
+        "yearsToEntry": 5,
+        "skills": ["Design", "CAD", "Horticulture", "Sustainability Planning"],
+        "careerPath": "Junior Designer  to  Landscape Architect  to  Senior Architect  to  Principal",
+        "relatedCareers": ["urban-planner", "architect", "environmental-designer"],
+        "discoveryHint": "Create beautiful, sustainable outdoor spaces that enhance communities."
+      }
+    },
+    {
+      "id": "polymer-scientist",
+      "title": "Polymer Scientist / Materials Scientist",
+      "tier": "niche",
+      "description": "Develops and researches polymers and materials with novel properties for industrial applications.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_organic", "weight": 0.90 },
+        { "subcategoryId": "subcat_phys_properties", "weight": 0.85 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 110000, "senior": 160000 },
+        "education": "BS Chemistry + MS/PhD Chemistry or Materials Science",
+        "jobOutlook": "4% growth, steady in materials R&D",
+        "yearsToEntry": 5,
+        "skills": ["Polymer Synthesis", "Materials Characterization", "Testing", "Analysis"],
+        "careerPath": "Research Scientist  to  Senior Scientist  to  Principal Scientist  to  R&D Manager",
+        "relatedCareers": ["chemical-engineer", "nanotechnologist", "materials-engineer"],
+        "discoveryHint": "Develop advanced materials that revolutionize industries from aerospace to medicine."
+      }
+    },
+    {
+      "id": "classical-musician",
+      "title": "Classical Musician / Concert Performer",
+      "tier": "niche",
+      "description": "Performs classical music professionally in orchestras, chamber ensembles, or solo recitals.",
+      "requirements": [
+        { "subcategoryId": "subcat_music_performance", "weight": 0.95 },
+        { "subcategoryId": "subcat_music_theory", "weight": 0.85 },
+        { "subcategoryId": "subcat_music_general", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 70000, "senior": 150000 },
+        "education": "BM Music Performance + conservatory training",
+        "jobOutlook": "Competitive; varies by location and instrument",
+        "yearsToEntry": 4,
+        "skills": ["Instrument Mastery", "Sight Reading", "Ensemble Playing", "Interpretation"],
+        "careerPath": "Student  to  Orchestral Member  to  Concertmaster  to  Solo Artist",
+        "relatedCareers": ["music-teacher", "conductor", "session-musician"],
+        "discoveryHint": "Master your instrument and move audiences through classical performance."
+      }
+    },
+    {
+      "id": "actuarial-scientist",
+      "title": "Actuary",
+      "tier": "niche",
+      "description": "Analyzes financial risk using mathematics and statistics, primarily for insurance and pensions.",
+      "requirements": [
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.95 },
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_probability", "weight": 0.95 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 130000, "senior": 200000 },
+        "education": "BS Mathematics/Statistics + actuarial exams (ASA, FSA)",
+        "jobOutlook": "18% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Probability & Statistics", "Risk Analysis", "Coding", "Business Knowledge"],
+        "careerPath": "Junior Actuary  to  Actuary  to  Senior Actuary  to  Chief Actuary",
+        "relatedCareers": ["financial-analyst", "risk-analyst", "insurance-expert"],
+        "discoveryHint": "Use mathematics to quantify and manage financial risk across industries."
+      }
+    },
+    {
+      "id": "technical-writer",
+      "title": "Technical Writer",
+      "tier": "niche",
+      "description": "Writes technical documentation, manuals, and guides explaining complex information clearly.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.70 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 85000, "senior": 125000 },
+        "education": "BA Communications/English + technical experience",
+        "jobOutlook": "6% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Technical Knowledge", "Clear Writing", "Documentation Tools", "User Empathy"],
+        "careerPath": "Junior Writer  to  Technical Writer  to  Senior Writer  to  Documentation Manager",
+        "relatedCareers": ["content-writer", "developer-advocate", "api-documentor"],
+        "discoveryHint": "Make complex technical concepts understandable to end users globally."
+      }
+    },
+    {
+      "id": "animation-director",
+      "title": "Animation Director / Animator",
+      "tier": "niche",
+      "description": "Creates animated content for films, games, TV shows, and digital media.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.95 },
+        { "subcategoryId": "subcat_arts_film", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_media", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 90000, "senior": 160000 },
+        "education": "BA Animation or Digital Art; portfolio essential",
+        "jobOutlook": "6% growth, growing in digital media",
+        "yearsToEntry": 4,
+        "skills": ["Animation Software", "Storytelling", "Character Design", "Technical Skills"],
+        "careerPath": "Junior Animator  to  Animator  to  Lead Animator  to  Animation Director",
+        "relatedCareers": ["3d-modeler", "vfx-artist", "motion-designer"],
+        "discoveryHint": "Bring characters and stories to life through the art of animation."
+      }
+    },
+    {
+      "id": "philosopher",
+      "title": "Philosopher / Philosophy Researcher",
+      "tier": "niche",
+      "description": "Researches philosophical questions through scholarship, teaching, and intellectual discourse.",
+      "requirements": [
+        { "subcategoryId": "subcat_philo_ethics", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.90 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 80000, "senior": 130000 },
+        "education": "PhD Philosophy",
+        "jobOutlook": "-1% decline; academic positions limited",
+        "yearsToEntry": 8,
+        "skills": ["Logical Analysis", "Writing", "Critical Thinking", "Teaching"],
+        "careerPath": "Postdoc  to  Assistant Professor  to  Associate Professor  to  Full Professor",
+        "relatedCareers": ["ethicist", "policy-advisor", "academic-researcher"],
+        "discoveryHint": "Explore fundamental questions about existence, ethics, and human knowledge."
+      }
+    },
+    {
+      "id": "geophysicist",
+      "title": "Geophysicist",
+      "tier": "niche",
+      "description": "Studies Earth's physical properties and processes through seismology, gravity, and magnetism.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_geo_geology", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 68000, "mid": 115000, "senior": 170000 },
+        "education": "BS Geophysics + MS/PhD for research",
+        "jobOutlook": "6% growth, steady in oil/gas and research",
+        "yearsToEntry": 5,
+        "skills": ["Seismic Data Analysis", "Field Work", "Modeling", "Geophysical Instruments"],
+        "careerPath": "Junior Geophysicist  to  Geophysicist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["seismologist", "geologist", "oil-and-gas-specialist"],
+        "discoveryHint": "Understand Earth's interior and apply that knowledge to resource exploration."
+      }
+    },
+    {
+      "id": "perfumer",
+      "title": "Perfumer / Fragrance Developer",
+      "tier": "niche",
+      "description": "Creates fragrances and scent compositions for perfumes, cosmetics, and consumer products.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_organic", "weight": 0.95 },
+        { "subcategoryId": "subcat_art_creative", "weight": 0.85 },
+        { "subcategoryId": "subcat_psych_sensory", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 90000, "senior": 150000 },
+        "education": "BS Chemistry + specialized fragrance training",
+        "jobOutlook": "Niche; steady in beauty/fragrance industries",
+        "yearsToEntry": 5,
+        "skills": ["Fragrance Chemistry", "Sensory Evaluation", "Creativity", "Olfactory Training"],
+        "careerPath": "Junior Perfumer  to  Perfumer  to  Senior Perfumer  to  Master Perfumer",
+        "relatedCareers": ["fragrance-chemist", "cosmetic-scientist", "sensory-specialist"],
+        "discoveryHint": "Create captivating fragrances that evoke emotions and memories."
+      }
+    },
+    {
+      "id": "ai-ethicist",
+      "title": "AI Ethicist",
+      "tier": "niche",
+      "description": "Researches and addresses ethical implications of AI systems, bias, and responsible AI development.",
+      "requirements": [
+        { "subcategoryId": "subcat_philo_ethics", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 150000, "senior": 220000 },
+        "education": "MA/PhD Ethics, Philosophy, or Policy + AI knowledge",
+        "jobOutlook": "Emerging field; high future demand",
+        "yearsToEntry": 6,
+        "skills": ["Ethical Analysis", "AI/ML Knowledge", "Policy Knowledge", "Stakeholder Management"],
+        "careerPath": "Researcher  to  AI Ethicist  to  Senior Researcher  to  Ethics Lead",
+        "relatedCareers": ["policy-analyst", "responsible-ai-specialist", "governance-expert"],
+        "discoveryHint": "Shape responsible AI development and ensure technology serves humanity ethically."
+      }
+    },
+    {
+      "id": "urban-planner",
+      "title": "Urban Planner",
+      "tier": "niche",
+      "description": "Plans sustainable urban development, transportation, and community infrastructure.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_geography", "weight": 0.85 },
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.80 },
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "MUP (Master of Urban Planning) + planning license",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 3,
+        "skills": ["GIS", "Urban Design", "Stakeholder Engagement", "Sustainability"],
+        "careerPath": "Junior Planner  to  Planner  to  Senior Planner  to  Director of Planning",
+        "relatedCareers": ["landscape-architect", "civil-engineer", "architect"],
+        "discoveryHint": "Shape cities to be more livable, sustainable, and equitable for everyone."
+      }
+    },
+    {
+      "id": "occupational-therapist",
+      "title": "Occupational Therapist (OT)",
+      "tier": "niche",
+      "description": "Helps people recover abilities, manage disabilities, and improve daily functioning through therapy.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_healthcare", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.80 },
+        { "subcategoryId": "subcat_bio_anatomy", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 62000, "mid": 85000, "senior": 125000 },
+        "education": "MSOT (Master of Science in Occupational Therapy) + OTR/L license",
+        "jobOutlook": "16% growth, very high demand",
+        "yearsToEntry": 3,
+        "skills": ["Therapeutic Intervention", "Assessment", "Empathy", "Problem-Solving"],
+        "careerPath": "OT  to  Senior OT  to  OT Supervisor  to  Clinical Manager",
+        "relatedCareers": ["physical-therapist", "speech-therapist", "rehabilitation-specialist"],
+        "discoveryHint": "Help people regain independence and improve quality of life through therapy."
+      }
+    },
+    {
+      "id": "behavioral-economist",
+      "title": "Behavioral Economist",
+      "tier": "niche",
+      "description": "Studies how psychology influences economic decisions, challenging traditional economic models.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.90 },
+        { "subcategoryId": "subcat_psych_research", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 180000 },
+        "education": "MA/PhD Economics or Psychology with behavioral focus",
+        "jobOutlook": "3% growth; growing in policy/tech",
+        "yearsToEntry": 6,
+        "skills": ["Experimental Design", "Behavioral Analysis", "Econometrics", "Research"],
+        "careerPath": "Researcher  to  Behavioral Economist  to  Senior Researcher  to  Lab Director",
+        "relatedCareers": ["psychologist", "economist", "policy-analyst"],
+        "discoveryHint": "Revolutionize understanding of human behavior and economic decision-making."
+      }
+    },
+    {
+      "id": "sports-medicine-physician",
+      "title": "Sports Medicine Physician",
+      "tier": "niche",
+      "description": "Diagnoses and treats injuries, provides preventive care, and manages athlete performance.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.90 },
+        { "subcategoryId": "subcat_bio_physiology", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 200000, "mid": 280000, "senior": 400000 },
+        "education": "MD/DO + sports medicine fellowship (3 years)",
+        "jobOutlook": "3% growth, steady demand",
+        "yearsToEntry": 12,
+        "skills": ["Injury Assessment", "Treatment", "Performance Enhancement", "Sports Knowledge"],
+        "careerPath": "Resident  to  Sports Medicine Physician  to  Senior Physician  to  Team Physician",
+        "relatedCareers": ["physical-therapist", "orthopedic-surgeon", "athletic-trainer"],
+        "discoveryHint": "Keep athletes healthy and performing at their peak potential."
+      }
+    },
+    {
+      "id": "costume-designer",
+      "title": "Costume Designer",
+      "tier": "niche",
+      "description": "Designs and creates costumes for theater, film, television, and performance productions.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.95 },
+        { "subcategoryId": "subcat_arts_film", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 70000, "senior": 120000 },
+        "education": "BFA Fashion Design or Costume Design",
+        "jobOutlook": "1% growth; varies by venue type",
+        "yearsToEntry": 4,
+        "skills": ["Costume Design", "Sewing/Construction", "Historical Knowledge", "Collaboration"],
+        "careerPath": "Costume Assistant  to  Costume Designer  to  Lead Designer  to  Costume Director",
+        "relatedCareers": ["fashion-designer", "fashion-historian", "stylist"],
+        "discoveryHint": "Create visual identities through costume that enhance storytelling."
+      }
+    },
+    {
+      "id": "organic-farmer",
+      "title": "Organic Farmer / Sustainable Agriculture Manager",
+      "tier": "niche",
+      "description": "Manages farm operations using sustainable, organic practices to produce crops or livestock.",
+      "requirements": [
+        { "subcategoryId": "subcat_agri_sustainable", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.80 },
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 65000, "senior": 120000 },
+        "education": "BS Agriculture or Horticulture; organic certification needed",
+        "jobOutlook": "Organic growing; 3% growth overall agriculture",
+        "yearsToEntry": 4,
+        "skills": ["Crop Management", "Sustainability Knowledge", "Business Acumen", "Problem-Solving"],
+        "careerPath": "Farm Worker  to  Farm Manager  to  Farm Owner  to  Agricultural Consultant",
+        "relatedCareers": ["agricultural-scientist", "sustainability-consultant", "food-scientist"],
+        "discoveryHint": "Grow healthy food while stewarding the land sustainably for future generations."
+      }
+    },
+    {
+      "id": "forensic-scientist",
+      "title": "Forensic Scientist",
+      "tier": "niche",
+      "description": "Analyzes physical evidence from crime scenes using scientific techniques to support investigations.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.80 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 48000, "mid": 75000, "senior": 110000 },
+        "education": "BS Chemistry/Biology + forensic training",
+        "jobOutlook": "12% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Analytical Chemistry", "DNA Analysis", "Evidence Collection", "Court Testimony"],
+        "careerPath": "Forensic Analyst  to  Senior Analyst  to  Lab Manager  to  Forensic Director",
+        "relatedCareers": ["crime-scene-investigator", "toxicologist", "medical-examiner"],
+        "discoveryHint": "Use science to solve crimes and bring justice to victims and families."
+      }
+    },
+    {
+      "id": "data-engineer",
+      "title": "Data Engineer",
+      "tier": "niche",
+      "description": "Builds pipelines, infrastructure, and systems to manage and process large-scale data.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 160000, "senior": 240000 },
+        "education": "BS Computer Science + data infrastructure experience",
+        "jobOutlook": "36% growth, extremely high demand",
+        "yearsToEntry": 4,
+        "skills": ["Distributed Systems", "SQL", "ETL", "Cloud Platforms"],
+        "careerPath": "Junior Engineer  to  Data Engineer  to  Senior Engineer  to  Data Infrastructure Lead",
+        "relatedCareers": ["backend-engineer", "devops-engineer", "ml-engineer"],
+        "discoveryHint": "Build the data infrastructure that powers modern analytics and AI."
+      }
+    }
+  ]
+}
+

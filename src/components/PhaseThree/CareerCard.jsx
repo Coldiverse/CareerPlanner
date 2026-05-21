@@ -19,28 +19,32 @@ export default function CareerCard({ career, isSaved, onSelect, onSave, isExplor
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200 cursor-pointer">
-      <div onClick={() => onSelect(career.careerID)}>
-        {/* Header */}
-        <div className="flex justify-between items-start mb-3">
-          <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900">{career.careerTitle}</h3>
-            <span className={`inline-block mt-1 px-2 py-1 rounded text-xs font-semibold border ${getTierColor(career.tier)}`}>
-              {career.tier}
-            </span>
-          </div>
-          {!isExplore && (
-            <div className="text-right">
-              <p className={`text-3xl font-bold ${getScoreColor(career.score)}`}>
-                {career.score}
-              </p>
-              <p className="text-xs text-gray-500">/10</p>
-            </div>
-          )}
+    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200 cursor-pointer" onClick={() => onSelect(career.careerID)}>
+      {/* Header */}
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-gray-900">{career.careerTitle}</h3>
+          <span className={`inline-block mt-1 px-2 py-1 rounded text-xs font-semibold border ${getTierColor(career.tier)}`}>
+            {career.tier}
+          </span>
         </div>
+        {!isExplore && (
+          <div className="text-right">
+            <p className={`text-3xl font-bold ${getScoreColor(career.score)}`}>
+              {career.score}
+            </p>
+            <p className="text-xs text-gray-500">/10</p>
+          </div>
+        )}
+      </div>
 
-        {/* Coverage & Education */}
-        <div className="space-y-2 mb-4">
+      {/* Short Description */}
+      <p className="text-sm text-gray-600 mb-3 truncate">
+        {career.description || 'Explore this career to learn more'}
+      </p>
+
+      {/* Coverage & Education */}
+      <div className="space-y-2 mb-4">
           {!isExplore && (
             <div>
               <p className="text-sm text-gray-600">
@@ -62,7 +66,6 @@ export default function CareerCard({ career, isSaved, onSelect, onSave, isExplor
             <span className="font-semibold">Outlook:</span> {career.jobOutlook}
           </p>
         </div>
-      </div>
 
       {/* Action Buttons */}
       <div className="flex gap-2 pt-4 border-t">

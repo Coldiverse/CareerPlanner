@@ -2,9 +2,27 @@ import React, { useMemo } from 'react';
 import { getCareerDetails, getCoverageMessage } from '../../utils/careerMatching';
 
 export default function CareerModal({ careerID, isSaved, onSave, onClose, phase2Ratings = {} }) {
-  const career = useMemo(() => getCareerDetails(careerID), [careerID]);
+  const career = useMemo(() => {
+    const found = getCareerDetails(careerID);
+    if (!found) {
+      console.error(`Career not found: ${careerID}`);
+    }
+    return found;
+  }, [careerID]);
 
-  if (!career) return null;
+  if (!career) {
+    console.warn(`Career modal: No career data for ID ${careerID}`);
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" onClick={onClose}>
+        <div className="bg-white rounded-lg p-8 text-center max-w-md" onClick={(e) => e.stopPropagation()}>
+          <p className="text-red-600 font-semibold mb-4">Career details could not be loaded.</p>
+          <button onClick={onClose} className="px-4 py-2 bg-indigo-600 text-white rounded">
+            Close
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   // Calculate user's match
   const ratedReqs = career.requirements.filter(r => phase2Ratings[r.subcategoryId] !== undefined);
@@ -76,7 +94,13 @@ export default function CareerModal({ careerID, isSaved, onSave, onClose, phase2
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-green-50 rounded-lg p-4 border border-green-200">
               <p className="text-xs text-green-600 font-semibold mb-1">Salary Range</p>
-              <p className="font-bold text-gray-900">{career.context?.salary || 'Varies'}</p>
+              <p className="font-bold text-gray-900">
+                {typeof career.context?.salary === 'object' && career.context?.salary
+                  ? `$${(career.context.salary.entry || 0).toLocaleString()} - $${(career.context.salary.senior || 0).toLocaleString()}`
+                  : typeof career.context?.salary === 'string'
+                  ? career.context.salary
+                  : 'Varies'}
+              </p>
             </div>
             <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
               <p className="text-xs text-blue-600 font-semibold mb-1">Entry Timeline</p>
@@ -93,7 +117,11 @@ export default function CareerModal({ careerID, isSaved, onSave, onClose, phase2
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-xs text-gray-600 font-semibold mb-2">Career Progression</p>
               <p className="text-gray-800">
-                {career.context?.careerPath?.join(' → ') || 'Early career → Growth → Senior roles'}
+                {typeof career.context?.careerPath === 'string'
+                  ? career.context.careerPath
+                  : Array.isArray(career.context?.careerPath)
+                  ? career.context.careerPath.join(' → ')
+                  : 'Early career → Growth → Senior roles'}
               </p>
             </div>
           </div>

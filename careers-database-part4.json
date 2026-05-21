@@ -1,0 +1,467 @@
+﻿{
+  "careers": [
+    {
+      "id": "synthetic-biologist",
+      "title": "Synthetic Biologist",
+      "tier": "exploratory",
+      "description": "Engineers biological systems with novel functions for medicine, energy, and materials applications.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_genetics", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 130000, "senior": 190000 },
+        "education": "PhD Biology/Biochemistry with synthetic biology focus",
+        "jobOutlook": "Emerging field; 10% expected growth",
+        "yearsToEntry": 8,
+        "skills": ["Genetic Engineering", "Bioinformatics", "Lab Work", "Systems Thinking"],
+        "careerPath": "Postdoc  to  Synthetic Biologist  to  Principal Scientist  to  Lab Director",
+        "relatedCareers": ["biomedical-engineer", "genetic-engineer", "biotechnologist"],
+        "discoveryHint": "Engineer life itself to solve humanity's greatest challenges in medicine and sustainability."
+      }
+    },
+    {
+      "id": "space-engineer",
+      "title": "Space Engineer / Astronautical Engineer",
+      "tier": "exploratory",
+      "description": "Designs spacecraft, satellites, and space systems for exploration, communication, and research.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_aerospace", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 130000, "senior": 180000 },
+        "education": "BS Aerospace/Mechanical Engineering",
+        "jobOutlook": "Emerging commercial space; 8% expected growth",
+        "yearsToEntry": 4,
+        "skills": ["Spacecraft Design", "Systems Engineering", "Orbital Mechanics", "Testing"],
+        "careerPath": "Junior Engineer  to  Space Engineer  to  Senior Engineer  to  Mission Lead",
+        "relatedCareers": ["mission-control-specialist", "satellite-engineer", "orbital-mechanic"],
+        "discoveryHint": "Design the spacecraft and systems that push human exploration beyond Earth."
+      }
+    },
+    {
+      "id": "neural-interface-engineer",
+      "title": "Neural Interface Engineer",
+      "tier": "exploratory",
+      "description": "Develops brain-computer interfaces and neural technology for medical and enhancement applications.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_biomedical", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_neuroscience", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 160000, "senior": 240000 },
+        "education": "BS Biomedical/Electrical Engineering + neurotech focus",
+        "jobOutlook": "Emerging frontier; high future demand expected",
+        "yearsToEntry": 5,
+        "skills": ["Neurotechnology", "Signal Processing", "Biocompatible Design", "Research"],
+        "careerPath": "Engineer  to  Neural Interface Engineer  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["neuroscientist", "biomedical-engineer", "clinical-engineer"],
+        "discoveryHint": "Bridge the gap between mind and machine to restore abilities and enhance human potential."
+      }
+    },
+    {
+      "id": "gene-therapy-specialist",
+      "title": "Gene Therapy Specialist",
+      "tier": "exploratory",
+      "description": "Develops and administers gene therapies to treat genetic disorders and diseases.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_genetics", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.85 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 150000, "senior": 220000 },
+        "education": "PhD Genetics/Biology or MD with gene therapy training",
+        "jobOutlook": "Emerging frontier; 20% expected growth",
+        "yearsToEntry": 6,
+        "skills": ["Genetic Engineering", "Clinical Trials", "Vector Development", "Regulatory Knowledge"],
+        "careerPath": "Research Scientist  to  Gene Therapy Specialist  to  Clinical Lead  to  Director",
+        "relatedCareers": ["genetic-engineer", "oncologist", "pediatrician"],
+        "discoveryHint": "Cure genetic diseases by rewriting DNA; pioneer the future of personalized medicine."
+      }
+    },
+    {
+      "id": "climate-scientist",
+      "title": "Climate Scientist",
+      "tier": "exploratory",
+      "description": "Studies climate systems, models future climate changes, and informs climate policy and adaptation.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_geo_geology", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 105000, "senior": 160000 },
+        "education": "MS/PhD Atmospheric Science, Oceanography, or Geology",
+        "jobOutlook": "5% growth, increasing demand",
+        "yearsToEntry": 6,
+        "skills": ["Climate Modeling", "Data Analysis", "Atmospheric Physics", "Communication"],
+        "careerPath": "Research Scientist  to  Climate Scientist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["meteorologist", "oceanographer", "environmental-scientist"],
+        "discoveryHint": "Study climate change and contribute to strategies addressing humanity's greatest challenge."
+      }
+    },
+    {
+      "id": "quantum-computing-researcher",
+      "title": "Quantum Computing Researcher",
+      "tier": "exploratory",
+      "description": "Researches quantum algorithms, hardware, and applications for quantum computing systems.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_quantum", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_advanced", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 170000, "senior": 250000 },
+        "education": "PhD Physics/Computer Science with quantum focus",
+        "jobOutlook": "Emerging frontier; 15% expected growth",
+        "yearsToEntry": 8,
+        "skills": ["Quantum Mechanics", "Algorithm Design", "Programming", "Hardware Knowledge"],
+        "careerPath": "Postdoc  to  Quantum Researcher  to  Principal Researcher  to  Lab Director",
+        "relatedCareers": ["quantum-physicist", "computer-scientist", "quantum-engineer"],
+        "discoveryHint": "Unlock exponential computing power and revolutionize what's computationally possible."
+      }
+    },
+    {
+      "id": "nanotechnologist",
+      "title": "Nanotechnologist",
+      "tier": "exploratory",
+      "description": "Designs and develops nanotechnology materials and devices for medicine, energy, and electronics.",
+      "requirements": [
+        { "subcategoryId": "subcat_chem_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_phys_properties", "weight": 0.90 },
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 130000, "senior": 190000 },
+        "education": "MS/PhD Chemistry, Physics, or Materials Science",
+        "jobOutlook": "Emerging field; 8% expected growth",
+        "yearsToEntry": 6,
+        "skills": ["Nanostructure Design", "Microscopy", "Materials Characterization", "Lab Work"],
+        "careerPath": "Researcher  to  Nanotechnologist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["materials-scientist", "chemist", "biomedical-engineer"],
+        "discoveryHint": "Engineer matter at the atomic scale to create revolutionary materials and devices."
+      }
+    },
+    {
+      "id": "renewable-energy-engineer",
+      "title": "Renewable Energy Engineer",
+      "tier": "exploratory",
+      "description": "Develops solar, wind, geothermal, and other renewable energy systems and infrastructure.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.85 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.80 },
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 110000, "senior": 160000 },
+        "education": "BS Mechanical/Electrical Engineering + renewable energy focus",
+        "jobOutlook": "8% growth, rapidly expanding",
+        "yearsToEntry": 4,
+        "skills": ["System Design", "Energy Storage", "Grid Integration", "Sustainability"],
+        "careerPath": "Junior Engineer  to  Renewable Energy Engineer  to  Senior Engineer  to  Project Lead",
+        "relatedCareers": ["power-engineer", "environmental-engineer", "sustainability-consultant"],
+        "discoveryHint": "Engineer the clean energy transition and build sustainable energy systems globally."
+      }
+    },
+    {
+      "id": "astrobiology-researcher",
+      "title": "Astrobiologist",
+      "tier": "exploratory",
+      "description": "Studies the potential for life beyond Earth, researching extremophiles and habitability conditions.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.80 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 110000, "senior": 170000 },
+        "education": "PhD Biology/Physics/Chemistry with astrobiology focus",
+        "jobOutlook": "Emerging field; growing with space exploration",
+        "yearsToEntry": 8,
+        "skills": ["Extremophile Research", "Planetary Science", "Laboratory Analysis", "Hypothesis Testing"],
+        "careerPath": "Postdoc  to  Astrobiologist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["planetary-scientist", "biochemist", "microbiologist"],
+        "discoveryHint": "Search for the signatures of life beyond Earth and understand life's limits."
+      }
+    },
+    {
+      "id": "vr-ar-developer",
+      "title": "VR/AR Developer",
+      "tier": "exploratory",
+      "description": "Develops virtual reality and augmented reality applications for gaming, training, and enterprise.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.80 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 130000, "senior": 190000 },
+        "education": "BS Computer Science or Game Development + VR/AR experience",
+        "jobOutlook": "18% growth, rapidly expanding",
+        "yearsToEntry": 4,
+        "skills": ["Game Engines", "3D Graphics", "UX Design", "Physics Simulation"],
+        "careerPath": "Junior Developer  to  VR/AR Developer  to  Senior Developer  to  Director",
+        "relatedCareers": ["game-developer", "3d-programmer", "interaction-designer"],
+        "discoveryHint": "Create immersive digital experiences that blur the line between reality and virtuality."
+      }
+    },
+    {
+      "id": "bioarchaeologist",
+      "title": "Bioarchaeologist",
+      "tier": "exploratory",
+      "description": "Studies ancient human remains to understand health, diet, and evolution of past populations.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_geo_geology", "weight": 0.75 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 75000, "senior": 115000 },
+        "education": "MA/PhD Bioarchaeology or Skeletal Biology",
+        "jobOutlook": "Limited; primarily academic",
+        "yearsToEntry": 6,
+        "skills": ["Skeletal Analysis", "Excavation", "DNA Analysis", "Statistical Methods"],
+        "careerPath": "Graduate Student  to  Postdoc  to  Bioarchaeologist  to  Lab Director",
+        "relatedCareers": ["archaeologist", "anthropologist", "paleontologist"],
+        "discoveryHint": "Unlock secrets of ancient populations and understand human evolution through remains."
+      }
+    },
+    {
+      "id": "computational-biologist",
+      "title": "Computational Biologist",
+      "tier": "exploratory",
+      "description": "Uses computational methods to analyze biological data, model systems, and discover biological patterns.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 140000, "senior": 210000 },
+        "education": "BS Biology/CS + MS/PhD Computational Biology",
+        "jobOutlook": "15% growth, expanding with big data",
+        "yearsToEntry": 6,
+        "skills": ["Bioinformatics", "Algorithm Design", "Statistical Analysis", "Database Management"],
+        "careerPath": "Scientist  to  Computational Biologist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["bioinformatician", "data-scientist", "ml-engineer"],
+        "discoveryHint": "Decode biological systems using computation and unlock new scientific insights."
+      }
+    },
+    {
+      "id": "nuclear-engineer",
+      "title": "Nuclear Engineer",
+      "tier": "exploratory",
+      "description": "Designs and operates nuclear reactors, handles nuclear safety, and develops nuclear technologies.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.85 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 130000, "senior": 190000 },
+        "education": "BS Nuclear Engineering + PE license",
+        "jobOutlook": "2% growth; nuclear expansion expected",
+        "yearsToEntry": 4,
+        "skills": ["Reactor Physics", "Safety Engineering", "Radiation Protection", "Systems Design"],
+        "careerPath": "Junior Engineer  to  Nuclear Engineer  to  Senior Engineer  to  Plant Manager",
+        "relatedCareers": ["power-engineer", "radiation-physicist", "systems-engineer"],
+        "discoveryHint": "Design safe nuclear systems that provide clean energy for the future."
+      }
+    },
+    {
+      "id": "digital-archaeologist",
+      "title": "Digital Archaeologist / Digital Humanities Scholar",
+      "tier": "exploratory",
+      "description": "Uses digital tools and computational methods to analyze, preserve, and interpret archaeological and historical data.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_digital", "weight": 0.90 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.90 },
+        { "subcategoryId": "subcat_hist_history", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "MA/PhD History/Archaeology + digital humanities training",
+        "jobOutlook": "Emerging field; 5% expected growth",
+        "yearsToEntry": 6,
+        "skills": ["Data Visualization", "GIS", "Database Design", "3D Modeling"],
+        "careerPath": "Graduate Student  to  Digital Humanities Scholar  to  Senior Researcher  to  Director",
+        "relatedCareers": ["archaeologist", "data-scientist", "information-architect"],
+        "discoveryHint": "Preserve and interpret human history using cutting-edge digital technologies."
+      }
+    },
+    {
+      "id": "microbiome-researcher",
+      "title": "Microbiome Researcher",
+      "tier": "exploratory",
+      "description": "Studies microbial communities in human bodies and environments, researching health and disease implications.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_microbiology", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 120000, "senior": 180000 },
+        "education": "PhD Microbiology or Molecular Biology",
+        "jobOutlook": "Emerging field; 12% expected growth",
+        "yearsToEntry": 8,
+        "skills": ["Metagenomics", "Bioinformatics", "Lab Work", "Statistical Analysis"],
+        "careerPath": "Postdoc  to  Researcher  to  Senior Scientist  to  Lab Director",
+        "relatedCareers": ["microbiologist", "genetic-engineer", "immunologist"],
+        "discoveryHint": "Unlock the secrets of microbial communities and their profound impact on health."
+      }
+    },
+    {
+      "id": "cognitive-architect",
+      "title": "Cognitive Architect",
+      "tier": "exploratory",
+      "description": "Designs AI systems with human-like cognition, focusing on reasoning, learning, and perception.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_research", "weight": 0.85 },
+        { "subcategoryId": "subcat_philo_epistemology", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 120000, "mid": 200000, "senior": 300000 },
+        "education": "BS Computer Science + MS/PhD in AI/Cognitive Science",
+        "jobOutlook": "Emerging frontier; high future demand",
+        "yearsToEntry": 6,
+        "skills": ["AI/ML", "Cognitive Science", "System Architecture", "Research"],
+        "careerPath": "Researcher  to  Cognitive Architect  to  Senior Researcher  to  Research Director",
+        "relatedCareers": ["ai-researcher", "neuroscientist", "machine-learning-engineer"],
+        "discoveryHint": "Build artificial minds that think, learn, and understand like humans."
+      }
+    },
+    {
+      "id": "longevity-scientist",
+      "title": "Longevity Scientist",
+      "tier": "exploratory",
+      "description": "Researches aging mechanisms and develops interventions to extend healthy human lifespan.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_general", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.90 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 140000, "senior": 210000 },
+        "education": "PhD Biology/Biochemistry with longevity focus",
+        "jobOutlook": "Emerging frontier; 10% expected growth",
+        "yearsToEntry": 8,
+        "skills": ["Gerontology", "Molecular Biology", "Research Design", "Lab Work"],
+        "careerPath": "Postdoc  to  Longevity Scientist  to  Senior Scientist  to  Lab Director",
+        "relatedCareers": ["gerontologist", "biochemist", "medical-researcher"],
+        "discoveryHint": "Unlock the secrets of aging and help humanity live longer, healthier lives."
+      }
+    },
+    {
+      "id": "metaverse-designer",
+      "title": "Metaverse Designer",
+      "tier": "exploratory",
+      "description": "Designs immersive digital worlds and experiences in the metaverse, blending art, technology, and psychology.",
+      "requirements": [
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_media", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 80000, "mid": 150000, "senior": 240000 },
+        "education": "BFA/BS with digital experience + metaverse platform knowledge",
+        "jobOutlook": "Emerging frontier; high future demand",
+        "yearsToEntry": 5,
+        "skills": ["3D Design", "Game Engines", "UX/UI", "Worldbuilding"],
+        "careerPath": "Designer  to  Metaverse Designer  to  Senior Designer  to  Creative Director",
+        "relatedCareers": ["game-designer", "vr-developer", "interaction-designer"],
+        "discoveryHint": "Create vast digital worlds where billions of people will work, play, and connect."
+      }
+    },
+    {
+      "id": "bioacoustics-researcher",
+      "title": "Bioacoustics Researcher",
+      "tier": "exploratory",
+      "description": "Studies animal communication and bioacoustics to understand behavior, ecology, and conservation.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_ecology", "weight": 0.95 },
+        { "subcategoryId": "subcat_music_production", "weight": 0.75 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 50000, "mid": 85000, "senior": 130000 },
+        "education": "MS/PhD Ecology, Biology, or Bioacoustics",
+        "jobOutlook": "Emerging niche; 5% expected growth",
+        "yearsToEntry": 6,
+        "skills": ["Acoustic Analysis", "Field Recording", "Behavior Study", "Signal Processing"],
+        "careerPath": "Researcher  to  Bioacoustics Scientist  to  Senior Scientist  to  Research Director",
+        "relatedCareers": ["conservation-biologist", "ecologist", "wildlife-researcher"],
+        "discoveryHint": "Understand animal communication and use it to conserve species and ecosystems."
+      }
+    },
+    {
+      "id": "digital-ethicist",
+      "title": "Digital Ethicist / Technology Ethicist",
+      "tier": "exploratory",
+      "description": "Addresses ethical challenges posed by digital technologies, privacy, surveillance, and digital rights.",
+      "requirements": [
+        { "subcategoryId": "subcat_philo_ethics", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 150000, "senior": 220000 },
+        "education": "MA/PhD Philosophy or Ethics + digital technology knowledge",
+        "jobOutlook": "Emerging field; high future demand",
+        "yearsToEntry": 6,
+        "skills": ["Ethical Analysis", "Policy Development", "Stakeholder Engagement", "Advocacy"],
+        "careerPath": "Researcher  to  Technology Ethicist  to  Senior Ethicist  to  Ethics Director",
+        "relatedCareers": ["ai-ethicist", "policy-analyst", "legal-counsel"],
+        "discoveryHint": "Shape ethical development of technology and protect digital rights globally."
+      }
+    },
+    {
+      "id": "synthetic-organism-designer",
+      "title": "Synthetic Organism Designer",
+      "tier": "exploratory",
+      "description": "Engineers entirely new organisms with novel capabilities for manufacturing, medicine, and research.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_genetics", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 160000, "senior": 240000 },
+        "education": "PhD Biology/Biochemistry with synthetic biology focus",
+        "jobOutlook": "Emerging frontier; 15% expected growth",
+        "yearsToEntry": 8,
+        "skills": ["Genetic Engineering", "Metabolic Engineering", "Bioinformatics", "Lab Work"],
+        "careerPath": "Postdoc  to  Designer  to  Principal Scientist  to  Lab Director",
+        "relatedCareers": ["synthetic-biologist", "genetic-engineer", "biotechnologist"],
+        "discoveryHint": "Design organisms that solve problems from disease treatment to sustainable manufacturing."
+      }
+    },
+    {
+      "id": "interplanetary-architect",
+      "title": "Interplanetary Architect",
+      "tier": "exploratory",
+      "description": "Designs habitats, settlements, and infrastructure for human colonization of Mars, Moon, and beyond.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_civil", "weight": 0.90 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.80 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 160000, "senior": 250000 },
+        "education": "BS Architecture/Engineering + space environment knowledge",
+        "jobOutlook": "Emerging frontier; high future demand",
+        "yearsToEntry": 5,
+        "skills": ["Habitat Design", "Life Support Systems", "Materials Science", "Sustainability"],
+        "careerPath": "Engineer  to  Interplanetary Architect  to  Senior Architect  to  Chief Architect",
+        "relatedCareers": ["aerospace-engineer", "architect", "systems-engineer"],
+        "discoveryHint": "Design human habitats on other planets and enable humanity's expansion into space."
+      }
+    }
+  ]
+}
+

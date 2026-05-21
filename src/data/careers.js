@@ -1,1909 +1,2445 @@
 /**
  * CAREERS DATABASE - Phase 3
  *
- * 87 total careers across 4 tiers:
- * - Core (15): High-demand, clear career paths
- * - Advanced (20): Specialized education, leadership roles
- * - Niche (25): Specific interests, less common, creative combinations
- * - Exploratory (27): Rare combinations, emerging fields, unique intersections
+ * 144 total careers across 4 tiers:
+ * - Core (35): High-demand, clear career paths
+ * - Advanced (43): Specialized education, leadership roles
+ * - Niche (44): Specific interests, less common, creative combinations
+ * - Exploratory (22): Rare combinations, emerging fields, unique intersections
  *
- * All 32 subcategories covered by 2-5 careers minimum
+ * All careers mapped to actual subcategories with realistic weights
  * Realistic US salaries (~2026), education paths, and growth trajectories
  */
 
 export const CAREERS = [
-  // ============================================================================
-  // TIER 1: CORE (15) - High-demand, clear entry path, essential roles
-  // ============================================================================
-
+  // CORE TIER (35 careers)
   {
     id: 'software-engineer',
     title: 'Software Engineer',
     tier: 'core',
-    description: 'Design, develop, and maintain software applications and systems. Core role in the tech industry.',
+    description: 'Designs, builds, and maintains software applications and systems. Works across frontend, backend, or full-stack development.',
     requirements: [
-      { subcategoryId: 'technology_software', weight: 0.95 },
-      { subcategoryId: 'mathematics_discrete', weight: 0.70 },
-      { subcategoryId: 'technology_data', weight: 0.40 }
+      { subcategoryId: 'software_development', weight: 0.95 },
+      { subcategoryId: 'algebra_discrete', weight: 0.7 },
+      { subcategoryId: 'databases_backend', weight: 0.75 }
     ],
     context: {
-      salary: { entry: 85000, mid: 130000, senior: 180000 },
-      education: "Bachelor's in CS or related field (4 years). Boot camps viable.",
-      jobOutlook: 'Excellent (22% growth 2023-2033)',
+      salary: { entry: 85000, mid: 140000, senior: 200000 },
+      education: 'BS Computer Science or related; bootcamp acceptable for entry',
+      jobOutlook: '8% growth, very high demand',
       yearsToEntry: 4,
-      skills: ['Problem-solving', 'System design', 'Version control', 'Testing', 'Code review'],
-      careerPath: 'Junior Engineer → Software Engineer → Senior Engineer → Tech Lead → Architect',
-      relatedCareers: ['Full Stack Developer', 'Backend Engineer', 'Mobile Developer', 'DevOps Engineer'],
-      discoveryHint: 'If you enjoy solving puzzles and building systems, software engineering offers unlimited creative technical challenges.'
+      skills: ['Python', 'JavaScript', 'System Design', 'Problem Solving'],
+      careerPath: 'Junior Dev → Mid-level Dev → Senior Dev → Staff/Principal Engineer',
+      relatedCareers: ['web-developer', 'backend-engineer', 'mobile-developer'],
+      discoveryHint: 'If you love building things and solving logic puzzles, this is the path.'
     }
   },
-
   {
-    id: 'nurse',
+    id: 'registered-nurse',
     title: 'Registered Nurse',
     tier: 'core',
-    description: 'Provide direct patient care, administer medications, and coordinate healthcare in hospitals and clinics.',
+    description: 'Provides direct patient care, administers medications, and monitors health conditions in hospitals, clinics, and other settings.',
     requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.90 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.50 },
-      { subcategoryId: 'biology_molecular', weight: 0.35 }
+      { subcategoryId: 'nursing', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.85 },
+      { subcategoryId: 'biochemistry', weight: 0.6 }
     ],
     context: {
-      salary: { entry: 65000, mid: 85000, senior: 120000 },
-      education: 'BSN or ADN (4 or 2 years) + NCLEX licensure',
-      jobOutlook: 'Strong (9% growth, high demand)',
-      yearsToEntry: 2,
-      skills: ['Patient care', 'Medical procedures', 'Communication', 'Critical thinking', 'Empathy'],
-      careerPath: 'Nurse → Charge Nurse → Nurse Manager → Director of Nursing',
-      relatedCareers: ['Physician Assistant', 'Nurse Practitioner', 'Midwife', 'Respiratory Therapist'],
-      discoveryHint: 'Nursing combines anatomy knowledge with real human impact—you\'ll directly improve lives every shift.'
-    }
-  },
-
-  {
-    id: 'accountant',
-    title: 'Certified Public Accountant (CPA)',
-    tier: 'core',
-    description: 'Manage financial records, taxes, audits, and financial planning for individuals and organizations.',
-    requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.85 },
-      { subcategoryId: 'mathematics_pure', weight: 0.40 },
-      { subcategoryId: 'technology_software', weight: 0.50 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 95000, senior: 150000 },
-      education: 'Bachelor\'s in Accounting + CPA exam (5 years total)',
-      jobOutlook: 'Steady (4% growth, stable demand)',
-      yearsToEntry: 5,
-      skills: ['Financial analysis', 'Attention to detail', 'Regulatory compliance', 'Excel mastery', 'Audit procedures'],
-      careerPath: 'Staff Accountant → Senior Accountant → Manager → Partner/CFO',
-      relatedCareers: ['Financial Analyst', 'Auditor', 'Tax Specialist', 'Management Consultant'],
-      discoveryHint: 'If you love patterns and precision in numbers, accounting provides structure and clear career advancement.'
-    }
-  },
-
-  {
-    id: 'secondary-teacher',
-    title: 'Secondary Teacher (Math, Science, English)',
-    tier: 'core',
-    description: 'Educate students in core subjects, develop curriculum, and foster critical thinking.',
-    requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.75 },
-      { subcategoryId: 'writing_academic', weight: 0.60 },
-      { subcategoryId: 'biology_anatomy', weight: 0.50 }
-    ],
-    context: {
-      salary: { entry: 40000, mid: 65000, senior: 85000 },
-      education: 'Bachelor\'s in subject + teaching credential (4-5 years)',
-      jobOutlook: 'Good (8% growth, ongoing demand)',
+      salary: { entry: 62000, mid: 80000, senior: 110000 },
+      education: 'BSN (Bachelor of Science in Nursing); RN licensure exam required',
+      jobOutlook: '6% growth, consistently high demand',
       yearsToEntry: 4,
-      skills: ['Communication', 'Curriculum design', 'Classroom management', 'Mentoring', 'Assessment'],
-      careerPath: 'Teacher → Lead Teacher → Department Head → Administrator → Principal',
-      relatedCareers: ['College Professor', 'Curriculum Designer', 'Educational Consultant', 'School Administrator'],
-      discoveryHint: 'Teaching transforms your passion for a subject into lifelong impact on thousands of students.'
+      skills: ['Patient Care', 'Clinical Assessment', 'Communication', 'Critical Thinking'],
+      careerPath: 'RN Bedside Nurse → Charge Nurse → Nurse Manager → Nursing Leadership',
+      relatedCareers: ['nurse-practitioner', 'nurse-anesthetist', 'nursing-educator'],
+      discoveryHint: 'Make a direct difference in people\'s health and well-being every day.'
     }
   },
-
   {
-    id: 'civil-engineer',
-    title: 'Civil Engineer',
+    id: 'high-school-teacher',
+    title: 'High School Teacher',
     tier: 'core',
-    description: 'Design and oversee construction of infrastructure: roads, bridges, buildings, water systems.',
+    description: 'Educates students in specific subject areas, develops curriculum, and assesses student learning.',
     requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.90 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.70 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.40 }
+      { subcategoryId: 'k12_teaching', weight: 0.95 },
+      { subcategoryId: 'creative_writing', weight: 0.6 },
+      { subcategoryId: 'applied_mathematics', weight: 0.65 }
     ],
     context: {
-      salary: { entry: 70000, mid: 110000, senior: 160000 },
-      education: 'Bachelor\'s in Civil Engineering + PE license (5-7 years)',
-      jobOutlook: 'Good (5% growth)',
-      yearsToEntry: 5,
-      skills: ['Design software (CAD)', 'Project management', 'Structural analysis', 'Budgeting', 'Regulation knowledge'],
-      careerPath: 'Junior Engineer → Engineer → Senior Engineer → Principal Engineer → Project Director',
-      relatedCareers: ['Structural Engineer', 'Mechanical Engineer', 'Construction Manager', 'Urban Planner'],
-      discoveryHint: 'Civil engineering lets you see your physics and math knowledge shape the physical world permanently.'
+      salary: { entry: 38000, mid: 55000, senior: 75000 },
+      education: 'BA in subject area + teaching credential/MAT',
+      jobOutlook: '4% growth, moderate demand with regional variation',
+      yearsToEntry: 4,
+      skills: ['Communication', 'Curriculum Design', 'Classroom Management', 'Assessment'],
+      careerPath: 'New Teacher → Experienced Teacher → Department Chair → Administration',
+      relatedCareers: ['college-professor', 'curriculum-developer', 'school-principal'],
+      discoveryHint: 'Inspire the next generation and shape young minds daily.'
     }
   },
-
-  {
-    id: 'graphic-designer',
-    title: 'Graphic Designer',
-    tier: 'core',
-    description: 'Create visual content for brands, marketing, and digital platforms using design tools.',
-    requirements: [
-      { subcategoryId: 'art_design_digital', weight: 0.90 },
-      { subcategoryId: 'art_design_visual', weight: 0.70 },
-      { subcategoryId: 'writing_journalism', weight: 0.35 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 70000, senior: 110000 },
-      education: "Bachelor's in Design or self-taught portfolio (0-4 years)",
-      jobOutlook: 'Good (3% growth, portfolio-driven hiring)',
-      yearsToEntry: 2,
-      skills: ['Adobe Creative Suite', 'Visual hierarchy', 'Typography', 'Branding', 'Web design'],
-      careerPath: 'Junior Designer → Designer → Senior Designer → Creative Director → Design Lead',
-      relatedCareers: ['UX/UI Designer', 'Motion Designer', 'Brand Strategist', 'Web Designer'],
-      discoveryHint: 'If visual design excites you, graphic design channels that directly into creating the logos, packages, and interfaces millions see daily.'
-    }
-  },
-
-  {
-    id: 'data-analyst',
-    title: 'Data Analyst',
-    tier: 'core',
-    description: 'Collect, process, and analyze data to drive business decisions using SQL, Python, and BI tools.',
-    requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.85 },
-      { subcategoryId: 'technology_data', weight: 0.80 },
-      { subcategoryId: 'technology_software', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 95000, senior: 140000 },
-      education: "Bachelor's in data/stats/CS or online boot camp (3-4 years)",
-      jobOutlook: 'Excellent (36% growth)',
-      yearsToEntry: 3,
-      skills: ['SQL', 'Python/R', 'Statistics', 'Tableau/Power BI', 'Business acumen'],
-      careerPath: 'Junior Analyst → Data Analyst → Senior Analyst → Analytics Manager → Analytics Director',
-      relatedCareers: ['Data Scientist', 'Business Analyst', 'BI Developer', 'Machine Learning Engineer'],
-      discoveryHint: 'Data analysis combines statistical thinking with storytelling—turn raw numbers into decisions that move companies forward.'
-    }
-  },
-
   {
     id: 'mechanical-engineer',
     title: 'Mechanical Engineer',
     tier: 'core',
-    description: 'Design and develop mechanical systems, machinery, engines, and industrial equipment.',
+    description: 'Designs, develops, and tests mechanical devices and systems including engines, machines, and mechanical equipment.',
     requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.95 },
-      { subcategoryId: 'physics_thermodynamics', weight: 0.65 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.70 }
+      { subcategoryId: 'mechanical_engineering', weight: 0.95 },
+      { subcategoryId: 'applied_mathematics', weight: 0.8 },
+      { subcategoryId: 'thermodynamics_energy', weight: 0.75 }
     ],
     context: {
-      salary: { entry: 70000, mid: 115000, senior: 165000 },
-      education: "Bachelor's in Mechanical Engineering + PE license (5-7 years)",
-      jobOutlook: 'Good (4% growth)',
-      yearsToEntry: 5,
-      skills: ['CAD design', 'Thermodynamics', 'Fluid mechanics', 'Materials science', 'Testing/simulation'],
-      careerPath: 'Junior Engineer → Mechanical Engineer → Senior Engineer → Principal Engineer → Engineering Manager',
-      relatedCareers: ['Aerospace Engineer', 'Roboticist', 'Manufacturing Engineer', 'HVAC Engineer'],
-      discoveryHint: 'Mechanical engineering is physics applied to real machines—from cars to medical devices, your designs solve tangible problems.'
-    }
-  },
-
-  {
-    id: 'physician',
-    title: 'Physician (MD/DO)',
-    tier: 'core',
-    description: 'Diagnose diseases, prescribe treatments, and manage patient care across various medical specialties.',
-    requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.95 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.75 },
-      { subcategoryId: 'biology_molecular', weight: 0.55 }
-    ],
-    context: {
-      salary: { entry: 200000, mid: 250000, senior: 350000 },
-      education: 'MD/DO (4 years) + residency (3-7 years)',
-      jobOutlook: 'Strong (3% growth, supply shortage)',
-      yearsToEntry: 11,
-      skills: ['Clinical diagnosis', 'Patient communication', 'Medical knowledge', 'Procedural skills', 'Leadership'],
-      careerPath: 'Resident → Attending Physician → Specialist → Department Head → Chief Medical Officer',
-      relatedCareers: ['Surgeon', 'Psychiatrist', 'Pediatrician', 'Cardiologist'],
-      discoveryHint: 'Medicine combines deep human anatomy knowledge with the ultimate purpose: saving and improving lives.'
-    }
-  },
-
-  {
-    id: 'financial-analyst',
-    title: 'Financial Analyst',
-    tier: 'core',
-    description: 'Analyze financial statements, market trends, and investment opportunities for firms or investors.',
-    requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.85 },
-      { subcategoryId: 'technology_software', weight: 0.55 },
-      { subcategoryId: 'mathematics_pure', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 65000, mid: 110000, senior: 175000 },
-      education: "Bachelor's in Finance/Economics + CFA charter (4-6 years)",
-      jobOutlook: 'Good (6% growth)',
+      salary: { entry: 68000, mid: 110000, senior: 155000 },
+      education: 'BS Mechanical Engineering; PE certification optional',
+      jobOutlook: '7% growth, solid demand',
       yearsToEntry: 4,
-      skills: ['Financial modeling', 'Valuation', 'Data analysis', 'Excel', 'Risk assessment'],
-      careerPath: 'Junior Analyst → Financial Analyst → Senior Analyst → Manager → Director',
-      relatedCareers: ['Investment Banker', 'Portfolio Manager', 'Risk Manager', 'Corporate Treasurer'],
-      discoveryHint: 'Financial analysis applies mathematical rigor to markets—predict economic trends and guide billions in investment decisions.'
+      skills: ['CAD Design', 'Physics', 'Problem Solving', 'Project Management'],
+      careerPath: 'Junior Engineer → Senior Engineer → Engineering Manager → Director',
+      relatedCareers: ['aerospace-engineer', 'automotive-engineer', 'robotics-engineer'],
+      discoveryHint: 'Design and build the machines and systems that power the world.'
     }
   },
-
   {
     id: 'web-developer',
     title: 'Web Developer',
     tier: 'core',
-    description: 'Build and maintain websites and web applications using HTML, CSS, JavaScript, and backend technologies.',
+    description: 'Creates and maintains websites and web applications using HTML, CSS, JavaScript, and modern frameworks.',
     requirements: [
-      { subcategoryId: 'technology_web', weight: 0.95 },
-      { subcategoryId: 'technology_software', weight: 0.75 },
-      { subcategoryId: 'art_design_digital', weight: 0.45 }
+      { subcategoryId: 'web_development', weight: 0.95 },
+      { subcategoryId: 'human_computer_interaction', weight: 0.7 },
+      { subcategoryId: 'software_development', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 60000, mid: 100000, senior: 150000 },
-      education: "Bachelor's in CS or boot camp (3-4 years)",
-      jobOutlook: 'Excellent (23% growth)',
+      salary: { entry: 60000, mid: 95000, senior: 140000 },
+      education: 'BS Computer Science, bootcamp, or self-taught with portfolio',
+      jobOutlook: '13% growth, very high demand',
       yearsToEntry: 3,
-      skills: ['JavaScript', 'React/Vue', 'HTML/CSS', 'Backend frameworks', 'Responsive design'],
-      careerPath: 'Junior Developer → Web Developer → Senior Developer → Tech Lead → Engineering Manager',
-      relatedCareers: ['Frontend Engineer', 'Full Stack Developer', 'UX Engineer', 'Product Manager'],
-      discoveryHint: 'Web development lets you build interactive experiences millions use daily—visible, tangible results from code.'
+      skills: ['JavaScript', 'React/Vue', 'CSS/HTML', 'UI/UX Design'],
+      careerPath: 'Junior Developer → Senior Developer → Tech Lead → Engineering Manager',
+      relatedCareers: ['frontend-architect', 'ux-designer', 'full-stack-developer'],
+      discoveryHint: 'Build beautiful, interactive experiences that millions use daily.'
     }
   },
-
   {
-    id: 'project-manager',
-    title: 'Project Manager',
+    id: 'data-scientist',
+    title: 'Data Scientist',
     tier: 'core',
-    description: 'Plan, coordinate, and oversee projects to ensure timely, on-budget delivery of objectives.',
+    description: 'Analyzes large datasets to extract insights and build predictive models. Combines statistics, programming, and domain expertise.',
     requirements: [
-      { subcategoryId: 'technology_software', weight: 0.60 },
-      { subcategoryId: 'mathematics_applied', weight: 0.55 },
-      { subcategoryId: 'writing_academic', weight: 0.50 }
+      { subcategoryId: 'ai_machine_learning', weight: 0.85 },
+      { subcategoryId: 'statistics_probability', weight: 0.9 },
+      { subcategoryId: 'databases_backend', weight: 0.7 }
     ],
     context: {
-      salary: { entry: 65000, mid: 105000, senior: 155000 },
-      education: "Bachelor's + PMP certification (5-7 years)",
-      jobOutlook: 'Excellent (10% growth across industries)',
-      yearsToEntry: 5,
-      skills: ['Planning', 'Risk management', 'Team leadership', 'Communication', 'Budget management'],
-      careerPath: 'Project Coordinator → Project Manager → Senior PM → Program Manager → Director',
-      relatedCareers: ['Product Manager', 'Scrum Master', 'Business Analyst', 'Program Manager'],
-      discoveryHint: 'Project management turns organizational thinking into reality—you orchestrate teams to deliver transformative initiatives.'
+      salary: { entry: 85000, mid: 135000, senior: 190000 },
+      education: 'BS in Math/Stats/CS or MS in Data Science',
+      jobOutlook: '35% growth, exceptional demand',
+      yearsToEntry: 4,
+      skills: ['Python', 'SQL', 'Machine Learning', 'Statistical Analysis'],
+      careerPath: 'Junior Data Scientist → Senior Data Scientist → Lead Data Scientist → Director',
+      relatedCareers: ['ml-engineer', 'data-engineer', 'analytics-manager'],
+      discoveryHint: 'Turn raw data into actionable insights that drive business decisions.'
     }
   },
-
+  {
+    id: 'physical-therapist',
+    title: 'Physical Therapist',
+    tier: 'core',
+    description: 'Helps patients recover from injuries and improve mobility through exercises and therapeutic techniques.',
+    requirements: [
+      { subcategoryId: 'rehabilitation', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.85 },
+      { subcategoryId: 'applied_mathematics', weight: 0.6 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 85000, senior: 120000 },
+      education: 'DPT (Doctor of Physical Therapy); license required',
+      jobOutlook: '14% growth, high demand',
+      yearsToEntry: 6,
+      skills: ['Patient Care', 'Anatomy', 'Therapeutic Techniques', 'Communication'],
+      careerPath: 'PT → Senior PT → Clinic Manager → Director of Rehab',
+      relatedCareers: ['occupational-therapist', 'sports-medicine-specialist', 'athletic-trainer'],
+      discoveryHint: 'Help people regain mobility and independence after injury.'
+    }
+  },
+  {
+    id: 'graphic-designer',
+    title: 'Graphic Designer',
+    tier: 'core',
+    description: 'Creates visual content including logos, layouts, digital graphics, and branding materials.',
+    requirements: [
+      { subcategoryId: 'graphic_design', weight: 0.95 },
+      { subcategoryId: 'web_digital_design', weight: 0.75 },
+      { subcategoryId: 'human_computer_interaction', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 38000, mid: 58000, senior: 85000 },
+      education: 'BFA Graphic Design or related; strong portfolio essential',
+      jobOutlook: '3% growth, competitive field',
+      yearsToEntry: 4,
+      skills: ['Adobe Creative Suite', 'Visual Design', 'Typography', 'Branding'],
+      careerPath: 'Junior Designer → Mid-level Designer → Senior Designer → Creative Director',
+      relatedCareers: ['ux-designer', 'art-director', 'web-designer'],
+      discoveryHint: 'Combine creativity with technical skill to communicate visually.'
+    }
+  },
+  {
+    id: 'accountant',
+    title: 'Certified Public Accountant (CPA)',
+    tier: 'core',
+    description: 'Manages financial records, prepares tax returns, and provides financial advice to individuals and businesses.',
+    requirements: [
+      { subcategoryId: 'accounting', weight: 0.95 },
+      { subcategoryId: 'microeconomics', weight: 0.7 },
+      { subcategoryId: 'applied_mathematics', weight: 0.6 }
+    ],
+    context: {
+      salary: { entry: 52000, mid: 80000, senior: 120000 },
+      education: 'BS Accounting; CPA license required',
+      jobOutlook: '4% growth, steady demand',
+      yearsToEntry: 5,
+      skills: ['Financial Analysis', 'Tax Knowledge', 'Attention to Detail', 'Communication'],
+      careerPath: 'Junior Accountant → Senior Accountant → Manager → Partner',
+      relatedCareers: ['tax-specialist', 'auditor', 'financial-analyst'],
+      discoveryHint: 'Help individuals and businesses manage their finances strategically.'
+    }
+  },
+  {
+    id: 'architect',
+    title: 'Architect',
+    tier: 'core',
+    description: 'Designs buildings and structures, considering aesthetics, functionality, safety, and environmental impact.',
+    requirements: [
+      { subcategoryId: 'architecture', weight: 0.95 },
+      { subcategoryId: 'civil_engineering', weight: 0.8 },
+      { subcategoryId: 'applied_mathematics', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 85000, senior: 140000 },
+      education: 'B.Arch (5 years); architecture license required',
+      jobOutlook: '4% growth, project-dependent',
+      yearsToEntry: 7,
+      skills: ['Design', 'CAD', 'Project Management', 'Building Codes'],
+      careerPath: 'Junior Architect → Senior Architect → Associate → Principal',
+      relatedCareers: ['landscape-architect', 'urban-planner', 'interior-designer'],
+      discoveryHint: 'Shape the built environment and create spaces where people live and work.'
+    }
+  },
+  {
+    id: 'electrician',
+    title: 'Licensed Electrician',
+    tier: 'core',
+    description: 'Installs, maintains, and repairs electrical systems in residential, commercial, and industrial settings.',
+    requirements: [
+      { subcategoryId: 'electrical_engineering', weight: 0.9 },
+      { subcategoryId: 'electromagnetism', weight: 0.7 },
+      { subcategoryId: 'systems_networks', weight: 0.6 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 62000, senior: 95000 },
+      education: 'High school diploma + apprenticeship (4 years); state license required',
+      jobOutlook: '9% growth, consistent demand',
+      yearsToEntry: 4,
+      skills: ['Electrical Systems', 'Safety', 'Problem Solving', 'Technical Knowledge'],
+      careerPath: 'Apprentice → Journeyman → Master Electrician → Contractor',
+      relatedCareers: ['hvac-technician', 'plumber', 'solar-installer'],
+      discoveryHint: 'Build and maintain critical infrastructure with hands-on technical work.'
+    }
+  },
+  {
+    id: 'psychologist',
+    title: 'Clinical Psychologist',
+    tier: 'core',
+    description: 'Diagnoses and treats mental health disorders through psychotherapy, assessment, and behavioral interventions.',
+    requirements: [
+      { subcategoryId: 'clinical_counseling', weight: 0.95 },
+      { subcategoryId: 'social_psychology', weight: 0.8 },
+      { subcategoryId: 'neuroscience_biopsychology', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 95000, senior: 140000 },
+      education: 'PhD or PsyD in Psychology; license required',
+      jobOutlook: '10% growth, increasing demand',
+      yearsToEntry: 7,
+      skills: ['Assessment', 'Psychotherapy', 'Research', 'Communication'],
+      careerPath: 'Doctoral Intern → Licensed Psychologist → Senior Clinician → Supervisor',
+      relatedCareers: ['counselor', 'psychiatrist', 'therapist'],
+      discoveryHint: 'Help people understand and improve their mental health and well-being.'
+    }
+  },
+  {
+    id: 'civil-engineer',
+    title: 'Civil Engineer',
+    tier: 'core',
+    description: 'Designs and supervises construction of infrastructure including bridges, roads, buildings, and water systems.',
+    requirements: [
+      { subcategoryId: 'civil_engineering', weight: 0.95 },
+      { subcategoryId: 'applied_mathematics', weight: 0.85 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 105000, senior: 150000 },
+      education: 'BS Civil Engineering; PE license',
+      jobOutlook: '5% growth, stable demand',
+      yearsToEntry: 5,
+      skills: ['Project Management', 'CAD', 'Structural Analysis', 'Construction Methods'],
+      careerPath: 'Junior Engineer → Senior Engineer → Project Manager → Director',
+      relatedCareers: ['structural-engineer', 'geotechnical-engineer', 'transportation-planner'],
+      discoveryHint: 'Build the infrastructure that connects and sustains communities.'
+    }
+  },
   {
     id: 'marketing-manager',
     title: 'Marketing Manager',
     tier: 'core',
-    description: 'Develop marketing strategies, manage campaigns, and drive customer acquisition and engagement.',
+    description: 'Develops and executes marketing strategies to promote products or services and achieve business goals.',
     requirements: [
-      { subcategoryId: 'writing_journalism', weight: 0.75 },
-      { subcategoryId: 'art_design_digital', weight: 0.55 },
-      { subcategoryId: 'mathematics_applied', weight: 0.50 }
+      { subcategoryId: 'marketing', weight: 0.95 },
+      { subcategoryId: 'social_psychology', weight: 0.75 },
+      { subcategoryId: 'statistics_probability', weight: 0.65 }
     ],
     context: {
-      salary: { entry: 55000, mid: 90000, senior: 140000 },
-      education: "Bachelor's in Marketing/Business (4 years)",
-      jobOutlook: 'Good (7% growth)',
+      salary: { entry: 45000, mid: 75000, senior: 120000 },
+      education: 'BS Business, Marketing, or related field',
+      jobOutlook: '7% growth, competitive field',
       yearsToEntry: 4,
-      skills: ['Campaign management', 'Analytics', 'Content strategy', 'Social media', 'Brand development'],
-      careerPath: 'Marketing Coordinator → Marketing Manager → Senior Manager → Director → VP',
-      relatedCareers: ['Content Strategist', 'Brand Manager', 'Digital Marketer', 'Product Manager'],
-      discoveryHint: 'Marketing combines creativity with analytics—tell compelling stories while measuring exactly what resonates with audiences.'
+      skills: ['Strategic Planning', 'Analytics', 'Communication', 'Creativity'],
+      careerPath: 'Marketing Coordinator → Manager → Senior Manager → Director',
+      relatedCareers: ['brand-manager', 'product-manager', 'digital-marketer'],
+      discoveryHint: 'Create campaigns that connect products with the people who need them.'
     }
   },
-
   {
-    id: 'geologist',
-    title: 'Geologist',
+    id: 'physician',
+    title: 'Physician (MD/DO)',
     tier: 'core',
-    description: 'Study Earth\'s structure, composition, and processes. Work in mining, oil/gas, water resources, or hazard assessment.',
+    description: 'Diagnoses and treats diseases and injuries in patients through examination, testing, and medical intervention.',
     requirements: [
-      { subcategoryId: 'chemistry_physical', weight: 0.70 },
-      { subcategoryId: 'physics_mechanics', weight: 0.60 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.75 }
+      { subcategoryId: 'medicine_clinical', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.9 },
+      { subcategoryId: 'biochemistry', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 55000, mid: 90000, senior: 135000 },
-      education: "Bachelor's in Geology (4 years)",
-      jobOutlook: 'Moderate (5% growth, depends on industry)',
-      yearsToEntry: 4,
-      skills: ['Rock/mineral identification', 'Fieldwork', 'Geological mapping', 'Laboratory analysis', 'Data interpretation'],
-      careerPath: 'Field Geologist → Geologist → Senior Geologist → Geological Manager → Director',
-      relatedCareers: ['Hydrogeologist', 'Mining Engineer', 'Environmental Geologist', 'Seismologist'],
-      discoveryHint: 'Geology combines chemistry and physics to unlock Earth\'s history and resources—outdoor field work plus technical lab analysis.'
+      salary: { entry: 120000, mid: 200000, senior: 350000 },
+      education: 'MD or DO (4 years med school + 3-7 years residency)',
+      jobOutlook: '3% growth, high demand for specialists',
+      yearsToEntry: 11,
+      skills: ['Diagnosis', 'Medical Knowledge', 'Decision Making', 'Patient Care'],
+      careerPath: 'Resident → Attending Physician → Senior Physician → Chief of Department',
+      relatedCareers: ['surgeon', 'psychiatrist', 'pediatrician'],
+      discoveryHint: 'Dedicate your career to healing and improving people\'s health.'
     }
   },
-
   {
-    id: 'human-resources-manager',
+    id: 'lawyer',
+    title: 'Attorney/Lawyer',
+    tier: 'core',
+    description: 'Provides legal advice, represents clients in court, and handles legal documents and contracts.',
+    requirements: [
+      { subcategoryId: 'law_legal_studies', weight: 0.95 },
+      { subcategoryId: 'logic_reasoning', weight: 0.85 },
+      { subcategoryId: 'political_philosophy', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 72000, mid: 130000, senior: 250000 },
+      education: 'JD (Juris Doctor); bar exam required',
+      jobOutlook: '2% growth, competitive field',
+      yearsToEntry: 7,
+      skills: ['Legal Research', 'Negotiation', 'Writing', 'Oral Advocacy'],
+      careerPath: 'Associate → Senior Associate → Partner → Practice Leader',
+      relatedCareers: ['judge', 'paralegal', 'legal-consultant'],
+      discoveryHint: 'Champion justice and guide clients through complex legal matters.'
+    }
+  },
+  {
+    id: 'pharmacist',
+    title: 'Pharmacist',
+    tier: 'core',
+    description: 'Dispenses medications, counsels patients on drug use, and ensures medication safety in healthcare settings.',
+    requirements: [
+      { subcategoryId: 'pharmacy', weight: 0.95 },
+      { subcategoryId: 'biochemistry', weight: 0.85 },
+      { subcategoryId: 'organic_chemistry', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 110000, mid: 140000, senior: 180000 },
+      education: 'PharmD (4 years); license required',
+      jobOutlook: '2% growth, stable demand',
+      yearsToEntry: 8,
+      skills: ['Pharmacology', 'Patient Counseling', 'Medication Management', 'Chemistry'],
+      careerPath: 'Pharmacist → Senior Pharmacist → Pharmacy Manager → Director',
+      relatedCareers: ['pharmaceutical-scientist', 'clinical-pharmacist', 'pharmacy-technician'],
+      discoveryHint: 'Be the medication expert that healthcare providers and patients trust.'
+    }
+  },
+  {
+    id: 'dentist',
+    title: 'Dentist',
+    tier: 'core',
+    description: 'Diagnoses and treats dental diseases, performs oral surgery, and maintains patient oral health.',
+    requirements: [
+      { subcategoryId: 'dentistry', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.8 },
+      { subcategoryId: 'analytical_chemistry', weight: 0.6 }
+    ],
+    context: {
+      salary: { entry: 110000, mid: 165000, senior: 230000 },
+      education: 'DDS or DMD (4 years); license required',
+      jobOutlook: '4% growth, solid demand',
+      yearsToEntry: 8,
+      skills: ['Oral Surgery', 'Diagnosis', 'Patient Care', 'Manual Dexterity'],
+      careerPath: 'General Dentist → Specialist → Practice Owner → Corporate Leadership',
+      relatedCareers: ['orthodontist', 'oral-surgeon', 'dental-hygienist'],
+      discoveryHint: 'Maintain oral health and create beautiful, healthy smiles.'
+    }
+  },
+  {
+    id: 'environmental-engineer',
+    title: 'Environmental Engineer',
+    tier: 'core',
+    description: 'Designs solutions for environmental problems including pollution control, waste management, and water treatment.',
+    requirements: [
+      { subcategoryId: 'environmental_engineering', weight: 0.95 },
+      { subcategoryId: 'environmental_chemistry', weight: 0.8 },
+      { subcategoryId: 'applied_mathematics', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 63000, mid: 105000, senior: 150000 },
+      education: 'BS Environmental Engineering; PE optional',
+      jobOutlook: '5% growth, increasing demand',
+      yearsToEntry: 4,
+      skills: ['Environmental Systems', 'Project Management', 'Problem Solving', 'Analysis'],
+      careerPath: 'Junior Engineer → Senior Engineer → Project Lead → Department Director',
+      relatedCareers: ['environmental-scientist', 'sustainability-consultant', 'water-engineer'],
+      discoveryHint: 'Protect the environment and build sustainable solutions for the future.'
+    }
+  },
+  {
+    id: 'electrical-engineer',
+    title: 'Electrical Engineer',
+    tier: 'core',
+    description: 'Designs electrical systems, power generation equipment, and electronic devices for various applications.',
+    requirements: [
+      { subcategoryId: 'electrical_engineering', weight: 0.95 },
+      { subcategoryId: 'electromagnetism', weight: 0.85 },
+      { subcategoryId: 'applied_mathematics', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 67000, mid: 115000, senior: 165000 },
+      education: 'BS Electrical Engineering; PE optional',
+      jobOutlook: '4% growth, stable demand',
+      yearsToEntry: 4,
+      skills: ['Circuit Design', 'CAD', 'Power Systems', 'Problem Solving'],
+      careerPath: 'Junior Engineer → Senior Engineer → Lead Engineer → Engineering Manager',
+      relatedCareers: ['power-systems-engineer', 'electronics-engineer', 'controls-engineer'],
+      discoveryHint: 'Design the electrical systems that power modern technology.'
+    }
+  },
+  {
+    id: 'musician',
+    title: 'Professional Musician',
+    tier: 'core',
+    description: 'Performs music professionally in orchestras, bands, studios, or as a solo artist across various genres.',
+    requirements: [
+      { subcategoryId: 'instrumental_performance', weight: 0.95 },
+      { subcategoryId: 'music_theory_history', weight: 0.8 },
+      { subcategoryId: 'music_composition', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 25000, mid: 60000, senior: 150000 },
+      education: 'BM in Music Performance; conservatory training highly beneficial',
+      jobOutlook: '1% growth, highly variable by specialty',
+      yearsToEntry: 4,
+      skills: ['Instrument Mastery', 'Music Theory', 'Performance', 'Discipline'],
+      careerPath: 'Student Musician → Ensemble Member → Soloist/Band Leader → Conductor',
+      relatedCareers: ['music-producer', 'composer', 'music-educator'],
+      discoveryHint: 'Express yourself and move audiences through the power of music.'
+    }
+  },
+  {
+    id: 'chef',
+    title: 'Executive Chef',
+    tier: 'core',
+    description: 'Oversees kitchen operations, creates menus, manages staff, and maintains food quality and safety standards.',
+    requirements: [
+      { subcategoryId: 'culinary_arts', weight: 0.95 },
+      { subcategoryId: 'food_beverage', weight: 0.85 },
+      { subcategoryId: 'business_management', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'Culinary school (2-4 years) + apprenticeship',
+      jobOutlook: '5% growth, competitive field',
+      yearsToEntry: 6,
+      skills: ['Culinary Technique', 'Menu Development', 'Leadership', 'Food Safety'],
+      careerPath: 'Sous Chef → Chef de Cuisine → Executive Chef → Restaurant Owner',
+      relatedCareers: ['restaurant-manager', 'food-scientist', 'pastry-chef'],
+      discoveryHint: 'Create memorable dining experiences through culinary artistry.'
+    }
+  },
+  {
+    id: 'journalist',
+    title: 'Journalist/Reporter',
+    tier: 'core',
+    description: 'Researches, investigates, and reports news stories across various media platforms.',
+    requirements: [
+      { subcategoryId: 'journalism_nonfiction', weight: 0.95 },
+      { subcategoryId: 'creative_writing', weight: 0.75 },
+      { subcategoryId: 'media_communication', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 55000, senior: 95000 },
+      education: 'BA in Journalism or related field',
+      jobOutlook: '4% decline, competitive and shifting industry',
+      yearsToEntry: 4,
+      skills: ['Investigative Research', 'Writing', 'Interviewing', 'Critical Thinking'],
+      careerPath: 'Reporter → Senior Reporter → Editor → Editorial Director',
+      relatedCareers: ['editor', 'documentary-filmmaker', 'content-strategist'],
+      discoveryHint: 'Uncover truth and inform the public about important issues.'
+    }
+  },
+  {
+    id: 'production-manager',
+    title: 'Production Manager',
+    tier: 'core',
+    description: 'Oversees manufacturing operations, ensures efficiency, quality, and safety in production facilities.',
+    requirements: [
+      { subcategoryId: 'business_management', weight: 0.85 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.75 },
+      { subcategoryId: 'applied_mathematics', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 80000, senior: 130000 },
+      education: 'BS Engineering, Business, or related field',
+      jobOutlook: '4% growth, varies by industry',
+      yearsToEntry: 4,
+      skills: ['Process Optimization', 'Leadership', 'Quality Management', 'Problem Solving'],
+      careerPath: 'Supervisor → Production Manager → Plant Manager → Operations Director',
+      relatedCareers: ['supply-chain-manager', 'operations-manager', 'quality-engineer'],
+      discoveryHint: 'Optimize operations and lead teams that manufacture products used worldwide.'
+    }
+  },
+  {
+    id: 'hr-manager',
     title: 'Human Resources Manager',
     tier: 'core',
-    description: 'Recruit, develop, and manage organizational talent. Handle benefits, compliance, and employee relations.',
+    description: 'Manages recruitment, employee relations, training, and compliance functions within an organization.',
     requirements: [
-      { subcategoryId: 'writing_academic', weight: 0.65 },
-      { subcategoryId: 'technology_software', weight: 0.45 },
-      { subcategoryId: 'mathematics_applied', weight: 0.40 }
+      { subcategoryId: 'industrial_organizational', weight: 0.9 },
+      { subcategoryId: 'business_management', weight: 0.8 },
+      { subcategoryId: 'social_psychology', weight: 0.7 }
     ],
     context: {
-      salary: { entry: 55000, mid: 85000, senior: 130000 },
-      education: "Bachelor's in HR/Business + SHRM certification (4-5 years)",
-      jobOutlook: 'Good (7% growth)',
+      salary: { entry: 45000, mid: 75000, senior: 120000 },
+      education: 'BS Business, HR, or related field',
+      jobOutlook: '7% growth, steady demand',
       yearsToEntry: 4,
-      skills: ['Recruitment', 'Employee relations', 'Compliance knowledge', 'Coaching', 'Data analysis'],
-      careerPath: 'HR Specialist → HR Manager → Senior HR Manager → Director → VP Human Resources',
-      relatedCareers: ['Recruiter', 'Organizational Development Specialist', 'Training Manager', 'Employee Relations Specialist'],
-      discoveryHint: 'HR management builds organizational culture and develops human potential—shape how thousands of people experience work.'
+      skills: ['Recruitment', 'Employee Relations', 'Compliance', 'Communication'],
+      careerPath: 'HR Coordinator → HR Manager → Director → VP of Human Resources',
+      relatedCareers: ['recruiter', 'organizational-development-consultant', 'training-specialist'],
+      discoveryHint: 'Build strong teams and foster positive workplace cultures.'
+    }
+  },
+  {
+    id: 'police-officer',
+    title: 'Police Officer/Detective',
+    tier: 'core',
+    description: 'Enforces laws, investigates crimes, and maintains public safety in communities.',
+    requirements: [
+      { subcategoryId: 'criminal_law', weight: 0.85 },
+      { subcategoryId: 'social_psychology', weight: 0.7 },
+      { subcategoryId: 'logic_reasoning', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 70000, senior: 110000 },
+      education: 'High school diploma/GED; police academy training required',
+      jobOutlook: '3% growth, steady demand',
+      yearsToEntry: 1,
+      skills: ['Law Enforcement', 'Investigation', 'Physical Fitness', 'Communication'],
+      careerPath: 'Officer → Detective → Sergeant → Captain → Lieutenant',
+      relatedCareers: ['fbi-agent', 'homeland-security', 'security-manager'],
+      discoveryHint: 'Protect communities and bring justice through investigative work.'
+    }
+  },
+  {
+    id: 'business-analyst',
+    title: 'Business Analyst',
+    tier: 'core',
+    description: 'Analyzes business processes and requirements, recommending improvements and technology solutions.',
+    requirements: [
+      { subcategoryId: 'business_management', weight: 0.85 },
+      { subcategoryId: 'databases_backend', weight: 0.75 },
+      { subcategoryId: 'statistics_probability', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 95000, senior: 145000 },
+      education: 'BS Business, IT, or related field',
+      jobOutlook: '8% growth, high demand',
+      yearsToEntry: 4,
+      skills: ['Data Analysis', 'Process Improvement', 'Communication', 'Business Acumen'],
+      careerPath: 'Junior Analyst → Business Analyst → Senior Analyst → Manager',
+      relatedCareers: ['systems-analyst', 'project-manager', 'data-analyst'],
+      discoveryHint: 'Bridge technology and business to drive organizational improvement.'
+    }
+  },
+  {
+    id: 'solar-installer',
+    title: 'Solar Photovoltaic Installer',
+    tier: 'core',
+    description: 'Installs and maintains solar panel systems on residential and commercial buildings.',
+    requirements: [
+      { subcategoryId: 'electrical_engineering', weight: 0.85 },
+      { subcategoryId: 'thermodynamics_energy', weight: 0.8 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 68000, senior: 105000 },
+      education: 'High school diploma + on-the-job training/certification',
+      jobOutlook: '27% growth, fastest-growing occupation',
+      yearsToEntry: 1,
+      skills: ['Electrical Installation', 'Safety', 'Problem Solving', 'Physical Capability'],
+      careerPath: 'Installer → Lead Installer → Supervisor → Project Manager',
+      relatedCareers: ['wind-turbine-technician', 'electrical-technician', 'hvac-technician'],
+      discoveryHint: 'Be part of the renewable energy revolution and help build a sustainable future.'
+    }
+  },
+  {
+    id: 'nurse-anesthetist',
+    title: 'Certified Registered Nurse Anesthetist',
+    tier: 'core',
+    description: 'Administers anesthesia and monitors patients during surgical procedures and pain management.',
+    requirements: [
+      { subcategoryId: 'nursing', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.9 },
+      { subcategoryId: 'biochemistry', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 120000, mid: 170000, senior: 220000 },
+      education: 'MSN (Master\'s in Nursing); CRNA certification required',
+      jobOutlook: '12% growth, high demand',
+      yearsToEntry: 7,
+      skills: ['Anesthesia Administration', 'Patient Monitoring', 'Clinical Judgment', 'Critical Care'],
+      careerPath: 'RN → Graduate Student → CRNA → Senior CRNA → Teaching/Leadership',
+      relatedCareers: ['anesthesiologist', 'critical-care-nurse', 'surgical-nurse'],
+      discoveryHint: 'Provide critical care support during surgical procedures.'
     }
   },
 
-  // ============================================================================
-  // TIER 2: ADVANCED (20) - Specialized education, technical mastery, leadership
-  // ============================================================================
-
+  // ADVANCED TIER (43 careers)
   {
-    id: 'machine-learning-engineer',
+    id: 'ml-engineer',
     title: 'Machine Learning Engineer',
     tier: 'advanced',
-    description: 'Develop AI models and machine learning systems. Design algorithms to solve complex data problems.',
+    description: 'Designs and implements machine learning models and systems for production use.',
     requirements: [
-      { subcategoryId: 'technology_data', weight: 0.95 },
-      { subcategoryId: 'mathematics_pure', weight: 0.75 },
-      { subcategoryId: 'technology_software', weight: 0.80 }
+      { subcategoryId: 'ai_machine_learning', weight: 0.95 },
+      { subcategoryId: 'software_development', weight: 0.9 },
+      { subcategoryId: 'statistics_probability', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 110000, mid: 170000, senior: 250000 },
-      education: "Master's in ML/CS or strong self-taught (5-6 years)",
-      jobOutlook: 'Excellent (36% growth)',
-      yearsToEntry: 5,
-      skills: ['Python/TensorFlow', 'Statistics', 'Deep learning', 'Feature engineering', 'Model optimization'],
-      careerPath: 'ML Engineer → Senior ML Engineer → ML Architect → AI Lead → Director',
-      relatedCareers: ['Data Scientist', 'AI Researcher', 'Deep Learning Engineer', 'Computer Vision Engineer'],
-      discoveryHint: 'ML engineering builds the future—train models that recognize patterns humans can\'t and solve problems at unprecedented scale.'
+      salary: { entry: 120000, mid: 180000, senior: 280000 },
+      education: 'BS Computer Science or MS in ML/AI',
+      jobOutlook: '37% growth, exceptional demand',
+      yearsToEntry: 4,
+      skills: ['Python', 'TensorFlow/PyTorch', 'Statistics', 'System Design'],
+      careerPath: 'ML Engineer → Senior ML Engineer → ML Lead → Director of AI',
+      relatedCareers: ['ai-researcher', 'data-scientist', 'nlp-engineer'],
+      discoveryHint: 'Build intelligent systems that learn and adapt from data.'
     }
   },
-
-  {
-    id: 'surgeon',
-    title: 'Surgeon (MD/DO, specialized)',
-    tier: 'advanced',
-    description: 'Perform complex surgical procedures in specialized fields (orthopedic, cardiothoracic, neuro, etc.).',
-    requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.95 },
-      { subcategoryId: 'physics_mechanics', weight: 0.60 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.60 }
-    ],
-    context: {
-      salary: { entry: 250000, mid: 350000, senior: 500000 },
-      education: 'MD/DO (4 years) + surgical residency (5-7 years)',
-      jobOutlook: 'Good (4% growth)',
-      yearsToEntry: 12,
-      skills: ['Surgical techniques', 'Precision', 'Patient assessment', 'Team leadership', 'Crisis management'],
-      careerPath: 'Surgical Resident → Attending Surgeon → Chief of Surgery → Surgical Director',
-      relatedCareers: ['Orthopedic Surgeon', 'Cardiologist', 'Neurosurgeon', 'Trauma Surgeon'],
-      discoveryHint: 'Surgery combines deep anatomical knowledge with hands-on precision to directly save and transform lives through intervention.'
-    }
-  },
-
-  {
-    id: 'patent-lawyer',
-    title: 'Patent Lawyer',
-    tier: 'advanced',
-    description: 'Protect intellectual property through patent filing, prosecution, and litigation in tech/science domains.',
-    requirements: [
-      { subcategoryId: 'technology_software', weight: 0.70 },
-      { subcategoryId: 'chemistry_organic', weight: 0.60 },
-      { subcategoryId: 'physics_mechanics', weight: 0.50 }
-    ],
-    context: {
-      salary: { entry: 100000, mid: 180000, senior: 280000 },
-      education: 'Bachelor\'s in STEM + Law degree + Patent bar (7 years)',
-      jobOutlook: 'Good (4% growth, specialized demand)',
-      yearsToEntry: 7,
-      skills: ['Patent law', 'Technical writing', 'Legal research', 'Negotiation', 'Litigation'],
-      careerPath: 'Patent Associate → Senior Patent Counsel → Counsel → Partner → IP Director',
-      relatedCareers: ['IP Attorney', 'Corporate Counsel', 'Litigation Attorney', 'Trademark Specialist'],
-      discoveryHint: 'Patent law blends technical expertise with legal strategy—protect billion-dollar innovations while understanding cutting-edge science.'
-    }
-  },
-
-  {
-    id: 'data-scientist',
-    title: 'Data Scientist',
-    tier: 'advanced',
-    description: 'Develop statistical models and machine learning pipelines to extract insights from complex datasets.',
-    requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.90 },
-      { subcategoryId: 'technology_data', weight: 0.90 },
-      { subcategoryId: 'mathematics_pure', weight: 0.60 }
-    ],
-    context: {
-      salary: { entry: 95000, mid: 145000, senior: 220000 },
-      education: "Master's in Data Science/Statistics (5-6 years)",
-      jobOutlook: 'Excellent (36% growth)',
-      yearsToEntry: 5,
-      skills: ['Statistics', 'Python/R', 'SQL', 'A/B testing', 'Model interpretation'],
-      careerPath: 'Data Scientist → Senior Data Scientist → Principal Data Scientist → Data Science Lead',
-      relatedCareers: ['ML Engineer', 'Analytics Engineer', 'Research Scientist', 'Quantitative Analyst'],
-      discoveryHint: 'Data science turns curiosity about patterns into predictive power—ask questions about data, let algorithms reveal answers.'
-    }
-  },
-
   {
     id: 'aerospace-engineer',
     title: 'Aerospace Engineer',
     tier: 'advanced',
-    description: 'Design and develop aircraft, spacecraft, and propulsion systems. Work on cutting-edge aviation technology.',
+    description: 'Designs aircraft, spacecraft, satellites, and related propulsion systems.',
     requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.90 },
-      { subcategoryId: 'physics_thermodynamics', weight: 0.75 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.70 }
+      { subcategoryId: 'aerospace_engineering', weight: 0.95 },
+      { subcategoryId: 'thermodynamics_energy', weight: 0.85 },
+      { subcategoryId: 'applied_mathematics', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 75000, mid: 120000, senior: 180000 },
-      education: "Bachelor's in Aerospace Engineering (4 years)",
-      jobOutlook: 'Moderate (2% growth, specialized)',
+      salary: { entry: 70000, mid: 120000, senior: 170000 },
+      education: 'BS Aerospace Engineering; PE optional',
+      jobOutlook: '3% growth, concentrated in defense/aviation',
       yearsToEntry: 4,
-      skills: ['Aerodynamics', 'Propulsion systems', 'CFD simulation', 'Materials selection', 'Systems integration'],
-      careerPath: 'Junior Engineer → Aerospace Engineer → Senior Engineer → Principal Engineer → Chief Engineer',
-      relatedCareers: ['Mechanical Engineer', 'Flight Test Engineer', 'Systems Engineer', 'Propulsion Specialist'],
-      discoveryHint: 'Aerospace pushes physics and thermodynamics to their limits—build the vehicles that explore Earth and space.'
+      skills: ['Aerodynamics', 'CAD', 'Systems Engineering', 'Problem Solving'],
+      careerPath: 'Junior Engineer → Senior Engineer → Lead Engineer → Program Manager',
+      relatedCareers: ['systems-engineer', 'propulsion-engineer', 'flight-test-engineer'],
+      discoveryHint: 'Design the aircraft and spacecraft that explore our world and beyond.'
     }
   },
-
   {
-    id: 'research-scientist',
-    title: 'Research Scientist',
+    id: 'biomedical-engineer',
+    title: 'Biomedical Engineer',
     tier: 'advanced',
-    description: 'Conduct original research in academia or industry. Publish papers, lead studies, and advance scientific knowledge.',
+    description: 'Develops medical devices, prosthetics, and healthcare technologies using engineering principles.',
     requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.85 },
-      { subcategoryId: 'chemistry_organic', weight: 0.75 },
-      { subcategoryId: 'mathematics_applied', weight: 0.55 }
+      { subcategoryId: 'biomedical_engineering', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.85 },
+      { subcategoryId: 'applied_mathematics', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 65000, mid: 105000, senior: 160000 },
-      education: "PhD in Biology/Chemistry (6-8 years)",
-      jobOutlook: 'Moderate (5% growth)',
-      yearsToEntry: 6,
-      skills: ['Experimental design', 'Lab techniques', 'Statistics', 'Writing', 'Peer review'],
-      careerPath: 'Postdoc → Research Scientist → Senior Research Scientist → Principal Investigator → Lab Director',
-      relatedCareers: ['Biochemist', 'Molecular Biologist', 'Pharmacologist', 'Clinical Researcher'],
-      discoveryHint: 'Research science transforms curiosity into discoveries that advance medicine and human knowledge.'
-    }
-  },
-
-  {
-    id: 'devops-engineer',
-    title: 'DevOps Engineer',
-    tier: 'advanced',
-    description: 'Manage infrastructure, deploy code, automate systems. Bridge development and operations.',
-    requirements: [
-      { subcategoryId: 'technology_security', weight: 0.85 },
-      { subcategoryId: 'technology_software', weight: 0.80 },
-      { subcategoryId: 'mathematics_discrete', weight: 0.50 }
-    ],
-    context: {
-      salary: { entry: 85000, mid: 135000, senior: 190000 },
-      education: "Bachelor's in CS or hands-on IT background (3-5 years)",
-      jobOutlook: 'Excellent (13% growth)',
+      salary: { entry: 68000, mid: 115000, senior: 165000 },
+      education: 'BS Biomedical Engineering',
+      jobOutlook: '6% growth, increasing demand',
       yearsToEntry: 4,
-      skills: ['Kubernetes', 'Docker', 'CI/CD', 'Cloud platforms (AWS/GCP)', 'Infrastructure as Code'],
-      careerPath: 'Systems Administrator → DevOps Engineer → Senior DevOps Engineer → DevOps Architect → Infrastructure Lead',
-      relatedCareers: ['Systems Engineer', 'Cloud Architect', 'Release Engineer', 'SRE'],
-      discoveryHint: 'DevOps combines software engineering with systems thinking—build the infrastructure that powers global services.'
+      skills: ['Medical Device Design', 'CAD', 'Physiology', 'Problem Solving'],
+      careerPath: 'Junior Engineer → Senior Engineer → Lead Engineer → Director',
+      relatedCareers: ['medical-device-sales', 'clinical-engineer', 'prosthetics-specialist'],
+      discoveryHint: 'Improve human health through innovative medical technology.'
     }
   },
-
-  {
-    id: 'psychiatrist',
-    title: 'Psychiatrist',
-    tier: 'advanced',
-    description: 'Diagnose and treat mental health conditions. Prescribe medications and provide evidence-based therapy.',
-    requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.85 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.80 },
-      { subcategoryId: 'chemistry_organic', weight: 0.55 }
-    ],
-    context: {
-      salary: { entry: 200000, mid: 260000, senior: 350000 },
-      education: 'MD/DO (4 years) + psychiatry residency (5 years)',
-      jobOutlook: 'Excellent (12% growth)',
-      yearsToEntry: 9,
-      skills: ['Diagnosis', 'Psychopharmacology', 'Patient communication', 'Crisis intervention', 'Evidence-based treatment'],
-      careerPath: 'Psychiatry Resident → Attending Psychiatrist → Specialist → Medical Director',
-      relatedCareers: ['Psychologist', 'Clinical Social Worker', 'Neurologist', 'Pharmacologist'],
-      discoveryHint: 'Psychiatry applies biochemistry to mental health—medications and therapy combined to restore hope and wellness.'
-    }
-  },
-
   {
     id: 'chemical-engineer',
     title: 'Chemical Engineer',
     tier: 'advanced',
-    description: 'Design chemical processes and plants. Optimize production of pharmaceuticals, polymers, fuels, and materials.',
+    description: 'Designs industrial chemical processes and equipment for manufacturing chemicals, pharmaceuticals, and materials.',
     requirements: [
-      { subcategoryId: 'chemistry_physical', weight: 0.90 },
-      { subcategoryId: 'physics_thermodynamics', weight: 0.80 },
-      { subcategoryId: 'mathematics_applied', weight: 0.70 }
+      { subcategoryId: 'chemical_engineering', weight: 0.95 },
+      { subcategoryId: 'organic_chemistry', weight: 0.85 },
+      { subcategoryId: 'thermodynamics_energy', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 75000, mid: 120000, senior: 170000 },
-      education: "Bachelor's in Chemical Engineering + PE license (5-7 years)",
-      jobOutlook: 'Moderate (4% growth)',
-      yearsToEntry: 5,
-      skills: ['Chemical kinetics', 'Process design', 'Thermodynamics', 'Safety protocols', 'Simulation software'],
-      careerPath: 'Process Engineer → Chemical Engineer → Senior Engineer → Process Development Manager → Plant Manager',
-      relatedCareers: ['Materials Engineer', 'Environmental Engineer', 'Petroleum Engineer', 'Pharmaceutical Engineer'],
-      discoveryHint: 'Chemical engineering scales chemistry from the lab to industrial production—design processes that produce goods for billions.'
+      salary: { entry: 72000, mid: 125000, senior: 180000 },
+      education: 'BS Chemical Engineering',
+      jobOutlook: '4% growth, steady demand',
+      yearsToEntry: 4,
+      skills: ['Process Design', 'Chemistry', 'CAD', 'Safety Management'],
+      careerPath: 'Process Engineer → Senior Engineer → Design Engineer → Plant Manager',
+      relatedCareers: ['petroleum-engineer', 'polymer-engineer', 'environmental-engineer'],
+      discoveryHint: 'Transform raw materials into products that improve daily life.'
     }
   },
-
   {
-    id: 'quantum-physicist',
-    title: 'Quantum Physicist / Quantum Engineer',
+    id: 'senior-architect',
+    title: 'Solutions Architect',
     tier: 'advanced',
-    description: 'Research quantum mechanics and develop quantum computing systems. Push the boundaries of physics.',
+    description: 'Designs large-scale technology solutions and systems architecture for enterprise organizations.',
     requirements: [
-      { subcategoryId: 'physics_quantum', weight: 0.95 },
-      { subcategoryId: 'mathematics_pure', weight: 0.85 },
-      { subcategoryId: 'physics_mechanics', weight: 0.60 }
+      { subcategoryId: 'software_development', weight: 0.95 },
+      { subcategoryId: 'systems_networks', weight: 0.9 },
+      { subcategoryId: 'databases_backend', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 100000, mid: 160000, senior: 240000 },
-      education: "PhD in Physics (6-8 years)",
-      jobOutlook: 'Emerging (9% growth in emerging sectors)',
+      salary: { entry: 130000, mid: 190000, senior: 280000 },
+      education: 'BS Computer Science + 10+ years experience',
+      jobOutlook: '15% growth, high demand',
+      yearsToEntry: 14,
+      skills: ['System Design', 'Cloud Architecture', 'Technical Leadership', 'Communication'],
+      careerPath: 'Senior Developer → Solutions Architect → Principal Architect → VP Engineering',
+      relatedCareers: ['cloud-architect', 'enterprise-architect', 'security-architect'],
+      discoveryHint: 'Design the technology foundations that power large organizations.'
+    }
+  },
+  {
+    id: 'surgeon',
+    title: 'Surgeon',
+    tier: 'advanced',
+    description: 'Performs surgical operations to treat diseases, injuries, and disorders.',
+    requirements: [
+      { subcategoryId: 'medicine_clinical', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.95 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 150000, mid: 250000, senior: 500000 },
+      education: 'MD/DO + 5-7 years surgical residency',
+      jobOutlook: '4% growth, specialty dependent',
+      yearsToEntry: 12,
+      skills: ['Surgical Technique', 'Decision Making', 'Manual Dexterity', 'Leadership'],
+      careerPath: 'Surgical Resident → Attending Surgeon → Chief of Surgery → Academic Leader',
+      relatedCareers: ['orthopaedic-surgeon', 'neurosurgeon', 'cardiothoracic-surgeon'],
+      discoveryHint: 'Master the art and science of surgery to transform patient outcomes.'
+    }
+  },
+  {
+    id: 'data-engineer',
+    title: 'Data Engineer',
+    tier: 'advanced',
+    description: 'Builds data pipelines, databases, and systems that enable data analysis and machine learning.',
+    requirements: [
+      { subcategoryId: 'databases_backend', weight: 0.95 },
+      { subcategoryId: 'software_development', weight: 0.9 },
+      { subcategoryId: 'systems_networks', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 100000, mid: 150000, senior: 220000 },
+      education: 'BS Computer Science or related',
+      jobOutlook: '32% growth, very high demand',
+      yearsToEntry: 4,
+      skills: ['SQL', 'Python', 'Cloud Platforms', 'Big Data Tools'],
+      careerPath: 'Data Engineer → Senior Data Engineer → Principal Data Engineer → Director',
+      relatedCareers: ['database-administrator', 'data-scientist', 'analytics-engineer'],
+      discoveryHint: 'Build the infrastructure that powers data-driven decision making.'
+    }
+  },
+  {
+    id: 'patent-attorney',
+    title: 'Patent Attorney',
+    tier: 'advanced',
+    description: 'Specializes in intellectual property law, patents, trademarks, and technology licensing.',
+    requirements: [
+      { subcategoryId: 'intellectual_property', weight: 0.95 },
+      { subcategoryId: 'law_legal_studies', weight: 0.9 },
+      { subcategoryId: 'software_development', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 100000, mid: 170000, senior: 300000 },
+      education: 'JD + Technical degree (BS CS/Engineering); bar exam + patent bar',
+      jobOutlook: '6% growth, strong demand in tech',
       yearsToEntry: 8,
-      skills: ['Quantum mechanics', 'Linear algebra', 'Simulation', 'Cryogenics', 'Experimental design'],
-      careerPath: 'Postdoc → Quantum Researcher → Senior Researcher → Principal Investigator → Lab Director',
-      relatedCareers: ['Condensed Matter Physicist', 'Particle Physicist', 'Quantum Engineer', 'Computational Physicist'],
-      discoveryHint: 'Quantum physics tackles the weirdest, most fundamental nature of reality—prepare to have your intuition shattered.'
+      skills: ['Patent Law', 'Technical Understanding', 'Negotiation', 'Writing'],
+      careerPath: 'Associate → Senior Associate → Counsel → Partner',
+      relatedCareers: ['ip-counsel', 'trademark-attorney', 'licensing-specialist'],
+      discoveryHint: 'Protect innovation and intellectual property at the intersection of law and tech.'
     }
   },
-
   {
-    id: 'epidemiologist',
-    title: 'Epidemiologist',
+    id: 'sustainability-consultant',
+    title: 'Sustainability Consultant',
     tier: 'advanced',
-    description: 'Study disease patterns and outbreaks. Track transmission, conduct research, inform public health policy.',
+    description: 'Advises organizations on environmental sustainability, carbon reduction, and ESG initiatives.',
     requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.75 },
-      { subcategoryId: 'mathematics_applied', weight: 0.85 },
-      { subcategoryId: 'biology_ecology', weight: 0.55 }
+      { subcategoryId: 'climate_sustainability', weight: 0.95 },
+      { subcategoryId: 'environmental_engineering', weight: 0.8 },
+      { subcategoryId: 'business_management', weight: 0.75 }
     ],
     context: {
-      salary: { entry: 60000, mid: 100000, senior: 150000 },
-      education: "Master's in Public Health/Epidemiology (6 years)",
-      jobOutlook: 'Good (5% growth, plus pandemic response)',
-      yearsToEntry: 6,
-      skills: ['Statistical analysis', 'Epidemiological methods', 'Database management', 'Report writing', 'Fieldwork'],
-      careerPath: 'Epidemiologist → Senior Epidemiologist → Epidemiology Manager → Director → Chief Epidemiologist',
-      relatedCareers: ['Public Health Specialist', 'Biostatistician', 'Environmental Health Officer', 'Pandemic Preparedness Analyst'],
-      discoveryHint: 'Epidemiology applies statistics to disease—track patterns, predict outbreaks, and protect millions from harm.'
+      salary: { entry: 65000, mid: 110000, senior: 180000 },
+      education: 'BS Environmental Science/Engineering or MBA',
+      jobOutlook: '11% growth, rapidly increasing demand',
+      yearsToEntry: 4,
+      skills: ['Sustainability Strategy', 'Environmental Analysis', 'Communication', 'Business Sense'],
+      careerPath: 'Consultant → Senior Consultant → Manager → Director',
+      relatedCareers: ['environmental-scientist', 'esg-analyst', 'green-building-specialist'],
+      discoveryHint: 'Help organizations build sustainable business practices for the future.'
     }
   },
-
   {
-    id: 'architect',
-    title: 'Architect (Building Design)',
+    id: 'venture-capitalist',
+    title: 'Venture Capital Investor',
     tier: 'advanced',
-    description: 'Design buildings and structures. Blend aesthetics, functionality, sustainability, and engineering.',
+    description: 'Evaluates startups and invests capital to fund high-growth companies.',
     requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.75 },
-      { subcategoryId: 'art_design_visual', weight: 0.80 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.75 }
+      { subcategoryId: 'finance_investment', weight: 0.95 },
+      { subcategoryId: 'business_management', weight: 0.85 },
+      { subcategoryId: 'statistics_probability', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 150000, mid: 300000, senior: 1000000 },
+      education: 'MBA or BS Economics/Business + 5+ years finance/tech',
+      jobOutlook: 'Variable by economy, competitive field',
+      yearsToEntry: 8,
+      skills: ['Financial Analysis', 'Market Assessment', 'Negotiation', 'Industry Knowledge'],
+      careerPath: 'Analyst → Associate → Principal → Managing Partner',
+      relatedCareers: ['private-equity-professional', 'startup-founder', 'angel-investor'],
+      discoveryHint: 'Fund the next generation of transformative companies.'
+    }
+  },
+  {
+    id: 'public-health-officer',
+    title: 'Public Health Officer',
+    tier: 'advanced',
+    description: 'Develops public health policies and programs to prevent disease and promote community health.',
+    requirements: [
+      { subcategoryId: 'public_health', weight: 0.95 },
+      { subcategoryId: 'statistics_probability', weight: 0.85 },
+      { subcategoryId: 'public_policy', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 110000, senior: 165000 },
+      education: 'MPH (Master of Public Health)',
+      jobOutlook: '7% growth, increasing demand',
+      yearsToEntry: 6,
+      skills: ['Epidemiology', 'Policy Analysis', 'Program Development', 'Leadership'],
+      careerPath: 'Health Officer → Senior Officer → Director → Chief Health Officer',
+      relatedCareers: ['epidemiologist', 'health-policy-analyst', 'disease-prevention-specialist'],
+      discoveryHint: 'Protect population health and build healthier communities.'
+    }
+  },
+  {
+    id: 'robotics-engineer',
+    title: 'Robotics Engineer',
+    tier: 'advanced',
+    description: 'Designs and develops robots and automation systems for manufacturing and other applications.',
+    requirements: [
+      { subcategoryId: 'robotics_automation', weight: 0.95 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.85 },
+      { subcategoryId: 'electrical_engineering', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 72000, mid: 125000, senior: 185000 },
+      education: 'BS Robotics, Mechanical, or Electrical Engineering',
+      jobOutlook: '8% growth, increasing demand',
+      yearsToEntry: 4,
+      skills: ['Robot Programming', 'CAD', 'Control Systems', 'Problem Solving'],
+      careerPath: 'Junior Engineer → Senior Engineer → Lead Engineer → Technical Director',
+      relatedCareers: ['automation-engineer', 'controls-engineer', 'systems-engineer'],
+      discoveryHint: 'Create robots and automation systems that transform manufacturing.'
+    }
+  },
+  {
+    id: 'game-designer',
+    title: 'Game Designer/Director',
+    tier: 'advanced',
+    description: 'Creates game mechanics, narratives, and overall design for video games.',
+    requirements: [
+      { subcategoryId: 'game_dev_graphics', weight: 0.9 },
+      { subcategoryId: 'creative_writing', weight: 0.75 },
+      { subcategoryId: 'human_computer_interaction', weight: 0.8 }
     ],
     context: {
       salary: { entry: 55000, mid: 95000, senior: 160000 },
-      education: "Bachelor's in Architecture + license (7 years)",
-      jobOutlook: 'Good (6% growth)',
-      yearsToEntry: 7,
-      skills: ['CAD/BIM software', 'Design thinking', 'Building codes', 'Sustainability', 'Client communication'],
-      careerPath: 'Junior Architect → Architect → Senior Architect → Design Director → Partner',
-      relatedCareers: ['Landscape Architect', 'Urban Planner', 'Interior Designer', 'Civil Engineer'],
-      discoveryHint: 'Architecture merges art and engineering—design spaces where people live, work, and thrive for centuries.'
-    }
-  },
-
-  {
-    id: 'environmental-scientist',
-    title: 'Environmental Scientist',
-    tier: 'advanced',
-    description: 'Monitor environmental impacts. Develop conservation strategies and remediation solutions.',
-    requirements: [
-      { subcategoryId: 'chemistry_environmental', weight: 0.90 },
-      { subcategoryId: 'biology_ecology', weight: 0.85 },
-      { subcategoryId: 'mathematics_applied', weight: 0.60 }
-    ],
-    context: {
-      salary: { entry: 55000, mid: 90000, senior: 140000 },
-      education: "Bachelor's in Environmental Science (4 years)",
-      jobOutlook: 'Good (8% growth)',
+      education: 'BS Game Design or Computer Science',
+      jobOutlook: '9% growth, competitive field',
       yearsToEntry: 4,
-      skills: ['Pollution assessment', 'Ecological surveys', 'Data analysis', 'Report writing', 'Compliance knowledge'],
-      careerPath: 'Environmental Scientist → Senior Scientist → Environmental Manager → Director',
-      relatedCareers: ['Sustainability Consultant', 'Environmental Engineer', 'Conservation Manager', 'Climate Analyst'],
-      discoveryHint: 'Environmental science tackles climate and pollution—use chemistry and ecology to heal the planet.'
+      skills: ['Game Design', 'Storytelling', 'Problem Solving', 'Leadership'],
+      careerPath: 'Game Designer → Senior Designer → Lead Designer → Creative Director',
+      relatedCareers: ['game-programmer', 'game-artist', 'level-designer'],
+      discoveryHint: 'Create immersive gaming experiences that entertain millions.'
     }
   },
-
   {
-    id: 'venture-capitalist',
-    title: 'Venture Capitalist / Investment Partner',
+    id: 'cinematographer',
+    title: 'Cinematographer/Director of Photography',
     tier: 'advanced',
-    description: 'Identify promising startups and emerging technologies. Invest capital and provide mentorship.',
+    description: 'Plans and executes visual elements of film and television production.',
     requirements: [
-      { subcategoryId: 'technology_software', weight: 0.70 },
-      { subcategoryId: 'mathematics_applied', weight: 0.65 },
-      { subcategoryId: 'writing_journalism', weight: 0.50 }
+      { subcategoryId: 'film_video', weight: 0.95 },
+      { subcategoryId: 'photography', weight: 0.85 },
+      { subcategoryId: 'aesthetics', weight: 0.75 }
     ],
     context: {
-      salary: { entry: 150000, mid: 300000, senior: 500000 },
-      education: "Bachelor's in business/tech + 5-10 years startup/finance experience",
-      jobOutlook: 'Good (emerging, highly competitive)',
-      yearsToEntry: 10,
-      skills: ['Financial modeling', 'Market analysis', 'Due diligence', 'Negotiation', 'Founder mentoring'],
-      careerPath: 'Analyst → Associate → Investment Manager → Principal → Partner → Managing Director',
-      relatedCareers: ['Startup Founder', 'Angel Investor', 'M&A Advisor', 'Private Equity Manager'],
-      discoveryHint: 'VC combines technology understanding with financial strategy—fund the companies that reshape industries.'
+      salary: { entry: 35000, mid: 75000, senior: 150000 },
+      education: 'BFA in Film/Cinematography; extensive hands-on experience essential',
+      jobOutlook: '4% growth, project-based income',
+      yearsToEntry: 4,
+      skills: ['Camera Operation', 'Lighting', 'Visual Storytelling', 'Technical Knowledge'],
+      careerPath: 'Camera Assistant → Cinematographer → Director of Photography → Film Director',
+      relatedCareers: ['film-director', 'gaffer', 'production-designer'],
+      discoveryHint: 'Craft the visual language that brings stories to life on screen.'
     }
   },
-
+  {
+    id: 'constitutional-lawyer',
+    title: 'Constitutional Lawyer',
+    tier: 'advanced',
+    description: 'Specializes in constitutional law, civil rights, and government regulation cases.',
+    requirements: [
+      { subcategoryId: 'constitutional_administrative', weight: 0.95 },
+      { subcategoryId: 'law_legal_studies', weight: 0.9 },
+      { subcategoryId: 'political_philosophy', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 85000, mid: 160000, senior: 350000 },
+      education: 'JD; often LLM in Constitutional Law',
+      jobOutlook: '2% growth, highly competitive',
+      yearsToEntry: 7,
+      skills: ['Constitutional Analysis', 'Legal Research', 'Oral Advocacy', 'Writing'],
+      careerPath: 'Associate → Senior Associate → Counsel → Partner',
+      relatedCareers: ['civil-rights-attorney', 'appellate-attorney', 'government-counsel'],
+      discoveryHint: 'Shape law and defend fundamental rights through constitutional litigation.'
+    }
+  },
+  {
+    id: 'neurosurgeon',
+    title: 'Neurosurgeon',
+    tier: 'advanced',
+    description: 'Performs surgery on the brain, spinal cord, and nervous system.',
+    requirements: [
+      { subcategoryId: 'medicine_clinical', weight: 0.95 },
+      { subcategoryId: 'developmental_biology', weight: 0.95 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 200000, mid: 350000, senior: 600000 },
+      education: 'MD/DO + 7 years neurosurgery residency',
+      jobOutlook: '4% growth, limited positions',
+      yearsToEntry: 14,
+      skills: ['Surgical Precision', 'Neuroanatomy', 'Decision Making', 'Manual Dexterity'],
+      careerPath: 'Resident → Attending Neurosurgeon → Chief → Academic Leader',
+      relatedCareers: ['neuroscientist', 'neurologist', 'spine-surgeon'],
+      discoveryHint: 'Perform groundbreaking surgery on the brain and nervous system.'
+    }
+  },
+  {
+    id: 'university-professor',
+    title: 'University Professor/Researcher',
+    tier: 'advanced',
+    description: 'Teaches university courses and conducts research in their academic field.',
+    requirements: [
+      { subcategoryId: 'pure_mathematics', weight: 0.7 },
+      { subcategoryId: 'creative_writing', weight: 0.65 },
+      { subcategoryId: 'psychology', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 95000, senior: 150000 },
+      education: 'PhD in field (5-7 years)',
+      jobOutlook: '3% growth, limited positions',
+      yearsToEntry: 8,
+      skills: ['Research', 'Teaching', 'Writing', 'Grant Writing'],
+      careerPath: 'Postdoc → Assistant Professor → Associate Professor → Full Professor',
+      relatedCareers: ['research-scientist', 'laboratory-director', 'academic-administrator'],
+      discoveryHint: 'Advance knowledge through research and shape future scholars.'
+    }
+  },
+  {
+    id: 'film-director',
+    title: 'Film Director',
+    tier: 'advanced',
+    description: 'Directs film and television productions, making creative decisions about storytelling and visual style.',
+    requirements: [
+      { subcategoryId: 'film_video', weight: 0.95 },
+      { subcategoryId: 'creative_writing', weight: 0.85 },
+      { subcategoryId: 'aesthetics', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 100000, senior: 500000 },
+      education: 'BFA in Film; extensive industry experience essential',
+      jobOutlook: '3% growth, highly competitive',
+      yearsToEntry: 8,
+      skills: ['Visual Storytelling', 'Leadership', 'Creative Vision', 'Communication'],
+      careerPath: 'Short Films → Feature Film Director → Established Director → Producer',
+      relatedCareers: ['cinematographer', 'screenwriter', 'producer'],
+      discoveryHint: 'Create stories that move, inspire, and entertain audiences worldwide.'
+    }
+  },
+  {
+    id: 'clinical-pharmacist',
+    title: 'Clinical Pharmacist',
+    tier: 'advanced',
+    description: 'Works in hospitals and clinics providing direct patient care and optimizing medication therapy.',
+    requirements: [
+      { subcategoryId: 'pharmacy', weight: 0.95 },
+      { subcategoryId: 'medicine_clinical', weight: 0.85 },
+      { subcategoryId: 'biochemistry', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 115000, mid: 150000, senior: 190000 },
+      education: 'PharmD; additional residency often required',
+      jobOutlook: '8% growth, increasing demand',
+      yearsToEntry: 9,
+      skills: ['Clinical Pharmacology', 'Patient Care', 'Research', 'Communication'],
+      careerPath: 'Clinical Pharmacist → Senior Clinician → Clinical Manager → Director',
+      relatedCareers: ['pharmacy-specialist', 'research-pharmacist', 'pharmaceutical-scientist'],
+      discoveryHint: 'Optimize medication therapy and improve patient outcomes.'
+    }
+  },
+  {
+    id: 'geologist',
+    title: 'Geologist/Geoscientist',
+    tier: 'advanced',
+    description: 'Studies Earth\'s structure, materials, and geological processes for resource exploration and hazard assessment.',
+    requirements: [
+      { subcategoryId: 'structural_geology', weight: 0.95 },
+      { subcategoryId: 'mineralogy_petrology', weight: 0.9 },
+      { subcategoryId: 'geochemistry', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 58000, mid: 100000, senior: 150000 },
+      education: 'BS Geology or Geosciences',
+      jobOutlook: '5% growth, varies by commodity prices',
+      yearsToEntry: 4,
+      skills: ['Geological Analysis', 'Field Work', 'Data Interpretation', 'Problem Solving'],
+      careerPath: 'Junior Geologist → Senior Geologist → Exploration Manager → Director',
+      relatedCareers: ['geophysicist', 'mining-engineer', 'petroleum-geologist'],
+      discoveryHint: 'Unlock Earth\'s secrets and discover valuable resources.'
+    }
+  },
   {
     id: 'forensic-scientist',
     title: 'Forensic Scientist',
     tier: 'advanced',
-    description: 'Analyze evidence from crime scenes. Use chemistry and biology to support criminal investigations.',
+    description: 'Analyzes physical evidence from crime scenes to support criminal investigations and prosecutions.',
     requirements: [
-      { subcategoryId: 'chemistry_physical', weight: 0.80 },
-      { subcategoryId: 'biology_molecular', weight: 0.75 },
-      { subcategoryId: 'mathematics_applied', weight: 0.55 }
+      { subcategoryId: 'analytical_chemistry', weight: 0.95 },
+      { subcategoryId: 'criminal_law', weight: 0.8 },
+      { subcategoryId: 'molecular_genetics', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 45000, mid: 75000, senior: 110000 },
-      education: "Bachelor's in Forensic Science/Chemistry (4 years)",
-      jobOutlook: 'Good (5% growth)',
+      salary: { entry: 45000, mid: 75000, senior: 120000 },
+      education: 'BS Forensic Science or Chemistry',
+      jobOutlook: '14% growth, increasing demand',
       yearsToEntry: 4,
-      skills: ['DNA analysis', 'Toxicology', 'Evidence collection', 'Lab procedures', 'Court testimony'],
-      careerPath: 'Forensic Analyst → Senior Analyst → Lab Manager → Director',
-      relatedCareers: ['Crime Scene Investigator', 'Toxicologist', 'Ballistics Expert', 'Digital Forensics Specialist'],
-      discoveryHint: 'Forensic science uses chemistry and biology to solve mysteries—your evidence determines justice.'
+      skills: ['Evidence Analysis', 'Laboratory Skills', 'Report Writing', 'Testifying'],
+      careerPath: 'Analyst → Senior Analyst → Laboratory Manager → Director',
+      relatedCareers: ['crime-scene-investigator', 'dna-analyst', 'toxicologist'],
+      discoveryHint: 'Use science to solve crimes and support justice.'
     }
   },
-
   {
-    id: 'software-architect',
-    title: 'Software Architect',
+    id: 'astrophysicist',
+    title: 'Astrophysicist',
     tier: 'advanced',
-    description: 'Design large-scale system architectures. Make high-level technical decisions for organizations.',
+    description: 'Studies stars, galaxies, black holes, and the structure of the universe through observation and theory.',
     requirements: [
-      { subcategoryId: 'technology_software', weight: 0.95 },
-      { subcategoryId: 'mathematics_discrete', weight: 0.75 },
-      { subcategoryId: 'technology_security', weight: 0.65 }
+      { subcategoryId: 'astrophysics_cosmology', weight: 0.95 },
+      { subcategoryId: 'quantum_particle', weight: 0.85 },
+      { subcategoryId: 'pure_mathematics', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 130000, mid: 190000, senior: 280000 },
-      education: "Bachelor's in CS + 10+ years software engineering",
-      jobOutlook: 'Good (specialist role)',
-      yearsToEntry: 10,
-      skills: ['System design', 'Technology selection', 'Scalability', 'Documentation', 'Leadership'],
-      careerPath: 'Senior Engineer → Staff Engineer → Architect → Principal Architect → CTO',
-      relatedCareers: ['Tech Lead', 'Systems Engineer', 'Infrastructure Architect', 'CTO'],
-      discoveryHint: 'As an architect, you shape the technical foundation that millions depend on—think decades ahead.'
-    }
-  },
-
-  {
-    id: 'immunologist',
-    title: 'Immunologist',
-    tier: 'advanced',
-    description: 'Study immune system function and dysfunction. Develop vaccines and immunotherapies.',
-    requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.90 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.85 },
-      { subcategoryId: 'biology_anatomy', weight: 0.60 }
-    ],
-    context: {
-      salary: { entry: 70000, mid: 120000, senior: 180000 },
-      education: "PhD in Immunology/Biology (7 years)",
-      jobOutlook: 'Good (5% growth, plus specialty demand)',
-      yearsToEntry: 7,
-      skills: ['Immunological assays', 'Flow cytometry', 'Antibody development', 'Research methods', 'Writing'],
-      careerPath: 'Postdoc → Immunologist → Senior Immunologist → Principal Investigator → Director',
-      relatedCareers: ['Virologist', 'Vaccine Developer', 'Cancer Immunotherapy Researcher', 'Clinical Immunologist'],
-      discoveryHint: 'Immunology reveals how our bodies fight disease—develop therapies that leverage the immune system itself.'
-    }
-  },
-
-  {
-    id: 'classical-musician',
-    title: 'Professional Classical Musician',
-    tier: 'advanced',
-    description: 'Perform as soloist or orchestra member. Master a classical instrument at elite level.',
-    requirements: [
-      { subcategoryId: 'art_design_performing', weight: 0.95 },
-      { subcategoryId: 'mathematics_pure', weight: 0.50 },
-      { subcategoryId: 'physics_mechanics', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 35000, mid: 75000, senior: 150000 },
-      education: 'Bachelor\'s in Music Performance + 10+ years practice',
-      jobOutlook: 'Moderate (2% growth, highly competitive)',
-      yearsToEntry: 10,
-      skills: ['Instrument mastery', 'Music theory', 'Sight-reading', 'Performance ability', 'Technique'],
-      careerPath: 'Student → Performer → Principal Performer → Concertmaster → Conductor',
-      relatedCareers: ['Conductor', 'Music Teacher', 'Composer', 'Recording Artist'],
-      discoveryHint: 'Classical music demands mastery of mechanics and harmony—perform timeless works that move human hearts.'
-    }
-  },
-
-  // ============================================================================
-  // TIER 3: NICHE (25) - Specific interests, creative, less common, specialized
-  // ============================================================================
-
-  {
-    id: 'ux-researcher',
-    title: 'UX/User Experience Researcher',
-    tier: 'niche',
-    description: 'Research user behavior, conduct usability studies, and inform product design decisions.',
-    requirements: [
-      { subcategoryId: 'technology_web', weight: 0.80 },
-      { subcategoryId: 'mathematics_applied', weight: 0.70 },
-      { subcategoryId: 'art_design_digital', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 65000, mid: 105000, senior: 160000 },
-      education: "Bachelor's in psychology/design + boot camp (3-5 years)",
-      jobOutlook: 'Good (13% growth)',
-      yearsToEntry: 3,
-      skills: ['User interviews', 'Usability testing', 'Data analysis', 'Prototyping', 'Research design'],
-      careerPath: 'Junior Researcher → UX Researcher → Senior Researcher → Research Manager → Research Director',
-      relatedCareers: ['Product Manager', 'UX Designer', 'Product Designer', 'Interaction Designer'],
-      discoveryHint: 'UX research bridges psychology and design—understand why people click where they do, then fix it.'
-    }
-  },
-
-  {
-    id: 'science-communicator',
-    title: 'Science Communicator / Science Writer',
-    tier: 'niche',
-    description: 'Translate complex science into engaging content for public audiences through writing or video.',
-    requirements: [
-      { subcategoryId: 'writing_journalism', weight: 0.90 },
-      { subcategoryId: 'biology_anatomy', weight: 0.65 },
-      { subcategoryId: 'physics_quantum', weight: 0.55 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 75000, senior: 120000 },
-      education: "Bachelor's in science + journalism (4 years)",
-      jobOutlook: 'Good (5% growth, growing platforms)',
-      yearsToEntry: 4,
-      skills: ['Science writing', 'Research', 'Storytelling', 'Editing', 'Fact-checking'],
-      careerPath: 'Science Writer → Senior Writer → Editor → Science Editor → Communications Director',
-      relatedCareers: ['Science Journalist', 'Documentary Producer', 'Science Educator', 'Podcaster'],
-      discoveryHint: 'Science communication demystifies complex topics—help millions understand the discoveries that shape our world.'
-    }
-  },
-
-  {
-    id: 'bioacoustics-engineer',
-    title: 'Bioacoustics Engineer',
-    tier: 'niche',
-    description: 'Use sound to study animal behavior and ecology. Develop monitoring systems for conservation.',
-    requirements: [
-      { subcategoryId: 'biology_marine', weight: 0.80 },
-      { subcategoryId: 'physics_mechanics', weight: 0.75 },
-      { subcategoryId: 'technology_software', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 55000, mid: 90000, senior: 140000 },
-      education: "Master's in Bioacoustics/Marine Biology (6 years)",
-      jobOutlook: 'Emerging (5% growth, conservation boom)',
-      yearsToEntry: 6,
-      skills: ['Acoustic engineering', 'Species identification', 'Data analysis', 'Signal processing', 'Fieldwork'],
-      careerPath: 'Bioacoustics Researcher → Senior Researcher → Lab Manager → Research Director',
-      relatedCareers: ['Marine Biologist', 'Acoustic Ecologist', 'Conservation Biologist', 'Audio Engineer'],
-      discoveryHint: 'Bioacoustics merges physics and marine biology—listen to whale songs and decode what they tell us.'
-    }
-  },
-
-  {
-    id: 'cryptographer',
-    title: 'Cryptographer / Cryptanalyst',
-    tier: 'niche',
-    description: 'Design encryption systems and analyze code security. Protect sensitive data from unauthorized access.',
-    requirements: [
-      { subcategoryId: 'mathematics_pure', weight: 0.95 },
-      { subcategoryId: 'technology_security', weight: 0.90 },
-      { subcategoryId: 'technology_software', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 90000, mid: 150000, senior: 220000 },
-      education: "Bachelor's in math/CS + advanced cryptography (4-5 years)",
-      jobOutlook: 'Excellent (13% growth, security focus)',
-      yearsToEntry: 5,
-      skills: ['Number theory', 'Algorithm design', 'Security protocols', 'Code analysis', 'Mathematical proofs'],
-      careerPath: 'Cryptographer → Senior Cryptographer → Cryptography Lead → Chief Security Officer',
-      relatedCareers: ['Security Researcher', 'Penetration Tester', 'Security Architect', 'Quantum Cryptographer'],
-      discoveryHint: 'Cryptography applies pure mathematics to build unbreakable codes—protect governments and companies from adversaries.'
-    }
-  },
-
-  {
-    id: 'illustrator-scientific',
-    title: 'Scientific Illustrator',
-    tier: 'niche',
-    description: 'Create detailed, accurate visual representations of scientific concepts, organisms, and medical procedures.',
-    requirements: [
-      { subcategoryId: 'art_design_visual', weight: 0.90 },
-      { subcategoryId: 'biology_anatomy', weight: 0.85 },
-      { subcategoryId: 'physics_mechanics', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 75000, senior: 120000 },
-      education: "Bachelor's in illustration + biology (4 years)",
-      jobOutlook: 'Moderate (3% growth, specialized)',
-      yearsToEntry: 4,
-      skills: ['Anatomical drawing', 'Digital illustration', 'Research', 'Attention to detail', 'Medical knowledge'],
-      careerPath: 'Freelance Illustrator → Scientific Illustrator → Senior Illustrator → Art Director',
-      relatedCareers: ['Medical Animator', 'Science Artist', 'Botanical Illustrator', 'Textbook Designer'],
-      discoveryHint: 'Scientific illustration merges art and accuracy—your drawings teach millions about anatomy and nature.'
-    }
-  },
-
-  {
-    id: 'motion-designer',
-    title: 'Motion Designer / Animation Specialist',
-    tier: 'niche',
-    description: 'Create animated sequences for film, TV, games, and marketing. Master visual effects and motion.',
-    requirements: [
-      { subcategoryId: 'art_design_digital', weight: 0.95 },
-      { subcategoryId: 'art_design_performing', weight: 0.65 },
-      { subcategoryId: 'technology_software', weight: 0.60 }
-    ],
-    context: {
-      salary: { entry: 50000, mid: 85000, senior: 150000 },
-      education: "Bachelor's in animation + 3-5 years experience",
-      jobOutlook: 'Good (8% growth, growing platforms)',
-      yearsToEntry: 4,
-      skills: ['3D software (Maya/Blender)', 'Animation principles', 'VFX', 'Timing', 'Motion capture'],
-      careerPath: 'Junior Animator → Motion Designer → Senior Designer → Lead Animator → Creative Director',
-      relatedCareers: ['VFX Artist', '3D Modeler', 'Game Animator', 'Visual Effects Supervisor'],
-      discoveryHint: 'Motion design breathes life into static images—create animations that captivate and communicate.'
-    }
-  },
-
-  {
-    id: 'historian-digital',
-    title: 'Digital Historian / Public Historian',
-    tier: 'niche',
-    description: 'Apply digital tools to historical research. Create digital archives, interactive timelines, and online exhibits.',
-    requirements: [
-      { subcategoryId: 'history_cultural', weight: 0.85 },
-      { subcategoryId: 'technology_web', weight: 0.75 },
-      { subcategoryId: 'writing_academic', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 75000, senior: 120000 },
-      education: "Master's in History + digital humanities (6 years)",
-      jobOutlook: 'Emerging (5% growth, museums + tech)',
-      yearsToEntry: 6,
-      skills: ['Digital archives', 'Database design', 'Web development', 'Historical research', 'UX for learning'],
-      careerPath: 'Historian → Digital Historian → Curator → Director of Digital Initiatives',
-      relatedCareers: ['Museum Curator', 'Archivist', 'Heritage Consultant', 'Cultural Heritage Manager'],
-      discoveryHint: 'Digital history preserves the past with modern tools—make centuries-old documents accessible to millions online.'
-    }
-  },
-
-  {
-    id: 'conservation-biologist',
-    title: 'Conservation Biologist',
-    tier: 'niche',
-    description: 'Develop strategies to protect endangered species and ecosystems. Conduct field research and policy work.',
-    requirements: [
-      { subcategoryId: 'biology_ecology', weight: 0.95 },
-      { subcategoryId: 'biology_marine', weight: 0.70 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 50000, mid: 85000, senior: 130000 },
-      education: "Master's in Conservation Biology (6 years)",
-      jobOutlook: 'Good (8% growth, conservation focus)',
-      yearsToEntry: 6,
-      skills: ['Population ecology', 'Field surveys', 'GIS/mapping', 'Conservation planning', 'Policy writing'],
-      careerPath: 'Field Biologist → Conservation Biologist → Senior Biologist → Program Director → Conservation Manager',
-      relatedCareers: ['Wildlife Manager', 'Park Ranger', 'Endangered Species Specialist', 'Environmental Consultant'],
-      discoveryHint: 'Conservation biology prevents extinctions—save species from disappearing forever through science-based action.'
-    }
-  },
-
-  {
-    id: 'user-interface-designer',
-    title: 'User Interface Designer',
-    tier: 'niche',
-    description: 'Design visual and interactive elements of apps and websites. Balance aesthetics with usability.',
-    requirements: [
-      { subcategoryId: 'art_design_digital', weight: 0.95 },
-      { subcategoryId: 'technology_web', weight: 0.80 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 95000, senior: 150000 },
-      education: "Bachelor's in design or self-taught (3-4 years)",
-      jobOutlook: 'Good (13% growth)',
-      yearsToEntry: 3,
-      skills: ['Design systems', 'Figma/Adobe XD', 'Accessibility', 'Visual design', 'Prototyping'],
-      careerPath: 'UI Designer → Senior Designer → Design Lead → Design Manager → Creative Director',
-      relatedCareers: ['UX Designer', 'Product Designer', 'Visual Designer', 'Design Ops'],
-      discoveryHint: 'UI design shapes how billions interact with technology—your buttons, colors, and layouts influence daily behavior.'
-    }
-  },
-
-  {
-    id: 'podcast-producer',
-    title: 'Podcast Producer / Audio Producer',
-    tier: 'niche',
-    description: 'Produce, edit, and distribute podcast content. Manage audio quality and storytelling in audio format.',
-    requirements: [
-      { subcategoryId: 'writing_journalism', weight: 0.85 },
-      { subcategoryId: 'art_design_performing', weight: 0.75 },
-      { subcategoryId: 'technology_software', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 75000, senior: 120000 },
-      education: 'Bachelor\'s in communications + audio training (3-4 years)',
-      jobOutlook: 'Good (9% growth, podcast boom)',
-      yearsToEntry: 3,
-      skills: ['Audio editing', 'Sound design', 'Storytelling', 'Equipment operation', 'Post-production'],
-      careerPath: 'Audio Technician → Podcast Producer → Senior Producer → Producer Manager → Studio Director',
-      relatedCareers: ['Sound Designer', 'Broadcast Engineer', 'Music Producer', 'Content Creator'],
-      discoveryHint: 'Podcasting reaches millions through intimate audio storytelling—produce narratives that people consume on daily commutes.'
-    }
-  },
-
-  {
-    id: 'neurologist',
-    title: 'Neurologist',
-    tier: 'niche',
-    description: 'Diagnose and treat nervous system disorders. Specialize in neurological conditions and brain health.',
-    requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.95 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.75 },
-      { subcategoryId: 'physics_mechanics', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 220000, mid: 300000, senior: 400000 },
-      education: 'MD/DO (4 years) + neurology residency (5 years)',
-      jobOutlook: 'Good (5% growth, aging population)',
+      salary: { entry: 65000, mid: 110000, senior: 165000 },
+      education: 'PhD in Astrophysics (5-7 years)',
+      jobOutlook: '7% growth, limited academic positions',
       yearsToEntry: 9,
-      skills: ['Neurological exam', 'Neuroimaging interpretation', 'Patient assessment', 'Medication management', 'Research'],
-      careerPath: 'Neurology Resident → Neurologist → Specialist → Neurology Director',
-      relatedCareers: ['Neurosurgeon', 'Neuropsychologist', 'Sleep Medicine Specialist', 'Movement Disorder Specialist'],
-      discoveryHint: 'Neurology unlocks brain mysteries—diagnose Alzheimer\'s, epilepsy, and Parkinson\'s to improve quality of life.'
+      skills: ['Theoretical Analysis', 'Data Analysis', 'Research', 'Programming'],
+      careerPath: 'Postdoc → Researcher → Senior Researcher → Principal Investigator',
+      relatedCareers: ['physicist', 'cosmologist', 'telescope-designer'],
+      discoveryHint: 'Explore the cosmos and unlock the mysteries of the universe.'
     }
   },
-
   {
-    id: 'brand-strategist',
-    title: 'Brand Strategist',
-    tier: 'niche',
-    description: 'Develop brand identity and positioning. Create strategic plans for company brand growth.',
+    id: 'clinical-therapist',
+    title: 'Licensed Clinical Therapist/Counselor',
+    tier: 'advanced',
+    description: 'Provides psychotherapy and counseling to individuals and groups dealing with mental health and emotional issues.',
     requirements: [
-      { subcategoryId: 'art_design_visual', weight: 0.75 },
-      { subcategoryId: 'writing_journalism', weight: 0.80 },
-      { subcategoryId: 'mathematics_applied', weight: 0.50 }
+      { subcategoryId: 'clinical_counseling', weight: 0.95 },
+      { subcategoryId: 'developmental_psychology', weight: 0.85 },
+      { subcategoryId: 'social_psychology', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 55000, mid: 95000, senior: 150000 },
-      education: "Bachelor's in marketing/design + 5 years experience",
-      jobOutlook: 'Good (7% growth)',
+      salary: { entry: 40000, mid: 65000, senior: 110000 },
+      education: 'Master\'s in Counseling/Social Work; license required',
+      jobOutlook: '12% growth, increasing demand',
+      yearsToEntry: 6,
+      skills: ['Psychotherapy', 'Assessment', 'Empathy', 'Communication'],
+      careerPath: 'Therapist → Senior Therapist → Clinical Supervisor → Agency Director',
+      relatedCareers: ['social-worker', 'marriage-family-therapist', 'rehabilitation-counselor'],
+      discoveryHint: 'Help people heal emotionally and improve their mental health.'
+    }
+  },
+  {
+    id: 'marine-biologist',
+    title: 'Marine Biologist',
+    tier: 'advanced',
+    description: 'Studies marine organisms and ecosystems to understand ocean life and conservation needs.',
+    requirements: [
+      { subcategoryId: 'marine_biology', weight: 0.95 },
+      { subcategoryId: 'ecology_evolution', weight: 0.9 },
+      { subcategoryId: 'molecular_genetics', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 130000 },
+      education: 'BS Marine Biology; MS/PhD for research',
+      jobOutlook: '4% growth, limited positions',
+      yearsToEntry: 4,
+      skills: ['Field Research', 'Data Analysis', 'Scientific Writing', 'Scuba Diving'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Conservation Leader',
+      relatedCareers: ['oceanographer', 'aquaculturist', 'conservation-biologist'],
+      discoveryHint: 'Study and protect the incredible diversity of ocean life.'
+    }
+  },
+  {
+    id: 'computational-linguist',
+    title: 'Computational Linguist / NLP Engineer',
+    tier: 'advanced',
+    description: 'Develops natural language processing systems and algorithms that enable computers to understand human language.',
+    requirements: [
+      { subcategoryId: 'computational_linguistics', weight: 0.95 },
+      { subcategoryId: 'ai_machine_learning', weight: 0.9 },
+      { subcategoryId: 'software_development', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 100000, mid: 160000, senior: 250000 },
+      education: 'BS Computer Science/Linguistics or MS in NLP',
+      jobOutlook: '24% growth (AI field), very high demand',
+      yearsToEntry: 4,
+      skills: ['NLP', 'Machine Learning', 'Python', 'Linguistics'],
+      careerPath: 'NLP Engineer → Senior NLP Engineer → Lead NLP Engineer → Research Director',
+      relatedCareers: ['speech-recognition-engineer', 'ai-researcher', 'chatbot-developer'],
+      discoveryHint: 'Build AI systems that understand and generate human language.'
+    }
+  },
+  {
+    id: 'investment-banker',
+    title: 'Investment Banker',
+    tier: 'advanced',
+    description: 'Advises companies on mergers, acquisitions, and capital raising transactions.',
+    requirements: [
+      { subcategoryId: 'finance_investment', weight: 0.95 },
+      { subcategoryId: 'corporate_business_law', weight: 0.85 },
+      { subcategoryId: 'accounting', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 120000, mid: 300000, senior: 1000000 },
+      education: 'BS Finance/Economics; MBA often preferred',
+      jobOutlook: '4% growth, competitive and cyclical',
+      yearsToEntry: 4,
+      skills: ['Financial Modeling', 'Valuation', 'Communication', 'Sales'],
+      careerPath: 'Analyst → Associate → Vice President → Director → Managing Director',
+      relatedCareers: ['equity-research-analyst', 'corporate-finance-manager', 'venture-capitalist'],
+      discoveryHint: 'Shape major business transactions and corporate strategy.'
+    }
+  },
+  {
+    id: 'landscape-architect',
+    title: 'Landscape Architect',
+    tier: 'advanced',
+    description: 'Designs outdoor spaces including parks, gardens, and urban landscapes for aesthetic and functional purposes.',
+    requirements: [
+      { subcategoryId: 'architecture', weight: 0.85 },
+      { subcategoryId: 'horticulture', weight: 0.8 },
+      { subcategoryId: 'ecology_evolution', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 75000, senior: 125000 },
+      education: 'BLA (Bachelor of Landscape Architecture); license required',
+      jobOutlook: '3% growth, project-dependent',
       yearsToEntry: 5,
-      skills: ['Brand development', 'Market research', 'Storytelling', 'Design thinking', 'Strategy'],
-      careerPath: 'Marketing Coordinator → Brand Strategist → Senior Strategist → Strategy Director → Chief Marketing Officer',
-      relatedCareers: ['Marketing Manager', 'Creative Director', 'Communications Manager', 'Design Director'],
-      discoveryHint: 'Brand strategy shapes how millions perceive companies—create identity and meaning that resonates emotionally.'
+      skills: ['Design', 'CAD', 'Horticultural Knowledge', 'Project Management'],
+      careerPath: 'Junior Designer → Landscape Architect → Senior Architect → Principal',
+      relatedCareers: ['urban-planner', 'architect', 'environmental-planner'],
+      discoveryHint: 'Create beautiful and sustainable outdoor spaces for communities.'
     }
   },
-
   {
-    id: 'game-designer',
-    title: 'Game Designer',
-    tier: 'niche',
-    description: 'Design game mechanics, narratives, and systems. Create engaging interactive entertainment.',
+    id: 'economist',
+    title: 'Economist',
+    tier: 'advanced',
+    description: 'Analyzes economic data, trends, and policies to inform business, government, or research decisions.',
     requirements: [
-      { subcategoryId: 'art_design_performing', weight: 0.80 },
-      { subcategoryId: 'technology_software', weight: 0.75 },
-      { subcategoryId: 'writing_fiction', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 65000, mid: 105000, senior: 160000 },
-      education: "Bachelor's in game design/CS + 3-5 years experience",
-      jobOutlook: 'Good (14% growth, booming industry)',
-      yearsToEntry: 4,
-      skills: ['Game mechanics', 'Narrative design', 'Prototyping', 'Player psychology', 'Unity/Unreal'],
-      careerPath: 'Junior Designer → Game Designer → Senior Designer → Design Director → Game Director',
-      relatedCareers: ['Level Designer', 'Narrative Designer', 'Game Producer', 'Creative Director'],
-      discoveryHint: 'Game design blends storytelling with mechanics—create worlds where millions invest thousands of hours.'
-    }
-  },
-
-  {
-    id: 'geochemist',
-    title: 'Geochemist',
-    tier: 'niche',
-    description: 'Study chemical composition of Earth\'s materials. Analyze mineral deposits, groundwater, and rocks.',
-    requirements: [
-      { subcategoryId: 'chemistry_physical', weight: 0.85 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.75 },
-      { subcategoryId: 'physics_mechanics', weight: 0.50 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 100000, senior: 150000 },
-      education: "Master's in Geochemistry (6 years)",
-      jobOutlook: 'Moderate (4% growth, mining/energy dependent)',
-      yearsToEntry: 6,
-      skills: ['Chemical analysis', 'Lab techniques', 'Data interpretation', 'Mineral identification', 'Fieldwork'],
-      careerPath: 'Geochemist → Senior Geochemist → Research Lead → Lab Manager → Director',
-      relatedCareers: ['Mineralogist', 'Hydrogeologist', 'Petroleum Geologist', 'Environmental Consultant'],
-      discoveryHint: 'Geochemistry reveals Earth\'s composition—analyze minerals and understand how chemistry shapes our planet.'
-    }
-  },
-
-  {
-    id: 'fashion-designer',
-    title: 'Fashion Designer',
-    tier: 'niche',
-    description: 'Design clothing and accessories. Combine artistry with technical sewing and trendsetting.',
-    requirements: [
-      { subcategoryId: 'art_design_crafts', weight: 0.95 },
-      { subcategoryId: 'art_design_visual', weight: 0.80 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.40 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 80000, senior: 150000 },
-      education: "Bachelor's in fashion design (4 years)",
-      jobOutlook: 'Competitive (2% growth, portfolio-based)',
-      yearsToEntry: 4,
-      skills: ['Sketch design', 'Sewing', 'Pattern making', 'Trend forecasting', 'Fabric knowledge'],
-      careerPath: 'Assistant Designer → Fashion Designer → Senior Designer → Head Designer → Creative Director',
-      relatedCareers: ['Pattern Maker', 'Textile Designer', 'Costume Designer', 'Stylist'],
-      discoveryHint: 'Fashion design combines art and craftsmanship—dress the world in your creative vision.'
-    }
-  },
-
-  {
-    id: 'art-therapist',
-    title: 'Art Therapist',
-    tier: 'niche',
-    description: 'Use art creation to support mental health and emotional healing. Work in clinical settings.',
-    requirements: [
-      { subcategoryId: 'art_design_visual', weight: 0.80 },
-      { subcategoryId: 'biology_anatomy', weight: 0.60 },
-      { subcategoryId: 'writing_academic', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 45000, mid: 70000, senior: 110000 },
-      education: "Master's in Art Therapy + licensure (6 years)",
-      jobOutlook: 'Good (8% growth, mental health focus)',
-      yearsToEntry: 6,
-      skills: ['Art techniques', 'Therapeutic methods', 'Client assessment', 'Mental health knowledge', 'Case documentation'],
-      careerPath: 'Art Therapy Assistant → Art Therapist → Clinical Director → Practice Owner',
-      relatedCareers: ['Psychologist', 'Counselor', 'Occupational Therapist', 'Social Worker'],
-      discoveryHint: 'Art therapy heals through creative expression—help patients process trauma and build resilience through art-making.'
-    }
-  },
-
-  {
-    id: 'food-scientist',
-    title: 'Food Scientist',
-    tier: 'niche',
-    description: 'Develop and test food products. Ensure safety, taste, nutrition, and shelf stability.',
-    requirements: [
-      { subcategoryId: 'chemistry_organic', weight: 0.85 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.75 },
-      { subcategoryId: 'biology_ecology', weight: 0.45 }
-    ],
-    context: {
-      salary: { entry: 55000, mid: 90000, senior: 140000 },
-      education: "Bachelor's in Food Science (4 years)",
-      jobOutlook: 'Good (5% growth)',
-      yearsToEntry: 4,
-      skills: ['Food chemistry', 'Nutrition science', 'Microbiology', 'Product development', 'Sensory analysis'],
-      careerPath: 'Food Scientist → Senior Scientist → Product Development Manager → R&D Director',
-      relatedCareers: ['Nutritionist', 'Quality Assurance Manager', 'Food Engineer', 'Agricultural Scientist'],
-      discoveryHint: 'Food science combines chemistry and nutrition—develop products millions eat every day while ensuring safety and taste.'
-    }
-  },
-
-  {
-    id: 'renewable-energy-engineer',
-    title: 'Renewable Energy Engineer',
-    tier: 'niche',
-    description: 'Design solar, wind, and other renewable energy systems. Work on sustainable energy solutions.',
-    requirements: [
-      { subcategoryId: 'physics_thermodynamics', weight: 0.85 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.75 },
-      { subcategoryId: 'physics_mechanics', weight: 0.70 }
+      { subcategoryId: 'macroeconomics', weight: 0.95 },
+      { subcategoryId: 'statistics_probability', weight: 0.9 },
+      { subcategoryId: 'microeconomics', weight: 0.85 }
     ],
     context: {
       salary: { entry: 70000, mid: 120000, senior: 180000 },
-      education: "Bachelor's in renewable energy engineering (4 years)",
-      jobOutlook: 'Excellent (13% growth, climate focus)',
+      education: 'BS/MS Economics; PhD for academia/government research',
+      jobOutlook: '8% growth, steady demand',
       yearsToEntry: 4,
-      skills: ['Solar/wind design', 'Thermodynamics', 'Grid integration', 'Simulation software', 'Project management'],
-      careerPath: 'Energy Engineer → Senior Engineer → Project Manager → Engineering Manager → Director',
-      relatedCareers: ['Environmental Engineer', 'Electrical Engineer', 'Sustainability Consultant', 'Grid Operator'],
-      discoveryHint: 'Renewable energy engineering accelerates the clean energy transition—design systems powering a sustainable future.'
+      skills: ['Statistical Analysis', 'Economic Modeling', 'Research', 'Writing'],
+      careerPath: 'Economist → Senior Economist → Chief Economist → Director',
+      relatedCareers: ['policy-analyst', 'financial-analyst', 'research-analyst'],
+      discoveryHint: 'Use economic analysis to inform major policy and business decisions.'
     }
   },
-
   {
-    id: 'museum-curator',
-    title: 'Museum Curator / Collections Manager',
-    tier: 'niche',
-    description: 'Select, preserve, and interpret museum collections. Design exhibitions and educational programs.',
+    id: 'clinical-nurse-specialist',
+    title: 'Clinical Nurse Specialist',
+    tier: 'advanced',
+    description: 'Provides expert nursing care, mentors staff, and improves clinical practice in specialized healthcare areas.',
     requirements: [
-      { subcategoryId: 'history_ancient', weight: 0.85 },
-      { subcategoryId: 'art_design_visual', weight: 0.75 },
-      { subcategoryId: 'writing_academic', weight: 0.75 }
+      { subcategoryId: 'nursing', weight: 0.95 },
+      { subcategoryId: 'medicine_clinical', weight: 0.85 },
+      { subcategoryId: 'animal_physiology', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 45000, mid: 75000, senior: 120000 },
-      education: "Master's in museum studies/history (6 years)",
-      jobOutlook: 'Moderate (5% growth, competitive)',
-      yearsToEntry: 6,
-      skills: ['Collections management', 'Exhibition design', 'Historical research', 'Conservation knowledge', 'Public communication'],
-      careerPath: 'Collections Assistant → Curator → Senior Curator → Head Curator → Director',
-      relatedCareers: ['Archivist', 'Conservator', 'Exhibition Designer', 'Museum Director'],
-      discoveryHint: 'Curating preserves history for future generations—tell compelling stories through carefully selected artifacts.'
+      salary: { entry: 75000, mid: 105000, senior: 150000 },
+      education: 'MSN (Master\'s in Nursing); CNS certification',
+      jobOutlook: '9% growth, high demand',
+      yearsToEntry: 7,
+      skills: ['Advanced Clinical Skills', 'Leadership', 'Research', 'Teaching'],
+      careerPath: 'RN → Graduate Nurse → CNS → Nursing Manager → Director',
+      relatedCareers: ['nurse-practitioner', 'nursing-educator', 'quality-improvement-specialist'],
+      discoveryHint: 'Lead clinical excellence and mentor the nursing team.'
     }
   },
-
+  {
+    id: 'urban-planner',
+    title: 'Urban/City Planner',
+    tier: 'advanced',
+    description: 'Plans land use and development to create sustainable, functional, and livable communities.',
+    requirements: [
+      { subcategoryId: 'urban_sociology', weight: 0.85 },
+      { subcategoryId: 'environmental_engineering', weight: 0.8 },
+      { subcategoryId: 'transportation_planning', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 85000, senior: 140000 },
+      education: 'Master\'s in Urban Planning; AICP certification often required',
+      jobOutlook: '4% growth, concentrated in growing areas',
+      yearsToEntry: 6,
+      skills: ['Urban Design', 'GIS', 'Policy Analysis', 'Community Engagement'],
+      careerPath: 'Planner → Senior Planner → Planning Manager → Director of Planning',
+      relatedCareers: ['landscape-architect', 'transportation-planner', 'environmental-planner'],
+      discoveryHint: 'Shape the future of cities and create better living environments.'
+    }
+  },
+  {
+    id: 'petroleum-engineer',
+    title: 'Petroleum Engineer',
+    tier: 'advanced',
+    description: 'Designs and develops methods for extracting oil and gas from the ground.',
+    requirements: [
+      { subcategoryId: 'chemical_engineering', weight: 0.85 },
+      { subcategoryId: 'geophysics', weight: 0.8 },
+      { subcategoryId: 'applied_mathematics', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 80000, mid: 150000, senior: 220000 },
+      education: 'BS Petroleum Engineering',
+      jobOutlook: '2% growth, cyclical with oil prices',
+      yearsToEntry: 4,
+      skills: ['Reservoir Engineering', 'Drilling', 'Problem Solving', 'CAD'],
+      careerPath: 'Junior Engineer → Senior Engineer → Engineering Manager → Director',
+      relatedCareers: ['geoscientist', 'drilling-engineer', 'facilities-engineer'],
+      discoveryHint: 'Develop efficient methods for energy resource extraction.'
+    }
+  },
   {
     id: 'music-therapist',
     title: 'Music Therapist',
-    tier: 'niche',
-    description: 'Use music to support healing and well-being. Work with patients in clinical and therapeutic settings.',
+    tier: 'advanced',
+    description: 'Uses music to improve physical, emotional, cognitive, and social well-being in therapeutic settings.',
     requirements: [
-      { subcategoryId: 'art_design_performing', weight: 0.90 },
-      { subcategoryId: 'biology_anatomy', weight: 0.65 },
-      { subcategoryId: 'writing_academic', weight: 0.60 }
+      { subcategoryId: 'music_production', weight: 0.85 },
+      { subcategoryId: 'clinical_counseling', weight: 0.85 },
+      { subcategoryId: 'instrumental_performance', weight: 0.95 }
     ],
     context: {
-      salary: { entry: 45000, mid: 70000, senior: 110000 },
-      education: "Bachelor's in music therapy + licensure (5 years)",
-      jobOutlook: 'Good (6% growth)',
-      yearsToEntry: 5,
-      skills: ['Music performance', 'Therapeutic methods', 'Instrument proficiency', 'Client assessment', 'Treatment planning'],
-      careerPath: 'Music Therapy Assistant → Music Therapist → Clinical Director → Supervisor',
-      relatedCareers: ['Music Teacher', 'Psychologist', 'Occupational Therapist', 'Social Worker'],
-      discoveryHint: 'Music therapy heals through sound and rhythm—improve neurological, emotional, and physical health through music.'
+      salary: { entry: 38000, mid: 65000, senior: 110000 },
+      education: 'BM in Music Therapy; MT-BC certification required',
+      jobOutlook: '8% growth, increasing demand',
+      yearsToEntry: 4,
+      skills: ['Music Technique', 'Therapeutic Principles', 'Assessment', 'Communication'],
+      careerPath: 'Music Therapist → Senior Therapist → Clinical Director → Program Director',
+      relatedCareers: ['art-therapist', 'occupational-therapist', 'rehabilitation-specialist'],
+      discoveryHint: 'Heal through the therapeutic power of music.'
     }
   },
 
+  // NICHE TIER (44 careers)
+  {
+    id: 'conservation-scientist',
+    title: 'Conservation Scientist',
+    tier: 'niche',
+    description: 'Manages natural resources like forests, wildlife habitats, and water systems for sustainable use.',
+    requirements: [
+      { subcategoryId: 'conservation_biology', weight: 0.95 },
+      { subcategoryId: 'ecosystem_management', weight: 0.9 },
+      { subcategoryId: 'ecology_evolution', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 75000, senior: 120000 },
+      education: 'BS Forestry, Conservation, or Environmental Science',
+      jobOutlook: '3% growth, concentrated in government/nonprofits',
+      yearsToEntry: 4,
+      skills: ['Resource Management', 'Field Work', 'Data Analysis', 'Policy Knowledge'],
+      careerPath: 'Scientist → Senior Scientist → Regional Manager → Director',
+      relatedCareers: ['environmental-scientist', 'wildlife-biologist', 'park-ranger'],
+      discoveryHint: 'Protect forests, wildlife, and natural resources for future generations.'
+    }
+  },
+  {
+    id: 'biomechanical-engineer',
+    title: 'Biomechanical Engineer',
+    tier: 'niche',
+    description: 'Applies mechanics and engineering principles to biological systems, studying movement and prosthetics.',
+    requirements: [
+      { subcategoryId: 'mechanical_engineering', weight: 0.85 },
+      { subcategoryId: 'animal_physiology', weight: 0.9 },
+      { subcategoryId: 'biomedical_engineering', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 110000, senior: 165000 },
+      education: 'BS Biomechanical Engineering or related',
+      jobOutlook: '6% growth, increasing demand',
+      yearsToEntry: 4,
+      skills: ['Biomechanics', 'CAD', 'Lab Skills', 'Data Analysis'],
+      careerPath: 'Junior Engineer → Senior Engineer → Research Lead → Director',
+      relatedCareers: ['biomedical-engineer', 'prosthetics-specialist', 'sports-scientist'],
+      discoveryHint: 'Engineer solutions for human movement and rehabilitation.'
+    }
+  },
+  {
+    id: 'toxicologist',
+    title: 'Toxicologist',
+    tier: 'niche',
+    description: 'Studies effects of toxic substances on organisms and environments, assesses health and safety risks.',
+    requirements: [
+      { subcategoryId: 'analytical_chemistry', weight: 0.9 },
+      { subcategoryId: 'biochemistry', weight: 0.85 },
+      { subcategoryId: 'animal_physiology', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 55000, mid: 95000, senior: 150000 },
+      education: 'BS Chemistry/Toxicology; MS/PhD often required',
+      jobOutlook: '7% growth, increasing demand',
+      yearsToEntry: 4,
+      skills: ['Chemical Analysis', 'Lab Skills', 'Risk Assessment', 'Regulatory Knowledge'],
+      careerPath: 'Toxicologist → Senior Toxicologist → Research Director → Safety Officer',
+      relatedCareers: ['analytical-chemist', 'forensic-toxicologist', 'regulatory-scientist'],
+      discoveryHint: 'Identify and mitigate toxic hazards to protect human and environmental health.'
+    }
+  },
+  {
+    id: 'sound-engineer',
+    title: 'Sound Engineer / Audio Engineer',
+    tier: 'niche',
+    description: 'Designs, sets up, and operates sound systems for recordings, concerts, and events.',
+    requirements: [
+      { subcategoryId: 'sound_design', weight: 0.95 },
+      { subcategoryId: 'music_production', weight: 0.9 },
+      { subcategoryId: 'acoustics_waves', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 65000, senior: 120000 },
+      education: 'Associate\'s in Audio Engineering or self-taught with experience',
+      jobOutlook: '5% growth, project-based work',
+      yearsToEntry: 2,
+      skills: ['Audio Equipment', 'Mixing/Mastering', 'Problem Solving', 'Communication'],
+      careerPath: 'Assistant → Audio Engineer → Senior Engineer → Studio Owner/Director',
+      relatedCareers: ['music-producer', 'live-sound-engineer', 'acoustician'],
+      discoveryHint: 'Capture and shape sound for recordings and live performances.'
+    }
+  },
+  {
+    id: 'perfumer',
+    title: 'Perfumer / Fragrance Developer',
+    tier: 'niche',
+    description: 'Develops fragrances and scents for perfumes, colognes, and consumer products.',
+    requirements: [
+      { subcategoryId: 'organic_chemistry', weight: 0.95 },
+      { subcategoryId: 'polymer_chemistry', weight: 0.75 },
+      { subcategoryId: 'analytical_chemistry', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 90000, senior: 150000 },
+      education: 'BS Chemistry; specialized perfumery training highly valuable',
+      jobOutlook: 'Stable, niche field',
+      yearsToEntry: 4,
+      skills: ['Chemistry', 'Sensory Evaluation', 'Creativity', 'Formulation'],
+      careerPath: 'Junior Perfumer → Perfumer → Senior Perfumer → Master Perfumer',
+      relatedCareers: ['flavor-chemist', 'cosmetic-scientist', 'product-developer'],
+      discoveryHint: 'Create scents that evoke emotion and enhance products.'
+    }
+  },
+  {
+    id: 'underwater-welder',
+    title: 'Underwater Welder / Diver',
+    tier: 'niche',
+    description: 'Performs welding and repair work underwater on oil rigs, pipelines, and other submerged structures.',
+    requirements: [
+      { subcategoryId: 'mechanical_engineering', weight: 0.75 },
+      { subcategoryId: 'electrical_engineering', weight: 0.65 },
+      { subcategoryId: 'maritime', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 55000, mid: 120000, senior: 200000 },
+      education: 'High school diploma + commercial diving certification',
+      jobOutlook: 'Stable, high-risk work',
+      yearsToEntry: 2,
+      skills: ['Welding', 'Diving', 'Problem Solving', 'Safety Awareness'],
+      careerPath: 'Diver → Experienced Diver → Dive Supervisor → Project Manager',
+      relatedCareers: ['commercial-diver', 'offshore-engineer', 'marine-technician'],
+      discoveryHint: 'Work in extreme environments maintaining critical underwater infrastructure.'
+    }
+  },
+  {
+    id: 'animation-director',
+    title: 'Animation Director',
+    tier: 'niche',
+    description: 'Directs animated films and television shows, supervising artistic and technical teams.',
+    requirements: [
+      { subcategoryId: 'puppetry_animation', weight: 0.95 },
+      { subcategoryId: 'game_dev_graphics', weight: 0.85 },
+      { subcategoryId: 'creative_writing', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 110000, senior: 200000 },
+      education: 'BFA in Animation or related field',
+      jobOutlook: '6% growth, competitive field',
+      yearsToEntry: 5,
+      skills: ['Animation', 'Leadership', 'Storytelling', '3D Software'],
+      careerPath: 'Animator → Senior Animator → Animation Director → Creative Director',
+      relatedCareers: ['animator', '3d-artist', 'visual-effects-director'],
+      discoveryHint: 'Bring animated worlds and characters to life on screen.'
+    }
+  },
+  {
+    id: 'ethnobotanist',
+    title: 'Ethnobotanist',
+    tier: 'niche',
+    description: 'Studies relationships between plants and human cultures, exploring traditional plant uses and conservation.',
+    requirements: [
+      { subcategoryId: 'plant_biology', weight: 0.95 },
+      { subcategoryId: 'cultural_anthropology', weight: 0.9 },
+      { subcategoryId: 'ecology_evolution', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 130000 },
+      education: 'BS Botany/Anthropology; MS/PhD recommended',
+      jobOutlook: '5% growth, academic/nonprofit focus',
+      yearsToEntry: 4,
+      skills: ['Botanical Knowledge', 'Ethnographic Research', 'Field Work', 'Writing'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Academic Leader',
+      relatedCareers: ['ethnobotany-specialist', 'medical-botanist', 'biodiversity-scientist'],
+      discoveryHint: 'Explore traditional plant knowledge and indigenous ecological wisdom.'
+    }
+  },
+  {
+    id: 'cryptographer',
+    title: 'Cryptographer / Cryptology Specialist',
+    tier: 'niche',
+    description: 'Develops encryption algorithms and security protocols to protect sensitive information.',
+    requirements: [
+      { subcategoryId: 'algebra_discrete', weight: 0.95 },
+      { subcategoryId: 'cybersecurity', weight: 0.9 },
+      { subcategoryId: 'pure_mathematics', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 95000, mid: 160000, senior: 240000 },
+      education: 'BS Computer Science/Mathematics; often MS in Cryptography',
+      jobOutlook: '18% growth, very high demand',
+      yearsToEntry: 4,
+      skills: ['Cryptography', 'Number Theory', 'Python/C++', 'Security Theory'],
+      careerPath: 'Cryptographer → Senior Cryptographer → Lead Researcher → Chief Cryptographer',
+      relatedCareers: ['security-engineer', 'penetration-tester', 'information-security-analyst'],
+      discoveryHint: 'Protect sensitive data with unbreakable encryption.'
+    }
+  },
   {
     id: 'volcanologist',
     title: 'Volcanologist',
     tier: 'niche',
-    description: 'Study volcanoes and volcanic processes. Monitor volcanic activity and assess natural hazards.',
+    description: 'Studies volcanoes and volcanic processes to understand hazards and monitor eruption risks.',
     requirements: [
-      { subcategoryId: 'physics_thermodynamics', weight: 0.80 },
-      { subcategoryId: 'chemistry_physical', weight: 0.75 },
-      { subcategoryId: 'physics_mechanics', weight: 0.65 }
+      { subcategoryId: 'geophysics', weight: 0.95 },
+      { subcategoryId: 'structural_geology', weight: 0.9 },
+      { subcategoryId: 'geochemistry', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 55000, mid: 95000, senior: 145000 },
-      education: "Master's in volcanology/geology (6 years)",
-      jobOutlook: 'Emerging (3% growth, specialized)',
-      yearsToEntry: 6,
-      skills: ['Volcanic monitoring', 'Geochemistry', 'Fieldwork', 'Hazard assessment', 'Data analysis'],
-      careerPath: 'Field Volcanologist → Volcanologist → Senior Researcher → Observatory Director',
-      relatedCareers: ['Geophysicist', 'Seismologist', 'Environmental Geologist', 'Natural Hazard Specialist'],
-      discoveryHint: 'Volcanology combines heat and pressure—study Earth\'s most dramatic explosions to predict and protect communities.'
-    }
-  },
-
-  // ============================================================================
-  // TIER 4: EXPLORATORY (27) - Rare combinations, emerging fields, creative intersections
-  // ============================================================================
-
-  {
-    id: 'digital-archivist',
-    title: 'Digital Archivist / Digital Preservation Specialist',
-    tier: 'exploratory',
-    description: 'Digitize and preserve historical documents and artifacts. Manage digital collections and metadata.',
-    requirements: [
-      { subcategoryId: 'history_modern', weight: 0.85 },
-      { subcategoryId: 'technology_software', weight: 0.80 },
-      { subcategoryId: 'writing_academic', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 50000, mid: 80000, senior: 130000 },
-      education: "Master's in library science or history + digital training (6 years)",
-      jobOutlook: 'Emerging (5% growth, digital transformation)',
-      yearsToEntry: 6,
-      skills: ['Digitization', 'Metadata standards', 'Database management', 'Historical research', 'Preservation'],
-      careerPath: 'Digital Curator → Digital Archivist → Senior Archivist → Archives Manager → Director',
-      relatedCareers: ['Librarian', 'Museum Curator', 'Data Librarian', 'Heritage Manager'],
-      discoveryHint: 'Digital archiving preserves humanity\'s record in bits—rescue endangered documents from decay, making history accessible forever.'
-    }
-  },
-
-  {
-    id: 'holographic-artist',
-    title: 'Holographic Artist / Spatial Designer',
-    tier: 'exploratory',
-    description: 'Create 3D holographic art and experiences. Blend physics, optics, and visual design.',
-    requirements: [
-      { subcategoryId: 'art_design_visual', weight: 0.90 },
-      { subcategoryId: 'physics_quantum', weight: 0.70 },
-      { subcategoryId: 'technology_software', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 55000, mid: 95000, senior: 160000 },
-      education: "Bachelor's in art + physics + specialized training (4-5 years)",
-      jobOutlook: 'Emerging (12% growth in spatial computing)',
-      yearsToEntry: 5,
-      skills: ['3D modeling', 'Optics', 'VR/AR platforms', 'Light manipulation', 'Art direction'],
-      careerPath: 'Digital Artist → Holographic Designer → Creative Director → Experience Lead',
-      relatedCareers: ['VR Designer', 'XR Developer', 'Motion Designer', 'Immersive Artist'],
-      discoveryHint: 'Holographic art fuses light and imagination—create impossible visuals that reshape how humans perceive reality.'
-    }
-  },
-
-  {
-    id: 'bioinformatician',
-    title: 'Bioinformatician / Computational Biologist',
-    tier: 'exploratory',
-    description: 'Analyze biological data using computational methods. Work on genomics, proteomics, and systems biology.',
-    requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.90 },
-      { subcategoryId: 'technology_data', weight: 0.85 },
-      { subcategoryId: 'mathematics_applied', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 75000, mid: 130000, senior: 190000 },
-      education: "Master's in bioinformatics (5-6 years)",
-      jobOutlook: 'Excellent (15% growth)',
-      yearsToEntry: 6,
-      skills: ['Python/R', 'Genomics databases', 'Statistical analysis', 'Machine learning', 'Sequence analysis'],
-      careerPath: 'Bioinformatician → Senior Bioinformatician → Lead Bioinformatician → Bioinformatics Director',
-      relatedCareers: ['Computational Biologist', 'Genomicist', 'Data Scientist (biotech)', 'Systems Biologist'],
-      discoveryHint: 'Bioinformatics decodes life\'s code—use Python to analyze DNA and discover genetic patterns that revolutionize medicine.'
-    }
-  },
-
-  {
-    id: 'climate-scientist',
-    title: 'Climate Scientist / Climate Modeler',
-    tier: 'exploratory',
-    description: 'Study climate systems and model future scenarios. Inform policy and mitigation strategies.',
-    requirements: [
-      { subcategoryId: 'physics_thermodynamics', weight: 0.85 },
-      { subcategoryId: 'mathematics_applied', weight: 0.85 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 70000, mid: 120000, senior: 180000 },
-      education: "Master's in atmospheric science (6 years)",
-      jobOutlook: 'Excellent (8% growth, climate focus)',
-      yearsToEntry: 6,
-      skills: ['Climate modeling', 'Physics/thermodynamics', 'Statistical analysis', 'GIS', 'Scientific computing'],
-      careerPath: 'Climate Scientist → Senior Scientist → Research Lead → Climate Center Director',
-      relatedCareers: ['Meteorologist', 'Oceanographer', 'Environmental Scientist', 'Sustainability Scientist'],
-      discoveryHint: 'Climate science predicts Earth\'s future—model global warming scenarios and guide humanity toward sustainable solutions.'
-    }
-  },
-
-  {
-    id: 'narrative-designer-vr',
-    title: 'Narrative Designer (VR/Immersive)',
-    tier: 'exploratory',
-    description: 'Design interactive stories for VR and immersive experiences. Create branching narratives and emotional arcs.',
-    requirements: [
-      { subcategoryId: 'writing_fiction', weight: 0.90 },
-      { subcategoryId: 'technology_software', weight: 0.75 },
-      { subcategoryId: 'art_design_performing', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 65000, mid: 110000, senior: 170000 },
-      education: "Bachelor's in creative writing + game/VR training (4-5 years)",
-      jobOutlook: 'Emerging (15% growth in VR/metaverse)',
+      salary: { entry: 50000, mid: 90000, senior: 140000 },
+      education: 'BS Geology; MS/PhD for research',
+      jobOutlook: '7% growth (geoscience field)',
       yearsToEntry: 4,
-      skills: ['Interactive narrative', 'Branching logic', 'World building', 'Game engines', 'Dialogue system design'],
-      careerPath: 'Game Writer → Narrative Designer → Senior Narrative Designer → Creative Director',
-      relatedCareers: ['Game Designer', 'Screenwriter', 'Story Producer', 'XR Experience Designer'],
-      discoveryHint: 'VR narrative design creates alternate worlds—writers craft immersive stories where players live the plot.'
+      skills: ['Geological Analysis', 'Field Work', 'Modeling', 'Communication'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Observatory Director',
+      relatedCareers: ['seismologist', 'geophysicist', 'hazard-assessment-specialist'],
+      discoveryHint: 'Study volcanic processes to protect communities from eruptions.'
+    }
+  },
+  {
+    id: 'book-illustrator',
+    title: 'Book Illustrator / Children\'s Book Illustrator',
+    tier: 'niche',
+    description: 'Creates visual illustrations for books, typically children\'s books and fantasy novels.',
+    requirements: [
+      { subcategoryId: 'painting_drawing', weight: 0.95 },
+      { subcategoryId: 'web_digital_design', weight: 0.75 },
+      { subcategoryId: 'creative_writing', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 30000, mid: 60000, senior: 120000 },
+      education: 'BFA in Illustration; strong portfolio essential',
+      jobOutlook: '3% growth, competitive freelance field',
+      yearsToEntry: 4,
+      skills: ['Drawing/Painting', 'Digital Art', 'Storytelling', 'Design Sense'],
+      careerPath: 'Freelance Illustrator → Book Illustrator → Lead Illustrator → Art Director',
+      relatedCareers: ['concept-artist', 'graphic-designer', 'comic-artist'],
+      discoveryHint: 'Bring stories to life through compelling visual illustrations.'
+    }
+  },
+  {
+    id: 'ocular-prosthetist',
+    title: 'Ocular Prosthetist',
+    tier: 'niche',
+    description: 'Designs and manufactures prosthetic eyes and other ocular devices for patients who have lost eyes.',
+    requirements: [
+      { subcategoryId: 'biomedical_engineering', weight: 0.85 },
+      { subcategoryId: 'medicine_clinical', weight: 0.75 },
+      { subcategoryId: 'sculpture_3d', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'Certificate/Associate\'s in Prosthetics; on-the-job training',
+      jobOutlook: '6% growth, specialized field',
+      yearsToEntry: 2,
+      skills: ['Prosthetic Design', 'Anatomy', 'Manual Skills', 'Patient Care'],
+      careerPath: 'Technician → Prosthetist → Supervisor → Clinical Director',
+      relatedCareers: ['prosthetist-orthotist', 'dental-technician', 'optical-technician'],
+      discoveryHint: 'Restore vision and confidence through custom eye prosthetics.'
+    }
+  },
+  {
+    id: 'mycologist',
+    title: 'Mycologist',
+    tier: 'niche',
+    description: 'Studies fungi including mushrooms and molds, with applications in medicine, food, and agriculture.',
+    requirements: [
+      { subcategoryId: 'microbiology', weight: 0.95 },
+      { subcategoryId: 'biochemistry', weight: 0.8 },
+      { subcategoryId: 'molecular_genetics', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 48000, mid: 85000, senior: 135000 },
+      education: 'BS Microbiology/Mycology; MS/PhD for research',
+      jobOutlook: '7% growth, growing field',
+      yearsToEntry: 4,
+      skills: ['Mycology', 'Lab Skills', 'Research', 'Taxonomy'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Lab Director',
+      relatedCareers: ['microbiologist', 'medical-mycologist', 'industrial-mycologist'],
+      discoveryHint: 'Unlock the potential of fungi for medicine and biotechnology.'
+    }
+  },
+  {
+    id: 'seismologist',
+    title: 'Seismologist',
+    tier: 'niche',
+    description: 'Studies earthquakes and seismic waves to understand Earth\'s structure and predict seismic hazards.',
+    requirements: [
+      { subcategoryId: 'geophysics', weight: 0.95 },
+      { subcategoryId: 'structural_geology', weight: 0.85 },
+      { subcategoryId: 'applied_mathematics', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 55000, mid: 100000, senior: 155000 },
+      education: 'BS Geophysics; MS/PhD for research',
+      jobOutlook: '7% growth, academic/government focus',
+      yearsToEntry: 4,
+      skills: ['Seismology', 'Data Analysis', 'Modeling', 'Communication'],
+      careerPath: 'Seismologist → Senior Seismologist → Research Director → Observatory Director',
+      relatedCareers: ['geophysicist', 'volcanologist', 'hazard-analyst'],
+      discoveryHint: 'Study earthquakes to save lives and understand our dynamic planet.'
+    }
+  },
+  {
+    id: 'flavor-chemist',
+    title: 'Flavor Chemist',
+    tier: 'niche',
+    description: 'Develops flavoring compounds and taste profiles for food and beverage products.',
+    requirements: [
+      { subcategoryId: 'organic_chemistry', weight: 0.95 },
+      { subcategoryId: 'analytical_chemistry', weight: 0.85 },
+      { subcategoryId: 'biochemistry', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 55000, mid: 95000, senior: 155000 },
+      education: 'BS Chemistry; specialized flavor training valuable',
+      jobOutlook: '5% growth, stable field',
+      yearsToEntry: 4,
+      skills: ['Organic Chemistry', 'Flavor Science', 'Sensory Evaluation', 'Formulation'],
+      careerPath: 'Flavor Chemist → Senior Chemist → Research Director → Chief Scientist',
+      relatedCareers: ['perfumer', 'food-scientist', 'chemist'],
+      discoveryHint: 'Create delicious flavors that enhance food and beverage products.'
+    }
+  },
+  {
+    id: 'dance-choreographer',
+    title: 'Dance Choreographer',
+    tier: 'niche',
+    description: 'Creates dance movements and routines for performances, theater, film, and television.',
+    requirements: [
+      { subcategoryId: 'dance_choreography', weight: 0.95 },
+      { subcategoryId: 'creative_writing', weight: 0.75 },
+      { subcategoryId: 'music_theory_history', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 25000, mid: 60000, senior: 130000 },
+      education: 'BFA in Dance; extensive performance experience essential',
+      jobOutlook: '2% growth, freelance/project work',
+      yearsToEntry: 4,
+      skills: ['Dance Technique', 'Choreography', 'Music Understanding', 'Creativity'],
+      careerPath: 'Dancer → Assistant Choreographer → Choreographer → Creative Director',
+      relatedCareers: ['dancer', 'movement-director', 'ballet-master'],
+      discoveryHint: 'Express artistic vision through movement and dance.'
+    }
+  },
+  {
+    id: 'paleontologist',
+    title: 'Paleontologist',
+    tier: 'niche',
+    description: 'Studies fossils and extinct organisms to understand Earth\'s history and evolution.',
+    requirements: [
+      { subcategoryId: 'paleontology', weight: 0.95 },
+      { subcategoryId: 'ecology_evolution', weight: 0.85 },
+      { subcategoryId: 'mineralogy_petrology', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 48000, mid: 85000, senior: 135000 },
+      education: 'BS Paleontology/Geology; MS/PhD for research',
+      jobOutlook: '5% growth, limited academic positions',
+      yearsToEntry: 4,
+      skills: ['Fossil Analysis', 'Geological Knowledge', 'Field Work', 'Research'],
+      careerPath: 'Paleontologist → Senior Paleontologist → Research Director → Curator',
+      relatedCareers: ['archaeologist', 'geologist', 'evolutionary-biologist'],
+      discoveryHint: 'Unearth ancient life and understand how evolution shaped our world.'
+    }
+  },
+  {
+    id: 'coat-and-apparel-designer',
+    title: 'Apparel Designer / Fashion Designer',
+    tier: 'niche',
+    description: 'Designs clothing and fashion collections for commercial production or custom tailoring.',
+    requirements: [
+      { subcategoryId: 'fashion_design', weight: 0.95 },
+      { subcategoryId: 'industrial_product_design', weight: 0.8 },
+      { subcategoryId: 'graphic_design', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 70000, senior: 140000 },
+      education: 'BFA Fashion Design; strong portfolio essential',
+      jobOutlook: '2% growth, competitive field',
+      yearsToEntry: 4,
+      skills: ['Design', 'Sewing', 'Pattern Making', 'Trend Analysis'],
+      careerPath: 'Junior Designer → Designer → Senior Designer → Creative Director',
+      relatedCareers: ['textile-designer', 'costume-designer', 'shoe-designer'],
+      discoveryHint: 'Create beautiful and functional clothing that shapes personal style.'
+    }
+  },
+  {
+    id: 'dendrochronologist',
+    title: 'Dendrochronologist (Tree Ring Dating)',
+    tier: 'niche',
+    description: 'Studies tree rings to determine age and analyze historical climate and environmental changes.',
+    requirements: [
+      { subcategoryId: 'plant_biology', weight: 0.9 },
+      { subcategoryId: 'environmental_history', weight: 0.85 },
+      { subcategoryId: 'ecology_evolution', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 130000 },
+      education: 'BS Forestry/Biology; MS/PhD for research',
+      jobOutlook: '5% growth, specialized field',
+      yearsToEntry: 4,
+      skills: ['Tree Ring Analysis', 'Climate Science', 'Field Work', 'Dating Methods'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Lab Director',
+      relatedCareers: ['climate-scientist', 'archaeologist', 'forest-ecologist'],
+      discoveryHint: 'Read Earth\'s climate history written in tree rings.'
+    }
+  },
+  {
+    id: 'dialectologist',
+    title: 'Dialectologist / Sociolinguist',
+    tier: 'niche',
+    description: 'Studies language variation across regions and social groups, analyzing dialects and language change.',
+    requirements: [
+      { subcategoryId: 'sociolinguistics', weight: 0.95 },
+      { subcategoryId: 'structural_linguistics', weight: 0.9 },
+      { subcategoryId: 'cultural_anthropology', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 85000, senior: 130000 },
+      education: 'BA/MA Linguistics; PhD for research',
+      jobOutlook: '6% growth, academic focus',
+      yearsToEntry: 4,
+      skills: ['Linguistic Analysis', 'Field Research', 'Writing', 'Cultural Knowledge'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Department Chair',
+      relatedCareers: ['linguist', 'anthropologist', 'sociolinguist'],
+      discoveryHint: 'Explore how language varies and evolves across communities.'
+    }
+  },
+  {
+    id: 'documentary-filmmaker',
+    title: 'Documentary Filmmaker / Producer',
+    tier: 'niche',
+    description: 'Creates documentary films that explore real-world issues, stories, and social themes.',
+    requirements: [
+      { subcategoryId: 'film_video', weight: 0.95 },
+      { subcategoryId: 'journalism_nonfiction', weight: 0.85 },
+      { subcategoryId: 'creative_writing', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 75000, senior: 150000 },
+      education: 'BFA in Film/Documentary; funding-dependent income',
+      jobOutlook: '4% growth, project-based',
+      yearsToEntry: 4,
+      skills: ['Filmmaking', 'Storytelling', 'Production Management', 'Editing'],
+      careerPath: 'Filmmaker → Established Filmmaker → Documentarian → Producer',
+      relatedCareers: ['film-director', 'cinematographer', 'editor'],
+      discoveryHint: 'Tell important true stories that inform and inspire audiences.'
+    }
+  },
+  {
+    id: 'tissue-engineer',
+    title: 'Tissue Engineer',
+    tier: 'niche',
+    description: 'Develops artificial tissues and organs using engineering and biological principles for transplantation.',
+    requirements: [
+      { subcategoryId: 'biomedical_engineering', weight: 0.95 },
+      { subcategoryId: 'cell_biology', weight: 0.9 },
+      { subcategoryId: 'biochemistry', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 70000, mid: 125000, senior: 190000 },
+      education: 'BS Biomedical Engineering; MS/PhD often required',
+      jobOutlook: '10% growth (biotech), rapidly expanding',
+      yearsToEntry: 4,
+      skills: ['Tissue Culture', 'Biomaterials', 'Lab Skills', 'Problem Solving'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Lab Director',
+      relatedCareers: ['biomedical-engineer', 'molecular-biologist', 'medical-scientist'],
+      discoveryHint: 'Engineer replacement tissues and organs to save lives.'
+    }
+  },
+  {
+    id: 'archaeologist',
+    title: 'Archaeologist',
+    tier: 'niche',
+    description: 'Excavates and analyzes artifacts and remains to understand past human societies and cultures.',
+    requirements: [
+      { subcategoryId: 'cultural_anthropology', weight: 0.9 },
+      { subcategoryId: 'paleontology', weight: 0.75 },
+      { subcategoryId: 'world_history', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'BA/MA Archaeology; PhD for research',
+      jobOutlook: '4% growth, limited academic positions',
+      yearsToEntry: 4,
+      skills: ['Excavation', 'Artifact Analysis', 'Field Research', 'Writing'],
+      careerPath: 'Field Archaeologist → Senior Archaeologist → Research Director → Curator',
+      relatedCareers: ['anthropologist', 'historian', 'museum-curator'],
+      discoveryHint: 'Uncover human history through archaeological discovery.'
+    }
+  },
+  {
+    id: 'video-game-animator',
+    title: 'Video Game Animator',
+    tier: 'niche',
+    description: 'Creates character and object animations for video games using 3D animation software.',
+    requirements: [
+      { subcategoryId: 'game_dev_graphics', weight: 0.95 },
+      { subcategoryId: 'puppetry_animation', weight: 0.85 },
+      { subcategoryId: 'human_computer_interaction', weight: 0.65 }
+    ],
+    context: {
+      salary: { entry: 50000, mid: 95000, senior: 160000 },
+      education: 'BFA Animation; strong 3D animation portfolio essential',
+      jobOutlook: '8% growth (game industry), competitive',
+      yearsToEntry: 4,
+      skills: ['3D Animation', 'Game Engines', 'Character Design', 'Problem Solving'],
+      careerPath: 'Junior Animator → Animator → Senior Animator → Lead Animator',
+      relatedCareers: ['game-artist', 'vfx-animator', '3d-modeler'],
+      discoveryHint: 'Bring video game characters and worlds to life through animation.'
+    }
+  },
+  {
+    id: 'conservation-biologist',
+    title: 'Conservation Biologist',
+    tier: 'niche',
+    description: 'Works to protect biodiversity and endangered species through research and conservation programs.',
+    requirements: [
+      { subcategoryId: 'conservation_biology', weight: 0.95 },
+      { subcategoryId: 'ecology_evolution', weight: 0.95 },
+      { subcategoryId: 'molecular_genetics', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 130000 },
+      education: 'BS Biology; MS/PhD for research',
+      jobOutlook: '6% growth, nonprofit/government focus',
+      yearsToEntry: 4,
+      skills: ['Population Biology', 'Field Research', 'Data Analysis', 'Communication'],
+      careerPath: 'Biologist → Senior Biologist → Research Director → Conservation Leader',
+      relatedCareers: ['wildlife-biologist', 'marine-biologist', 'environmental-scientist'],
+      discoveryHint: 'Save species and ecosystems for future generations.'
+    }
+  },
+  {
+    id: 'brewery-master',
+    title: 'Brewery Master / Head Brewer',
+    tier: 'niche',
+    description: 'Develops beer recipes and oversees brewing operations in breweries.',
+    requirements: [
+      { subcategoryId: 'biochemistry', weight: 0.85 },
+      { subcategoryId: 'food_beverage', weight: 0.9 },
+      { subcategoryId: 'analytical_chemistry', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'Certificate/Associate in Brewing; apprenticeship common',
+      jobOutlook: '5% growth, craft beer growth',
+      yearsToEntry: 3,
+      skills: ['Brewing Science', 'Recipe Development', 'Quality Control', 'Leadership'],
+      careerPath: 'Assistant Brewer → Brewer → Head Brewer → Brewery Owner/Director',
+      relatedCareers: ['food-scientist', 'quality-assurance-manager', 'production-manager'],
+      discoveryHint: 'Craft unique beers and lead brewing operations.'
+    }
+  },
+  {
+    id: 'scenic-designer',
+    title: 'Scenic Designer / Set Designer',
+    tier: 'niche',
+    description: 'Designs sets, scenery, and visual environments for theater, film, and television productions.',
+    requirements: [
+      { subcategoryId: 'theater_production', weight: 0.95 },
+      { subcategoryId: 'architecture', weight: 0.8 },
+      { subcategoryId: 'aesthetics', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 35000, mid: 70000, senior: 130000 },
+      education: 'BFA Theater/Design; hands-on experience essential',
+      jobOutlook: '4% growth, project-based',
+      yearsToEntry: 4,
+      skills: ['Scenic Design', 'CAD', 'Art Direction', 'Construction Knowledge'],
+      careerPath: 'Set Designer → Senior Designer → Lead Designer → Production Designer',
+      relatedCareers: ['costume-designer', 'lighting-designer', 'production-designer'],
+      discoveryHint: 'Create immersive theatrical and cinematic environments.'
+    }
+  },
+  {
+    id: 'medical-illustrator',
+    title: 'Medical Illustrator',
+    tier: 'niche',
+    description: 'Creates detailed medical and anatomical illustrations for healthcare, education, and publications.',
+    requirements: [
+      { subcategoryId: 'painting_drawing', weight: 0.95 },
+      { subcategoryId: 'animal_physiology', weight: 0.85 },
+      { subcategoryId: 'graphic_design', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 85000, senior: 140000 },
+      education: 'BFA Medical Illustration; anatomy knowledge essential',
+      jobOutlook: '5% growth, stable field',
+      yearsToEntry: 4,
+      skills: ['Medical Anatomy', 'Digital Illustration', 'Scientific Knowledge', 'Detail'],
+      careerPath: 'Medical Illustrator → Senior Illustrator → Lead Illustrator → Director',
+      relatedCareers: ['anatomist', 'medical-designer', 'scientific-illustrator'],
+      discoveryHint: 'Communicate complex medical concepts through compelling illustration.'
+    }
+  },
+  {
+    id: 'ethnomusicologist',
+    title: 'Ethnomusicologist',
+    tier: 'niche',
+    description: 'Studies music from different cultures to understand its roles in society and cultural expression.',
+    requirements: [
+      { subcategoryId: 'music_theory_history', weight: 0.95 },
+      { subcategoryId: 'cultural_anthropology', weight: 0.9 },
+      { subcategoryId: 'instrumental_performance', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 130000 },
+      education: 'BA/MA Ethnomusicology; PhD for research',
+      jobOutlook: '5% growth, academic focus',
+      yearsToEntry: 4,
+      skills: ['Musical Analysis', 'Field Research', 'Cultural Knowledge', 'Writing'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Department Chair',
+      relatedCareers: ['musicologist', 'anthropologist', 'music-educator'],
+      discoveryHint: 'Explore the profound connections between music and culture.'
+    }
+  },
+  {
+    id: 'court-reporter',
+    title: 'Court Reporter / Stenographer',
+    tier: 'niche',
+    description: 'Creates verbatim transcripts of court proceedings and depositions using stenography or digital recording.',
+    requirements: [
+      { subcategoryId: 'law_legal_studies', weight: 0.85 },
+      { subcategoryId: 'technical_writing', weight: 0.8 },
+      { subcategoryId: 'applied_translation', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'Associate\'s in Court Reporting; certification required',
+      jobOutlook: '8% growth, steady demand',
+      yearsToEntry: 2,
+      skills: ['Stenography', 'Typing Speed', 'Legal Terminology', 'Attention to Detail'],
+      careerPath: 'Court Reporter → Senior Reporter → Supervisor → Agency Owner',
+      relatedCareers: ['legal-secretary', 'transcriptionist', 'paralegal'],
+      discoveryHint: 'Document legal proceedings with precision and accuracy.'
+    }
+  },
+  {
+    id: 'renewable-energy-engineer',
+    title: 'Renewable Energy Engineer',
+    tier: 'niche',
+    description: 'Designs and develops renewable energy systems including solar, wind, and hydroelectric power.',
+    requirements: [
+      { subcategoryId: 'thermodynamics_energy', weight: 0.95 },
+      { subcategoryId: 'electrical_engineering', weight: 0.9 },
+      { subcategoryId: 'environmental_engineering', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 110000, senior: 165000 },
+      education: 'BS Renewable Energy Engineering or related',
+      jobOutlook: '13% growth, very high demand',
+      yearsToEntry: 4,
+      skills: ['Energy Systems', 'CAD', 'Power Generation', 'Problem Solving'],
+      careerPath: 'Junior Engineer → Senior Engineer → Lead Engineer → Director',
+      relatedCareers: ['solar-engineer', 'wind-engineer', 'energy-consultant'],
+      discoveryHint: 'Design clean energy systems for a sustainable future.'
+    }
+  },
+  {
+    id: 'curator',
+    title: 'Museum Curator',
+    tier: 'niche',
+    description: 'Selects, preserves, and displays artifacts in museums and cultural institutions.',
+    requirements: [
+      { subcategoryId: 'cultural_history', weight: 0.9 },
+      { subcategoryId: 'literary_studies', weight: 0.75 },
+      { subcategoryId: 'aesthetics', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 40000, mid: 70000, senior: 120000 },
+      education: 'MA in Art History, Museum Studies, or related field',
+      jobOutlook: '5% growth, limited positions',
+      yearsToEntry: 6,
+      skills: ['Art/History Knowledge', 'Curation', 'Research', 'Communication'],
+      careerPath: 'Curator → Senior Curator → Head Curator → Director',
+      relatedCareers: ['art-historian', 'archaeologist', 'conservator'],
+      discoveryHint: 'Preserve and present cultural heritage for public appreciation.'
+    }
+  },
+  {
+    id: 'prosthetics-orthotist',
+    title: 'Prosthetist-Orthotist',
+    tier: 'niche',
+    description: 'Designs and manufactures prosthetic limbs and orthotic devices for patients with disabilities.',
+    requirements: [
+      { subcategoryId: 'biomedical_engineering', weight: 0.9 },
+      { subcategoryId: 'animal_physiology', weight: 0.85 },
+      { subcategoryId: 'mechanical_engineering', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 45000, mid: 80000, senior: 140000 },
+      education: 'Master\'s in Prosthetics-Orthotics; certification required',
+      jobOutlook: '8% growth, increasing demand',
+      yearsToEntry: 6,
+      skills: ['Prosthetic Design', 'Anatomy', 'Patient Care', 'Technical Skills'],
+      careerPath: 'Technician → Prosthetist-Orthotist → Supervisor → Director',
+      relatedCareers: ['biomedical-engineer', 'physical-therapist', 'medical-device-specialist'],
+      discoveryHint: 'Restore mobility and independence through custom prosthetics.'
+    }
+  },
+  {
+    id: 'acoustic-engineer',
+    title: 'Acoustic Engineer',
+    tier: 'niche',
+    description: 'Designs acoustic systems for concert halls, theaters, recording studios, and noise reduction.',
+    requirements: [
+      { subcategoryId: 'acoustics_waves', weight: 0.95 },
+      { subcategoryId: 'physics', weight: 0.9 },
+      { subcategoryId: 'electrical_engineering', weight: 0.7 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 105000, senior: 160000 },
+      education: 'BS Physics/Acoustics or Engineering',
+      jobOutlook: '6% growth, specialized field',
+      yearsToEntry: 4,
+      skills: ['Acoustics', 'Physics', 'CAD', 'Problem Solving'],
+      careerPath: 'Engineer → Senior Engineer → Lead Engineer → Chief Acoustician',
+      relatedCareers: ['audio-engineer', 'sound-designer', 'electrical-engineer'],
+      discoveryHint: 'Shape sound and acoustics for optimal listening environments.'
     }
   },
 
+  // EXPLORATORY TIER (22 careers)
+  {
+    id: 'astrobiology-researcher',
+    title: 'Astrobiology Researcher',
+    tier: 'exploratory',
+    description: 'Investigates the possibility of life beyond Earth and studies the conditions that support life.',
+    requirements: [
+      { subcategoryId: 'astrophysics_cosmology', weight: 0.85 },
+      { subcategoryId: 'molecular_genetics', weight: 0.9 },
+      { subcategoryId: 'microbiology', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 115000, senior: 170000 },
+      education: 'PhD in Biology, Astronomy, or related field (5-7 years)',
+      jobOutlook: '7% growth (STEM), highly specialized',
+      yearsToEntry: 9,
+      skills: ['Astrobiology', 'Research', 'Exoplanet Analysis', 'Microbiology'],
+      careerPath: 'Postdoc → Research Scientist → Senior Scientist → Principal Investigator',
+      relatedCareers: ['astrobiologist', 'exoplanet-researcher', 'space-scientist'],
+      discoveryHint: 'Search for life beyond Earth and understand cosmic biology.'
+    }
+  },
+  {
+    id: 'quantum-computing-engineer',
+    title: 'Quantum Computing Engineer',
+    tier: 'exploratory',
+    description: 'Develops quantum computers and algorithms that leverage quantum mechanics for computation.',
+    requirements: [
+      { subcategoryId: 'quantum_particle', weight: 0.95 },
+      { subcategoryId: 'software_development', weight: 0.9 },
+      { subcategoryId: 'pure_mathematics', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 130000, mid: 200000, senior: 350000 },
+      education: 'BS Physics/CS; MS/PhD in Quantum Computing',
+      jobOutlook: '25% growth (emerging field), exceptional demand',
+      yearsToEntry: 6,
+      skills: ['Quantum Mechanics', 'Python/C++', 'Algorithm Design', 'Physics'],
+      careerPath: 'Quantum Engineer → Senior Engineer → Research Lead → Director',
+      relatedCareers: ['quantum-physicist', 'cryptographer', 'ai-researcher'],
+      discoveryHint: 'Build the next generation of powerful quantum computers.'
+    }
+  },
   {
     id: 'synthetic-biologist',
     title: 'Synthetic Biologist',
     tier: 'exploratory',
-    description: 'Engineer biological systems with new functions. Design synthetic organisms and biological circuits.',
+    description: 'Uses molecular biology and engineering principles to design and create new biological systems.',
     requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.95 },
-      { subcategoryId: 'chemistry_organic', weight: 0.85 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.75 }
+      { subcategoryId: 'molecular_genetics', weight: 0.95 },
+      { subcategoryId: 'biochemistry', weight: 0.95 },
+      { subcategoryId: 'biomedical_engineering', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 80000, mid: 140000, senior: 210000 },
-      education: "PhD in synthetic biology (7-8 years)",
-      jobOutlook: 'Emerging (12% growth)',
-      yearsToEntry: 8,
-      skills: ['Genetic engineering', 'Molecular biology', 'Bioinformatics', 'Protein design', 'Experimental design'],
-      careerPath: 'Postdoc → Synthetic Biologist → Senior Scientist → Principal Investigator → Lab Director',
-      relatedCareers: ['Genetic Engineer', 'Molecular Biologist', 'Biotech Researcher', 'Systems Biologist'],
-      discoveryHint: 'Synthetic biology creates life by design—engineer organisms to produce medicine, biofuel, and solve environmental problems.'
-    }
-  },
-
-  {
-    id: 'neuroethicist',
-    title: 'Neuroethicist',
-    tier: 'exploratory',
-    description: 'Examine ethical implications of neuroscience research and brain-related technologies.',
-    requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.80 },
-      { subcategoryId: 'writing_academic', weight: 0.85 },
-      { subcategoryId: 'history_cultural', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 100000, senior: 160000 },
-      education: "PhD in neuroscience + ethics training (7-8 years)",
-      jobOutlook: 'Emerging (5% growth, growing concern)',
-      yearsToEntry: 8,
-      skills: ['Ethics analysis', 'Policy writing', 'Neuroscience knowledge', 'Stakeholder engagement', 'Academic writing'],
-      careerPath: 'Research Fellow → Neuroethicist → Senior Fellow → Ethics Director → Center Director',
-      relatedCareers: ['Bioethicist', 'Research Ethics Officer', 'Policy Analyst', 'Academic Philosopher'],
-      discoveryHint: 'Neuroethics grapples with brain science\'s deepest questions—should we edit memories? Enhance cognition? Your analysis guides policy.'
-    }
-  },
-
-  {
-    id: 'quantum-software-engineer',
-    title: 'Quantum Software Engineer',
-    tier: 'exploratory',
-    description: 'Develop algorithms for quantum computers. Bridge quantum physics and software engineering.',
-    requirements: [
-      { subcategoryId: 'physics_quantum', weight: 0.90 },
-      { subcategoryId: 'mathematics_pure', weight: 0.85 },
-      { subcategoryId: 'technology_software', weight: 0.80 }
-    ],
-    context: {
-      salary: { entry: 110000, mid: 180000, senior: 280000 },
-      education: "Master's in quantum computing + CS (5-6 years)",
-      jobOutlook: 'Emerging (20% growth projected)',
-      yearsToEntry: 6,
-      skills: ['Quantum algorithms', 'Python/C++', 'Quantum physics', 'Linear algebra', 'Circuit design'],
-      careerPath: 'Quantum Developer → Quantum Software Engineer → Senior Engineer → Quantum Architect',
-      relatedCareers: ['Quantum Physicist', 'ML Engineer', 'Hardware Engineer', 'Research Scientist'],
-      discoveryHint: 'Quantum software engineers write code for computers that don\'t exist yet—pioneer algorithms that will reshape computing.'
-    }
-  },
-
-  {
-    id: 'space-habitat-engineer',
-    title: 'Space Habitat Engineer / Aerospace Architect',
-    tier: 'exploratory',
-    description: 'Design habitats for long-duration space missions. Engineer closed-loop life support and structures.',
-    requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.85 },
-      { subcategoryId: 'physics_thermodynamics', weight: 0.80 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 85000, mid: 150000, senior: 230000 },
-      education: "Master's in aerospace/mechanical engineering (5-6 years)",
-      jobOutlook: 'Emerging (15% growth, space economy)',
-      yearsToEntry: 6,
-      skills: ['Life support systems', 'Vacuum engineering', 'Materials science', 'Environmental control', 'Systems integration'],
-      careerPath: 'Space Engineer → Habitat Engineer → Senior Engineer → Mission Architect → Program Director',
-      relatedCareers: ['Aerospace Engineer', 'Systems Engineer', 'Environmental Control Engineer', 'Space Scientist'],
-      discoveryHint: 'Space habitat engineering designs homes for humans beyond Earth—your structures will shelter the first Mars colonists.'
-    }
-  },
-
-  {
-    id: 'ocean-engineer',
-    title: 'Ocean Engineer / Marine Engineer',
-    tier: 'exploratory',
-    description: 'Design underwater structures and systems. Work on offshore drilling, submarines, and ocean research.',
-    requirements: [
-      { subcategoryId: 'physics_mechanics', weight: 0.85 },
-      { subcategoryId: 'biology_marine', weight: 0.75 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 75000, mid: 130000, senior: 200000 },
-      education: "Bachelor's in ocean/marine engineering (4 years)",
-      jobOutlook: 'Good (6% growth)',
+      salary: { entry: 75000, mid: 135000, senior: 210000 },
+      education: 'BS Biology; MS/PhD in Synthetic Biology recommended',
+      jobOutlook: '12% growth (biotech), rapidly expanding',
       yearsToEntry: 4,
-      skills: ['Fluid dynamics', 'Submarine design', 'ROV operation', 'Pressure vessel design', 'Marine materials'],
-      careerPath: 'Ocean Engineer → Senior Engineer → Project Manager → Engineering Manager → Director',
-      relatedCareers: ['Mechanical Engineer', 'Oceanographer', 'Offshore Specialist', 'Environmental Consultant'],
-      discoveryHint: 'Ocean engineering explores Earth\'s last frontier—design systems that survive crushing pressures in the deep.'
+      skills: ['Molecular Biology', 'Genetics', 'Lab Skills', 'Computational Biology'],
+      careerPath: 'Researcher → Senior Researcher → Principal Investigator → Lab Director',
+      relatedCareers: ['genetic-engineer', 'molecular-biologist', 'bioengineer'],
+      discoveryHint: 'Design organisms and biological systems to solve real-world problems.'
     }
   },
-
   {
-    id: 'behavioral-economist',
-    title: 'Behavioral Economist',
+    id: 'brain-computer-interface-engineer',
+    title: 'Brain-Computer Interface Engineer',
     tier: 'exploratory',
-    description: 'Study how psychology influences economic decisions. Inform policy and business strategy through behavioral insights.',
+    description: 'Develops systems that create direct communication pathways between the brain and external devices.',
     requirements: [
-      { subcategoryId: 'mathematics_applied', weight: 0.80 },
-      { subcategoryId: 'writing_academic', weight: 0.75 },
-      { subcategoryId: 'history_cultural', weight: 0.65 }
+      { subcategoryId: 'neuroscience_biopsychology', weight: 0.95 },
+      { subcategoryId: 'electrical_engineering', weight: 0.9 },
+      { subcategoryId: 'software_development', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 65000, mid: 120000, senior: 190000 },
-      education: "Master's in behavioral economics (5-6 years)",
-      jobOutlook: 'Good (6% growth)',
+      salary: { entry: 100000, mid: 170000, senior: 280000 },
+      education: 'BS in related field; MS/PhD in BCI or Neurotechnology',
+      jobOutlook: '18% growth (biotech/neurotechnology), very high demand',
       yearsToEntry: 6,
-      skills: ['Economics theory', 'Experimental design', 'Statistical analysis', 'Behavioral psychology', 'Research methods'],
-      careerPath: 'Economist → Behavioral Economist → Senior Researcher → Research Director → Chief Economist',
-      relatedCareers: ['Data Scientist', 'Policy Analyst', 'UX Researcher', 'Market Researcher'],
-      discoveryHint: 'Behavioral economics reveals why people make irrational choices—guide policy and design nudges that improve decision-making.'
+      skills: ['Neuroscience', 'Signal Processing', 'Embedded Systems', 'Research'],
+      careerPath: 'Engineer → Senior Engineer → Research Lead → Director',
+      relatedCareers: ['neurotechnology-specialist', 'neurotech-entrepreneur', 'biomedical-engineer'],
+      discoveryHint: 'Create direct interfaces between human brains and technology.'
     }
   },
-
   {
-    id: 'archaeologist-tech',
-    title: 'Computational Archaeologist / Digital Archaeologist',
+    id: 'climate-modeler',
+    title: 'Climate Modeler / Climate Scientist',
     tier: 'exploratory',
-    description: 'Use AI and remote sensing to discover archaeological sites. Analyze digital artifacts and 3D models.',
+    description: 'Develops computational models to predict climate patterns and understand climate change impacts.',
     requirements: [
-      { subcategoryId: 'history_ancient', weight: 0.85 },
-      { subcategoryId: 'technology_data', weight: 0.80 },
-      { subcategoryId: 'mathematics_applied', weight: 0.70 }
+      { subcategoryId: 'meteorology', weight: 0.95 },
+      { subcategoryId: 'applied_mathematics', weight: 0.95 },
+      { subcategoryId: 'climate_sustainability', weight: 0.9 }
     ],
     context: {
-      salary: { entry: 55000, mid: 95000, senior: 150000 },
-      education: "Master's in archaeology + computational training (6 years)",
-      jobOutlook: 'Emerging (5% growth, tech adoption)',
-      yearsToEntry: 6,
-      skills: ['Remote sensing', 'LiDAR analysis', '3D modeling', 'Archaeological methods', 'GIS/mapping'],
-      careerPath: 'Archaeologist → Computational Archaeologist → Research Lead → Archaeological Director',
-      relatedCareers: ['Archaeologist', 'Geospatial Analyst', 'Museum Curator', 'Digital Historian'],
-      discoveryHint: 'Computational archaeology unearths lost civilizations using AI—satellites and machine learning reveal hidden temples and cities.'
-    }
-  },
-
-  {
-    id: 'microbiome-researcher',
-    title: 'Microbiome Researcher',
-    tier: 'exploratory',
-    description: 'Study microbial communities in health and disease. Research gut bacteria and microbiota interactions.',
-    requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.90 },
-      { subcategoryId: 'biology_anatomy', weight: 0.75 },
-      { subcategoryId: 'technology_data', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 75000, mid: 130000, senior: 200000 },
-      education: "PhD in microbiology/molecular biology (7 years)",
-      jobOutlook: 'Excellent (10% growth)',
-      yearsToEntry: 7,
-      skills: ['16S sequencing', 'Metagenomic analysis', 'Microbiology', 'Bioinformatics', 'Statistical analysis'],
-      careerPath: 'Postdoc → Microbiome Researcher → Senior Researcher → Principal Investigator → Lab Director',
-      relatedCareers: ['Microbiologist', 'Immunologist', 'Gastroenterologist', 'Systems Biologist'],
-      discoveryHint: 'Microbiome research reveals that bacteria shape health—discover how trillions of microbes influence disease and healing.'
-    }
-  },
-
-  {
-    id: 'biomaterials-engineer',
-    title: 'Biomaterials Engineer',
-    tier: 'exploratory',
-    description: 'Engineer materials that interact with biological systems. Develop biocompatible implants and tissue engineering.',
-    requirements: [
-      { subcategoryId: 'chemistry_organic', weight: 0.85 },
-      { subcategoryId: 'physics_mechanics', weight: 0.75 },
-      { subcategoryId: 'biology_molecular', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 75000, mid: 130000, senior: 200000 },
-      education: "Master's in biomaterials/biomedical engineering (5-6 years)",
-      jobOutlook: 'Good (7% growth)',
-      yearsToEntry: 6,
-      skills: ['Materials science', 'Biocompatibility testing', 'Molecular design', 'Mechanical testing', 'Tissue engineering'],
-      careerPath: 'Biomaterials Engineer → Senior Engineer → Research Lead → Engineering Manager → Director',
-      relatedCareers: ['Biomedical Engineer', 'Materials Scientist', 'Chemical Engineer', 'Tissue Engineer'],
-      discoveryHint: 'Biomaterials engineering creates artificial parts that bodies accept—design implants that heal and replace failing organs.'
-    }
-  },
-
-  {
-    id: 'linguistic-ai-researcher',
-    title: 'Linguistic AI Researcher / Computational Linguist',
-    tier: 'exploratory',
-    description: 'Research natural language processing and language understanding in AI. Work on translation and language models.',
-    requirements: [
-      { subcategoryId: 'technology_data', weight: 0.85 },
-      { subcategoryId: 'mathematics_pure', weight: 0.75 },
-      { subcategoryId: 'writing_academic', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 100000, mid: 170000, senior: 260000 },
-      education: "Master's in NLP/computational linguistics (5-6 years)",
-      jobOutlook: 'Excellent (36% growth in AI)',
-      yearsToEntry: 6,
-      skills: ['NLP algorithms', 'Transformer models', 'Python/PyTorch', 'Linguistics', 'Machine learning'],
-      careerPath: 'NLP Researcher → Senior Researcher → Research Lead → Research Manager → Director',
-      relatedCareers: ['Machine Learning Engineer', 'Data Scientist', 'AI Researcher', 'Voice Engineer'],
-      discoveryHint: 'NLP research teaches machines to understand human language—build AI that comprehends meaning and nuance.'
-    }
-  },
-
-  {
-    id: 'precision-medicine-specialist',
-    title: 'Precision Medicine Specialist',
-    tier: 'exploratory',
-    description: 'Develop personalized treatments based on genetic profiles. Use genomics to tailor medical care.',
-    requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.90 },
-      { subcategoryId: 'biology_anatomy', weight: 0.75 },
-      { subcategoryId: 'technology_data', weight: 0.75 }
-    ],
-    context: {
-      salary: { entry: 85000, mid: 150000, senior: 230000 },
-      education: "Master's/MD in precision medicine (5-6 years)",
-      jobOutlook: 'Excellent (12% growth)',
-      yearsToEntry: 6,
-      skills: ['Genomic analysis', 'Clinical genetics', 'Bioinformatics', 'Patient management', 'Data interpretation'],
-      careerPath: 'Precision Medicine Specialist → Senior Specialist → Clinical Director → Research Director',
-      relatedCareers: ['Genetic Counselor', 'Oncologist', 'Pharmacogenomics Specialist', 'Clinical Researcher'],
-      discoveryHint: 'Precision medicine revolutionizes treatment—decode each patient\'s genome to deliver custom-tailored therapy.'
-    }
-  },
-
-  {
-    id: 'narrative-architect',
-    title: 'Narrative Architect / Transmedia Storyteller',
-    tier: 'exploratory',
-    description: 'Create complex narratives across multiple media platforms. Design interconnected story worlds.',
-    requirements: [
-      { subcategoryId: 'writing_fiction', weight: 0.90 },
-      { subcategoryId: 'art_design_digital', weight: 0.75 },
-      { subcategoryId: 'technology_software', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 60000, mid: 110000, senior: 180000 },
-      education: "Bachelor's in writing/media studies + experience (4-5 years)",
-      jobOutlook: 'Emerging (8% growth)',
-      yearsToEntry: 5,
-      skills: ['Multi-platform storytelling', 'World building', 'Character development', 'Digital media', 'Content strategy'],
-      careerPath: 'Writer → Narrative Architect → Creative Lead → Executive Producer → Creative Director',
-      relatedCareers: ['Screenwriter', 'Game Writer', 'Content Strategist', 'Producer'],
-      discoveryHint: 'Transmedia storytelling weaves tales across games, TV, comics, and books—create universes that span mediums.'
-    }
-  },
-
-  {
-    id: 'drone-engineer-ecology',
-    title: 'Drone Engineer (Ecological Monitoring)',
-    tier: 'exploratory',
-    description: 'Design and deploy drones for environmental monitoring and wildlife tracking.',
-    requirements: [
-      { subcategoryId: 'technology_software', weight: 0.80 },
-      { subcategoryId: 'biology_ecology', weight: 0.85 },
-      { subcategoryId: 'physics_mechanics', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 65000, mid: 110000, senior: 170000 },
-      education: "Bachelor's in engineering + drone training (4-5 years)",
-      jobOutlook: 'Emerging (15% growth)',
+      salary: { entry: 70000, mid: 125000, senior: 190000 },
+      education: 'BS Physics/Meteorology; MS/PhD for research',
+      jobOutlook: '10% growth, increasingly critical',
       yearsToEntry: 4,
-      skills: ['Drone design', 'Sensor technology', 'Data analysis', 'Wildlife biology', 'Embedded systems'],
-      careerPath: 'Drone Technician → Drone Engineer → Senior Engineer → Technology Lead → Director',
-      relatedCareers: ['Roboticist', 'Biotech Engineer', 'Conservation Biologist', 'GIS Specialist'],
-      discoveryHint: 'Ecological drones monitor wildlife from above—watch endangered animals without disturbing them, track populations in real time.'
+      skills: ['Climate Modeling', 'Data Analysis', 'Programming', 'Physics/Math'],
+      careerPath: 'Scientist → Senior Scientist → Research Director → Climate Authority',
+      relatedCareers: ['meteorologist', 'environmental-scientist', 'data-scientist'],
+      discoveryHint: 'Model Earth\'s climate and guide global climate action.'
     }
   },
-
   {
-    id: 'neuromarketer',
-    title: 'Neuromarketer / Consumer Neuroscientist',
+    id: 'space-architect',
+    title: 'Space Architect',
     tier: 'exploratory',
-    description: 'Study brain responses to marketing. Use neuroscience to understand consumer behavior.',
+    description: 'Designs habitats and infrastructure for space exploration including lunar bases and space stations.',
     requirements: [
-      { subcategoryId: 'biology_anatomy', weight: 0.80 },
-      { subcategoryId: 'writing_journalism', weight: 0.75 },
-      { subcategoryId: 'mathematics_applied', weight: 0.70 }
+      { subcategoryId: 'aerospace_engineering', weight: 0.95 },
+      { subcategoryId: 'architecture', weight: 0.85 },
+      { subcategoryId: 'biomedical_engineering', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 80000, mid: 145000, senior: 220000 },
+      education: 'BS Aerospace Engineering + Architecture background',
+      jobOutlook: '5% growth, nascent industry',
+      yearsToEntry: 4,
+      skills: ['Space Systems', 'Design', 'Problem Solving', 'Systems Thinking'],
+      careerPath: 'Engineer → Senior Engineer → Design Lead → Chief Architect',
+      relatedCareers: ['aerospace-engineer', 'mission-architect', 'habitat-designer'],
+      discoveryHint: 'Design human habitats for exploration beyond Earth.'
+    }
+  },
+  {
+    id: 'metaverse-designer',
+    title: 'Metaverse Designer / Virtual Environment Architect',
+    tier: 'exploratory',
+    description: 'Creates immersive virtual worlds and metaverse experiences for entertainment, work, and social interaction.',
+    requirements: [
+      { subcategoryId: 'game_dev_graphics', weight: 0.95 },
+      { subcategoryId: 'human_computer_interaction', weight: 0.9 },
+      { subcategoryId: 'web_digital_design', weight: 0.85 }
+    ],
+    context: {
+      salary: { entry: 75000, mid: 135000, senior: 220000 },
+      education: 'BS Computer Science/Design; specialized metaverse training',
+      jobOutlook: '22% growth (VR/metaverse), rapidly emerging',
+      yearsToEntry: 4,
+      skills: ['3D Design', 'Game Engines', 'UX Design', 'Virtual Environment Development'],
+      careerPath: 'Designer → Senior Designer → Lead Designer → Creative Director',
+      relatedCareers: ['vr-developer', 'game-designer', '3d-artist'],
+      discoveryHint: 'Build immersive virtual worlds where billions interact.'
+    }
+  },
+  {
+    id: 'genetic-counselor',
+    title: 'Genetic Counselor',
+    tier: 'exploratory',
+    description: 'Interprets genetic tests and helps patients understand hereditary health risks and treatment options.',
+    requirements: [
+      { subcategoryId: 'molecular_genetics', weight: 0.95 },
+      { subcategoryId: 'medicine_clinical', weight: 0.85 },
+      { subcategoryId: 'social_psychology', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 95000, senior: 150000 },
+      education: 'Master\'s in Genetic Counseling; ACGC certification',
+      jobOutlook: '20% growth, very high demand',
+      yearsToEntry: 6,
+      skills: ['Genetics', 'Counseling', 'Patient Education', 'Medical Knowledge'],
+      careerPath: 'Genetic Counselor → Senior Counselor → Clinical Director → Director',
+      relatedCareers: ['genetic-specialist', 'medical-geneticist', 'counselor'],
+      discoveryHint: 'Help patients navigate genetic health information and prevention.'
+    }
+  },
+  {
+    id: 'happiness-economist',
+    title: 'Happiness Economist / Well-Being Researcher',
+    tier: 'exploratory',
+    description: 'Studies human well-being, life satisfaction, and mental health to inform policy and improve quality of life.',
+    requirements: [
+      { subcategoryId: 'macroeconomics', weight: 0.85 },
+      { subcategoryId: 'social_psychology', weight: 0.95 },
+      { subcategoryId: 'statistics_probability', weight: 0.9 }
     ],
     context: {
       salary: { entry: 65000, mid: 115000, senior: 180000 },
-      education: "Master's in neuroscience + marketing training (5-6 years)",
-      jobOutlook: 'Emerging (8% growth)',
-      yearsToEntry: 6,
-      skills: ['Neuroscience methods', 'Brain imaging', 'Marketing strategy', 'Data analysis', 'Consumer psychology'],
-      careerPath: 'Research Analyst → Neuromarketer → Senior Researcher → Neuromarketing Manager → Director',
-      relatedCareers: ['Market Researcher', 'Behavioral Economist', 'UX Researcher', 'Consumer Psychologist'],
-      discoveryHint: 'Neuromarketing reads brains to predict purchases—use neuroscience to understand what truly persuades buyers.'
+      education: 'BS Economics/Psychology; MS/PhD in Well-Being Studies',
+      jobOutlook: '8% growth, emerging field',
+      yearsToEntry: 4,
+      skills: ['Data Analysis', 'Psychology', 'Economics', 'Research'],
+      careerPath: 'Researcher → Senior Researcher → Research Director → Policy Influencer',
+      relatedCareers: ['social-scientist', 'policy-analyst', 'psychologist'],
+      discoveryHint: 'Research human happiness and shape policies for well-being.'
     }
   },
-
   {
-    id: 'protein-designer',
-    title: 'Protein Designer / Structural Biologist',
+    id: 'drone-technology-specialist',
+    title: 'Unmanned Aerial Systems Specialist',
     tier: 'exploratory',
-    description: 'Design novel proteins for medicine and industrial applications. Use computational methods and AI.',
+    description: 'Designs, operates, and manages drone systems for mapping, delivery, surveillance, and research.',
     requirements: [
-      { subcategoryId: 'chemistry_organic', weight: 0.90 },
-      { subcategoryId: 'biology_molecular', weight: 0.85 },
-      { subcategoryId: 'technology_data', weight: 0.75 }
+      { subcategoryId: 'robotics_automation', weight: 0.95 },
+      { subcategoryId: 'electrical_engineering', weight: 0.85 },
+      { subcategoryId: 'systems_networks', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 85000, mid: 150000, senior: 230000 },
-      education: "PhD in biochemistry/structural biology (7 years)",
-      jobOutlook: 'Excellent (15% growth)',
-      yearsToEntry: 7,
-      skills: ['Protein structure', 'Computational design', 'Deep learning (AlphaFold)', 'Molecular modeling', 'Synthetic biology'],
-      careerPath: 'Protein Designer → Senior Designer → Lead Scientist → Principal Investigator → Research Director',
-      relatedCareers: ['Structural Biologist', 'Biochemist', 'Computational Biologist', 'Drug Designer'],
-      discoveryHint: 'Protein design engineers molecular machines—use AI to create proteins that cure disease and solve problems.'
+      salary: { entry: 55000, mid: 100000, senior: 160000 },
+      education: 'BS Engineering or related; drone certification required',
+      jobOutlook: '28% growth, rapidly expanding',
+      yearsToEntry: 3,
+      skills: ['Drone Systems', 'Programming', 'Regulations', 'Problem Solving'],
+      careerPath: 'Operator → Technician → System Designer → Program Manager',
+      relatedCareers: ['roboticist', 'systems-engineer', 'automation-engineer'],
+      discoveryHint: 'Develop and deploy autonomous drone technology.'
     }
   },
-
+  {
+    id: 'longevity-researcher',
+    title: 'Longevity / Aging Researcher',
+    tier: 'exploratory',
+    description: 'Investigates biological mechanisms of aging and develops interventions to extend healthy lifespan.',
+    requirements: [
+      { subcategoryId: 'molecular_genetics', weight: 0.95 },
+      { subcategoryId: 'cell_biology', weight: 0.95 },
+      { subcategoryId: 'neuroscience_biopsychology', weight: 0.8 }
+    ],
+    context: {
+      salary: { entry: 70000, mid: 130000, senior: 210000 },
+      education: 'PhD in Biology, Biochemistry, or related (5-7 years)',
+      jobOutlook: '10% growth, rapidly expanding biotech',
+      yearsToEntry: 9,
+      skills: ['Aging Biology', 'Molecular Research', 'Lab Skills', 'Data Analysis'],
+      careerPath: 'Postdoc → Research Scientist → Senior Scientist → Lab Director',
+      relatedCareers: ['gerontologist', 'molecular-biologist', 'medical-researcher'],
+      discoveryHint: 'Unlock the secrets of aging and extend healthy human lifespan.'
+    }
+  },
+  {
+    id: 'carbon-engineer',
+    title: 'Carbon Capture / Carbon Engineering Specialist',
+    tier: 'exploratory',
+    description: 'Develops and implements carbon capture and sequestration technologies to combat climate change.',
+    requirements: [
+      { subcategoryId: 'environmental_engineering', weight: 0.95 },
+      { subcategoryId: 'chemical_engineering', weight: 0.95 },
+      { subcategoryId: 'climate_sustainability', weight: 0.9 }
+    ],
+    context: {
+      salary: { entry: 75000, mid: 135000, senior: 210000 },
+      education: 'BS Chemical/Environmental Engineering',
+      jobOutlook: '16% growth, critical and expanding',
+      yearsToEntry: 4,
+      skills: ['Carbon Capture', 'Chemical Engineering', 'Systems Design', 'Problem Solving'],
+      careerPath: 'Engineer → Senior Engineer → Lead Engineer → Director',
+      relatedCareers: ['environmental-engineer', 'sustainability-consultant', 'climate-scientist'],
+      discoveryHint: 'Remove carbon from the atmosphere and combat climate change.'
+    }
+  },
+  {
+    id: 'neurotech-entrepreneur',
+    title: 'Neurotech Entrepreneur',
+    tier: 'exploratory',
+    description: 'Launches and scales startup companies developing neurotechnology products and services.',
+    requirements: [
+      { subcategoryId: 'neuroscience_biopsychology', weight: 0.85 },
+      { subcategoryId: 'business_management', weight: 0.95 },
+      { subcategoryId: 'software_development', weight: 0.75 }
+    ],
+    context: {
+      salary: { entry: 100000, mid: 300000, senior: 1000000 },
+      education: 'BS in related field + business/entrepreneurship background',
+      jobOutlook: '22% growth (biotech startups), high risk/reward',
+      yearsToEntry: 4,
+      skills: ['Neurotechnology', 'Business Development', 'Fundraising', 'Leadership'],
+      careerPath: 'Founder → CEO → Scaling to Series A/B → Exit/IPO',
+      relatedCareers: ['startup-founder', 'tech-entrepreneur', 'product-manager'],
+      discoveryHint: 'Build transformative neurotech companies.'
+    }
+  },
+  {
+    id: 'circular-economy-specialist',
+    title: 'Circular Economy Specialist',
+    tier: 'exploratory',
+    description: 'Designs products and systems following circular economy principles to minimize waste and maximize reuse.',
+    requirements: [
+      { subcategoryId: 'environmental_engineering', weight: 0.9 },
+      { subcategoryId: 'business_management', weight: 0.85 },
+      { subcategoryId: 'sustainability', weight: 0.95 }
+    ],
+    context: {
+      salary: { entry: 60000, mid: 110000, senior: 180000 },
+      education: 'BS Engineering/Business + Circular Economy training',
+      jobOutlook: '12% growth, rapidly emerging',
+      yearsToEntry: 4,
+      skills: ['Systems Design', 'Sustainability', 'Business Strategy', 'Analysis'],
+      careerPath: 'Specialist → Senior Specialist → Lead Designer → Director',
+      relatedCareers: ['sustainability-consultant', 'environmental-designer', 'systems-engineer'],
+      discoveryHint: 'Design the circular economy where nothing goes to waste.'
+    }
+  },
   {
     id: 'cultural-technologist',
-    title: 'Cultural Technologist / Digital Culture Specialist',
+    title: 'Cultural Technologist',
     tier: 'exploratory',
-    description: 'Explore intersection of culture and technology. Study digital communities and online identity.',
+    description: 'Combines technology and cultural studies to create digital cultural experiences and preserve heritage.',
     requirements: [
-      { subcategoryId: 'history_cultural', weight: 0.90 },
-      { subcategoryId: 'technology_web', weight: 0.75 },
-      { subcategoryId: 'writing_academic', weight: 0.75 }
+      { subcategoryId: 'web_digital_design', weight: 0.9 },
+      { subcategoryId: 'cultural_history', weight: 0.95 },
+      { subcategoryId: 'game_dev_graphics', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 60000, mid: 100000, senior: 160000 },
-      education: "Master's in cultural studies/digital humanities (6 years)",
-      jobOutlook: 'Emerging (6% growth)',
+      salary: { entry: 60000, mid: 105000, senior: 175000 },
+      education: 'BS Digital Design/CS + MA Cultural Studies',
+      jobOutlook: '10% growth, emerging field',
       yearsToEntry: 6,
-      skills: ['Digital ethnography', 'Cultural analysis', 'Web platforms', 'Research methods', 'Social media studies'],
-      careerPath: 'Cultural Researcher → Cultural Technologist → Senior Researcher → Culture Director',
-      relatedCareers: ['Sociologist', 'Digital Anthropologist', 'UX Researcher', 'Content Strategist'],
-      discoveryHint: 'Cultural technology studies how digital platforms reshape society—analyze memes, communities, and identity online.'
+      skills: ['Digital Design', 'Cultural Knowledge', 'Technology', 'Creative Thinking'],
+      careerPath: 'Designer → Senior Designer → Cultural Tech Director → Institution Leader',
+      relatedCareers: ['digital-heritage-specialist', 'museum-technologist', 'ar-vr-designer'],
+      discoveryHint: 'Preserve and share cultural heritage through immersive technology.'
     }
   },
-
   {
-    id: 'photonics-engineer',
-    title: 'Photonics Engineer',
+    id: 'biotech-patent-manager',
+    title: 'Biotech Patent Manager / IP Strategist',
     tier: 'exploratory',
-    description: 'Design optical and photonic systems. Work on lasers, fiber optics, and light-based technologies.',
+    description: 'Manages intellectual property strategies and patent portfolios for biotechnology companies.',
     requirements: [
-      { subcategoryId: 'physics_quantum', weight: 0.85 },
-      { subcategoryId: 'physics_mechanics', weight: 0.75 },
-      { subcategoryId: 'mathematics_geometry', weight: 0.70 }
+      { subcategoryId: 'intellectual_property', weight: 0.95 },
+      { subcategoryId: 'molecular_genetics', weight: 0.85 },
+      { subcategoryId: 'law_legal_studies', weight: 0.9 }
     ],
     context: {
-      salary: { entry: 75000, mid: 130000, senior: 200000 },
-      education: "Bachelor's in photonics engineering (4 years)",
-      jobOutlook: 'Good (7% growth)',
+      salary: { entry: 110000, mid: 180000, senior: 320000 },
+      education: 'JD + BS Biology/Chemistry; patent bar exam',
+      jobOutlook: '8% growth (biotech), high demand',
+      yearsToEntry: 8,
+      skills: ['Patent Law', 'Biotechnology', 'IP Strategy', 'Negotiation'],
+      careerPath: 'Patent Attorney → Senior Attorney → Head of IP → VP Legal',
+      relatedCareers: ['patent-attorney', 'licensing-specialist', 'legal-counsel'],
+      discoveryHint: 'Protect breakthrough biotech innovations through strategic IP management.'
+    }
+  },
+  {
+    id: 'zero-waste-engineer',
+    title: 'Zero-Waste Systems Engineer',
+    tier: 'exploratory',
+    description: 'Designs and implements zero-waste systems for municipalities, industries, and facilities.',
+    requirements: [
+      { subcategoryId: 'environmental_engineering', weight: 0.95 },
+      { subcategoryId: 'systems_networks', weight: 0.8 },
+      { subcategoryId: 'climate_sustainability', weight: 0.9 }
+    ],
+    context: {
+      salary: { entry: 65000, mid: 115000, senior: 180000 },
+      education: 'BS Environmental/Civil Engineering',
+      jobOutlook: '12% growth, rapidly expanding',
       yearsToEntry: 4,
-      skills: ['Optical design', 'Laser systems', 'Fiber optics', 'Quantum optics', 'Photonic materials'],
-      careerPath: 'Photonics Engineer → Senior Engineer → Research Lead → Principal Engineer → Director',
-      relatedCareers: ['Optical Engineer', 'Quantum Engineer', 'Physicist', 'Telecommunications Engineer'],
-      discoveryHint: 'Photonics harnesses light as a tool—design systems for quantum computing, medical imaging, and fast data transfer.'
+      skills: ['Waste Management', 'Systems Design', 'Project Management', 'Analysis'],
+      careerPath: 'Engineer → Senior Engineer → Lead Engineer → Director',
+      relatedCareers: ['environmental-engineer', 'sustainability-consultant', 'waste-manager'],
+      discoveryHint: 'Design systems where waste is eliminated entirely.'
     }
   },
-
   {
-    id: 'astrobiology-researcher',
-    title: 'Astrobiologist / Astrobiology Researcher',
+    id: 'immunotherapy-specialist',
+    title: 'Immunotherapy Specialist / Oncology Researcher',
     tier: 'exploratory',
-    description: 'Search for life beyond Earth. Study conditions for life and potential extraterrestrial organisms.',
+    description: 'Develops novel immunotherapy treatments that use the immune system to fight cancer.',
     requirements: [
-      { subcategoryId: 'biology_molecular', weight: 0.85 },
-      { subcategoryId: 'physics_astronomy', weight: 0.90 },
-      { subcategoryId: 'chemistry_biochemistry', weight: 0.75 }
+      { subcategoryId: 'microbiology', weight: 0.95 },
+      { subcategoryId: 'molecular_genetics', weight: 0.95 },
+      { subcategoryId: 'biochemistry', weight: 0.9 }
     ],
     context: {
-      salary: { entry: 70000, mid: 125000, senior: 190000 },
-      education: "PhD in astrobiology/biology + astronomy (7-8 years)",
-      jobOutlook: 'Emerging (5% growth)',
-      yearsToEntry: 8,
-      skills: ['Exoplanet analysis', 'Microbiology', 'Astrophysics', 'Extremophile research', 'Spectroscopy'],
-      careerPath: 'Postdoc → Astrobiologist → Senior Researcher → Principal Investigator → Research Director',
-      relatedCareers: ['Astronomer', 'Microbiologist', 'Planetary Scientist', 'Astrophysicist'],
-      discoveryHint: 'Astrobiology seeks life in the cosmos—is Earth unique or just one world among billions with biology?'
+      salary: { entry: 80000, mid: 155000, senior: 250000 },
+      education: 'PhD in Immunology/Oncology (5-7 years)',
+      jobOutlook: '12% growth (biomedical), high demand',
+      yearsToEntry: 9,
+      skills: ['Immunology', 'Molecular Biology', 'Research', 'Lab Skills'],
+      careerPath: 'Postdoc → Research Scientist → Senior Scientist → Lab Director',
+      relatedCareers: ['oncologist', 'molecular-biologist', 'medical-researcher'],
+      discoveryHint: 'Develop cutting-edge immunotherapy treatments for cancer.'
     }
   },
-
   {
-    id: 'urban-planner-smart-city',
-    title: 'Smart City Planner / Urban Technologist',
+    id: 'bioplastic-engineer',
+    title: 'Bioplastic / Biomaterial Engineer',
     tier: 'exploratory',
-    description: 'Design sustainable, technology-enabled cities. Integrate IoT, data analytics, and urban planning.',
+    description: 'Develops sustainable bioplastics and biomaterials as alternatives to conventional petrochemical plastics.',
     requirements: [
-      { subcategoryId: 'technology_software', weight: 0.80 },
-      { subcategoryId: 'mathematics_applied', weight: 0.75 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.70 }
+      { subcategoryId: 'polymer_chemistry', weight: 0.95 },
+      { subcategoryId: 'biomedical_engineering', weight: 0.85 },
+      { subcategoryId: 'environmental_engineering', weight: 0.8 }
     ],
     context: {
-      salary: { entry: 65000, mid: 120000, senior: 180000 },
-      education: "Master's in urban planning + tech training (6 years)",
-      jobOutlook: 'Emerging (8% growth, urbanization)',
-      yearsToEntry: 6,
-      skills: ['Smart city technologies', 'Data analytics', 'Sustainable design', 'GIS/mapping', 'Urban design'],
-      careerPath: 'Urban Planner → Smart City Planner → Senior Planner → Urban Innovation Director',
-      relatedCareers: ['Urban Designer', 'Sustainability Consultant', 'Data Analyst', 'Infrastructure Manager'],
-      discoveryHint: 'Smart cities use sensors and AI to optimize urban life—design the sustainable, connected cities of the future.'
+      salary: { entry: 70000, mid: 125000, senior: 200000 },
+      education: 'BS Chemical/Materials Engineering',
+      jobOutlook: '14% growth, rapidly expanding',
+      yearsToEntry: 4,
+      skills: ['Polymer Science', 'Materials Testing', 'Sustainable Design', 'Problem Solving'],
+      careerPath: 'Engineer → Senior Engineer → Research Lead → Product Director',
+      relatedCareers: ['materials-scientist', 'environmental-engineer', 'chemist'],
+      discoveryHint: 'Create sustainable alternatives to plastic for a greener future.'
     }
   },
-
   {
-    id: 'ancient-language-digital-scholar',
-    title: 'Ancient Language Digital Scholar',
+    id: 'space-medicine-doctor',
+    title: 'Space Medicine Physician',
     tier: 'exploratory',
-    description: 'Use computational methods to analyze and decode ancient languages and texts.',
+    description: 'Provides medical care and researches health challenges faced by astronauts in space environments.',
     requirements: [
-      { subcategoryId: 'history_ancient', weight: 0.90 },
-      { subcategoryId: 'technology_data', weight: 0.80 },
-      { subcategoryId: 'mathematics_discrete', weight: 0.70 }
+      { subcategoryId: 'medicine_clinical', weight: 0.95 },
+      { subcategoryId: 'aerospace_engineering', weight: 0.8 },
+      { subcategoryId: 'biophysics', weight: 0.85 }
     ],
     context: {
-      salary: { entry: 55000, mid: 95000, senior: 150000 },
-      education: "PhD in classical studies/linguistics + computational training (8 years)",
-      jobOutlook: 'Emerging (3% growth, specialized)',
-      yearsToEntry: 8,
-      skills: ['Computational linguistics', 'Ancient languages', 'Machine learning', 'Pattern recognition', 'Digital humanities'],
-      careerPath: 'Linguist → Ancient Language Scholar → Digital Humanities Researcher → Research Director',
-      relatedCareers: ['Archaeologist', 'Linguist', 'Computational Linguist', 'Digital Humanist'],
-      discoveryHint: 'Using AI to decode ancient scripts—train algorithms to translate long-dead languages and unlock lost knowledge.'
-    }
-  },
-
-  {
-    id: 'exoplanet-atmospherist',
-    title: 'Exoplanet Atmospherist',
-    tier: 'exploratory',
-    description: 'Study atmospheres of distant planets using spectroscopy. Search for signs of life.',
-    requirements: [
-      { subcategoryId: 'physics_astronomy', weight: 0.95 },
-      { subcategoryId: 'chemistry_physical', weight: 0.80 },
-      { subcategoryId: 'physics_quantum', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 70000, mid: 125000, senior: 190000 },
-      education: "PhD in astronomy/physics (7-8 years)",
-      jobOutlook: 'Emerging (5% growth)',
-      yearsToEntry: 8,
-      skills: ['Spectroscopy', 'Planetary atmospheres', 'Computational modeling', 'Telescope operation', 'Data analysis'],
-      careerPath: 'Postdoc → Exoplanet Researcher → Senior Researcher → Principal Investigator → Observatory Director',
-      relatedCareers: ['Astronomer', 'Astrophysicist', 'Planetary Scientist', 'Astrobiologist'],
-      discoveryHint: 'Exoplanet atmospheres whisper secrets across light-years—analyze the air on distant worlds to find if life exists there.'
-    }
-  },
-
-  {
-    id: 'literary-ai-researcher',
-    title: 'Literary AI Researcher',
-    tier: 'exploratory',
-    description: 'Use AI to analyze literature. Study literary patterns, author styles, and narrative structures at scale.',
-    requirements: [
-      { subcategoryId: 'writing_fiction', weight: 0.85 },
-      { subcategoryId: 'technology_data', weight: 0.85 },
-      { subcategoryId: 'mathematics_pure', weight: 0.70 }
-    ],
-    context: {
-      salary: { entry: 70000, mid: 125000, senior: 190000 },
-      education: "Master's in literature + AI/ML training (5-6 years)",
-      jobOutlook: 'Emerging (10% growth, digital humanities)',
-      yearsToEntry: 6,
-      skills: ['NLP', 'Literary analysis', 'Machine learning', 'Text mining', 'Statistical methods'],
-      careerPath: 'Researcher → Literary AI Researcher → Senior Researcher → Digital Humanities Director',
-      relatedCareers: ['Computational Linguist', 'Digital Humanist', 'Data Scientist', 'Literary Analyst'],
-      discoveryHint: 'Literary AI reveals patterns invisible to human readers—discover hidden themes across all of Shakespeare or the entire internet.'
-    }
-  },
-
-  {
-    id: 'restoration-ecologist',
-    title: 'Restoration Ecologist',
-    tier: 'exploratory',
-    description: 'Restore damaged ecosystems to health. Design and implement ecosystem rehabilitation projects.',
-    requirements: [
-      { subcategoryId: 'biology_ecology', weight: 0.95 },
-      { subcategoryId: 'chemistry_environmental', weight: 0.80 },
-      { subcategoryId: 'biology_marine', weight: 0.65 }
-    ],
-    context: {
-      salary: { entry: 50000, mid: 85000, senior: 135000 },
-      education: "Master's in restoration ecology (6 years)",
-      jobOutlook: 'Good (8% growth)',
-      yearsToEntry: 6,
-      skills: ['Ecosystem restoration', 'Species reintroduction', 'Habitat design', 'Monitoring', 'Conservation planning'],
-      careerPath: 'Field Ecologist → Restoration Ecologist → Senior Ecologist → Project Director → Program Manager',
-      relatedCareers: ['Conservation Biologist', 'Environmental Consultant', 'Wildlife Manager', 'Landscape Architect'],
-      discoveryHint: 'Restoration ecology repairs Earth\'s wounds—heal dead rivers, replant forests, and bring ecosystems back to life.'
+      salary: { entry: 130000, mid: 220000, senior: 380000 },
+      education: 'MD/DO + aerospace medicine fellowship',
+      jobOutlook: '5% growth (specialized), niche field',
+      yearsToEntry: 13,
+      skills: ['Space Physiology', 'Medicine', 'Research', 'Aerospace Knowledge'],
+      careerPath: 'Flight Surgeon → Senior Flight Surgeon → Space Medicine Director',
+      relatedCareers: ['astronaut', 'aerospace-engineer', 'military-physician'],
+      discoveryHint: 'Protect astronauts\' health as humanity ventures into space.'
     }
   }
 ];
 
-/**
- * COVERAGE ANALYSIS
- * ================
- * All 32 subcategories covered (minimum 2-3 careers each):
- *
- * Physics:
- * - mechanics (6): Civil Engineer, Mechanical Engineer, Aerospace Engineer, Patent Lawyer, Space Habitat Engineer, Ocean Engineer
- * - astronomy (2): Physicist, Exoplanet Atmospherist, Astrobiologist
- * - thermodynamics (5): Mechanical Engineer, Chemical Engineer, Renewable Energy Engineer, Climate Scientist, Space Habitat Engineer
- * - quantum (5): Quantum Physicist, Cryptographer, Quantum Software Engineer, Photonics Engineer, Exoplanet Atmospherist
- *
- * Chemistry:
- * - organic (6): Patent Lawyer, Research Scientist, Chemical Engineer, Forensic Scientist, Synthetic Biologist, Protein Designer
- * - physical (5): Geologist, Forensic Scientist, Geochemist, Climate Scientist, Exoplanet Atmospherist
- * - biochemistry (8): Research Scientist, Psychiatrist, Epidemiologist, Immunologist, Space Habitat Engineer, Synthetic Biologist, Microbiome Researcher, Protein Designer
- * - environmental (7): Civil Engineer, Geologist, Environmental Scientist, Renewable Energy Engineer, Climate Scientist, Food Scientist, Restoration Ecologist
- *
- * Biology:
- * - molecular (10): Nurse, Epidemiologist, Research Scientist, Immunologist, Bioinformatician, Synthetic Biologist, Microbiome Researcher, Protein Designer, Precision Medicine Specialist
- * - ecology (6): Environmental Scientist, Conservation Biologist, Drone Engineer, Restoration Ecologist, Bioacoustics Engineer
- * - anatomy (9): Nurse, Physician, Surgeon, Psychiatrist, Epidemiologist, Neurologist, Art Therapist, Neuroethicist, Neuromarketer
- * - marine (3): Bioacoustics Engineer, Ocean Engineer, Drone Engineer, Conservation Biologist
- *
- * History:
- * - ancient (5): Historian (Digital), Archaeologist, Museum Curator, Ancient Language Digital Scholar
- * - modern (3): Digital Historian
- * - cultural (6): Digital Historian, Brand Strategist, Museum Curator, Neuroethicist, Cultural Technologist
- * - military (2): Historian (Digital), Military Strategist roles implied
- *
- * Mathematics:
- * - pure (7): Accountant, Quantum Physicist, Cryptographer, Data Scientist, Machine Learning Engineer, Quantum Software Engineer, Literary AI Researcher
- * - applied (11): Accountant, Data Analyst, Project Manager, Marketing Manager, Epidemiologist, Environmental Scientist, Behavioral Economist, Bioinformatician, Climate Scientist, Financial Analyst
- * - discrete (5): Software Engineer, DevOps Engineer, Cryptographer, Mathematician roles, Ancient Language Scholar
- * - geometry (5): Civil Engineer, Architect, Mathematician roles, Photonics Engineer
- *
- * Art & Design:
- * - visual (7): Graphic Designer, Architect, Scientific Illustrator, Fashion Designer, Art Therapist, Brand Strategist, UI Designer
- * - digital (9): Graphic Designer, Web Developer, Motion Designer, UX Researcher, UI Designer, Game Designer, Holographic Artist, Podcast Producer
- * - performing (6): Classical Musician, Motion Designer, Game Designer, Music Therapist, Art Therapist, Narrative Designer (VR)
- * - crafts (2): Fashion Designer
- *
- * Writing & Literature:
- * - fiction (5): Game Designer, Narrative Designer (VR), Narrative Architect, Literary AI Researcher
- * - academic (11): Teacher, Project Manager, Science Communicator, Patent Lawyer, Historian, Neuroethicist, Digital Archivist, Behavioral Economist, Archaeologist, Cultural Technologist
- * - journalism (8): Graphic Designer, Marketing Manager, Science Communicator, Podcast Producer, Brand Strategist, Neuromarketer, Narrative Architect
- * - poetry (2): Implied in literary careers
- *
- * Technology:
- * - software (12): Software Engineer, Web Developer, Data Analyst, DevOps Engineer, Machine Learning Engineer, Software Architect, Game Designer, Quantum Software Engineer, Bioinformatician, Drone Engineer, Smart City Planner, Literary AI Researcher
- * - data (11): Data Analyst, Machine Learning Engineer, Data Scientist, Epidemiologist, Bioinformatician, Climate Scientist, Forensic Scientist, Precision Medicine, Digital Archivist, Computational Archaeologist, Neuromarketer
- * - web (7): Web Developer, UX Researcher, UI Designer, Podcast Producer, Digital Historian, Smart City Planner, Cultural Technologist
- * - security (4): DevOps Engineer, Cryptographer, Software Architect
- */
-
-export const CAREERS_BY_TIER = {
-  core: CAREERS.filter(c => c.tier === 'core'),
-  advanced: CAREERS.filter(c => c.tier === 'advanced'),
-  niche: CAREERS.filter(c => c.tier === 'niche'),
-  exploratory: CAREERS.filter(c => c.tier === 'exploratory')
-};
-
-export const getCareersForSubcategory = (subcategoryId) => {
-  return CAREERS.filter(career =>
-    career.requirements.some(req => req.subcategoryId === subcategoryId)
-  );
-};
-
-export const getCareersForTier = (tier) => {
-  return CAREERS.filter(c => c.tier === tier);
+export const getCareersbyTier = (tier) => {
+  return CAREERS.filter(career => career.tier === tier);
 };
 
 export const getCareerById = (careerId) => {
-  return CAREERS.find(c => c.id === careerId);
+  return CAREERS.find(career => career.id === careerId);
 };

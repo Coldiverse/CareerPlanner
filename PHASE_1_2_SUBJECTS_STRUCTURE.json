@@ -1,0 +1,1351 @@
+{
+  "subjects": [
+    {
+      "id": "physics",
+      "name": "Physics",
+      "description": "Study of matter, energy, forces, and the fundamental laws governing the universe.",
+      "subcategories": [
+        {
+          "id": "mechanics_engineering",
+          "name": "Mechanics & Engineering Physics",
+          "description": "Classical mechanics, motion, forces, and their applications in engineering",
+          "careerRelevance": "Leads to mechanical engineering, automotive engineering, aerospace engineering"
+        },
+        {
+          "id": "quantum_particle",
+          "name": "Quantum & Particle Physics",
+          "description": "Subatomic particles, quantum mechanics, and the nature of matter",
+          "careerRelevance": "Enables research physics, quantum computing, semiconductor engineering"
+        },
+        {
+          "id": "astrophysics_cosmology",
+          "name": "Astrophysics & Cosmology",
+          "description": "Stars, galaxies, black holes, universe structure and evolution",
+          "careerRelevance": "Opens careers in astronomy, space research, observatories, planetariums"
+        },
+        {
+          "id": "electromagnetism",
+          "name": "Electromagnetism & Optics",
+          "description": "Electric fields, magnetism, light, and electromagnetic radiation",
+          "careerRelevance": "Foundation for electrical engineering, photonics, telecommunications"
+        },
+        {
+          "id": "thermodynamics_energy",
+          "name": "Thermodynamics & Energy",
+          "description": "Heat, entropy, energy conversion, and temperature",
+          "careerRelevance": "Critical for energy engineering, renewable energy, HVAC systems"
+        },
+        {
+          "id": "acoustics_waves",
+          "name": "Acoustics & Wave Physics",
+          "description": "Sound, vibrations, waves, and their properties",
+          "careerRelevance": "Applies to audio engineering, music technology, ultrasound imaging"
+        },
+        {
+          "id": "nuclear_physics",
+          "name": "Nuclear & Particle Physics",
+          "description": "Nuclear reactions, radioactivity, and atomic structure",
+          "careerRelevance": "Leads to nuclear engineering, medical physics, radiation oncology"
+        },
+        {
+          "id": "biophysics",
+          "name": "Biophysics & Medical Physics",
+          "description": "Physics principles applied to biological systems and medical imaging",
+          "careerRelevance": "Enables medical device development, diagnostic imaging, biomedical research"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "description": "Study of matter, chemical reactions, and the composition of substances.",
+      "subcategories": [
+        {
+          "id": "organic_chemistry",
+          "name": "Organic Chemistry",
+          "description": "Chemistry of carbon compounds, reactions, and synthesis",
+          "careerRelevance": "Essential for pharmaceutical development, chemical engineering, materials science"
+        },
+        {
+          "id": "inorganic_chemistry",
+          "name": "Inorganic Chemistry",
+          "description": "Non-carbon compounds, metals, minerals, and coordination chemistry",
+          "careerRelevance": "Supports metallurgy, mining, industrial chemistry, material design"
+        },
+        {
+          "id": "biochemistry",
+          "name": "Biochemistry",
+          "description": "Chemical processes in living organisms, proteins, and metabolism",
+          "careerRelevance": "Essential for biotech, pharmaceutical research, nutrition science, enzyme engineering"
+        },
+        {
+          "id": "analytical_chemistry",
+          "name": "Analytical Chemistry",
+          "description": "Methods for identifying and quantifying matter composition",
+          "careerRelevance": "Supports quality control, forensics, environmental testing, lab analysis"
+        },
+        {
+          "id": "physical_chemistry",
+          "name": "Physical Chemistry",
+          "description": "Chemical thermodynamics, kinetics, and molecular interactions",
+          "careerRelevance": "Applies to nanotechnology, materials engineering, chemical process design"
+        },
+        {
+          "id": "environmental_chemistry",
+          "name": "Environmental Chemistry",
+          "description": "Chemistry of air, water, soil, and pollution remediation",
+          "careerRelevance": "Enables environmental engineering, sustainability consulting, water treatment"
+        },
+        {
+          "id": "polymer_chemistry",
+          "name": "Polymer & Materials Chemistry",
+          "description": "Synthesis and properties of polymers and advanced materials",
+          "careerRelevance": "Supports plastics manufacturing, composites design, textile engineering"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "description": "Study of living organisms, life processes, and biological systems.",
+      "subcategories": [
+        {
+          "id": "molecular_genetics",
+          "name": "Molecular Biology & Genetics",
+          "description": "DNA, genes, genetic expression, and heredity",
+          "careerRelevance": "Opens careers in genetic counseling, biotech, gene therapy, forensic genetics"
+        },
+        {
+          "id": "cell_biology",
+          "name": "Cell Biology",
+          "description": "Cell structure, organelles, and cellular processes",
+          "careerRelevance": "Supports research positions, stem cell therapy, cell-based drug development"
+        },
+        {
+          "id": "ecology_evolution",
+          "name": "Ecology & Evolutionary Biology",
+          "description": "Organisms in ecosystems, adaptation, and species change over time",
+          "careerRelevance": "Enables conservation work, environmental consulting, wildlife management"
+        },
+        {
+          "id": "microbiology",
+          "name": "Microbiology & Immunology",
+          "description": "Bacteria, viruses, fungi, and immune system responses",
+          "careerRelevance": "Leads to clinical microbiology, vaccine development, infection prevention"
+        },
+        {
+          "id": "plant_biology",
+          "name": "Plant Biology & Botany",
+          "description": "Plant structure, physiology, reproduction, and diversity",
+          "careerRelevance": "Supports agriculture, horticulture, forestry, botanical research"
+        },
+        {
+          "id": "animal_physiology",
+          "name": "Animal Physiology & Anatomy",
+          "description": "Animal body systems, organ function, and health",
+          "careerRelevance": "Essential for veterinary medicine, medical research, pharmaceutical development"
+        },
+        {
+          "id": "marine_biology",
+          "name": "Marine & Aquatic Biology",
+          "description": "Ocean ecosystems, marine organisms, and aquaculture",
+          "careerRelevance": "Opens marine research, fisheries management, conservation roles"
+        },
+        {
+          "id": "developmental_biology",
+          "name": "Developmental Biology & Neurobiology",
+          "description": "Embryo development, nervous system, and brain function",
+          "careerRelevance": "Supports neuroscience research, developmental disorders treatment, brain imaging"
+        }
+      ]
+    },
+    {
+      "id": "earth_science",
+      "name": "Earth Science & Geology",
+      "description": "Study of Earth's structure, processes, and materials.",
+      "subcategories": [
+        {
+          "id": "mineralogy_petrology",
+          "name": "Mineralogy & Petrology",
+          "description": "Minerals, rocks, and their formation processes",
+          "careerRelevance": "Supports mining engineering, gemology, industrial mineral processing"
+        },
+        {
+          "id": "structural_geology",
+          "name": "Structural Geology & Tectonics",
+          "description": "Earth's structure, plate tectonics, and deformation",
+          "careerRelevance": "Essential for earthquake prediction, oil/gas exploration, geotechnical engineering"
+        },
+        {
+          "id": "paleontology",
+          "name": "Paleontology & Fossil Study",
+          "description": "Extinct organisms, fossil records, and Earth's history",
+          "careerRelevance": "Enables museum curation, paleontological research, evolutionary studies"
+        },
+        {
+          "id": "geochemistry",
+          "name": "Geochemistry",
+          "description": "Chemical composition and reactions in Earth materials",
+          "careerRelevance": "Applies to environmental remediation, mineral exploration, isotope analysis"
+        },
+        {
+          "id": "geophysics",
+          "name": "Geophysics & Seismology",
+          "description": "Physical properties of Earth, earthquakes, and subsurface mapping",
+          "careerRelevance": "Supports seismic monitoring, resource exploration, geothermal engineering"
+        },
+        {
+          "id": "hydrogeology",
+          "name": "Hydrogeology & Groundwater",
+          "description": "Water in Earth systems, aquifers, and water movement",
+          "careerRelevance": "Critical for water supply management, contamination cleanup, well drilling"
+        },
+        {
+          "id": "meteorology",
+          "name": "Meteorology & Atmospheric Science",
+          "description": "Atmosphere, weather patterns, and climate systems",
+          "careerRelevance": "Opens meteorology, climate science, air quality monitoring, weather forecasting"
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "description": "Study of numbers, patterns, space, and logical reasoning.",
+      "subcategories": [
+        {
+          "id": "pure_mathematics",
+          "name": "Pure & Theoretical Mathematics",
+          "description": "Abstract theory, number theory, proofs, and mathematical foundations",
+          "careerRelevance": "Supports academic research, cryptography, mathematical modeling"
+        },
+        {
+          "id": "applied_mathematics",
+          "name": "Applied Mathematics & Modeling",
+          "description": "Using math to solve real-world engineering and science problems",
+          "careerRelevance": "Essential for engineering design, scientific computing, operations research"
+        },
+        {
+          "id": "statistics_probability",
+          "name": "Statistics & Probability",
+          "description": "Data analysis, probability theory, and statistical inference",
+          "careerRelevance": "Critical for data science, finance, quality control, epidemiology"
+        },
+        {
+          "id": "geometry_topology",
+          "name": "Geometry & Topology",
+          "description": "Shapes, spatial relationships, and continuous transformations",
+          "careerRelevance": "Applies to computer graphics, architectural design, map projections"
+        },
+        {
+          "id": "calculus_analysis",
+          "name": "Calculus & Real Analysis",
+          "description": "Rates of change, limits, integration, and function behavior",
+          "careerRelevance": "Foundation for physics, engineering, economics, and optimization"
+        },
+        {
+          "id": "algebra_discrete",
+          "name": "Algebra & Discrete Mathematics",
+          "description": "Equations, logic, combinatorics, and computer science math",
+          "careerRelevance": "Essential for computer science, coding, algorithm design, cryptography"
+        },
+        {
+          "id": "linear_algebra",
+          "name": "Linear Algebra & Matrix Theory",
+          "description": "Vectors, matrices, and systems of equations",
+          "careerRelevance": "Critical for machine learning, computer graphics, data science, physics"
+        }
+      ]
+    },
+    {
+      "id": "computer_science",
+      "name": "Computer Science & Technology",
+      "description": "Study of computation, algorithms, and digital systems.",
+      "subcategories": [
+        {
+          "id": "software_development",
+          "name": "Software Development & Programming",
+          "description": "Writing code, software design patterns, and development methodologies",
+          "careerRelevance": "Opens full-stack development, mobile apps, enterprise software careers"
+        },
+        {
+          "id": "web_development",
+          "name": "Web Development & Frontend",
+          "description": "HTML/CSS/JavaScript, responsive design, user interface development",
+          "careerRelevance": "Leads to web developer, UX engineer, frontend architect roles"
+        },
+        {
+          "id": "databases_backend",
+          "name": "Databases & Backend Systems",
+          "description": "Database design, server architecture, APIs, and data management",
+          "careerRelevance": "Supports backend engineering, database administration, DevOps roles"
+        },
+        {
+          "id": "ai_machine_learning",
+          "name": "Artificial Intelligence & Machine Learning",
+          "description": "Neural networks, deep learning, natural language processing, computer vision",
+          "careerRelevance": "Opens AI research, ML engineering, data science, autonomous systems careers"
+        },
+        {
+          "id": "cybersecurity",
+          "name": "Cybersecurity & Network Security",
+          "description": "Security protocols, encryption, threat detection, and network defense",
+          "careerRelevance": "Enables security engineering, penetration testing, compliance roles"
+        },
+        {
+          "id": "systems_networks",
+          "name": "Systems & Networks",
+          "description": "Operating systems, networking protocols, and distributed systems",
+          "careerRelevance": "Supports network engineering, systems administration, cloud architecture"
+        },
+        {
+          "id": "human_computer_interaction",
+          "name": "Human-Computer Interaction & UX",
+          "description": "User experience design, usability, interaction design, and accessibility",
+          "careerRelevance": "Leads to UX/UI designer, product manager, user researcher roles"
+        },
+        {
+          "id": "game_dev_graphics",
+          "name": "Game Development & Computer Graphics",
+          "description": "Game engines, 3D graphics, physics engines, and interactive media",
+          "careerRelevance": "Opens game development, VR/AR engineering, animation careers"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering & Technology",
+      "description": "Application of science and technology to solve practical problems.",
+      "subcategories": [
+        {
+          "id": "mechanical_engineering",
+          "name": "Mechanical Engineering",
+          "description": "Machine design, thermodynamics, manufacturing, and mechanics",
+          "careerRelevance": "Supports automotive, aerospace, manufacturing, and robotics industries"
+        },
+        {
+          "id": "electrical_engineering",
+          "name": "Electrical & Electronics Engineering",
+          "description": "Power systems, circuits, electrical devices, and semiconductor design",
+          "careerRelevance": "Opens power generation, electronics manufacturing, telecommunications"
+        },
+        {
+          "id": "civil_engineering",
+          "name": "Civil Engineering",
+          "description": "Infrastructure design, bridges, buildings, roads, and water systems",
+          "careerRelevance": "Enables construction, urban planning, structural design careers"
+        },
+        {
+          "id": "chemical_engineering",
+          "name": "Chemical Engineering",
+          "description": "Industrial chemical processes, production scaling, and reactor design",
+          "careerRelevance": "Supports pharmaceutical manufacturing, petrochemicals, food processing"
+        },
+        {
+          "id": "aerospace_engineering",
+          "name": "Aerospace Engineering",
+          "description": "Aircraft and spacecraft design, aerodynamics, and propulsion systems",
+          "careerRelevance": "Opens aviation, space exploration, defense contractor careers"
+        },
+        {
+          "id": "biomedical_engineering",
+          "name": "Biomedical & Healthcare Engineering",
+          "description": "Medical devices, prosthetics, diagnostic equipment, and healthcare technology",
+          "careerRelevance": "Supports medical device companies, hospitals, research institutions"
+        },
+        {
+          "id": "environmental_engineering",
+          "name": "Environmental Engineering",
+          "description": "Pollution control, waste management, water treatment, and sustainability",
+          "careerRelevance": "Enables environmental consulting, cleanup projects, sustainability roles"
+        },
+        {
+          "id": "robotics_automation",
+          "name": "Robotics & Industrial Automation",
+          "description": "Robot design, control systems, automation, and manufacturing systems",
+          "careerRelevance": "Opens robotics research, factory automation, autonomous vehicles careers"
+        }
+      ]
+    },
+    {
+      "id": "visual_arts",
+      "name": "Visual Arts & Design",
+      "description": "Creative expression through visual media and spatial design.",
+      "subcategories": [
+        {
+          "id": "painting_drawing",
+          "name": "Painting & Drawing",
+          "description": "Traditional and digital painting, drawing techniques, and visual composition",
+          "careerRelevance": "Leads to fine art, illustration, concept art, and gallery careers"
+        },
+        {
+          "id": "sculpture_3d",
+          "name": "Sculpture & 3D Art",
+          "description": "Three-dimensional sculpture, installation art, and spatial design",
+          "careerRelevance": "Supports fine art, public art, museum curation, set design"
+        },
+        {
+          "id": "graphic_design",
+          "name": "Graphic Design & Typography",
+          "description": "Logo design, branding, layout design, and visual communication",
+          "careerRelevance": "Opens graphic design, branding agencies, marketing design roles"
+        },
+        {
+          "id": "industrial_product_design",
+          "name": "Industrial & Product Design",
+          "description": "Consumer product design, ergonomics, and user-centered design",
+          "careerRelevance": "Enables product design, furniture design, consumer goods careers"
+        },
+        {
+          "id": "fashion_design",
+          "name": "Fashion & Textile Design",
+          "description": "Clothing design, fashion trends, textile patterns, and sustainable fashion",
+          "careerRelevance": "Leads to fashion design, textile design, apparel industry careers"
+        },
+        {
+          "id": "photography",
+          "name": "Photography",
+          "description": "Still photography, lighting, composition, and digital image editing",
+          "careerRelevance": "Opens professional photography, photojournalism, stock photography careers"
+        },
+        {
+          "id": "web_digital_design",
+          "name": "Web & Digital Design",
+          "description": "User interface design, interactive design, digital experiences, and animation",
+          "careerRelevance": "Supports UX/UI design, interactive media, digital agencies"
+        },
+        {
+          "id": "architecture",
+          "name": "Architecture & Spatial Design",
+          "description": "Building design, urban planning, interior design, and landscape architecture",
+          "careerRelevance": "Opens architecture, urban design, interior design, landscape design careers"
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Music & Audio Arts",
+      "description": "Study and creation of music and sound across genres and technologies.",
+      "subcategories": [
+        {
+          "id": "instrumental_performance",
+          "name": "Instrumental & Vocal Performance",
+          "description": "Musical performance, technique, and interpretation of instruments and voice",
+          "careerRelevance": "Leads to professional musician, orchestra member, studio vocalist careers"
+        },
+        {
+          "id": "music_composition",
+          "name": "Music Composition & Songwriting",
+          "description": "Creating original music, film scores, arrangements, and orchestration",
+          "careerRelevance": "Opens composer, film score, game audio, and songwriter careers"
+        },
+        {
+          "id": "music_production",
+          "name": "Music Production & Recording",
+          "description": "Recording techniques, mixing, mastering, and studio engineering",
+          "careerRelevance": "Supports music producer, audio engineer, sound designer roles"
+        },
+        {
+          "id": "music_theory_history",
+          "name": "Music Theory & History",
+          "description": "Harmony, melody, rhythm, music history, and cultural contexts",
+          "careerRelevance": "Enables music education, musicology, music critic careers"
+        },
+        {
+          "id": "sound_design",
+          "name": "Sound Design & Audio Technology",
+          "description": "Synthesizers, audio effects, spatial audio, and sound for media",
+          "careerRelevance": "Opens sound design for film/games, audio technology, podcast production"
+        },
+        {
+          "id": "music_education",
+          "name": "Music Education & Pedagogy",
+          "description": "Teaching music, curriculum design, and musical development",
+          "careerRelevance": "Supports music teacher, private instructor, and music school careers"
+        },
+        {
+          "id": "conducting",
+          "name": "Conducting & Ensemble Direction",
+          "description": "Orchestra/choir conducting, ensemble leadership, and musical direction",
+          "careerRelevance": "Leads to conductor, music director, and ensemble leader roles"
+        }
+      ]
+    },
+    {
+      "id": "performing_arts",
+      "name": "Performing Arts & Drama",
+      "description": "Performance-based creative expression through acting, dance, and theater.",
+      "subcategories": [
+        {
+          "id": "acting_theater",
+          "name": "Acting & Theater Performance",
+          "description": "Character development, stage acting, and theatrical performance",
+          "careerRelevance": "Opens actor, theater performer, method acting coach careers"
+        },
+        {
+          "id": "dance_choreography",
+          "name": "Dance & Choreography",
+          "description": "Dance technique, choreography, movement expression, and dance styles",
+          "careerRelevance": "Leads to professional dancer, choreographer, dance instructor roles"
+        },
+        {
+          "id": "theater_production",
+          "name": "Theater Production & Direction",
+          "description": "Directing plays, stage management, theater design, and production",
+          "careerRelevance": "Supports theater director, stage manager, production designer careers"
+        },
+        {
+          "id": "film_video",
+          "name": "Film & Video Production",
+          "description": "Cinematography, directing films, editing, and video production",
+          "careerRelevance": "Opens filmmaker, video director, cinematographer, editor careers"
+        },
+        {
+          "id": "comedy_improv",
+          "name": "Comedy & Improvisation",
+          "description": "Stand-up comedy, improv performance, and comedic writing",
+          "careerRelevance": "Leads to comedian, improv performer, comedy writer careers"
+        },
+        {
+          "id": "puppetry_animation",
+          "name": "Puppetry & Animation",
+          "description": "Puppet design and operation, 2D/3D animation, and stop-motion",
+          "careerRelevance": "Opens animation studio, puppet show, children's media careers"
+        }
+      ]
+    },
+    {
+      "id": "literature_writing",
+      "name": "Literature & Writing",
+      "description": "Written expression, literary analysis, and storytelling.",
+      "subcategories": [
+        {
+          "id": "creative_writing",
+          "name": "Creative Writing & Fiction",
+          "description": "Novel writing, short stories, fantasy, sci-fi, and narrative techniques",
+          "careerRelevance": "Opens author, novelist, freelance writer, self-publishing careers"
+        },
+        {
+          "id": "poetry",
+          "name": "Poetry & Poetic Expression",
+          "description": "Poetry forms, verse techniques, and poetic language",
+          "careerRelevance": "Supports poet, poetry editor, poetry teacher, slam poetry careers"
+        },
+        {
+          "id": "journalism_nonfiction",
+          "name": "Journalism & Nonfiction Writing",
+          "description": "News writing, feature journalism, memoirs, and narrative nonfiction",
+          "careerRelevance": "Opens journalist, reporter, nonfiction author, copywriter careers"
+        },
+        {
+          "id": "technical_writing",
+          "name": "Technical & Professional Writing",
+          "description": "Documentation, user guides, technical manuals, and business writing",
+          "careerRelevance": "Leads to technical writer, content strategist, proposal writer roles"
+        },
+        {
+          "id": "playwriting_screenwriting",
+          "name": "Playwriting & Screenwriting",
+          "description": "Play scripts, movie scripts, television writing, and dialogue",
+          "careerRelevance": "Opens screenwriter, playwright, TV writer, script consultant careers"
+        },
+        {
+          "id": "literary_studies",
+          "name": "Literary Analysis & Criticism",
+          "description": "Literary theory, textual analysis, and literary criticism",
+          "careerRelevance": "Supports literature professor, literary critic, book reviewer roles"
+        },
+        {
+          "id": "editing_publishing",
+          "name": "Editing & Publishing",
+          "description": "Manuscript editing, publishing processes, and book production",
+          "careerRelevance": "Opens acquisitions editor, copy editor, publisher, literary agent careers"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History & Social Studies",
+      "description": "Study of past events, societies, and human change over time.",
+      "subcategories": [
+        {
+          "id": "world_history",
+          "name": "World & Ancient History",
+          "description": "Ancient civilizations, world cultures, and global historical patterns",
+          "careerRelevance": "Supports historian, museum curator, tour guide, historical consultant"
+        },
+        {
+          "id": "american_history",
+          "name": "American History",
+          "description": "U.S. history, politics, social movements, and American culture",
+          "careerRelevance": "Enables history teacher, historical preservation specialist roles"
+        },
+        {
+          "id": "military_history",
+          "name": "Military & War History",
+          "description": "Wars, military strategy, conflict analysis, and military culture",
+          "careerRelevance": "Opens military historian, defense analyst, historical consultant careers"
+        },
+        {
+          "id": "cultural_history",
+          "name": "Cultural & Social History",
+          "description": "Culture, society, daily life, social movements, and cultural change",
+          "careerRelevance": "Supports social historian, cultural anthropologist, museum curator"
+        },
+        {
+          "id": "political_intellectual_history",
+          "name": "Political & Intellectual History",
+          "description": "Political systems, philosophy history, ideologies, and intellectual movements",
+          "careerRelevance": "Opens policy analyst, think tank researcher, political historian careers"
+        },
+        {
+          "id": "environmental_history",
+          "name": "Environmental & Urban History",
+          "description": "Environmental change, urban development, and human-nature relationships",
+          "careerRelevance": "Leads to environmental historian, urban planner, conservation careers"
+        },
+        {
+          "id": "local_genealogy",
+          "name": "Local History & Genealogy",
+          "description": "Regional history, family history research, and genealogical studies",
+          "careerRelevance": "Supports genealogist, local historian, family history consultant roles"
+        }
+      ]
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy & Logic",
+      "description": "Fundamental questions about existence, knowledge, ethics, and reality.",
+      "subcategories": [
+        {
+          "id": "metaphysics_ontology",
+          "name": "Metaphysics & Ontology",
+          "description": "Nature of reality, existence, substance, and fundamental being",
+          "careerRelevance": "Opens philosophy professor, theoretical researcher, think tank roles"
+        },
+        {
+          "id": "epistemology",
+          "name": "Epistemology & Theory of Knowledge",
+          "description": "Nature of knowledge, justified belief, and how we know things",
+          "careerRelevance": "Supports researcher, academic philosopher, methodology specialist"
+        },
+        {
+          "id": "ethics_moral",
+          "name": "Ethics & Moral Philosophy",
+          "description": "Right and wrong, virtue, morality, and ethical reasoning",
+          "careerRelevance": "Leads to ethics consultant, policy advisor, moral philosopher careers"
+        },
+        {
+          "id": "logic_reasoning",
+          "name": "Logic & Critical Reasoning",
+          "description": "Logical systems, argumentation, critical thinking, and fallacies",
+          "careerRelevance": "Opens debate coach, argumentation specialist, analytical researcher"
+        },
+        {
+          "id": "aesthetics",
+          "name": "Aesthetics & Philosophy of Art",
+          "description": "Nature of beauty, artistic value, taste, and aesthetic experience",
+          "careerRelevance": "Supports art critic, aesthetician, cultural analyst, museum consultant"
+        },
+        {
+          "id": "political_philosophy",
+          "name": "Political Philosophy",
+          "description": "Justice, rights, government, power, and social contract",
+          "careerRelevance": "Opens political theorist, policy advisor, human rights advocate careers"
+        },
+        {
+          "id": "philosophy_science",
+          "name": "Philosophy of Science & Technology",
+          "description": "Scientific method, technology ethics, and science foundations",
+          "careerRelevance": "Supports science advisor, tech ethicist, research philosopher roles"
+        }
+      ]
+    },
+    {
+      "id": "linguistics",
+      "name": "Linguistics & Language Studies",
+      "description": "Study of language structure, meaning, and communication.",
+      "subcategories": [
+        {
+          "id": "structural_linguistics",
+          "name": "Structural & Theoretical Linguistics",
+          "description": "Grammar, syntax, phonetics, and language structures",
+          "careerRelevance": "Supports linguistics professor, language researcher, speech pathologist"
+        },
+        {
+          "id": "sociolinguistics",
+          "name": "Sociolinguistics & Dialectology",
+          "description": "Language and society, dialects, socioeconomic variation, language change",
+          "careerRelevance": "Opens sociolinguist, language policy advisor, dialect researcher"
+        },
+        {
+          "id": "psycholinguistics",
+          "name": "Psycholinguistics",
+          "description": "Language acquisition, processing, memory, and brain-language relationships",
+          "careerRelevance": "Supports cognitive researcher, speech therapist, education specialist"
+        },
+        {
+          "id": "computational_linguistics",
+          "name": "Computational Linguistics & NLP",
+          "description": "Natural language processing, machine translation, and computational methods",
+          "careerRelevance": "Opens NLP engineer, speech recognition specialist, AI language roles"
+        },
+        {
+          "id": "applied_translation",
+          "name": "Applied Linguistics & Translation",
+          "description": "Language teaching, translation, interpretation, and language application",
+          "careerRelevance": "Opens translator, interpreter, ESL teacher, language consultant"
+        },
+        {
+          "id": "historical_comparative",
+          "name": "Historical & Comparative Linguistics",
+          "description": "Language evolution, language families, and linguistic reconstruction",
+          "careerRelevance": "Supports historical linguist, etymology researcher, language preservation"
+        }
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology & Behavioral Sciences",
+      "description": "Study of human behavior, mental processes, and psychological phenomena.",
+      "subcategories": [
+        {
+          "id": "cognitive_psychology",
+          "name": "Cognitive Psychology",
+          "description": "Memory, attention, learning, thinking, and problem-solving",
+          "careerRelevance": "Opens cognitive psychologist, learning specialist, cognitive researcher"
+        },
+        {
+          "id": "developmental_psychology",
+          "name": "Developmental Psychology",
+          "description": "Child development, lifespan development, and developmental stages",
+          "careerRelevance": "Supports child psychologist, school counselor, developmental researcher"
+        },
+        {
+          "id": "clinical_counseling",
+          "name": "Clinical & Counseling Psychology",
+          "description": "Mental health treatment, psychotherapy, and clinical assessment",
+          "careerRelevance": "Opens clinical psychologist, therapist, counselor, mental health roles"
+        },
+        {
+          "id": "social_psychology",
+          "name": "Social Psychology",
+          "description": "Group behavior, influence, attitudes, and interpersonal dynamics",
+          "careerRelevance": "Leads to social psychologist, organizational consultant, HR specialist"
+        },
+        {
+          "id": "industrial_organizational",
+          "name": "Industrial-Organizational Psychology",
+          "description": "Workplace behavior, management, hiring, and organizational dynamics",
+          "careerRelevance": "Supports IO psychologist, HR consultant, organizational development"
+        },
+        {
+          "id": "neuroscience_biopsychology",
+          "name": "Neuroscience & Biopsychology",
+          "description": "Brain function, neurotransmitters, biological basis of behavior",
+          "careerRelevance": "Opens neuroscientist, cognitive neuroscience researcher, brain imaging"
+        },
+        {
+          "id": "health_psychology",
+          "name": "Health & Forensic Psychology",
+          "description": "Health behaviors, stress, wellness, and forensic assessment",
+          "careerRelevance": "Opens health psychologist, forensic psychologist, wellness consultant"
+        }
+      ]
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology & Anthropology",
+      "description": "Study of societies, cultures, and human social relationships.",
+      "subcategories": [
+        {
+          "id": "cultural_anthropology",
+          "name": "Cultural Anthropology",
+          "description": "Culture, ethnography, cultural practices, and cultural diversity",
+          "careerRelevance": "Opens anthropologist, ethnographer, cultural researcher, museum curator"
+        },
+        {
+          "id": "social_theory",
+          "name": "Sociological Theory & Methods",
+          "description": "Social structures, theories of society, and research methodology",
+          "careerRelevance": "Supports sociologist, academic researcher, social scientist"
+        },
+        {
+          "id": "urban_sociology",
+          "name": "Urban Sociology & Community Studies",
+          "description": "City life, communities, urbanization, and metropolitan dynamics",
+          "careerRelevance": "Opens urban sociologist, community organizer, urban planner"
+        },
+        {
+          "id": "criminology_deviance",
+          "name": "Criminology & Deviance",
+          "description": "Crime, criminal justice, deviance, and law enforcement",
+          "careerRelevance": "Leads to criminologist, crime analyst, law enforcement researcher"
+        },
+        {
+          "id": "religious_studies",
+          "name": "Religious & Spiritual Studies",
+          "description": "Religions, spirituality, rituals, and belief systems",
+          "careerRelevance": "Opens religious scholar, chaplain, interfaith worker, religion professor"
+        },
+        {
+          "id": "media_communication",
+          "name": "Media & Communication Studies",
+          "description": "Media effects, communication theory, mass media, and digital culture",
+          "careerRelevance": "Supports media analyst, communication researcher, media critic"
+        },
+        {
+          "id": "family_kinship",
+          "name": "Family & Kinship Studies",
+          "description": "Family structures, relationships, kinship systems, and family dynamics",
+          "careerRelevance": "Opens family counselor, family researcher, social worker"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics & Business",
+      "description": "Study of resource allocation, markets, and economic systems.",
+      "subcategories": [
+        {
+          "id": "microeconomics",
+          "name": "Microeconomics",
+          "description": "Individual markets, consumer behavior, firms, and pricing",
+          "careerRelevance": "Supports economist, market analyst, pricing specialist, consultant"
+        },
+        {
+          "id": "macroeconomics",
+          "name": "Macroeconomics",
+          "description": "National economies, inflation, employment, and monetary policy",
+          "careerRelevance": "Opens policy advisor, government economist, central bank roles"
+        },
+        {
+          "id": "finance_investment",
+          "name": "Finance & Investment",
+          "description": "Financial markets, stocks, bonds, portfolios, and investment strategy",
+          "careerRelevance": "Opens financial analyst, investment manager, financial advisor careers"
+        },
+        {
+          "id": "accounting",
+          "name": "Accounting & Financial Reporting",
+          "description": "Bookkeeping, financial statements, auditing, and financial management",
+          "careerRelevance": "Leads to accountant, auditor, financial controller, tax specialist"
+        },
+        {
+          "id": "business_management",
+          "name": "Business Management & Entrepreneurship",
+          "description": "Business strategy, operations, leadership, and startup development",
+          "careerRelevance": "Opens entrepreneur, business manager, operations director, consultant"
+        },
+        {
+          "id": "marketing",
+          "name": "Marketing & Consumer Behavior",
+          "description": "Marketing strategy, advertising, brand management, and market research",
+          "careerRelevance": "Supports marketing manager, brand strategist, market researcher"
+        },
+        {
+          "id": "international_development",
+          "name": "International Economics & Development",
+          "description": "Trade, development economics, global markets, and economic policy",
+          "careerRelevance": "Opens development economist, international trade specialist, NGO roles"
+        }
+      ]
+    },
+    {
+      "id": "political_science",
+      "name": "Political Science & Governance",
+      "description": "Study of government, politics, power, and political institutions.",
+      "subcategories": [
+        {
+          "id": "comparative_government",
+          "name": "Comparative Government & Politics",
+          "description": "Political systems, government structures, and international politics",
+          "careerRelevance": "Opens political scientist, policy analyst, diplomat, think tank roles"
+        },
+        {
+          "id": "american_politics",
+          "name": "American Politics & Government",
+          "description": "U.S. political system, Congress, presidency, and elections",
+          "careerRelevance": "Supports political analyst, campaign manager, policy advisor"
+        },
+        {
+          "id": "international_relations",
+          "name": "International Relations",
+          "description": "Global politics, diplomacy, conflict, and international cooperation",
+          "careerRelevance": "Opens diplomat, foreign service, international relations specialist"
+        },
+        {
+          "id": "public_policy",
+          "name": "Public Policy & Administration",
+          "description": "Policy analysis, public administration, and government programs",
+          "careerRelevance": "Leads to policy analyst, government administrator, public manager"
+        },
+        {
+          "id": "law_legal_studies",
+          "name": "Law & Legal Studies",
+          "description": "Legal systems, constitutional law, and legal theory",
+          "careerRelevance": "Opens lawyer, legal analyst, judge, legal scholar careers"
+        },
+        {
+          "id": "political_ideologies",
+          "name": "Political Theory & Ideologies",
+          "description": "Political ideologies, rights, justice, and political philosophy",
+          "careerRelevance": "Supports political theorist, policy advisor, activist organizer"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education & Pedagogy",
+      "description": "Study of teaching, learning, and educational systems.",
+      "subcategories": [
+        {
+          "id": "general_pedagogy",
+          "name": "Educational Theory & Pedagogy",
+          "description": "Teaching methods, learning theory, and educational philosophy",
+          "careerRelevance": "Supports education professor, curriculum designer, teacher trainer"
+        },
+        {
+          "id": "k12_teaching",
+          "name": "K-12 Teaching & Subject Education",
+          "description": "Teaching subject matter at primary and secondary levels",
+          "careerRelevance": "Opens teacher, subject matter specialist, school administrator careers"
+        },
+        {
+          "id": "special_education",
+          "name": "Special Education & Inclusive Learning",
+          "description": "Learning disabilities, adaptive teaching, and inclusion strategies",
+          "careerRelevance": "Opens special education teacher, educational therapist, IEP specialist"
+        },
+        {
+          "id": "higher_education",
+          "name": "Higher Education & Academic Leadership",
+          "description": "University systems, academic programs, and university administration",
+          "careerRelevance": "Supports professor, academic advisor, university administrator"
+        },
+        {
+          "id": "instructional_technology",
+          "name": "Instructional Technology & E-Learning",
+          "description": "Educational technology, online learning, and digital instruction",
+          "careerRelevance": "Opens instructional technologist, curriculum developer, online educator"
+        },
+        {
+          "id": "educational_assessment",
+          "name": "Educational Assessment & Measurement",
+          "description": "Testing, evaluation, learning assessment, and educational metrics",
+          "careerRelevance": "Supports assessment specialist, test designer, evaluation researcher"
+        },
+        {
+          "id": "adult_lifelong_learning",
+          "name": "Adult & Lifelong Learning",
+          "description": "Professional development, adult education, and workforce training",
+          "careerRelevance": "Opens adult educator, training specialist, corporate learning roles"
+        }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Medical Sciences",
+      "description": "Study of human health, disease prevention, and medical treatment.",
+      "subcategories": [
+        {
+          "id": "medicine_clinical",
+          "name": "Medicine & Clinical Practice",
+          "description": "Medical diagnosis, treatment, patient care, and clinical medicine",
+          "careerRelevance": "Opens physician, surgeon, medical specialist, clinical practitioner"
+        },
+        {
+          "id": "nursing",
+          "name": "Nursing & Patient Care",
+          "description": "Nursing care, patient management, and healthcare administration",
+          "careerRelevance": "Leads to registered nurse, nurse specialist, nurse manager careers"
+        },
+        {
+          "id": "dentistry",
+          "name": "Dentistry & Oral Health",
+          "description": "Dental care, oral surgery, and oral health promotion",
+          "careerRelevance": "Opens dentist, dental specialist, orthodontist, dental hygienist"
+        },
+        {
+          "id": "pharmacy",
+          "name": "Pharmacy & Pharmacology",
+          "description": "Drug development, medication management, and pharmaceutical science",
+          "careerRelevance": "Supports pharmacist, pharmaceutical researcher, drug safety specialist"
+        },
+        {
+          "id": "public_health",
+          "name": "Public Health & Epidemiology",
+          "description": "Disease prevention, population health, and health promotion",
+          "careerRelevance": "Opens epidemiologist, public health officer, health policy roles"
+        },
+        {
+          "id": "mental_health",
+          "name": "Mental Health & Psychiatry",
+          "description": "Psychiatric treatment, mental health counseling, and psychological wellness",
+          "careerRelevance": "Opens psychiatrist, mental health counselor, therapist careers"
+        },
+        {
+          "id": "rehabilitation",
+          "name": "Rehabilitation & Therapeutic Sciences",
+          "description": "Physical therapy, occupational therapy, and rehabilitation services",
+          "careerRelevance": "Opens physical therapist, occupational therapist, rehabilitation specialist"
+        },
+        {
+          "id": "nutrition_wellness",
+          "name": "Nutrition & Wellness Science",
+          "description": "Nutrition science, diet management, fitness, and health promotion",
+          "careerRelevance": "Supports registered dietitian, nutritionist, wellness coach, health educator"
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law & Legal Practice",
+      "description": "Study and practice of legal systems, justice, and the law.",
+      "subcategories": [
+        {
+          "id": "criminal_law",
+          "name": "Criminal Law & Justice",
+          "description": "Criminal procedure, prosecution, defense, and criminal justice system",
+          "careerRelevance": "Opens criminal lawyer, prosecutor, public defender, crime analyst"
+        },
+        {
+          "id": "civil_law",
+          "name": "Civil Law & Litigation",
+          "description": "Civil disputes, contracts, litigation, and legal remedies",
+          "careerRelevance": "Leads to civil litigator, contract attorney, legal consultant"
+        },
+        {
+          "id": "corporate_business_law",
+          "name": "Corporate & Business Law",
+          "description": "Business contracts, mergers, corporate governance, and commercial law",
+          "careerRelevance": "Opens corporate attorney, business lawyer, deal lawyer careers"
+        },
+        {
+          "id": "intellectual_property",
+          "name": "Intellectual Property Law",
+          "description": "Patents, copyrights, trademarks, and intellectual property protection",
+          "careerRelevance": "Supports patent attorney, IP lawyer, copyright specialist roles"
+        },
+        {
+          "id": "constitutional_administrative",
+          "name": "Constitutional & Administrative Law",
+          "description": "Constitutional interpretation, administrative law, and government regulation",
+          "careerRelevance": "Opens constitutional lawyer, administrative attorney, policy advocate"
+        },
+        {
+          "id": "family_law",
+          "name": "Family Law & Estate Planning",
+          "description": "Divorce, custody, inheritance, wills, and family matters",
+          "careerRelevance": "Opens family law attorney, estate planner, probate specialist"
+        },
+        {
+          "id": "international_law",
+          "name": "International & Environmental Law",
+          "description": "International treaties, environmental regulation, and cross-border law",
+          "careerRelevance": "Opens international lawyer, environmental attorney, NGO legal role"
+        }
+      ]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture & Environmental Stewardship",
+      "description": "Study of farming, plant cultivation, animal husbandry, and sustainable land use.",
+      "subcategories": [
+        {
+          "id": "crop_science",
+          "name": "Crop Science & Plant Production",
+          "description": "Crop cultivation, plant genetics, soil science, and sustainable farming",
+          "careerRelevance": "Opens agronomist, farm manager, crop consultant, agricultural researcher"
+        },
+        {
+          "id": "animal_agriculture",
+          "name": "Animal Agriculture & Veterinary Science",
+          "description": "Livestock management, animal health, and animal welfare",
+          "careerRelevance": "Leads to veterinarian, farm animal specialist, livestock manager"
+        },
+        {
+          "id": "sustainable_organic",
+          "name": "Sustainable & Organic Agriculture",
+          "description": "Organic farming, permaculture, and sustainable food systems",
+          "careerRelevance": "Opens organic farmer, sustainability consultant, environmental farmer"
+        },
+        {
+          "id": "soil_water",
+          "name": "Soil & Water Management",
+          "description": "Soil conservation, irrigation, water management, and land restoration",
+          "careerRelevance": "Supports soil scientist, irrigation specialist, conservation scientist"
+        },
+        {
+          "id": "forestry",
+          "name": "Forestry & Forest Management",
+          "description": "Forest ecology, timber management, and forest conservation",
+          "careerRelevance": "Opens forest manager, forester, wildlife manager, conservation roles"
+        },
+        {
+          "id": "food_agriculture_business",
+          "name": "Food Industry & Agricultural Business",
+          "description": "Food production, food safety, distribution, and agricultural economics",
+          "careerRelevance": "Supports food scientist, food safety manager, agricultural marketer"
+        },
+        {
+          "id": "horticulture",
+          "name": "Horticulture & Landscape Management",
+          "description": "Gardening, landscape design, ornamental plants, and turf management",
+          "careerRelevance": "Opens horticulturist, landscape designer, garden manager, arborist"
+        }
+      ]
+    },
+    {
+      "id": "sports_recreation",
+      "name": "Sports, Fitness & Recreation",
+      "description": "Study and practice of physical activity, athletics, and recreational pursuits.",
+      "subcategories": [
+        {
+          "id": "exercise_science",
+          "name": "Exercise Science & Kinesiology",
+          "description": "Human movement, physiology of exercise, and athletic performance",
+          "careerRelevance": "Opens exercise physiologist, sports scientist, athletic trainer"
+        },
+        {
+          "id": "sports_management",
+          "name": "Sports Management & Administration",
+          "description": "Sports organizations, facility management, and sports administration",
+          "careerRelevance": "Leads to sports manager, athletic director, sports administrator"
+        },
+        {
+          "id": "coaching",
+          "name": "Athletic Coaching & Training",
+          "description": "Coaching techniques, athlete development, and team management",
+          "careerRelevance": "Opens coach, strength and conditioning specialist, team trainer"
+        },
+        {
+          "id": "sports_medicine",
+          "name": "Sports Medicine & Injury Prevention",
+          "description": "Athletic injury treatment, rehabilitation, and performance medicine",
+          "careerRelevance": "Opens sports medicine physician, athletic trainer, sports therapist"
+        },
+        {
+          "id": "recreation_wellness",
+          "name": "Recreation & Wellness Programming",
+          "description": "Recreation programs, community fitness, and wellness activities",
+          "careerRelevance": "Supports recreational director, wellness coordinator, program manager"
+        },
+        {
+          "id": "sport_psychology",
+          "name": "Sport Psychology & Performance",
+          "description": "Athletic psychology, mental performance, and sports behavior",
+          "careerRelevance": "Opens sports psychologist, performance coach, mental health specialist"
+        }
+      ]
+    },
+    {
+      "id": "hospitality_tourism",
+      "name": "Hospitality, Tourism & Events",
+      "description": "Study of hospitality services, travel, and event management.",
+      "subcategories": [
+        {
+          "id": "hotel_hospitality",
+          "name": "Hotel Management & Hospitality",
+          "description": "Hotel operations, guest services, and hospitality management",
+          "careerRelevance": "Opens hotel manager, front office manager, hospitality director"
+        },
+        {
+          "id": "food_beverage",
+          "name": "Food & Beverage Management",
+          "description": "Restaurant management, culinary operations, and food service",
+          "careerRelevance": "Leads to restaurant manager, chef, food service director careers"
+        },
+        {
+          "id": "tourism_destination",
+          "name": "Tourism & Destination Management",
+          "description": "Tourism promotion, destination development, and travel planning",
+          "careerRelevance": "Opens tourism manager, destination marketer, tour operator"
+        },
+        {
+          "id": "event_management",
+          "name": "Event Planning & Management",
+          "description": "Event coordination, logistics, and event production",
+          "careerRelevance": "Supports event planner, meeting coordinator, event producer"
+        },
+        {
+          "id": "culinary_arts",
+          "name": "Culinary Arts & Gastronomy",
+          "description": "Professional cooking, cuisine, culinary technique, and food culture",
+          "careerRelevance": "Opens chef, sous chef, culinary instructor, food critic"
+        }
+      ]
+    },
+    {
+      "id": "transportation_logistics",
+      "name": "Transportation, Logistics & Supply Chain",
+      "description": "Study of movement of goods and people, and supply chain management.",
+      "subcategories": [
+        {
+          "id": "supply_chain",
+          "name": "Supply Chain & Logistics Management",
+          "description": "Inventory management, distribution, and supply chain optimization",
+          "careerRelevance": "Opens supply chain manager, logistics coordinator, procurement specialist"
+        },
+        {
+          "id": "transportation_planning",
+          "name": "Transportation & Urban Planning",
+          "description": "Transportation systems, traffic management, and public transit",
+          "careerRelevance": "Supports transportation planner, traffic engineer, transit manager"
+        },
+        {
+          "id": "aviation",
+          "name": "Aviation & Flight Operations",
+          "description": "Airline operations, flight management, and aviation administration",
+          "careerRelevance": "Opens pilot, aviation manager, air traffic controller, flight attendant"
+        },
+        {
+          "id": "maritime",
+          "name": "Maritime & Shipping",
+          "description": "Ship operations, maritime commerce, and shipping management",
+          "careerRelevance": "Leads to ship captain, maritime engineer, port manager roles"
+        },
+        {
+          "id": "railroad_transit",
+          "name": "Railroad & Transit Systems",
+          "description": "Railroad operations, transit systems, and public transportation",
+          "careerRelevance": "Opens transit operator, train engineer, operations manager careers"
+        }
+      ]
+    },
+    {
+      "id": "environmental_conservation",
+      "name": "Environmental Science & Conservation",
+      "description": "Study of environmental systems and protection of natural resources.",
+      "subcategories": [
+        {
+          "id": "conservation_biology",
+          "name": "Conservation Biology & Wildlife",
+          "description": "Species protection, biodiversity, and wildlife management",
+          "careerRelevance": "Opens conservation biologist, wildlife manager, park ranger"
+        },
+        {
+          "id": "environmental_protection",
+          "name": "Environmental Protection & Remediation",
+          "description": "Pollution control, environmental cleanup, and habitat restoration",
+          "careerRelevance": "Leads to environmental scientist, remediation specialist, cleanup manager"
+        },
+        {
+          "id": "climate_sustainability",
+          "name": "Climate & Sustainability Science",
+          "description": "Climate change, carbon management, and sustainable practices",
+          "careerRelevance": "Opens climate scientist, sustainability officer, green building specialist"
+        },
+        {
+          "id": "environmental_policy",
+          "name": "Environmental Policy & Advocacy",
+          "description": "Environmental law, policy, and conservation advocacy",
+          "careerRelevance": "Supports environmental attorney, policy advocate, nonprofit director"
+        },
+        {
+          "id": "ecosystem_management",
+          "name": "Ecosystem Management & Restoration",
+          "description": "Ecosystem services, restoration ecology, and land management",
+          "careerRelevance": "Opens ecosystem manager, restoration specialist, land conservationist"
+        }
+      ]
+    },
+    {
+      "id": "social_services",
+      "name": "Social Services & Human Services",
+      "description": "Study and practice of supporting vulnerable populations and social welfare.",
+      "subcategories": [
+        {
+          "id": "social_work",
+          "name": "Social Work & Case Management",
+          "description": "Client services, case management, and social support",
+          "careerRelevance": "Opens social worker, case manager, family counselor, advocate"
+        },
+        {
+          "id": "child_protection",
+          "name": "Child & Family Protection",
+          "description": "Child welfare, child abuse prevention, and family support",
+          "careerRelevance": "Supports child protective services, foster care specialist, youth worker"
+        },
+        {
+          "id": "elderly_care",
+          "name": "Gerontology & Elderly Care",
+          "description": "Senior care, aging populations, and long-term care management",
+          "careerRelevance": "Opens gerontologist, elder care coordinator, geriatric social worker"
+        },
+        {
+          "id": "substance_abuse",
+          "name": "Substance Abuse & Addiction Services",
+          "description": "Addiction treatment, recovery support, and prevention programs",
+          "careerRelevance": "Leads to addiction counselor, treatment specialist, prevention coordinator"
+        },
+        {
+          "id": "poverty_homelessness",
+          "name": "Poverty & Homelessness Services",
+          "description": "Poverty alleviation, homelessness services, and economic support",
+          "careerRelevance": "Opens homeless services coordinator, poverty advocate, case manager"
+        }
+      ]
+    }
+  ],
+  "phase2_structure": {
+    "description": "Phase 2 generates career paths based on Phase 1 subject ratings using weighted algorithms",
+    "career_generation_logic": {
+      "example": "Software Engineer career score = (technology_computing × 0.4) + (mathematics × 0.3) + (physics × 0.2) + (art_design × 0.1)",
+      "algorithm": "Each career has weights for 3-5 most relevant Phase 1 subjects. Weights sum to 1.0. Career score calculated for each user based on their Phase 1 ratings.",
+      "sorting": "Careers ranked by score, highest first. Recommend top 8-15 careers based on weights."
+    },
+    "career_data_fields": {
+      "id": "unique_career_id",
+      "name": "Career Title",
+      "description": "2-3 sentence overview of the career",
+      "phase1_weights": {
+        "subject_id": "weight_decimal"
+      },
+      "job_outlook": "Description of job market growth",
+      "median_salary": "Typical salary range",
+      "education_required": "Degree/certification needed",
+      "skills_required": ["skill1", "skill2", "skill3"],
+      "related_industries": ["industry1", "industry2"]
+    },
+    "example_careers": [
+      {
+        "id": "software_engineer",
+        "name": "Software Engineer",
+        "phase1_weights": {
+          "computer_science": 0.4,
+          "mathematics": 0.3,
+          "physics": 0.2,
+          "art_design": 0.1
+        }
+      },
+      {
+        "id": "environmental_scientist",
+        "name": "Environmental Scientist",
+        "phase1_weights": {
+          "earth_science": 0.35,
+          "biology": 0.25,
+          "chemistry": 0.25,
+          "environmental_conservation": 0.15
+        }
+      },
+      {
+        "id": "graphic_designer",
+        "name": "Graphic Designer",
+        "phase1_weights": {
+          "visual_arts": 0.4,
+          "computer_science": 0.3,
+          "psychology": 0.15,
+          "business_economics": 0.15
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "total_subjects": 22,
+    "total_subcategories": 154,
+    "last_updated": "2026-05-20",
+    "description": "Comprehensive Phase 1 & 2 structure for Career Path Explorer covering all major academic disciplines and interest areas"
+  }
+}

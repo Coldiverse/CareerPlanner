@@ -61,6 +61,7 @@ export const calculateCareerMatch = (career, phase2Ratings = {}) => {
 export const calculateAllCareerMatches = (phase2Ratings = {}) => {
   const allMatches = CAREERS.map(career => ({
     careerID: career.id,
+    description: career.description,
     ...calculateCareerMatch(career, phase2Ratings),
     salary: career.context?.salary || 'N/A',
     education: career.context?.education || 'N/A',

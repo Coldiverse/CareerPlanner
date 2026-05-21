@@ -1,0 +1,235 @@
+{
+  "careers": [
+    {
+      "id": "cloud-architect",
+      "title": "Cloud Solutions Architect",
+      "tier": "advanced",
+      "description": "Designs scalable cloud infrastructure and solutions using AWS, Azure, or Google Cloud platforms.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.85 },
+        { "subcategoryId": "subcat_cs_software_architecture", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 130000, "mid": 190000, "senior": 280000 },
+        "education": "BS Computer Science + cloud certifications (AWS/Azure/GCP)",
+        "jobOutlook": "15% growth, very high demand",
+        "yearsToEntry": 7,
+        "skills": ["Cloud Platforms", "Infrastructure as Code", "Microservices", "Security"],
+        "careerPath": "Cloud Engineer  to  Cloud Architect  to  Enterprise Architect  to  CTO",
+        "relatedCareers": ["devops-engineer", "infrastructure-engineer", "solutions-engineer"],
+        "discoveryHint": "Design the cloud infrastructure powering the world's largest companies."
+      }
+    },
+    {
+      "id": "embedded-systems-engineer",
+      "title": "Embedded Systems Engineer",
+      "tier": "advanced",
+      "description": "Develops firmware and embedded software for IoT devices, robotics, and consumer electronics.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_eng_electrical", "weight": 0.90 },
+        { "subcategoryId": "subcat_phys_general", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 140000, "senior": 200000 },
+        "education": "BS Computer Science or Electrical Engineering",
+        "jobOutlook": "10% growth, high demand",
+        "yearsToEntry": 4,
+        "skills": ["C/C++", "Microcontrollers", "Hardware-Software Integration", "RTOS"],
+        "careerPath": "Embedded Engineer  to  Senior Engineer  to  Technical Lead  to  Manager",
+        "relatedCareers": ["firmware-engineer", "hardware-engineer", "iot-engineer"],
+        "discoveryHint": "Code the software that powers everything from smart homes to autonomous vehicles."
+      }
+    },
+    {
+      "id": "software-test-architect",
+      "title": "Software Test Architect",
+      "tier": "advanced",
+      "description": "Designs comprehensive testing strategies, automation frameworks, and quality assurance processes.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_software_architecture", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_logic", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 160000, "senior": 230000 },
+        "education": "BS Computer Science + QA experience",
+        "jobOutlook": "7% growth, steady demand",
+        "yearsToEntry": 7,
+        "skills": ["Test Automation", "Test Strategy", "Framework Design", "Performance Testing"],
+        "careerPath": "QA Engineer  to  Test Lead  to  Test Architect  to  Quality Director",
+        "relatedCareers": ["qa-engineer", "performance-engineer", "test-engineer"],
+        "discoveryHint": "Build quality assurance systems that ensure software reliability at scale."
+      }
+    },
+    {
+      "id": "forensic-accountant",
+      "title": "Forensic Accountant",
+      "tier": "advanced",
+      "description": "Investigates financial crimes, uncovers fraud, and provides expert testimony in legal cases.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_litigation", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 130000, "senior": 200000 },
+        "education": "CPA + forensic accounting certification",
+        "jobOutlook": "6% growth, growing demand",
+        "yearsToEntry": 7,
+        "skills": ["Fraud Detection", "Financial Analysis", "Legal Knowledge", "Expert Testimony"],
+        "careerPath": "Accountant  to  Forensic Accountant  to  Senior Investigator  to  Director",
+        "relatedCareers": ["auditor", "financial-investigator", "attorney"],
+        "discoveryHint": "Uncover financial crimes and provide evidence for justice."
+      }
+    },
+    {
+      "id": "medical-physicist",
+      "title": "Medical Physicist",
+      "tier": "advanced",
+      "description": "Applies physics principles to medical imaging, radiation therapy, and healthcare technology.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_general", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_healthcare", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 80000, "mid": 130000, "senior": 190000 },
+        "education": "MS/PhD Physics with medical physics focus + certification",
+        "jobOutlook": "1% growth but specialized demand",
+        "yearsToEntry": 6,
+        "skills": ["Radiation Physics", "Medical Imaging", "Equipment Safety", "Data Analysis"],
+        "careerPath": "Medical Physics Fellow  to  Medical Physicist  to  Senior Physicist  to  Director",
+        "relatedCareers": ["medical-engineer", "radiation-oncologist", "biomedical-engineer"],
+        "discoveryHint": "Apply physics to save lives through advanced medical technology."
+      }
+    },
+    {
+      "id": "intellectual-property-manager",
+      "title": "Intellectual Property Manager",
+      "tier": "advanced",
+      "description": "Manages intellectual property portfolios, oversees patent strategy, and handles licensing agreements.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_intellectual", "weight": 0.95 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 170000, "senior": 280000 },
+        "education": "BS Technical + JD + IP focus",
+        "jobOutlook": "Not separately tracked; niche demand",
+        "yearsToEntry": 8,
+        "skills": ["Patent Law", "IP Strategy", "Licensing", "Portfolio Management"],
+        "careerPath": "IP Attorney  to  IP Manager  to  IP Director  to  Chief IP Officer",
+        "relatedCareers": ["patent-attorney", "trademark-attorney", "licensing-specialist"],
+        "discoveryHint": "Protect innovation and maximize IP value for technology companies."
+      }
+    },
+    {
+      "id": "wellness-coach",
+      "title": "Health and Wellness Coach",
+      "tier": "niche",
+      "description": "Guides individuals toward better health through personalized coaching on fitness, nutrition, and lifestyle.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_nutrition", "weight": 0.85 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 40000, "mid": 70000, "senior": 120000 },
+        "education": "Health coaching certification + CPT or nutrition credential",
+        "jobOutlook": "8% growth, growing demand",
+        "yearsToEntry": 2,
+        "skills": ["Health Coaching", "Behavior Change", "Communication", "Program Design"],
+        "careerPath": "Wellness Coach  to  Senior Coach  to  Program Director  to  Business Owner",
+        "relatedCareers": ["personal-trainer", "nutritionist", "life-coach"],
+        "discoveryHint": "Help people transform their health and achieve lasting wellness goals."
+      }
+    },
+    {
+      "id": "sommelier",
+      "title": "Sommelier / Wine Professional",
+      "tier": "niche",
+      "description": "Specializes in wine education, selection, and pairing for restaurants, wine bars, and retail.",
+      "requirements": [
+        { "subcategoryId": "subcat_agri_viticulture", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 },
+        { "subcategoryId": "subcat_psych_sensory", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 35000, "mid": 65000, "senior": 120000 },
+        "education": "Wine certification (Court of Master Sommeliers)",
+        "jobOutlook": "Niche; hospitality dependent",
+        "yearsToEntry": 3,
+        "skills": ["Wine Knowledge", "Tasting", "Pairing", "Customer Service"],
+        "careerPath": "Sommelier  to  Master Sommelier  to  Wine Director  to  Wine Business Owner",
+        "relatedCareers": ["wine-educator", "beverage-manager", "hospitality-manager"],
+        "discoveryHint": "Become an expert in wine and enhance dining experiences for guests."
+      }
+    },
+    {
+      "id": "biofilm-researcher",
+      "title": "Biofilm Researcher",
+      "tier": "niche",
+      "description": "Studies bacterial biofilm communities and develops strategies to combat biofilm-related infections.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_microbiology", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.85 },
+        { "subcategoryId": "subcat_educ_research", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 110000, "senior": 170000 },
+        "education": "PhD Microbiology or Molecular Biology",
+        "jobOutlook": "Emerging; 8% expected growth in biotech",
+        "yearsToEntry": 8,
+        "skills": ["Microbiology", "Microscopy", "Lab Techniques", "Data Analysis"],
+        "careerPath": "Postdoc  to  Researcher  to  Senior Scientist  to  Lab Director",
+        "relatedCareers": ["microbiologist", "infectious-disease-specialist", "pharmaceutical-scientist"],
+        "discoveryHint": "Combat drug-resistant biofilm infections and advance antibiotic therapies."
+      }
+    },
+    {
+      "id": "aviation-mechanic",
+      "title": "Aircraft Maintenance Technician / Aviation Mechanic",
+      "tier": "niche",
+      "description": "Maintains, inspects, and repairs aircraft to ensure safety and operational readiness.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 85000, "senior": 130000 },
+        "education": "FAA certification + apprenticeship",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 3,
+        "skills": ["Aircraft Systems", "Diagnostics", "Maintenance Procedures", "Safety Protocols"],
+        "careerPath": "Mechanic  to  Lead Mechanic  to  Inspector  to  Maintenance Manager",
+        "relatedCareers": ["automotive-mechanic", "aerospace-engineer", "inspector"],
+        "discoveryHint": "Keep aircraft safe and airworthy through expert maintenance."
+      }
+    },
+    {
+      "id": "antitrust-lawyer",
+      "title": "Antitrust Lawyer",
+      "tier": "advanced",
+      "description": "Specializes in antitrust law, competition law, and advises on regulatory compliance.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_civil", "weight": 0.85 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 120000, "mid": 210000, "senior": 400000 },
+        "education": "JD + antitrust/competition law focus + experience",
+        "jobOutlook": "4% growth; competitive practice",
+        "yearsToEntry": 7,
+        "skills": ["Antitrust Law", "Economic Analysis", "Litigation", "Strategic Advising"],
+        "careerPath": "Associate  to  Antitrust Attorney  to  Counsel  to  Partner",
+        "relatedCareers": ["regulatory-lawyer", "corporate-lawyer", "economist"],
+        "discoveryHint": "Navigate competition law and advise tech giants on antitrust matters."
+      }
+    }
+  ]
+}

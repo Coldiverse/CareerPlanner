@@ -123,9 +123,18 @@ export const countProgress = (phase2Ratings = {}) => {
 export const getProgressBySubject = (phase2Ratings = {}) => {
   const subjects = {};
 
-  // Initialize all subjects
-  ['physics', 'chemistry', 'biology', 'history', 'mathematics', 'art_design', 'writing_literature', 'technology_computing'].forEach(id => {
-    subjects[id] = { rated: 0, total: 4 };
+  // Get unique subjects and count subcategories per subject
+  const subjectMap = {};
+  SUBCATEGORIES.forEach(subcat => {
+    if (!subjectMap[subcat.parentSubjectId]) {
+      subjectMap[subcat.parentSubjectId] = 0;
+    }
+    subjectMap[subcat.parentSubjectId]++;
+  });
+
+  // Initialize all subjects with correct totals
+  Object.entries(subjectMap).forEach(([subjectId, total]) => {
+    subjects[subjectId] = { rated: 0, total };
   });
 
   // Count rated per subject

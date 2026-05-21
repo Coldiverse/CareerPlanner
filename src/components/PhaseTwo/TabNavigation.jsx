@@ -57,7 +57,7 @@ export default function TabNavigation({ subjects, activeTab, onTabChange, progre
         aria-label="Subject tabs"
       >
         {subjects.map((subject, index) => {
-          const progress = progressBySubject[subject.id] || { rated: 0, total: 4 };
+          const progress = progressBySubject[subject.id] || { rated: 0, total: '?' };
           const isActive = index === activeTab;
 
           return (
@@ -92,14 +92,15 @@ export default function TabNavigation({ subjects, activeTab, onTabChange, progre
       </div>
 
       {/* Desktop: show all subject progress */}
-      <div className="hidden md:grid grid-cols-8 gap-2 mt-4">
+      <div className="hidden md:grid gap-2 mt-4" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(120px, 1fr))` }}>
         {subjects.map((subject) => {
-          const progress = progressBySubject[subject.id] || { rated: 0, total: 4 };
+          const progress = progressBySubject[subject.id];
+          if (!progress) return null;
           const percentage = (progress.rated / progress.total) * 100;
 
           return (
             <div key={subject.id} className="text-center text-xs">
-              <div className="text-gray-700 font-semibold mb-1">{subject.name}</div>
+              <div className="text-gray-700 font-semibold mb-1 truncate">{subject.name}</div>
               <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                 <div
                   className="bg-indigo-600 h-full transition-all duration-300"

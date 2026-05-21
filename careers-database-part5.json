@@ -1,0 +1,235 @@
+{
+  "careers": [
+    {
+      "id": "mobile-developer",
+      "title": "Mobile Developer (iOS/Android)",
+      "tier": "core",
+      "description": "Develops mobile applications for iOS and Android platforms using native or cross-platform frameworks.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_web_dev", "weight": 0.80 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.65 }
+      ],
+      "context": {
+        "salary": { "entry": 75000, "mid": 125000, "senior": 180000 },
+        "education": "BS Computer Science or bootcamp",
+        "jobOutlook": "13% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Swift", "Kotlin", "React Native", "Mobile UI/UX"],
+        "careerPath": "Junior Developer  to  Mobile Developer  to  Senior Developer  to  Tech Lead",
+        "relatedCareers": ["web-developer", "frontend-engineer", "app-developer"],
+        "discoveryHint": "Build mobile apps used by billions of people on their phones every day."
+      }
+    },
+    {
+      "id": "backend-engineer",
+      "title": "Backend Engineer",
+      "tier": "core",
+      "description": "Builds server-side systems, APIs, and databases that power web and mobile applications.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 140000, "senior": 200000 },
+        "education": "BS Computer Science or bootcamp",
+        "jobOutlook": "13% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Node.js", "Python", "PostgreSQL", "System Design"],
+        "careerPath": "Junior Engineer  to  Backend Engineer  to  Senior Engineer  to  Infrastructure Lead",
+        "relatedCareers": ["software-engineer", "full-stack-developer", "devops-engineer"],
+        "discoveryHint": "Build the invisible infrastructure that powers applications millions use."
+      }
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps Engineer",
+      "tier": "core",
+      "description": "Manages infrastructure, deployment pipelines, and system reliability for applications in production.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.85 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 140000, "senior": 200000 },
+        "education": "BS Computer Science + DevOps experience",
+        "jobOutlook": "15% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["Docker", "Kubernetes", "CI/CD", "Cloud Platforms"],
+        "careerPath": "Junior DevOps  to  DevOps Engineer  to  Senior Engineer  to  Infrastructure Manager",
+        "relatedCareers": ["systems-administrator", "cloud-architect", "site-reliability-engineer"],
+        "discoveryHint": "Keep critical infrastructure running reliably at scale for billions of users."
+      }
+    },
+    {
+      "id": "security-analyst",
+      "title": "Cybersecurity Analyst",
+      "tier": "core",
+      "description": "Protects organizations from cyber threats through security assessments, monitoring, and incident response.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_networking", "weight": 0.90 },
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.75 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 180000 },
+        "education": "BS Computer Science + security certifications (CISSP, CEH)",
+        "jobOutlook": "33% growth, extremely high demand",
+        "yearsToEntry": 4,
+        "skills": ["Network Security", "Penetration Testing", "Compliance", "Threat Analysis"],
+        "careerPath": "Security Analyst  to  Senior Analyst  to  Security Manager  to  CISO",
+        "relatedCareers": ["ethical-hacker", "security-architect", "incident-responder"],
+        "discoveryHint": "Defend organizations against cyber threats and protect critical data."
+      }
+    },
+    {
+      "id": "business-analyst",
+      "title": "Business Analyst",
+      "tier": "core",
+      "description": "Analyzes business processes, gathers requirements, and recommends solutions to improve efficiency.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BA Business or Analytics",
+        "jobOutlook": "9% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Process Analysis", "Requirements Gathering", "SQL", "Communication"],
+        "careerPath": "Junior Analyst  to  Business Analyst  to  Senior Analyst  to  Manager",
+        "relatedCareers": ["product-manager", "management-consultant", "systems-analyst"],
+        "discoveryHint": "Bridge business needs and technology solutions to drive organizational improvement."
+      }
+    },
+    {
+      "id": "content-strategist",
+      "title": "Content Strategist",
+      "tier": "core",
+      "description": "Develops content strategies and plans that align with business goals and audience needs.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.90 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_digital", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 85000, "senior": 130000 },
+        "education": "BA Communications or Marketing",
+        "jobOutlook": "8% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Content Planning", "Copywriting", "SEO", "Analytics"],
+        "careerPath": "Content Specialist  to  Content Strategist  to  Senior Strategist  to  Director",
+        "relatedCareers": ["digital-marketer", "content-writer", "social-media-manager"],
+        "discoveryHint": "Create compelling content strategies that engage audiences and drive business results."
+      }
+    },
+    {
+      "id": "sales-manager",
+      "title": "Sales Manager",
+      "tier": "core",
+      "description": "Leads sales teams, sets targets, and develops strategies to drive revenue and customer growth.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.90 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.80 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 180000 },
+        "education": "BA Business or Sales",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Sales Strategy", "Team Leadership", "Negotiation", "CRM Systems"],
+        "careerPath": "Sales Rep  to  Sales Manager  to  Senior Manager  to  VP Sales",
+        "relatedCareers": ["business-development", "account-manager", "marketing-manager"],
+        "discoveryHint": "Lead teams to exceed revenue targets and build long-term customer relationships."
+      }
+    },
+    {
+      "id": "supply-chain-manager",
+      "title": "Supply Chain Manager",
+      "tier": "core",
+      "description": "Optimizes supply chain operations, manages logistics, and ensures efficient procurement and distribution.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 160000 },
+        "education": "BA Supply Chain Management or Operations",
+        "jobOutlook": "7% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Supply Chain Planning", "Logistics", "Analytics", "Vendor Management"],
+        "careerPath": "Coordinator  to  Supply Chain Manager  to  Senior Manager  to  Director",
+        "relatedCareers": ["operations-manager", "logistics-coordinator", "procurement-specialist"],
+        "discoveryHint": "Optimize global supply chains and ensure products reach customers efficiently."
+      }
+    },
+    {
+      "id": "quality-assurance-engineer",
+      "title": "Quality Assurance (QA) Engineer",
+      "tier": "core",
+      "description": "Tests software applications to identify bugs, ensure quality, and validate functionality before release.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.80 },
+        { "subcategoryId": "subcat_math_logic", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BS Computer Science or related",
+        "jobOutlook": "7% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Test Automation", "SQL", "Test Planning", "Bug Tracking"],
+        "careerPath": "QA Engineer  to  Senior QA  to  QA Lead  to  Engineering Manager",
+        "relatedCareers": ["test-automation-engineer", "quality-manager", "software-engineer"],
+        "discoveryHint": "Ensure software quality and prevent bugs from reaching users."
+      }
+    },
+    {
+      "id": "interaction-designer",
+      "title": "Interaction Designer",
+      "tier": "core",
+      "description": "Designs user interactions and experiences for digital products, focusing on usability and intuitiveness.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.90 },
+        { "subcategoryId": "subcat_art_visual_design", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 65000, "mid": 105000, "senior": 150000 },
+        "education": "BFA or BS Design with interaction focus",
+        "jobOutlook": "13% growth, growing demand",
+        "yearsToEntry": 4,
+        "skills": ["Interaction Design", "Prototyping", "User Testing", "Design Tools"],
+        "careerPath": "Interaction Designer  to  Senior Designer  to  Design Lead  to  Director",
+        "relatedCareers": ["ux-designer", "product-designer", "information-architect"],
+        "discoveryHint": "Create intuitive digital interactions that delight users and solve problems."
+      }
+    },
+    {
+      "id": "data-analyst",
+      "title": "Data Analyst",
+      "tier": "core",
+      "description": "Analyzes data to uncover trends, patterns, and insights that inform business decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_visual", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BS Mathematics, Statistics, or Economics",
+        "jobOutlook": "23% growth, very high demand",
+        "yearsToEntry": 4,
+        "skills": ["SQL", "Excel", "Tableau", "Statistical Analysis"],
+        "careerPath": "Junior Analyst  to  Data Analyst  to  Senior Analyst  to  Analytics Manager",
+        "relatedCareers": ["data-scientist", "business-analyst", "statistician"],
+        "discoveryHint": "Turn raw data into actionable business insights that drive decision-making."
+      }
+    }
+  ]
+}

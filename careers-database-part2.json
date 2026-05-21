@@ -1,0 +1,572 @@
+﻿{
+  "careers": [
+    {
+      "id": "machine-learning-engineer",
+      "title": "Machine Learning Engineer",
+      "tier": "advanced",
+      "description": "Develops machine learning models and systems that power AI applications in production environments.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_linear_algebra", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.90 }
+      ],
+      "context": {
+        "salary": { "entry": 120000, "mid": 180000, "senior": 250000 },
+        "education": "BS Computer Science + MS Machine Learning or equivalent experience",
+        "jobOutlook": "35% growth, extremely high demand",
+        "yearsToEntry": 5,
+        "skills": ["TensorFlow", "PyTorch", "Deep Learning", "System Design"],
+        "careerPath": "ML Engineer  to  Senior ML Engineer  to  ML Lead  to  ML Director",
+        "relatedCareers": ["deep-learning-specialist", "ai-researcher", "data-engineer"],
+        "discoveryHint": "Build AI systems that push the boundaries of what machines can accomplish."
+      }
+    },
+    {
+      "id": "surgeon",
+      "title": "Surgeon (General/Specialty)",
+      "tier": "advanced",
+      "description": "Performs surgical procedures to treat diseases, injuries, and deformities across medical specialties.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_anatomy", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 250000, "mid": 400000, "senior": 600000 },
+        "education": "MD/DO + surgical residency (5-7 years) + optional fellowship",
+        "jobOutlook": "4% growth, high demand",
+        "yearsToEntry": 13,
+        "skills": ["Surgical Technique", "Precision", "Decision-Making Under Pressure", "Leadership"],
+        "careerPath": "Surgical Resident  to  Board-Certified Surgeon  to  Senior Surgeon  to  Chief of Surgery",
+        "relatedCareers": ["cardiologist", "neurosurgeon", "orthopedic-surgeon"],
+        "discoveryHint": "Master surgical expertise and save lives through precision medical interventions."
+      }
+    },
+    {
+      "id": "patent-attorney",
+      "title": "Patent Attorney / IP Lawyer",
+      "tier": "advanced",
+      "description": "Handles intellectual property rights, patents, and legal issues related to innovation and technology.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_intellectual", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.85 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.60 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 180000, "senior": 350000 },
+        "education": "BS Technical field + JD + Patent Bar exam",
+        "jobOutlook": "4% growth, high demand in tech",
+        "yearsToEntry": 7,
+        "skills": ["Patent Law", "Technical Knowledge", "Negotiation", "Strategic Thinking"],
+        "careerPath": "Associate  to  Patent Attorney  to  Senior Attorney  to  Partner",
+        "relatedCareers": ["trademark-attorney", "licensing-specialist", "legal-counsel"],
+        "discoveryHint": "Protect innovation and navigate complex IP issues at the intersection of law and technology."
+      }
+    },
+    {
+      "id": "investment-banker",
+      "title": "Investment Banker",
+      "tier": "advanced",
+      "description": "Advises companies on mergers, acquisitions, and capital raising through financial transactions.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.95 },
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 150000, "mid": 300000, "senior": 500000 },
+        "education": "BS Finance/Economics + MBA preferred",
+        "jobOutlook": "5% growth, moderate demand",
+        "yearsToEntry": 4,
+        "skills": ["Financial Modeling", "M&A Strategy", "Negotiation", "Deal Structures"],
+        "careerPath": "Analyst  to  Associate  to  VP  to  Managing Director",
+        "relatedCareers": ["venture-capitalist", "private-equity", "management-consultant"],
+        "discoveryHint": "Shape the business landscape through high-stakes financial transactions and strategy."
+      }
+    },
+    {
+      "id": "research-scientist",
+      "title": "Research Scientist (R&D)",
+      "tier": "advanced",
+      "description": "Conducts research and develops new technologies, materials, or processes in academic or corporate settings.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_quantum", "weight": 0.85 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 180000 },
+        "education": "PhD in scientific discipline",
+        "jobOutlook": "3% growth, steady demand",
+        "yearsToEntry": 8,
+        "skills": ["Experimental Design", "Analysis", "Writing", "Critical Thinking"],
+        "careerPath": "Postdoc  to  Research Scientist  to  Senior Scientist  to  Principal Investigator",
+        "relatedCareers": ["university-professor", "lab-director", "innovation-manager"],
+        "discoveryHint": "Expand human knowledge through groundbreaking research that changes industries."
+      }
+    },
+    {
+      "id": "nurse-practitioner",
+      "title": "Nurse Practitioner",
+      "tier": "advanced",
+      "description": "Provides advanced nursing care with ability to diagnose conditions and prescribe medications.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_nursing", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.85 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 130000, "senior": 170000 },
+        "education": "BSN + MSN/DNP + NP certification + state license",
+        "jobOutlook": "36% growth, very high demand",
+        "yearsToEntry": 6,
+        "skills": ["Clinical Diagnosis", "Pharmacology", "Patient Management", "Leadership"],
+        "careerPath": "RN  to  NP  to  Clinical Leader  to  Practice Owner",
+        "relatedCareers": ["physician-assistant", "nurse-anesthetist", "clinical-nurse-specialist"],
+        "discoveryHint": "Provide high-quality patient care with autonomy and clinical responsibility."
+      }
+    },
+    {
+      "id": "product-manager",
+      "title": "Product Manager",
+      "tier": "advanced",
+      "description": "Leads product vision, strategy, and execution, working across engineering, design, and business teams.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 110000, "mid": 170000, "senior": 250000 },
+        "education": "BA any field; MBA helpful; product experience required",
+        "jobOutlook": "10% growth, very high demand",
+        "yearsToEntry": 5,
+        "skills": ["Strategic Thinking", "Data Analysis", "Communication", "User Empathy"],
+        "careerPath": "APM  to  PM  to  Senior PM  to  Director of Product",
+        "relatedCareers": ["product-strategist", "business-analyst", "program-manager"],
+        "discoveryHint": "Shape products that millions of people use daily; balance user needs with business goals."
+      }
+    },
+    {
+      "id": "management-consultant",
+      "title": "Management Consultant",
+      "tier": "advanced",
+      "description": "Advises organizations on strategy, operations, and organizational challenges across industries.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_macro", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 },
+        { "subcategoryId": "subcat_soc_organizational", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 90000, "mid": 160000, "senior": 300000 },
+        "education": "BA any field; MBA preferred for advancement",
+        "jobOutlook": "8% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Problem-Solving", "Analysis", "Client Management", "Presentation"],
+        "careerPath": "Associate  to  Consultant  to  Senior Consultant  to  Partner",
+        "relatedCareers": ["business-analyst", "strategy-manager", "operations-manager"],
+        "discoveryHint": "Help organizations solve complex problems and drive transformational change."
+      }
+    },
+    {
+      "id": "aerospace-engineer",
+      "title": "Aerospace Engineer",
+      "tier": "advanced",
+      "description": "Designs aircraft, spacecraft, and propulsion systems for aviation and aerospace industries.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_aerospace", "weight": 0.95 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.90 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 68000, "mid": 110000, "senior": 160000 },
+        "education": "BS Aerospace Engineering + PE license optional",
+        "jobOutlook": "3% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["CFD", "Structural Analysis", "Systems Design", "Testing & Validation"],
+        "careerPath": "Junior Engineer  to  Aerospace Engineer  to  Senior Engineer  to  Program Manager",
+        "relatedCareers": ["systems-engineer", "propulsion-engineer", "avionics-engineer"],
+        "discoveryHint": "Design the aircraft and spacecraft that push humanity's boundaries in exploration."
+      }
+    },
+    {
+      "id": "psychiatrist",
+      "title": "Psychiatrist",
+      "tier": "advanced",
+      "description": "Diagnoses and treats mental health disorders using medications, therapy, and medical interventions.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_clinical", "weight": 0.90 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 200000, "mid": 280000, "senior": 400000 },
+        "education": "MD/DO + psychiatry residency (4 years)",
+        "jobOutlook": "12% growth, very high demand",
+        "yearsToEntry": 12,
+        "skills": ["Diagnostics", "Psychopharmacology", "Empathy", "Clinical Judgment"],
+        "careerPath": "Resident  to  Board-Certified Psychiatrist  to  Senior Psychiatrist  to  Practice Owner",
+        "relatedCareers": ["psychologist", "clinical-counselor", "behavioral-neurologist"],
+        "discoveryHint": "Treat mental illness with medical expertise and improve quality of life."
+      }
+    },
+    {
+      "id": "biomedical-engineer",
+      "title": "Biomedical Engineer",
+      "tier": "advanced",
+      "description": "Designs medical devices, prosthetics, and diagnostic equipment to improve healthcare.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_biomedical", "weight": 0.95 },
+        { "subcategoryId": "subcat_bio_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_calculus", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 64000, "mid": 105000, "senior": 150000 },
+        "education": "BS Biomedical Engineering + PE license optional",
+        "jobOutlook": "6% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Medical Device Design", "Biomechanics", "Regulatory Knowledge", "Testing"],
+        "careerPath": "Junior Engineer  to  Biomedical Engineer  to  Senior Engineer  to  Engineering Manager",
+        "relatedCareers": ["medical-device-specialist", "clinical-engineer", "biomechanics-engineer"],
+        "discoveryHint": "Create innovations that directly improve patient outcomes and save lives."
+      }
+    },
+    {
+      "id": "environmental-engineer",
+      "title": "Environmental Engineer",
+      "tier": "advanced",
+      "description": "Designs solutions for water treatment, air quality, waste management, and environmental remediation.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_environmental", "weight": 0.95 },
+        { "subcategoryId": "subcat_chem_general", "weight": 0.85 },
+        { "subcategoryId": "subcat_env_sustainability", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 95000, "senior": 140000 },
+        "education": "BS Environmental Engineering + PE license",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 4,
+        "skills": ["Environmental Law", "Water Treatment", "Sustainability", "CAD"],
+        "careerPath": "Junior Engineer  to  Environmental Engineer  to  Senior Engineer  to  Project Manager",
+        "relatedCareers": ["sustainability-consultant", "water-engineer", "remediation-specialist"],
+        "discoveryHint": "Engineer solutions that protect the environment and advance sustainability."
+      }
+    },
+    {
+      "id": "university-professor",
+      "title": "University Professor (PhD Track)",
+      "tier": "advanced",
+      "description": "Teaches students, conducts research, and publishes findings in academic disciplines.",
+      "requirements": [
+        { "subcategoryId": "subcat_educ_research", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.85 },
+        { "subcategoryId": "subcat_subj_literature", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 55000, "mid": 90000, "senior": 140000 },
+        "education": "PhD in discipline + postdoc experience",
+        "jobOutlook": "-1% decline, competitive admission",
+        "yearsToEntry": 8,
+        "skills": ["Research Design", "Teaching", "Writing", "Mentorship"],
+        "careerPath": "Postdoc  to  Assistant Professor  to  Associate Professor  to  Full Professor",
+        "relatedCareers": ["research-scientist", "academic-administrator", "institutional-researcher"],
+        "discoveryHint": "Advance human knowledge and shape the next generation of scholars and leaders."
+      }
+    },
+    {
+      "id": "cto-chief-technology-officer",
+      "title": "CTO / Chief Technology Officer",
+      "tier": "advanced",
+      "description": "Leads technology strategy and architecture for organizations, guiding technical innovation.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.85 },
+        { "subcategoryId": "subcat_cs_software_architecture", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 200000, "mid": 350000, "senior": 500000 },
+        "education": "BS Computer Science + 10+ years experience",
+        "jobOutlook": "Not tracked separately; high demand for tech leaders",
+        "yearsToEntry": 10,
+        "skills": ["Architecture", "Leadership", "Vision Setting", "Team Building"],
+        "careerPath": "Engineer  to  Senior Engineer  to  Director  to  VP  to  CTO",
+        "relatedCareers": ["cfo", "chief-information-officer", "vp-engineering"],
+        "discoveryHint": "Set technology vision for organizations and drive enterprise-scale innovation."
+      }
+    },
+    {
+      "id": "securities-trader",
+      "title": "Securities Trader / Quantitative Trader",
+      "tier": "advanced",
+      "description": "Buys and sells securities to profit from market movements; may use algorithms and data analysis.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 100000, "mid": 300000, "senior": 1000000 },
+        "education": "BS Finance/Math + trading certifications",
+        "jobOutlook": "Market-dependent; varies significantly",
+        "yearsToEntry": 4,
+        "skills": ["Market Analysis", "Risk Management", "Quick Decision-Making", "Coding (quant)"],
+        "careerPath": "Junior Trader  to  Senior Trader  to  Trading Desk Head  to  Partner",
+        "relatedCareers": ["hedge-fund-manager", "quantitative-analyst", "derivatives-trader"],
+        "discoveryHint": "Navigate global markets and generate returns through analytical and strategic expertise."
+      }
+    },
+    {
+      "id": "media-producer",
+      "title": "Media Producer / Film Producer",
+      "tier": "advanced",
+      "description": "Oversees development, financing, and production of films, TV shows, or digital content.",
+      "requirements": [
+        { "subcategoryId": "subcat_comms_media", "weight": 0.95 },
+        { "subcategoryId": "subcat_arts_film", "weight": 0.85 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 45000, "mid": 100000, "senior": 300000 },
+        "education": "BA Media/Film or portfolio-based",
+        "jobOutlook": "Varies; entertainment industry competitive",
+        "yearsToEntry": 5,
+        "skills": ["Project Management", "Storytelling", "Financing", "Negotiation"],
+        "careerPath": "Associate Producer  to  Producer  to  Senior Producer  to  Executive Producer",
+        "relatedCareers": ["screenwriter", "director", "production-manager"],
+        "discoveryHint": "Create impactful stories that entertain, educate, and inspire millions."
+      }
+    },
+    {
+      "id": "corporate-lawyer",
+      "title": "Corporate Lawyer",
+      "tier": "advanced",
+      "description": "Handles business law, contracts, corporate governance, and M&A transactions.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_civil", "weight": 0.95 },
+        { "subcategoryId": "subcat_econ_accounting", "weight": 0.75 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 130000, "mid": 220000, "senior": 450000 },
+        "education": "JD from law school + bar exam + corporate experience",
+        "jobOutlook": "4% growth, steady demand",
+        "yearsToEntry": 7,
+        "skills": ["Contract Drafting", "Negotiation", "Business Acumen", "Legal Analysis"],
+        "careerPath": "Associate  to  Senior Associate  to  Counsel  to  Partner",
+        "relatedCareers": ["in-house-counsel", "m&a-attorney", "contracts-manager"],
+        "discoveryHint": "Navigate complex corporate transactions and advise C-suite on legal risks."
+      }
+    },
+    {
+      "id": "neuroscientist",
+      "title": "Neuroscientist / Neuroscience Researcher",
+      "tier": "advanced",
+      "description": "Studies the nervous system, brain function, and neurological disorders through research.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_neuroscience", "weight": 0.95 },
+        { "subcategoryId": "subcat_psych_research", "weight": 0.85 },
+        { "subcategoryId": "subcat_math_statistics", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 110000, "senior": 160000 },
+        "education": "PhD Neuroscience or related field",
+        "jobOutlook": "6% growth, steady demand",
+        "yearsToEntry": 8,
+        "skills": ["Experimental Design", "Neuroimaging", "Analysis", "Grant Writing"],
+        "careerPath": "Postdoc  to  Research Scientist  to  Principal Investigator  to  Lab Director",
+        "relatedCareers": ["cognitive-scientist", "neurologist", "brain-researcher"],
+        "discoveryHint": "Unlock mysteries of the brain and develop treatments for neurological disorders."
+      }
+    },
+    {
+      "id": "venture-capitalist",
+      "title": "Venture Capitalist / VC Investor",
+      "tier": "advanced",
+      "description": "Invests in early-stage startups, provides strategic guidance, and builds investment portfolios.",
+      "requirements": [
+        { "subcategoryId": "subcat_econ_finance", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.60 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 150000, "mid": 300000, "senior": 500000 },
+        "education": "BA any field + MBA preferred + startup/finance experience",
+        "jobOutlook": "Market-dependent; highly competitive",
+        "yearsToEntry": 6,
+        "skills": ["Due Diligence", "Market Analysis", "Negotiation", "Strategic Thinking"],
+        "careerPath": "Associate  to  Senior Associate  to  Partner  to  General Partner",
+        "relatedCareers": ["angel-investor", "private-equity", "startup-advisor"],
+        "discoveryHint": "Fund the next generation of transformative companies and shape industries."
+      }
+    },
+    {
+      "id": "oncologist",
+      "title": "Oncologist (Cancer Specialist)",
+      "tier": "advanced",
+      "description": "Diagnoses and treats cancer patients using chemotherapy, radiation, immunotherapy, and surgery.",
+      "requirements": [
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_pharmacology", "weight": 0.90 },
+        { "subcategoryId": "subcat_bio_biochemistry", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 250000, "mid": 350000, "senior": 500000 },
+        "education": "MD/DO + oncology residency + fellowship (4-6 years)",
+        "jobOutlook": "4% growth, high demand",
+        "yearsToEntry": 13,
+        "skills": ["Cancer Treatment", "Compassion", "Evidence-Based Medicine", "Research Knowledge"],
+        "careerPath": "Resident  to  Fellow  to  Practicing Oncologist  to  Senior Oncologist",
+        "relatedCareers": ["radiation-oncologist", "hematologist", "surgical-oncologist"],
+        "discoveryHint": "Combat cancer and extend lives through cutting-edge medical treatments."
+      }
+    },
+    {
+      "id": "senior-software-architect",
+      "title": "Senior Software Architect",
+      "tier": "advanced",
+      "description": "Designs large-scale software systems, establishes technical standards, and guides architectural decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_cs_software_architecture", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_databases", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 160000, "mid": 230000, "senior": 320000 },
+        "education": "BS Computer Science + 8+ years experience",
+        "jobOutlook": "13% growth, very high demand",
+        "yearsToEntry": 8,
+        "skills": ["System Design", "Scalability", "Leadership", "Technical Vision"],
+        "careerPath": "Senior Developer  to  Architect  to  Principal Architect  to  Distinguished Engineer",
+        "relatedCareers": ["technical-lead", "principal-engineer", "engineering-director"],
+        "discoveryHint": "Design systems that serve billions of users and shape the tech industry."
+      }
+    },
+    {
+      "id": "quantum-physicist",
+      "title": "Quantum Physicist",
+      "tier": "advanced",
+      "description": "Studies quantum mechanics phenomena and develops quantum computing applications.",
+      "requirements": [
+        { "subcategoryId": "subcat_phys_quantum", "weight": 0.95 },
+        { "subcategoryId": "subcat_math_advanced", "weight": 0.95 },
+        { "subcategoryId": "subcat_cs_algorithms", "weight": 0.70 }
+      ],
+      "context": {
+        "salary": { "entry": 80000, "mid": 140000, "senior": 200000 },
+        "education": "PhD Physics with quantum focus",
+        "jobOutlook": "Emerging field; high future demand expected",
+        "yearsToEntry": 8,
+        "skills": ["Quantum Computing", "Theoretical Physics", "Mathematical Modeling", "Lab Work"],
+        "careerPath": "Postdoc  to  Research Scientist  to  Principal Scientist  to  Research Director",
+        "relatedCareers": ["theoretical-physicist", "photonics-engineer", "quantum-engineer"],
+        "discoveryHint": "Pioneer quantum computing and unlock the next frontier of computational power."
+      }
+    },
+    {
+      "id": "compliance-officer",
+      "title": "Compliance Officer / Chief Compliance Officer",
+      "tier": "advanced",
+      "description": "Ensures organizations comply with laws, regulations, and internal policies; manages risk.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_regulatory", "weight": 0.95 },
+        { "subcategoryId": "subcat_comms_writing", "weight": 0.80 },
+        { "subcategoryId": "subcat_soc_organizational", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 85000, "mid": 140000, "senior": 200000 },
+        "education": "BA Law/Business/Finance + compliance certifications",
+        "jobOutlook": "5% growth, steady demand",
+        "yearsToEntry": 5,
+        "skills": ["Regulatory Knowledge", "Risk Assessment", "Documentation", "Audit"],
+        "careerPath": "Compliance Analyst  to  Compliance Officer  to  Senior Officer  to  CCO",
+        "relatedCareers": ["auditor", "risk-manager", "legal-counsel"],
+        "discoveryHint": "Protect organizations from regulatory risks and ensure ethical operations."
+      }
+    },
+    {
+      "id": "robotics-engineer",
+      "title": "Robotics Engineer",
+      "tier": "advanced",
+      "description": "Designs and develops robotic systems for manufacturing, healthcare, exploration, or service industries.",
+      "requirements": [
+        { "subcategoryId": "subcat_eng_mechanical", "weight": 0.90 },
+        { "subcategoryId": "subcat_cs_programming", "weight": 0.85 },
+        { "subcategoryId": "subcat_phys_mechanics", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 70000, "mid": 120000, "senior": 170000 },
+        "education": "BS Mechanical/Electrical Engineering or CS",
+        "jobOutlook": "15% growth, growing demand",
+        "yearsToEntry": 4,
+        "skills": ["Robotics Frameworks", "Control Systems", "Mechanical Design", "AI Integration"],
+        "careerPath": "Junior Engineer  to  Robotics Engineer  to  Senior Engineer  to  Robotics Lead",
+        "relatedCareers": ["automation-engineer", "computer-vision-engineer", "controls-engineer"],
+        "discoveryHint": "Create intelligent robots that automate dangerous or complex tasks."
+      }
+    },
+    {
+      "id": "federal-judge",
+      "title": "Federal Judge",
+      "tier": "advanced",
+      "description": "Presides over federal court cases, interprets laws, and issues judicial decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_law_civil", "weight": 0.95 },
+        { "subcategoryId": "subcat_law_litigation", "weight": 0.90 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.80 }
+      ],
+      "context": {
+        "salary": { "entry": 214000, "mid": 250000, "senior": 290000 },
+        "education": "JD + 10+ years legal practice + appointment/election",
+        "jobOutlook": "Highly competitive; limited openings",
+        "yearsToEntry": 13,
+        "skills": ["Legal Analysis", "Impartiality", "Written Reasoning", "Leadership"],
+        "careerPath": "Attorney  to  Senior Attorney  to  Federal Judge",
+        "relatedCareers": ["state-judge", "supreme-court-justice", "magistrate"],
+        "discoveryHint": "Interpret the law and shape judicial precedent that affects the nation."
+      }
+    },
+    {
+      "id": "genetic-counselor",
+      "title": "Genetic Counselor",
+      "tier": "advanced",
+      "description": "Interprets genetic tests, counsels patients about hereditary risks, and supports reproductive decisions.",
+      "requirements": [
+        { "subcategoryId": "subcat_bio_genetics", "weight": 0.95 },
+        { "subcategoryId": "subcat_health_medicine", "weight": 0.75 },
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.75 }
+      ],
+      "context": {
+        "salary": { "entry": 60000, "mid": 85000, "senior": 120000 },
+        "education": "MS Genetic Counseling + board certification",
+        "jobOutlook": "21% growth, growing demand",
+        "yearsToEntry": 3,
+        "skills": ["Genetics Knowledge", "Empathy", "Communication", "Ethical Reasoning"],
+        "careerPath": "Genetic Counselor  to  Senior Counselor  to  Clinical Director  to  Program Manager",
+        "relatedCareers": ["genetic-researcher", "reproductive-specialist", "genetic-tester"],
+        "discoveryHint": "Help families understand genetic risks and make informed medical decisions."
+      }
+    },
+    {
+      "id": "marketing-director",
+      "title": "Marketing Director / VP Marketing",
+      "tier": "advanced",
+      "description": "Leads marketing department, sets strategy, manages budgets, and drives brand growth.",
+      "requirements": [
+        { "subcategoryId": "subcat_psych_human_behavior", "weight": 0.85 },
+        { "subcategoryId": "subcat_econ_micro", "weight": 0.80 },
+        { "subcategoryId": "subcat_comms_verbal", "weight": 0.85 }
+      ],
+      "context": {
+        "salary": { "entry": 120000, "mid": 180000, "senior": 280000 },
+        "education": "BA Marketing/Business + 10+ years experience",
+        "jobOutlook": "8% growth, steady demand",
+        "yearsToEntry": 10,
+        "skills": ["Strategic Planning", "Team Leadership", "Budget Management", "Analytics"],
+        "careerPath": "Manager  to  Senior Manager  to  Director  to  VP  to  CMO",
+        "relatedCareers": ["chief-marketing-officer", "brand-director", "product-director"],
+        "discoveryHint": "Lead organizational marketing vision and build brands that dominate markets."
+      }
+    }
+  ]
+}
+
