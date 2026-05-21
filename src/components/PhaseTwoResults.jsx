@@ -147,7 +147,7 @@ export default function PhaseTwoResults({ onBack, onNext }) {
             ← Back to Rating
           </button>
 
-          {ranked.length > 0 && (
+          {ranked.length > 0 && onNext && (
             <button
               onClick={onNext}
               className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition flex items-center gap-2"

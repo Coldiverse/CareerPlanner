@@ -124,12 +124,14 @@ export default function PhaseTwo({ userId, onPhaseChange }) {
           </button>
 
           {rated > 0 && (
-            <button
-              onClick={() => setShowResults(true)}
-              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition flex items-center gap-2"
-            >
-              See Results →
-            </button>
+            <>
+              <button
+                onClick={() => setShowResults(true)}
+                className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition flex items-center gap-2"
+              >
+                See Results →
+              </button>
+            </>
           )}
         </div>
 

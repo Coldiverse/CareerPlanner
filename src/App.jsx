@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { ScoreProvider } from './contexts/ScoreContext';
 import PhaseOne from './components/PhaseOne';
 import PhaseTwo from './components/PhaseTwo';
+import PhaseThree from './components/PhaseThree';
 
 export default function App() {
   const [userId, setUserId] = useState(null);
@@ -99,6 +100,13 @@ export default function App() {
 
       {currentPhase === 'phase2' && (
         <PhaseTwo
+          userId={userId}
+          onPhaseChange={handlePhaseChange}
+        />
+      )}
+
+      {currentPhase === 'phase3' && (
+        <PhaseThree
           userId={userId}
           onPhaseChange={handlePhaseChange}
         />
