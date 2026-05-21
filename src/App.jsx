@@ -14,18 +14,32 @@ export default function App() {
   const [currentPhase, setCurrentPhase] = useState('phase1');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isSharedView, setIsSharedView] = useState(false);
 
   // Initialize or load user ID
   useEffect(() => {
-    const storedUserId = localStorage.getItem('careerUserId');
-    if (storedUserId) {
-      setUserId(storedUserId);
-      loadUserData(storedUserId);
+    // Check for shared UID in URL hash
+    const hashParams = new URLSearchParams(window.location.hash.slice(1));
+    const sharedUid = hashParams.get('uid');
+
+    if (sharedUid) {
+      // Load shared user's data and jump to Phase 3
+      setUserId(sharedUid);
+      setIsSharedView(true);
+      setCurrentPhase('phase3');
+      loadUserData(sharedUid);
     } else {
-      const newUserId = uuidv4();
-      localStorage.setItem('careerUserId', newUserId);
-      setUserId(newUserId);
-      setLoading(false);
+      // Normal flow: check localStorage for existing user
+      const storedUserId = localStorage.getItem('careerUserId');
+      if (storedUserId) {
+        setUserId(storedUserId);
+        loadUserData(storedUserId);
+      } else {
+        const newUserId = uuidv4();
+        localStorage.setItem('careerUserId', newUserId);
+        setUserId(newUserId);
+        setLoading(false);
+      }
     }
   }, []);
 
@@ -64,12 +78,35 @@ export default function App() {
     setCurrentPhase(newPhase);
   };
 
+  const handleReset = () => {
+    if (window.confirm('Start over? This will clear all your ratings.')) {
+      localStorage.removeItem('careerUserId');
+      window.location.hash = '';
+      window.location.reload();
+    }
+  };
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-          <p className="text-indigo-600 font-medium">Loading...</p>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-300 mb-4">Career Path Explorer</h1>
+            <p className="text-lg text-gray-400">Loading your career explorer...</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map(i => (
+              <div key={i} className="bg-white rounded-lg shadow-md p-6 animate-pulse">
+                <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-full mb-3"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6 mb-6"></div>
+                <div className="flex gap-2">
+                  <div className="flex-1 h-10 bg-gray-200 rounded"></div>
+                  <div className="w-12 h-10 bg-gray-200 rounded"></div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -100,6 +137,7 @@ export default function App() {
               initialRatings={phase1Ratings}
               onSave={handleSavePhase1Ratings}
               onComplete={() => handlePhaseChange('phase2')}
+              onReset={handleReset}
             />
           </div>
         </div>
@@ -109,6 +147,7 @@ export default function App() {
         <PhaseTwo
           userId={userId}
           onPhaseChange={handlePhaseChange}
+          onReset={handleReset}
         />
       )}
 
@@ -116,6 +155,8 @@ export default function App() {
         <PhaseThree
           userId={userId}
           onPhaseChange={handlePhaseChange}
+          onReset={handleReset}
+          isSharedView={isSharedView}
         />
       )}
     </ScoreProvider>

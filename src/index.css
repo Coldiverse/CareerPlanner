@@ -7,3 +7,88 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  .career-card-print {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: white;
+  }
+
+  .print-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 12px;
+  }
+
+  .print-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .print-header p {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* Hide modals, dropdowns, and interactive elements */
+  .modal,
+  .dropdown,
+  .modal-backdrop,
+  button.no-print,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  /* Make content full width */
+  .container {
+    max-width: 100%;
+  }
+
+  /* Grid for print */
+  .career-grid-print {
+    display: block;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Typography for print */
+  h1 { font-size: 20px; margin-top: 0; }
+  h2 { font-size: 16px; margin-top: 12px; }
+  h3 { font-size: 14px; margin-top: 8px; }
+  p { font-size: 12px; line-height: 1.4; }
+
+  /* Remove gradients for print */
+  .bg-gradient-to-br {
+    background: white !important;
+  }
+}

@@ -139,7 +139,7 @@ const SUBJECTS = [
   }
 ];
 
-export default function PhaseOne({ initialRatings, onSave, onComplete }) {
+export default function PhaseOne({ initialRatings, onSave, onComplete, onReset }) {
   const [ratings, setRatings] = useState(initialRatings || {});
   const [isSaving, setIsSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -179,7 +179,16 @@ export default function PhaseOne({ initialRatings, onSave, onComplete }) {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="relative text-center mb-12">
+        {onReset && (
+          <button
+            onClick={onReset}
+            className="absolute top-0 right-0 px-3 py-1 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition"
+            title="Clear all ratings and start over"
+          >
+            Start Over
+          </button>
+        )}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Career Path Explorer
         </h1>

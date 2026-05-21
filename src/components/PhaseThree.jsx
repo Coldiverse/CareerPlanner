@@ -23,7 +23,7 @@ const TIERS = [
   { id: 'exploratory', label: 'Exploratory', description: 'Unique combinations' }
 ];
 
-export default function PhaseThree({ userId, onPhaseChange }) {
+export default function PhaseThree({ userId, onPhaseChange, onReset, isSharedView }) {
   const { phase2Ratings } = useContext(ScoreContext);
 
   // State
@@ -31,6 +31,7 @@ export default function PhaseThree({ userId, onPhaseChange }) {
   const [savedCareers, setSavedCareers] = useState(
     JSON.parse(localStorage.getItem(`saved_careers_${userId}`) || '[]')
   );
+  const [shareToastShown, setShareToastShown] = useState(false);
   const [filters, setFilters] = useState({
     tiers: ['core', 'advanced'],
     salaryMin: null,
@@ -51,11 +52,23 @@ export default function PhaseThree({ userId, onPhaseChange }) {
     );
   }
 
-  // Calculate all career matches (memoized)
-  const allCareerMatches = useMemo(
-    () => calculateAllCareerMatches(phase2Ratings),
-    [phase2Ratings]
-  );
+  // Calculate all career matches with localStorage caching
+  const allCareerMatches = useMemo(() => {
+    const cacheKey = `career_cache_v1_${userId}`;
+    const ratingsKey = JSON.stringify(phase2Ratings);
+    try {
+      const cached = JSON.parse(localStorage.getItem(cacheKey) || '{}');
+      if (cached?.ratingsKey === ratingsKey && cached?.matches) {
+        return cached.matches;
+      }
+    } catch (_) {}
+
+    const matches = calculateAllCareerMatches(phase2Ratings);
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify({ ratingsKey, matches }));
+    } catch (_) {}
+    return matches;
+  }, [phase2Ratings, userId]);
 
   // Get shown and hidden careers
   const shownCareers = useMemo(
@@ -114,24 +127,76 @@ export default function PhaseThree({ userId, onPhaseChange }) {
     setSelectedCareerID(null);
   }, []);
 
+  const handleShareResults = useCallback(() => {
+    const shareUrl = `${window.location.origin}${window.location.pathname}#uid=${userId}`;
+    navigator.clipboard.writeText(shareUrl);
+    setShareToastShown(true);
+    setTimeout(() => setShareToastShown(false), 2000);
+  }, [userId]);
+
+  const handlePrint = useCallback(() => {
+    window.print();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
+        {/* Shared View Banner */}
+        {isSharedView && (
+          <div className="mb-6 p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-lg">
+            <p className="text-yellow-800 font-semibold">
+              👀 Viewing someone's shared results —
+              <button
+                onClick={onReset}
+                className="ml-2 underline hover:font-bold transition"
+              >
+                start your own
+              </button>
+            </p>
+          </div>
+        )}
+
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
+          <div className="flex justify-center gap-2 mb-4 no-print">
+            <button
+              onClick={handleShareResults}
+              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition text-sm"
+              title="Copy shareable link"
+            >
+              📤 Share Results
+            </button>
+            <button
+              onClick={handlePrint}
+              className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition text-sm no-print"
+              title="Print or save as PDF"
+            >
+              🖨️ Print / PDF
+            </button>
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Your Matched Career Paths
           </h1>
           <p className="text-xl text-gray-600">
             Personalized careers based on your interests in Phase 1 & 2
           </p>
+
+          {/* Share Toast */}
+          {shareToastShown && (
+            <div className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg animate-pulse no-print">
+              ✓ Link copied to clipboard!
+            </div>
+          )}
         </div>
 
         {/* Summary Stats */}
-        <SummaryStats stats={summaryStats} />
+        <div className="no-print">
+          <SummaryStats stats={summaryStats} />
+        </div>
 
         {/* Controls */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 no-print">
           <FilterControls
             tiers={TIERS}
             filters={filters}
@@ -203,7 +268,7 @@ export default function PhaseThree({ userId, onPhaseChange }) {
         )}
 
         {/* Action Buttons */}
-        <div className="mt-16 flex justify-center gap-4 flex-wrap pb-8">
+        <div className="mt-16 flex justify-center gap-4 flex-wrap pb-8 no-print">
           <button
             onClick={() => onPhaseChange && onPhaseChange('phase2')}
             className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold rounded-lg transition"

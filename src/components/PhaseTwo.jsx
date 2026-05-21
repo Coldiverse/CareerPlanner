@@ -40,7 +40,7 @@ const SUBJECTS = [
   { id: 'social_services', name: 'Social Services & Human Services' }
 ];
 
-export default function PhaseTwo({ userId, onPhaseChange }) {
+export default function PhaseTwo({ userId, onPhaseChange, onReset }) {
   const { phase2Ratings, setPhase2Ratings } = useContext(ScoreContext);
   const [activeTab, setActiveTab] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
