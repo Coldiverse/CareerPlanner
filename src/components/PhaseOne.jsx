@@ -44,7 +44,7 @@ const SUBJECTS = [
   }
 ];
 
-export default function PhaseOne({ initialRatings, onSave }) {
+export default function PhaseOne({ initialRatings, onSave, onComplete }) {
   const [ratings, setRatings] = useState(initialRatings || {});
   const [isSaving, setIsSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -130,9 +130,18 @@ export default function PhaseOne({ initialRatings, onSave }) {
           <div className="border-t pt-6">
             <p className="text-gray-600 mb-2">Average Interest Level:</p>
             <p className="text-4xl font-bold text-indigo-600 mb-4">{averageRating}/10</p>
-            <p className="text-gray-600 text-sm">
-              ✓ Your ratings have been saved. Phase 2 career paths will be prioritized based on your interests.
+            <p className="text-gray-600 text-sm mb-6">
+              ✓ Your ratings have been saved. Phase 2 will narrow down your interests to more specific paths.
             </p>
+
+            {onComplete && (
+              <button
+                onClick={onComplete}
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2"
+              >
+                Next: Get More Specific →
+              </button>
+            )}
           </div>
         </div>
       )}

@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { db } from './firebaseConfig';
 import { ref, get, set } from 'firebase/database';
 import { v4 as uuidv4 } from 'uuid';
+import { ScoreProvider } from './contexts/ScoreContext';
 import PhaseOne from './components/PhaseOne';
+import PhaseTwo from './components/PhaseTwo';
 
 export default function App() {
   const [userId, setUserId] = useState(null);
-  const [ratings, setRatings] = useState({});
+  const [phase1Ratings, setPhase1Ratings] = useState({});
+  const [currentPhase, setCurrentPhase] = useState('phase1');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,10 +29,10 @@ export default function App() {
 
   const loadUserData = async (userId) => {
     try {
-      const userRef = ref(db, `users/${userId}/phase1/ratings`);
-      const snapshot = await get(userRef);
-      if (snapshot.exists()) {
-        setRatings(snapshot.val());
+      const phase1Ref = ref(db, `users/${userId}/phase1/ratings`);
+      const phase1Snapshot = await get(phase1Ref);
+      if (phase1Snapshot.exists()) {
+        setPhase1Ratings(phase1Snapshot.val());
       }
     } catch (err) {
       console.warn('Could not load previous ratings:', err);
@@ -38,15 +41,19 @@ export default function App() {
     }
   };
 
-  const handleSaveRatings = async (newRatings) => {
+  const handleSavePhase1Ratings = async (newRatings) => {
     try {
       await set(ref(db, `users/${userId}/phase1/ratings`), newRatings);
       await set(ref(db, `users/${userId}/phase1/timestamp`), Date.now());
-      setRatings(newRatings);
+      setPhase1Ratings(newRatings);
     } catch (err) {
       setError('Failed to save ratings. Please try again.');
       console.error(err);
     }
+  };
+
+  const handlePhaseChange = (newPhase) => {
+    setCurrentPhase(newPhase);
   };
 
   if (loading) {
@@ -77,13 +84,25 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <PhaseOne
-          initialRatings={ratings}
-          onSave={handleSaveRatings}
+    <ScoreProvider phase1Ratings={phase1Ratings}>
+      {currentPhase === 'phase1' && (
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="container mx-auto px-4 py-8">
+            <PhaseOne
+              initialRatings={phase1Ratings}
+              onSave={handleSavePhase1Ratings}
+              onComplete={() => handlePhaseChange('phase2')}
+            />
+          </div>
+        </div>
+      )}
+
+      {currentPhase === 'phase2' && (
+        <PhaseTwo
+          userId={userId}
+          onPhaseChange={handlePhaseChange}
         />
-      </div>
-    </div>
+      )}
+    </ScoreProvider>
   );
 }

@@ -1,16 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
-// TODO: Replace with your Firebase project config
-// Get this from Firebase Console -> Project Settings
 const firebaseConfig = {
-  apiKey: "AIzaSyDQWxDsW3DfsT5qX2dQ1k2L6mN7oPq8R9s",
-  authDomain: "career-explorer-12345.firebaseapp.com",
-  projectId: "career-explorer-12345",
-  databaseURL: "https://career-explorer-12345.firebaseio.com",
-  storageBucket: "career-explorer-12345.appspot.com",
-  messagingSenderId: "123456789012",
-  appId: "1:123456789012:web:abcdef1234567890"
+  apiKey: "AIzaSyCfOxXb3gxS-cZu7SoToEfLtsD51SMpB7w",
+  authDomain: "careerplanner-64cbd.firebaseapp.com",
+  projectId: "careerplanner-64cbd",
+  databaseURL: "https://careerplanner-64cbd-default-rtdb.firebaseio.com",
+  storageBucket: "careerplanner-64cbd.firebasestorage.app",
+  messagingSenderId: "543873353389",
+  appId: "1:543873353389:web:9f591fd301fef97e9f2824"
 };
 
 const app = initializeApp(firebaseConfig);
