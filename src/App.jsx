@@ -6,6 +6,7 @@ import { ScoreProvider } from './contexts/ScoreContext';
 import PhaseOne from './components/PhaseOne';
 import PhaseTwo from './components/PhaseTwo';
 import PhaseThree from './components/PhaseThree';
+import CertificationHub from './components/Certifications/CertificationHub';
 
 export default function App() {
   const [userId, setUserId] = useState(null);
@@ -18,12 +19,28 @@ export default function App() {
 
   // Initialize or load user ID
   useEffect(() => {
-    // Check for shared UID in URL hash
-    const hashParams = new URLSearchParams(window.location.hash.slice(1));
+    // Check for hash parameters
+    const hash = window.location.hash.slice(1); // e.g. "certifications&uid=abc123"
+    const hashParams = new URLSearchParams(hash);
+    const isCertView = hashParams.has('certifications');
     const sharedUid = hashParams.get('uid');
 
-    if (sharedUid) {
-      // Load shared user's data and jump to Phase 3
+    if (isCertView) {
+      // Certifications view (new or shared)
+      if (sharedUid) {
+        setUserId(sharedUid);
+        setIsSharedView(true);
+      } else {
+        const stored = localStorage.getItem('careerUserId');
+        const uid = stored || uuidv4();
+        if (!stored) localStorage.setItem('careerUserId', uid);
+        setUserId(uid);
+      }
+      setCurrentPhase('certifications');
+      setLoading(false);
+      // CertificationHub loads its own Firebase data on mount
+    } else if (sharedUid) {
+      // Existing Phase 3 shared view
       setUserId(sharedUid);
       setIsSharedView(true);
       setCurrentPhase('phase3');
@@ -130,35 +147,73 @@ export default function App() {
 
   return (
     <ScoreProvider phase1Ratings={phase1Ratings} phase2Ratings={phase2Ratings}>
-      {currentPhase === 'phase1' && (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="container mx-auto px-4 py-8">
-            <PhaseOne
-              initialRatings={phase1Ratings}
-              onSave={handleSavePhase1Ratings}
-              onComplete={() => handlePhaseChange('phase2')}
-              onReset={handleReset}
-            />
+      <>
+        {/* Top Navigation Bar */}
+        <nav className="no-print sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+          <div className="max-w-6xl mx-auto px-4 py-2 flex gap-2">
+            <button
+              onClick={() => handlePhaseChange('phase1')}
+              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-colors ${
+                currentPhase !== 'certifications'
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Career Explorer
+            </button>
+            <button
+              onClick={() => handlePhaseChange('certifications')}
+              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-colors ${
+                currentPhase === 'certifications'
+                  ? 'bg-teal-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              CC Certifications
+            </button>
           </div>
-        </div>
-      )}
+        </nav>
 
-      {currentPhase === 'phase2' && (
-        <PhaseTwo
-          userId={userId}
-          onPhaseChange={handlePhaseChange}
-          onReset={handleReset}
-        />
-      )}
+        {/* Phase Content */}
+        {currentPhase === 'phase1' && (
+          <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+            <div className="container mx-auto px-4 py-8">
+              <PhaseOne
+                initialRatings={phase1Ratings}
+                onSave={handleSavePhase1Ratings}
+                onComplete={() => handlePhaseChange('phase2')}
+                onReset={handleReset}
+              />
+            </div>
+          </div>
+        )}
 
-      {currentPhase === 'phase3' && (
-        <PhaseThree
-          userId={userId}
-          onPhaseChange={handlePhaseChange}
-          onReset={handleReset}
-          isSharedView={isSharedView}
-        />
-      )}
+        {currentPhase === 'phase2' && (
+          <PhaseTwo
+            userId={userId}
+            onPhaseChange={handlePhaseChange}
+            onReset={handleReset}
+          />
+        )}
+
+        {currentPhase === 'phase3' && (
+          <PhaseThree
+            userId={userId}
+            onPhaseChange={handlePhaseChange}
+            onReset={handleReset}
+            isSharedView={isSharedView}
+          />
+        )}
+
+        {currentPhase === 'certifications' && (
+          <CertificationHub
+            userId={userId}
+            onPhaseChange={handlePhaseChange}
+            onReset={handleReset}
+            isSharedView={isSharedView}
+          />
+        )}
+      </>
     </ScoreProvider>
   );
 }
