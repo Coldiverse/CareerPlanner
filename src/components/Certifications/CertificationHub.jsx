@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firebaseConfig';
 import { ref, get, set } from 'firebase/database';
 import CertificationRating from './CertificationRating';
-import ClassesPage from './ClassesPage';
+import CertificationDirectory from './CertificationDirectory';
 
 export default function CertificationHub({
   userId,
@@ -10,7 +10,7 @@ export default function CertificationHub({
   onReset,
   isSharedView,
 }) {
-  const [certView, setCertView] = useState('rating');
+  const [certView, setCertView] = useState('rating'); // 'rating' or 'directory'
   const [certRatings, setCertRatings] = useState({});
   const [loadingCerts, setLoadingCerts] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -98,14 +98,14 @@ export default function CertificationHub({
           userId={userId}
           certRatings={certRatings}
           onRatingChange={handleRatingChange}
-          onViewClasses={() => setCertView('classes')}
+          onViewClasses={() => setCertView('directory')}
           onBack={() => onPhaseChange('phase3')}
           isSharedView={isSharedView}
           isSaving={isSaving}
           saveError={saveError}
         />
       ) : (
-        <ClassesPage onBack={() => setCertView('rating')} />
+        <CertificationDirectory onBack={() => setCertView('rating')} />
       )}
     </>
   );

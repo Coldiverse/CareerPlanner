@@ -62,7 +62,7 @@ export default function CertificationRating({
               onClick={onViewClasses}
               className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition text-sm"
             >
-              View All Classes →
+              View All Certifications →
             </button>
           </div>
 
@@ -114,7 +114,7 @@ export default function CertificationRating({
             onClick={onViewClasses}
             className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition"
           >
-            View All Classes →
+            View All Certifications →
           </button>
         </div>
       </div>
