@@ -19,14 +19,28 @@ export default function App() {
 
   // Initialize or load user ID
   useEffect(() => {
-    // Check for hash parameters
-    const hash = window.location.hash.slice(1); // e.g. "certifications&uid=abc123"
-    const hashParams = new URLSearchParams(hash);
-    const isCertView = hashParams.has('certifications');
-    const sharedUid = hashParams.get('uid');
+    // Parse hash route: #/certifications, #/certifications-list, #uid=X, etc.
+    const hash = window.location.hash.slice(1); // remove leading #
+    const isCertRoute = hash.startsWith('/certifications');
 
-    if (isCertView) {
-      // Certifications view (new or shared)
+    let sharedUid = null;
+    if (isCertRoute) {
+      // Parse query params from hash (#/certifications?uid=X)
+      const queryIndex = hash.indexOf('?');
+      if (queryIndex !== -1) {
+        const queryParams = new URLSearchParams(hash.slice(queryIndex + 1));
+        sharedUid = queryParams.get('uid');
+      }
+    } else {
+      // Legacy format: #uid=X
+      const hashParams = new URLSearchParams(hash);
+      sharedUid = hashParams.get('uid');
+    }
+
+    const isPhase3Shared = !isCertRoute && sharedUid;
+
+    if (isCertRoute) {
+      // Certifications view (rating or directory) - CertificationHub will read hash itself
       if (sharedUid) {
         setUserId(sharedUid);
         setIsSharedView(true);
@@ -38,9 +52,8 @@ export default function App() {
       }
       setCurrentPhase('certifications');
       setLoading(false);
-      // CertificationHub loads its own Firebase data on mount
-    } else if (sharedUid) {
-      // Existing Phase 3 shared view
+    } else if (isPhase3Shared) {
+      // Legacy Phase 3 shared view (#uid=X)
       setUserId(sharedUid);
       setIsSharedView(true);
       setCurrentPhase('phase3');
@@ -93,6 +106,12 @@ export default function App() {
 
   const handlePhaseChange = (newPhase) => {
     setCurrentPhase(newPhase);
+    // Update hash for bookmarkable URLs
+    if (newPhase === 'certifications') {
+      window.location.hash = '/certifications';
+    } else {
+      window.location.hash = '';
+    }
   };
 
   const handleReset = () => {

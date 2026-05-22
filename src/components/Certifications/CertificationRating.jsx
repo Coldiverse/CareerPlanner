@@ -16,7 +16,7 @@ export default function CertificationRating({
   const [shareToastShown, setShareToastShown] = useState(false);
 
   const handleShare = () => {
-    const shareUrl = `${window.location.origin}${window.location.pathname}#certifications&uid=${userId}`;
+    const shareUrl = `${window.location.origin}${window.location.pathname}#/certifications?uid=${userId}`;
     navigator.clipboard.writeText(shareUrl);
     setShareToastShown(true);
     setTimeout(() => setShareToastShown(false), 2000);

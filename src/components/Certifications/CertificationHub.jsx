@@ -10,7 +10,12 @@ export default function CertificationHub({
   onReset,
   isSharedView,
 }) {
-  const [certView, setCertView] = useState('rating'); // 'rating' or 'directory'
+  // Determine initial view from hash: #/certifications (rating) or #/certifications-list (directory)
+  const getInitialView = () => {
+    const hash = window.location.hash.slice(1);
+    return hash.startsWith('/certifications-list') ? 'directory' : 'rating';
+  };
+  const [certView, setCertView] = useState(getInitialView);
   const [certRatings, setCertRatings] = useState({});
   const [loadingCerts, setLoadingCerts] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
